@@ -1,15 +1,15 @@
 import csv
 import json
 from pathlib import Path
-from typing import List
-from core.models.schemas import UserInput, LessonOutput, GeneratedContent, QuizQuestion, QuestionBankItem
+from typing import List, Optional
+from core.models.schemas import UserInput, LessonOutput, GeneratedContent, QuizQuestion, QuestionBankItem, WebSearchReport
 
 
 class OutputWriter:
     def __init__(self, base_output_dir: Path):
         self.base_output_dir = base_output_dir
 
-    def write_all(self, user_input: UserInput, lesson_outputs: List[LessonOutput]) -> Path:
+    def write_all(self, user_input: UserInput, lesson_outputs: List[LessonOutput], web_search_report: Optional[WebSearchReport] = None) -> Path:
         prompt_folder = self._sanitize_folder_name(user_input.prompt)
         output_dir = self.base_output_dir / prompt_folder
         output_dir.mkdir(parents=True, exist_ok=True)
@@ -20,6 +20,9 @@ class OutputWriter:
             self._write_lesson_output(lesson_output, output_dir)
         
         self._write_summary_json(user_input, lesson_outputs, output_dir)
+        
+        if web_search_report:
+            self._write_web_search_references(web_search_report, output_dir)
         
         print(f"\nOutput written to: {output_dir}")
         return output_dir
@@ -121,6 +124,55 @@ class OutputWriter:
         file_path = output_dir / "generation_summary.json"
         with open(file_path, 'w', encoding='utf-8') as f:
             json.dump(summary, f, indent=2, ensure_ascii=False)
+
+    def _write_web_search_references(self, report: WebSearchReport, output_dir: Path):
+        file_path = output_dir / "references.txt"
+        with open(file_path, 'w', encoding='utf-8') as f:
+            f.write("=" * 80 + "\n")
+            f.write("WEB SEARCH REFERENCES REPORT\n")
+            f.write("=" * 80 + "\n\n")
+            f.write(f"Topic: {report.user_prompt}\n")
+            f.write(f"Search Timestamp: {report.search_timestamp}\n")
+            f.write(f"Total Search Queries: {len(report.search_queries)}\n")
+            f.write(f"Total Results Found: {report.total_results}\n")
+            f.write(f"Reputable Sources: {report.reputable_results}\n\n")
+            
+            f.write("-" * 80 + "\n")
+            f.write("SEARCH QUERIES USED:\n")
+            f.write("-" * 80 + "\n")
+            for i, query in enumerate(report.search_queries, 1):
+                f.write(f"  {i}. {query}\n")
+            f.write("\n")
+            
+            f.write("-" * 80 + "\n")
+            f.write("DETAILED RESULTS:\n")
+            f.write("-" * 80 + "\n\n")
+            
+            reputable_results = [r for r in report.results if r.is_reputable]
+            
+            for i, result in enumerate(reputable_results, 1):
+                f.write(f"[{i}] {result.title}\n")
+                f.write(f"    URL: {result.url}\n")
+                f.write(f"    Search Query: {result.query}\n")
+                f.write(f"    Reputation Score: {result.reputation_score:.2f}\n")
+                f.write(f"    Extracted At: {result.extracted_at}\n")
+                if result.snippet:
+                    f.write(f"    Snippet: {result.snippet[:200]}...\n")
+                if result.analysis:
+                    f.write(f"    Analysis: {result.analysis[:500]}...\n")
+                if result.normalized_content:
+                    f.write(f"    Normalized Content (first 1000 chars):\n")
+                    f.write(f"    {result.normalized_content[:1000]}\n")
+                f.write("\n" + "-" * 80 + "\n\n")
+            
+            if len(report.results) > len(reputable_results):
+                f.write("\nNON-REPUTABLE SOURCES (EXCLUDED FROM CONTENT):\n")
+                f.write("-" * 80 + "\n")
+                for result in report.results:
+                    if not result.is_reputable:
+                        f.write(f"  - {result.title} ({result.url}) - Score: {result.reputation_score:.2f}\n")
+        
+        print(f"  References written to: {file_path}")
 
     def _sanitize_folder_name(self, name: str) -> str:
         invalid_chars = '<>:"/\\|?*'

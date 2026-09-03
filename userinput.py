@@ -53,6 +53,8 @@ def get_user_input() -> UserInput:
         min_val=1, max_val=100, default=10
     )
 
+    web_search_needed = confirm("Enable web search for content enrichment? (y/n): ")
+
     user_input = UserInput(
         prompt=prompt,
         num_lessons=num_lessons,
@@ -61,7 +63,8 @@ def get_user_input() -> UserInput:
         content_length=content_length,
         quiz_question_count=quiz_question_count,
         quiz_difficulty=quiz_difficulty,
-        question_bank_count=question_bank_count
+        question_bank_count=question_bank_count,
+        web_search_needed=web_search_needed
     )
 
     print("\n" + "=" * 60)

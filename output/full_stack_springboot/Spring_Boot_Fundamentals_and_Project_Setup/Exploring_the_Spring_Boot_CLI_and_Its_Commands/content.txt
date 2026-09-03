@@ -1,0 +1,62 @@
+Lesson: Spring Boot Fundamentals and Project Setup
+Subtopic: Exploring the Spring Boot CLI and Its Commands
+Character Count: 3422
+============================================================
+
+Exploring the Spring Boot CLI and Its Commands
+
+In the realm of Spring Boot project setup, the Spring Boot CLI is an indispensable tool. It streamlines the creation, management, and deployment of Spring Boot applications, making development quicker and more efficient. This lesson will guide you through understanding and using the Spring Boot CLI commands, including commands for creating new projects, running applications, and deploying applications.
+
+### Creating a New Spring Boot Project
+
+The first step in any Spring Boot project is creating a new one. The Spring Initializr is a web-based tool that generates a new Spring Boot project, automatically configuring the necessary dependencies. To use the Spring Boot CLI, you’ll need to generate a project using the initializr URL. For example, to generate a simple RESTful service with JPA support, navigate to the initializr site, choose your project details, and download the project as a ZIP file. After downloading, you can use the Spring Boot CLI to create a new project.
+
+```bash
+# Generate a new project with JPA, Spring Data JPA, and REST
+spring init --dependencies jpa,spring-data-jpa,rest my-new-project
+```
+
+### Running a Spring Boot Application
+
+Once your project is set up, the next step is to run your application. The Spring Boot CLI simplifies this process by providing a simple command to start your application. Run the following command in your project’s directory:
+
+```bash
+# Start a Spring Boot application
+./mvnw spring-boot:run
+```
+
+Or if you are using a Windows environment:
+
+```bash
+# Start a Spring Boot application
+./mvnw spring-boot:run.bat
+```
+
+### Deploying a Spring Boot Application
+
+Deploying a Spring Boot application involves several steps, including packaging your application into a WAR or a JAR, and deploying it to a container like Tomcat or Docker. Here, we’ll use Docker to deploy our application. First, ensure Docker is installed and running on your machine.
+
+```bash
+# Build the Docker image
+./mvnw clean package
+
+# Start the Docker container
+docker run -p 8080:8080 -v $(pwd):/usr/src/app -w /usr/src/app -t my-new-project
+```
+
+In these commands:
+- `./mvnw clean package` compiles your application and packages it into a JAR file.
+- `docker run` uses the created JAR file to run your application inside a Docker container.
+- The `-p 8080:8080` option maps port 8080 from the host to the container, allowing you to access your application from your host machine.
+- The `-v` option mounts the current directory to the container’s working directory, allowing you to manage your application files.
+- `-t my-new-project` specifies the image name.
+
+### Practical Exercises
+
+1. **Create a New Project**: Using the initializr, create a Spring Boot project with the necessary dependencies. Use the CLI to generate the project directory structure and set up the necessary files.
+
+2. **Run a Simple REST Application**: Start a simple RESTful service using the CLI. Ensure it listens on port 8080 and is accessible from your local machine.
+
+3. **Deploy to Docker**: Build your project, and deploy it to a Docker container. Ensure the container is running and accessible on port 8080.
+
+These exercises will provide you with hands-on experience with using the Spring Boot CLI for project setup and deployment. Understanding and utilizing these tools effectively is crucial for building and deploying Spring Boot applications efficiently.

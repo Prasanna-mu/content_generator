@@ -31,6 +31,29 @@ class UserInput(BaseModel):
     quiz_question_count: int = Field(default=5, ge=1, le=50, description="Quiz questions per lesson")
     quiz_difficulty: QuizDifficulty = Field(default=QuizDifficulty.INTERMEDIATE)
     question_bank_count: int = Field(default=10, ge=1, le=100, description="Question bank questions per lesson")
+    web_search_needed: bool = Field(default=False, description="Whether to perform web search for content enrichment")
+
+
+class WebSearchResult(BaseModel):
+    query: str
+    url: str
+    title: str
+    snippet: str
+    is_reputable: bool = False
+    reputation_score: float = 0.0
+    normalized_content: str = ""
+    extracted_at: str = ""
+    analysis: str = ""
+    facts_verified: bool = False
+
+
+class WebSearchReport(BaseModel):
+    user_prompt: str
+    search_queries: List[str]
+    results: List[WebSearchResult]
+    total_results: int
+    reputable_results: int
+    search_timestamp: str
 
 
 class Subtopic(BaseModel):

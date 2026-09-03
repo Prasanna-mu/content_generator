@@ -72,3 +72,49 @@ python main.py --workers 8
 
 # Use JSON config
 python main.py --input user_input.json --workers 4
+
+
+
+
+
+
+
+
+
+
+Sprint 2 web search implementation is complete. Here's a summary of what was added:
+Changes Made
+1. User Input Schema (core/models/schemas.py)
+- Added web_search_needed: bool field to UserInput
+- Added WebSearchResult and WebSearchReport models
+2. User Input Prompt (userinput.py)
+- Added prompt: "Enable web search for content enrichment? (y/n): "
+3. Web Search Module (core/websearch/)
+File	Purpose
+query_generator.py	Generates multiple search queries from user prompt using LLM
+searcher.py	Parallel web search (DuckDuckGo/Serper/Bing) with worker count from .env
+reputation_checker.py	Checks site legitimacy with domain scoring
+crawler.py	Parallel HTML fetching for reputable sites
+extractor.py	Extracts main content, removes ads/nav/scripts
+normalizer.py	Cleans and deduplicates content
+analyzer.py	LLM-based content analysis and fact verification
+manager.py	Orchestrates the full pipeline
+4. Pipeline Integration (core/pipeline/orchestrator.py)
+- Web search runs before lesson generation (step 2 of 6 when enabled)
+- Results fed to LLM for enriched content generation
+- Graceful silent exit if no internet
+5. Output (core/output/writer.py)
+- Creates references.txt with:
+- All search queries used
+- Reputable sources with URLs, reputation scores
+- Normalized content excerpts
+- Analysis summaries
+6. Configuration (.env, requirements.txt)
+- Added web search config: SEARCH_ENGINE, SEARCH_TIMEOUT, RESULTS_PER_QUERY, MAX_SEARCH_QUERIES, MAX_CONTENT_CHARS
+- Added beautifulsoup4 dependency
+Key Features
+- Parallel processing respects WORKER_COUNT from .env
+- Multiple search queries generated from user prompt
+- Reputation filtering only uses credible sources
+- Silent fallback when internet unavailable
+- References report saved as references.txt
