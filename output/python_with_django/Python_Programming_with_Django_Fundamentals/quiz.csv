@@ -1,0 +1,6 @@
+Question,Option A,Option B,Option C,Option D,Correct Answer,Explanation
+What is the correct syntax to define a function in Python?,def my_function():,function my_function():,function my_function(),def my_function,3,The correct syntax to define a function in Python is 'def my_function():'.
+Which of the following is not a core component of a Django project?,Models,Templates,Databases,Libraries,4,"Libraries are not a core component of a Django project. Core components include Models, Templates, and Databases."
+How do you start a new Django project using the command line?,django-admin startproject myproject,django-admin startproject,startproject myproject,startproject,0,"To start a new Django project using the command line, you use the command 'django-admin startproject myproject'."
+What is the purpose of the 'models.py' file in a Django project?,To define database tables and their relationships,To handle HTTP requests and responses,To serve static files,To manage user sessions,0,The 'models.py' file in a Django project is used to define database tables and their relationships.
+Which of the following is not a basic syntax element in Python?,if,for,while,switch,3,"The 'switch' statement is not a basic syntax element in Python. Python uses 'if', 'for', and 'while' statements for conditional and looping structures."

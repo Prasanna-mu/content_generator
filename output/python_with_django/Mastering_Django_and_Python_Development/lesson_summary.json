@@ -1,0 +1,26 @@
+{
+  "lesson_title": "Mastering Django and Python Development",
+  "lesson_description": "In this advanced lesson, we will explore complex topics in Django, including database management, authentication systems, and building RESTful APIs. Additionally, students will deepen their understanding of Python best practices, such as code organization and testing. The culmination of this lesson will be a comprehensive project that integrates all the skills learned.",
+  "subtopics": [
+    {
+      "title": "Advanced Database Management in Django",
+      "description": "In this subtopic, we will delve into advanced database management techniques in Django. Topics include using Django's ORM for complex queries, managing database migrations, and optimizing database performance. We will also explore how to integrate third-party database tools and services into our Django applications.",
+      "estimated_chars": 450,
+      "actual_chars": 3387
+    },
+    {
+      "title": "Building Secure Authentication Systems with Django",
+      "description": "This subtopic focuses on creating secure and robust authentication systems using Django. We will cover Django's built-in authentication system, integrating third-party authentication services, and implementing custom authentication flows. We will also discuss security best practices and common pitfalls to avoid.",
+      "estimated_chars": 550,
+      "actual_chars": 1311
+    },
+    {
+      "title": "Creating RESTful APIs with Django REST Framework",
+      "description": "In this subtopic, we will learn how to create RESTful APIs using Django REST Framework. Topics include building API endpoints, handling requests and responses, and implementing authentication and authorization. We will also explore how to integrate third-party authentication services and secure our APIs.",
+      "estimated_chars": 500,
+      "actual_chars": 4795
+    }
+  ],
+  "quiz_question_count": 5,
+  "question_bank_count": 5
+}

@@ -1,0 +1,26 @@
+{
+  "lesson_title": "Python Programming with Django Fundamentals",
+  "lesson_description": "In this lesson, students will be introduced to the basics of Python programming and how it integrates with Django, a high-level Python web framework. Students will learn the fundamentals of Python syntax and how to set up a basic Django project. They will also learn about the basic structure and components of a Django project, laying the groundwork for more advanced topics in subsequent lessons.",
+  "subtopics": [
+    {
+      "title": "Introduction to Python Programming",
+      "description": "In this subtopic, we will cover the basics of Python programming. We will start with Python syntax, variables, data types, and basic control structures such as if-else statements and loops. We will also discuss Python's philosophy and best practices. This will provide a solid foundation for understanding how Python works and how it can be used in web development.",
+      "estimated_chars": 500,
+      "actual_chars": 3464
+    },
+    {
+      "title": "Setting Up a Django Project",
+      "description": "In this subtopic, we will learn how to set up a basic Django project. We will cover the installation of Django, creating a new project, and configuring settings. We will also create a simple Django application to understand the basic structure of a Django project. This subtopic will help students get started with Django and familiarize them with its core components.",
+      "estimated_chars": 600,
+      "actual_chars": 4612
+    },
+    {
+      "title": "Understanding Django's Core Components",
+      "description": "In this subtopic, we will explore the core components of a Django project, including models, views, templates, and URLs. We will cover how to define models, create views, and use templates to render HTML pages. We will also discuss how to handle URLs and integrate them with views and templates. This subtopic will help students understand how Django works under the hood and how to build a basic web application.",
+      "estimated_chars": 700,
+      "actual_chars": 2940
+    }
+  ],
+  "quiz_question_count": 5,
+  "question_bank_count": 5
+}

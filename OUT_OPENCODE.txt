@@ -1,0 +1,74 @@
+Sprint 1 complete. Here's the project structure:
+Content Generator/
+├── core/
+│   ├── llm/
+│   │   ├── base.py              # Abstract LLM provider
+│   │   ├── factory.py           # Provider factory
+│   │   └── providers/ollama.py  # Ollama implementation (qwen2.5:3b)
+│   ├── models/schemas.py        # Pydantic models (UserInput, Lesson, Subtopic, etc.)
+│   ├── planning/
+│   │   ├── prompt_analyzer.py   # Analyzes topic domain/complexity
+│   │   ├── lesson_generator.py  # Creates lesson structure
+│   │   └── subtopic_generator.py # Generates subtopics with char estimates
+│   ├── generation/content_generator.py  # Content + quiz + question bank
+│   ├── output/writer.py         # Writes folder structure (.txt, .csv, .json)
+│   └── pipeline/orchestrator.py # Coordinates all stages
+├── userinput.py                 # CLI input + JSON save/load
+├── main.py                      # Entry point with args
+├── requirements.txt
+├── .env.example
+└── README.md
+Usage:
+# Interactive mode
+python main.py
+
+# With saved config
+python main.py -i output/my_topic/user_input.json
+
+# Custom model/URL
+python main.py -m qwen2.5:3b -u http://localhost:11434
+Output structure:
+output/your_prompt/
+├── user_input.json
+├── generation_summary.json
+├── lesson_1/
+│   ├── lesson_summary.json
+│   ├── quiz.csv
+│   ├── question_bank.csv
+│   ├── subtopic_1/content.txt
+│   └── subtopic_2/content.txt
+└── lesson_2/...
+Prerequisites: Install Ollama, run ollama serve, pull qwen2.5:3b, then pip install -r requirements.txt.
+
+
+
+
+
+
+
+Implementation complete. Here's a summary of the changes:
+Changes Made
+1. User-Defined Lesson/Subtopic Counts (Already Implemented)
+- userinput.py already prompts user for num_lessons (1-50) and subtopics_per_lesson (1-20)
+- Fixed LLM prompts in core/llm/base.py to strictly respect user-specified counts with explicit "EXACTLY" and "STRICT REQUIREMENTS" instructions
+2. Parallel Processing for Content Generation
+- core/generation/content_generator.py: Added ThreadPoolExecutor with configurable worker_count
+- Lessons are now processed in parallel, maintaining output order
+- Error handling with proper exception propagation
+3. Configurable Worker Count via .env
+- .env.example: Added WORKER_COUNT=4 (default 4 workers)
+- main.py: Loads from .env, supports --workers CLI argument
+- core/pipeline/orchestrator.py: Passes worker_count to ContentGenerator
+4. Test Results
+- Small test (1 lesson, 1 subtopic) completed successfully
+- Output files generated correctly: content.txt, quiz.csv, question_bank.csv, lesson_summary.json, generation_summary.json
+- Parallel processing messages displayed: "Completed Lesson X/Y: Title"
+Usage
+# Use default 4 workers from .env
+python main.py
+
+# Override worker count via CLI
+python main.py --workers 8
+
+# Use JSON config
+python main.py --input user_input.json --workers 4

@@ -1,0 +1,30 @@
+{
+  "prompt": "python with django",
+  "config": {
+    "prompt": "python with django",
+    "num_lessons": 2,
+    "subtopics_per_lesson": 3,
+    "content_quality": "intermediate",
+    "content_length": "medium",
+    "quiz_question_count": 5,
+    "quiz_difficulty": "intermediate",
+    "question_bank_count": 5
+  },
+  "total_lessons": 2,
+  "total_subtopics": 6,
+  "total_content_chars": 20509,
+  "total_quiz_questions": 10,
+  "total_question_bank_items": 10,
+  "lessons": [
+    {
+      "title": "Python Programming with Django Fundamentals",
+      "subtopic_count": 3,
+      "total_chars": 11016
+    },
+    {
+      "title": "Mastering Django and Python Development",
+      "subtopic_count": 3,
+      "total_chars": 9493
+    }
+  ]
+}
