@@ -1,4 +1,5 @@
 Sprint 1 complete. Here's the project structure:
+
 Content Generator/
 ├── core/
 │   ├── llm/
@@ -118,3 +119,199 @@ Key Features
 - Reputation filtering only uses credible sources
 - Silent fallback when internet unavailable
 - References report saved as references.txt
+
+
+
+
+
+
+
+The implementation is complete. Here's a summary of what was done to fix the agent's JSON generation issues:
+Changes Made
+1. BaseLLMProvider (core/llm/base.py)
+- Added generate_json_with_validation() method with retry logic (default 3 retries)
+- Added validators for all JSON types:
+- validate_lessons_json() - checks title, description
+- validate_subtopics_json() - checks title, description, estimated_chars (required, positive int)
+- validate_quiz_json() - checks question, 4 options, correct_answer (0-3)
+- validate_question_bank_json() - checks question, answer
+- Added set_output_dir() and _save_intermediate_json() for saving intermediate outputs
+- Updated generate_lessons(), generate_subtopics(), generate_quiz(), generate_question_bank() to use validation with auto-save
+2. LessonGenerator (core/planning/lesson_generator.py)
+- Added _save_lessons() to save refined lessons as lessons_refined.json
+- Added load_saved_lessons() to retrieve from saved output
+3. SubtopicGenerator (core/planning/subtopic_generator.py)
+- Added _save_subtopics() to save all subtopics as subtopics_all.json
+- Added validate_subtopics() checker that verifies:
+- Correct number of subtopics per lesson
+- All have title, description, estimated_chars > 0
+- Added load_saved_subtopics() to restore from saved output
+4. PipelineOrchestrator (core/pipeline/orchestrator.py)
+- Sets LLM output directory to output/intermediate/ on initialization
+- Added validation step (checker) after subtopic generation that:
+1. Validates generated subtopics
+2. If failed, attempts to load from saved output
+3. Re-validates loaded data
+4. Raises error if still invalid
+5. Tests (tests/test_agent.py)
+- Comprehensive test suite covering all validators, retry logic, save/load, and orchestrator initialization
+- All 35 test assertions pass
+Workflow Now
+1. Agent generates lessons → saves lessons.json → refines → saves lessons_refined.json
+2. Agent generates subtopics per lesson → saves each + subtopics_all.json
+3. Checker validates all subtopics have required fields (title, description, estimated_chars)
+4. If validation fails → loads from saved subtopics_all.json → re-validates
+5. Only proceeds to content generation after validation passes
+This ensures the agent never loses estimated_chars or description fields, with automatic recovery from saved intermediate outputs.
+
+
+
+Implementation complete. Here's a summary of the Sprint 2 persistent session management system:
+Files Created/Modified
+New Files
+- core/session/__init__.py - Session module exports
+- core/session/models.py - Data models (Session, StageCheckpoint, TaskCheckpoint, enums)
+- core/session/manager.py - SessionManager with SQLite backend
+Modified Files
+- core/pipeline/orchestrator.py - Full integration with SessionManager, checkpoint-based resume
+- core/generation/content_generator.py - Added generate_all_with_checkpoints() for per-lesson checkpoints
+- core/output/writer.py - Added session_id parameter for session-based output directory
+- main.py - New CLI flags: --session-id, --resume, --list-sessions, --session-info, --processing-dir
+Key Features Implemented
+Requirement	Implementation
+Unique SQLite session per prompt	SessionManager.create_session() with UUID
+Track all pipeline stages	9 stages in PipelineStage enum with checkpoints
+Immediate checkpoint save	complete_stage() / complete_task() called after each operation
+Resume interrupted sessions	--resume --session-id recovers RUNNING→PENDING
+processing/ separate from output/	processing/sessions/<id>/ vs output/<id>/
+Preserve existing generators	Orchestrator wraps existing logic, minimal changes
+Configurable concurrency	--workers passed to ContentGenerator
+SQLite source of truth	All status in sessions.db
+Recover interrupted tasks	recover_interrupted_tasks/stages() on resume
+No content loss on failure	Completed lessons saved to lesson_outputs.json
+Usage
+# New run (creates session automatically)
+python main.py --input config.json
+
+# Resume interrupted session
+python main.py --resume --session-id <uuid>
+
+# List all sessions
+python main.py --list-sessions
+
+# View session details
+python main.py --session-info <uuid>
+The system is ready for production use with Ollama running.
+
+
+
+All tests pass. Let me provide a summary of the fixes:
+Summary of Fixes
+1. Intermediate folder in output folder (core/pipeline/orchestrator.py:68-70)
+Added validation in initialize() to ensure processing_dir != output_dir:
+if self.processing_dir == self.output_dir:
+    raise ValueError("processing_dir must be different from output_dir to keep intermediate files separate from final output")
+This prevents intermediate files from being written to the output folder.
+2. Resume not working - WEB_SEARCH stage bug (core/pipeline/orchestrator.py:180-195)
+Fixed _run_pipeline() to handle when web_search_needed=False. The session manager's get_resume_point() returns the first incomplete stage (which could be WEB_SEARCH), but since WEB_SEARCH is filtered from the pipeline, the fix now finds the first incomplete stage from the actual pipeline stages:
+if resume_from and resume_from not in stage_names:
+    for s in stage_names:
+        status = self.session_manager.get_stage_status(self.session_id, s)
+        if status in (StageStatus.PENDING, StageStatus.RUNNING, StageStatus.FAILED):
+            resume_from = s
+            break
+3. Session folder structure (core/pipeline/orchestrator.py:137-143)
+Added early creation of session directories in run():
+session_dir = self.processing_dir / "sessions" / self.session_id
+session_dir.mkdir(parents=True, exist_ok=True)
+(session_dir / "intermediate").mkdir(parents=True, exist_ok=True)
+This ensures processing/sessions/{session_id}/ and processing/sessions/{session_id}/intermediate/ exist for proper resume support.
+4. Tests added (tests/test_agent.py)
+- test_orchestrator_processing_dir_validation: Validates the processing/output dir separation
+- test_resume_point_with_web_search_disabled: Tests the resume point fix for disabled web search
+
+
+The implementation is complete. Let me provide a summary of the changes made:
+Summary of Changes
+I've implemented the requested workflow features in core/pipeline/orchestrator.py:
+New Features Added:
+1. Prompt-named folder in processing directory - Creates a folder named after the prompt (sanitized) in the processing directory
+2. Checklist file (checklist.json) - Created in the prompt folder with all pipeline stages initialized to "pending". Updated with:
+- Prompt and session ID at session start
+- Stage status ("completed"/"failed") after each stage completes
+3. Lessons JSON file (lessons.json) - Created in the prompt folder, updated after:
+- Lesson generation
+- Lesson refinement
+Contains lesson titles, descriptions, and estimated character counts
+4. Subtopics JSON file (subtopics.json) - Created in the prompt folder, updated after:
+- Subtopic generation
+- Subtopic adjustment
+- Subtopic validation
+Contains all subtopics across all lessons with lesson association
+5. Automatic checklist updates - After each pipeline stage completes (success or failure), the checklist is updated
+6. Resume support - When resuming from checkpoints, the JSON files are restored from checkpoint data
+Files Modified:
+- core/pipeline/orchestrator.py - Added new methods and integrated them into the pipeline flow
+Verification:
+- All 11 existing tests pass
+- New functionality tested with standalone scripts
+- CLI works correctly
+The workflow now follows your specified sequence:
+1. Analyze prompt → Create session & initialize checklist
+2. Web search (conditional)
+3. Create prompt-named folder in processing with checklist, lessons.json, subtopics.json
+4. Generate lessons → Update lessons.json
+5. Generate subtopics → Update subtopics.json
+6. Generate content (includes quiz & questions)
+7. Update checklist after each completion
+8. Final output in output folder
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+All tests pass. Let me provide a summary of the sprint 3 changes:
+Summary of Changes (Sprint 3)
+1. Processing Folder Structure (core/pipeline/orchestrator.py)
+- Removed intermediate folder creation in session directory
+- LLM output directory now points directly to session folder (not session/intermediate)
+- Processing directory now has:
+- sessions/ - session folders
+- {prompt_folder}/ - prompt-named folders with checklist, lessons, subtopics, tasklist
+2. Checklist Workflow (core/pipeline/orchestrator.py)
+- Simplified checklist stages to: web_search (only if CLI requested), subtopic_generation, lesson_generation, content_generation, output_writing
+- Web search stage only added to checklist when user_input.web_search_needed = True
+- Checklist properly updated on stage completion/failure/restore
+3. Tasklist Creation (core/pipeline/orchestrator.py)
+- Added _create_tasklist() method called after subtopic generation
+- Creates tasklist.json in prompt directory with all subtopics as tasks
+- Each task tracks: lesson_title, subtopic_title, completed, content_file
+4. Content Generation with Tasklist Updates (core/generation/content_generator.py)
+- Modified generate_all_with_checkpoints() to accept prompt_dir parameter
+- Added _update_tasklist_for_lesson() method that marks subtopic tasks as completed when content is generated
+- Sets content_file with sanitized filename matching output writer
+5. Flat Output Structure (core/output/writer.py)
+- Modified _write_subtopic_content() to save content directly in lesson directory (no nested subtopic folders)
+- Files named: {sanitized_subtopic_title}.txt (e.g., Sub_1.txt)
+- Matches tasklist's content_file field
+Test Results
+- All existing tests pass
+- Verified: checklist conditional stages, tasklist creation, flat content output, no intermediate folder

@@ -9,9 +9,12 @@ class OutputWriter:
     def __init__(self, base_output_dir: Path):
         self.base_output_dir = base_output_dir
 
-    def write_all(self, user_input: UserInput, lesson_outputs: List[LessonOutput], web_search_report: Optional[WebSearchReport] = None) -> Path:
-        prompt_folder = self._sanitize_folder_name(user_input.prompt)
-        output_dir = self.base_output_dir / prompt_folder
+    def write_all(self, user_input: UserInput, lesson_outputs: List[LessonOutput], web_search_report: Optional[WebSearchReport] = None, session_id: Optional[str] = None) -> Path:
+        if session_id:
+            output_dir = self.base_output_dir / session_id
+        else:
+            prompt_folder = self._sanitize_folder_name(user_input.prompt)
+            output_dir = self.base_output_dir / prompt_folder
         output_dir.mkdir(parents=True, exist_ok=True)
         
         self._write_user_input_json(user_input, output_dir)
@@ -45,11 +48,12 @@ class OutputWriter:
         self._write_lesson_summary_json(lesson_output, lesson_dir)
 
     def _write_subtopic_content(self, content: GeneratedContent, lesson_dir: Path):
-        subtopic_folder = self._sanitize_folder_name(content.subtopic_title)
-        subtopic_dir = lesson_dir / subtopic_folder
-        subtopic_dir.mkdir(parents=True, exist_ok=True)
+        # Create a sanitized filename for the subtopic content
+        import re
+        filename = re.sub(r'[<>:"/\\|?*]', '_', content.subtopic_title)
+        filename = filename.strip().replace(' ', '_')[:100] + ".txt"
+        file_path = lesson_dir / filename
         
-        file_path = subtopic_dir / "content.txt"
         with open(file_path, 'w', encoding='utf-8') as f:
             f.write(f"Lesson: {content.lesson_title}\n")
             f.write(f"Subtopic: {content.subtopic_title}\n")

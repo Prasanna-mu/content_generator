@@ -1,0 +1,59 @@
+{
+  "questions": [
+    {
+      "question": "When reading for entertainment, people tend to focus more on:",
+      "options": [
+        "A. The plot and character development",
+        "B. The author's writing style",
+        "C. The historical context of the story",
+        "D. The grammar and punctuation"
+      ],
+      "correct_answer": 0,
+      "explanation": "When reading for entertainment, the focus is often on the narrative and character development to engage the reader's imagination and emotions, rather than on the technical aspects of the text."
+    },
+    {
+      "question": "Which type of reading is characterized by a quick overview of a text to find specific information?",
+      "options": [
+        "A. Skimming",
+        "B. Scanning",
+        "C. Reading for comprehension",
+        "D. Reading for entertainment"
+      ],
+      "correct_answer": 1,
+      "explanation": "Scanning is a type of reading where one quickly looks through a text to find specific information, such as a phone number or a date. This is a quick and focused reading approach."
+    },
+    {
+      "question": "Memory plays a crucial role in which of the following reading types:",
+      "options": [
+        "A. Reading for entertainment",
+        "B. Reading for comprehension",
+        "C. Reading for information",
+        "D. All of the above"
+      ],
+      "correct_answer": 1,
+      "explanation": "Reading for comprehension requires active engagement with the text, including the use of memory to recall and understand the information presented. This is a more active form of reading compared to reading for entertainment or information."
+    },
+    {
+      "question": "Motivation is most likely to influence which of the following aspects of reading:",
+      "options": [
+        "A. The speed at which one reads",
+        "B. The type of reading one engages in",
+        "C. The comprehension one achieves",
+        "D. All of the above"
+      ],
+      "correct_answer": 2,
+      "explanation": "Motivation can affect all aspects of reading, including the speed at which one reads, the type of reading one engages in, and the comprehension one achieves. Motivation can drive a reader to read more quickly, more deeply, or with a specific purpose."
+    },
+    {
+      "question": "Emotions play a significant role in which of the following aspects of reading:",
+      "options": [
+        "A. The speed at which one reads",
+        "B. The type of reading one engages in",
+        "C. The comprehension one achieves",
+        "D. All of the above"
+      ],
+      "correct_answer": 3,
+      "explanation": "Emotions can influence all aspects of reading, including the speed at which one reads, the type of reading one engages in, and the comprehension one achieves. For example, positive emotions can enhance engagement and comprehension."
+    }
+  ]
+}

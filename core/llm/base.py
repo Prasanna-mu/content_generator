@@ -1,12 +1,26 @@
 from abc import ABC, abstractmethod
-from typing import List, Dict, Any, Optional
+from typing import List, Dict, Any, Optional, Callable
 from core.models.schemas import UserInput, Lesson, Subtopic, GeneratedContent, QuizQuestion, QuestionBankItem
+from pathlib import Path
+import json
 
 
 class BaseLLMProvider(ABC):
     def __init__(self, model_name: str, base_url: str = "http://localhost:11434"):
         self.model_name = model_name
         self.base_url = base_url
+        self._output_dir: Optional[Path] = None
+
+    def set_output_dir(self, output_dir: Path):
+        self._output_dir = output_dir
+        output_dir.mkdir(parents=True, exist_ok=True)
+
+    def _save_intermediate_json(self, filename: str, data: Dict[str, Any]):
+        if self._output_dir:
+            filepath = self._output_dir / filename
+            with open(filepath, 'w', encoding='utf-8') as f:
+                json.dump(data, f, indent=2, ensure_ascii=False)
+            print(f"  Saved intermediate output: {filepath}")
 
     @abstractmethod
     def generate(self, prompt: str, system_prompt: Optional[str] = None, **kwargs) -> str:
@@ -16,16 +30,115 @@ class BaseLLMProvider(ABC):
     def generate_json(self, prompt: str, system_prompt: Optional[str] = None, **kwargs) -> Dict[str, Any]:
         pass
 
+    def generate_json_with_validation(
+        self,
+        prompt: str,
+        system_prompt: Optional[str],
+        validator: Callable[[Dict[str, Any]], bool],
+        max_retries: int = 3,
+        save_as: Optional[str] = None,
+        **kwargs
+    ) -> Dict[str, Any]:
+        for attempt in range(max_retries):
+            try:
+                result = self.generate_json(prompt, system_prompt, **kwargs)
+                if validator(result):
+                    if save_as:
+                        self._save_intermediate_json(save_as, result)
+                    return result
+                else:
+                    print(f"  Validation failed (attempt {attempt + 1}/{max_retries}), retrying...")
+            except Exception as e:
+                print(f"  Generation error (attempt {attempt + 1}/{max_retries}): {e}")
+        raise ValueError(f"Failed to generate valid JSON after {max_retries} attempts")
+
+    def validate_lessons_json(self, data: Dict[str, Any]) -> bool:
+        if not isinstance(data, dict):
+            return False
+        lessons = data.get("lessons", [])
+        if not isinstance(lessons, list) or len(lessons) == 0:
+            return False
+        for lesson in lessons:
+            if not isinstance(lesson, dict):
+                return False
+            if not lesson.get("title") or not lesson.get("description"):
+                return False
+        return True
+
+    def validate_subtopics_json(self, data: Dict[str, Any], expected_count: int = 0) -> bool:
+        if not isinstance(data, dict):
+            return False
+        subtopics = data.get("subtopics", [])
+        if not isinstance(subtopics, list):
+            return False
+        if expected_count > 0 and len(subtopics) != expected_count:
+            return False
+        for subtopic in subtopics:
+            if not isinstance(subtopic, dict):
+                return False
+            if not subtopic.get("title") or not subtopic.get("description"):
+                return False
+            if "estimated_chars" not in subtopic or not isinstance(subtopic["estimated_chars"], int):
+                return False
+            if subtopic["estimated_chars"] <= 0:
+                return False
+        return True
+
+    def validate_quiz_json(self, data: Dict[str, Any], expected_count: int = 0) -> bool:
+        if not isinstance(data, dict):
+            return False
+        questions = data.get("questions", [])
+        if not isinstance(questions, list):
+            return False
+        if expected_count > 0 and len(questions) != expected_count:
+            return False
+        for q in questions:
+            if not isinstance(q, dict):
+                return False
+            if not q.get("question") or not isinstance(q.get("options"), list) or len(q["options"]) != 4:
+                return False
+            if "correct_answer" not in q or not isinstance(q["correct_answer"], int):
+                return False
+            if q["correct_answer"] < 0 or q["correct_answer"] > 3:
+                return False
+        return True
+
+    def validate_question_bank_json(self, data: Dict[str, Any], expected_count: int = 0) -> bool:
+        if not isinstance(data, dict):
+            return False
+        questions = data.get("questions", [])
+        if not isinstance(questions, list):
+            return False
+        if expected_count > 0 and len(questions) != expected_count:
+            return False
+        for q in questions:
+            if not isinstance(q, dict):
+                return False
+            if not q.get("question") or not q.get("answer"):
+                return False
+        return True
+
     def generate_lessons(self, user_input: UserInput) -> List[Dict[str, Any]]:
         prompt = self._build_lesson_prompt(user_input)
         system_prompt = self._get_lesson_system_prompt()
-        result = self.generate_json(prompt, system_prompt)
+        result = self.generate_json_with_validation(
+            prompt, system_prompt,
+            lambda d: self.validate_lessons_json(d),
+            max_retries=3,
+            save_as="lessons.json"
+        )
         return result.get("lessons", [])
 
     def generate_subtopics(self, lesson: Lesson, user_input: UserInput) -> List[Subtopic]:
         prompt = self._build_subtopic_prompt(lesson, user_input)
         system_prompt = self._get_subtopic_system_prompt()
-        result = self.generate_json(prompt, system_prompt)
+        expected = user_input.subtopics_per_lesson
+        result = self.generate_json_with_validation(
+            prompt, system_prompt,
+            lambda d: self.validate_subtopics_json(d, expected),
+            max_retries=3,
+            save_as=f"subtopics_{lesson.title.replace(' ', '_')}.json"
+        )
         return [Subtopic(**subtopic) for subtopic in result.get("subtopics", [])]
 
     def generate_content(self, lesson_title: str, subtopic: Subtopic, user_input: UserInput) -> GeneratedContent:
@@ -42,7 +155,13 @@ class BaseLLMProvider(ABC):
     def generate_quiz(self, lesson: Lesson, user_input: UserInput) -> List[QuizQuestion]:
         prompt = self._build_quiz_prompt(lesson, user_input)
         system_prompt = self._get_quiz_system_prompt(user_input)
-        result = self.generate_json(prompt, system_prompt)
+        expected = user_input.quiz_question_count
+        result = self.generate_json_with_validation(
+            prompt, system_prompt,
+            lambda d: self.validate_quiz_json(d, expected),
+            max_retries=3,
+            save_as=f"quiz_{lesson.title.replace(' ', '_')}.json"
+        )
         return [QuizQuestion(**q) for q in result.get("questions", [])]
 
     def generate_question_bank(
@@ -52,15 +171,17 @@ class BaseLLMProvider(ABC):
     ) -> List[QuestionBankItem]:
         prompt = self._build_question_bank_prompt(lesson, user_input)
         system_prompt = self._get_question_bank_system_prompt(user_input)
-
-        result = self.generate_json(prompt, system_prompt)
+        expected = user_input.question_bank_count
+        result = self.generate_json_with_validation(
+            prompt, system_prompt,
+            lambda d: self.validate_question_bank_json(d, expected),
+            max_retries=3,
+            save_as=f"question_bank_{lesson.title.replace(' ', '_')}.json"
+        )
 
         questions = []
 
         for index, q in enumerate(result.get("questions", []), start=1):
-            # Some LLM responses may omit difficulty even though
-            # the prompt explicitly requests it.
-            # Fall back to the user's configured quiz difficulty.
             if not q.get("difficulty"):
                 q["difficulty"] = user_input.quiz_difficulty.value
 

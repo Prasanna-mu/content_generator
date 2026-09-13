@@ -1,0 +1,59 @@
+{
+  "questions": [
+    {
+      "question": "Which type of memory is primarily involved when you remember the main points of a text you read?",
+      "options": [
+        "A. Short-term Memory",
+        "B. Long-term Memory",
+        "C. Sensory Memory",
+        "D. Working Memory"
+      ],
+      "correct_answer": 1,
+      "explanation": "Long-term memory is where we store information for extended periods. When you remember the main points of a text, you are accessing long-term memory."
+    },
+    {
+      "question": "Which of the following is an effective reading strategy that can improve memory retention by encouraging deeper processing of text?",
+      "options": [
+        "A. Skimming",
+        "B. Scanning",
+        "C. Summarizing",
+        "D. Rereading"
+      ],
+      "correct_answer": 2,
+      "explanation": "Summarizing involves creating a concise summary of the text, which requires deeper processing and can enhance memory retention."
+    },
+    {
+      "question": "Mindful reading practices that involve paying attention to the text can help with memory by:",
+      "options": [
+        "A. Increasing the speed of reading",
+        "B. Reducing the need for rereading",
+        "C. Enhancing comprehension and retention",
+        "D. Making reading more boring"
+      ],
+      "correct_answer": 2,
+      "explanation": "Mindful reading involves being fully engaged with the text, which can improve comprehension and retention, leading to better memory."
+    },
+    {
+      "question": "Which of the following best explains how reading comprehension impacts memory retention?",
+      "options": [
+        "A. Reading comprehension has no impact on memory",
+        "B. Better comprehension leads to better memory",
+        "C. Only rereading improves memory",
+        "D. Memory is solely dependent on reading speed"
+      ],
+      "correct_answer": 1,
+      "explanation": "Effective reading comprehension involves understanding the text, which can lead to better memory retention as more information is processed and understood."
+    },
+    {
+      "question": "A student is struggling with memory retention when reading. Which strategy could be most effective in improving their memory?",
+      "options": [
+        "A. Increasing the number of rereadings",
+        "B. Using flashcards to review key points",
+        "C. Reading faster to cover more material",
+        "D. Skipping difficult passages to avoid frustration"
+      ],
+      "correct_answer": 1,
+      "explanation": "Using flashcards to review key points can help reinforce memory and understanding of the text, making it easier to recall later."
+    }
+  ]
+}

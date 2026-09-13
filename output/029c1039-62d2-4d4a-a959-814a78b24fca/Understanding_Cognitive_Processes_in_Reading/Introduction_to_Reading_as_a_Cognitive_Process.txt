@@ -1,0 +1,97 @@
+Lesson: Understanding Cognitive Processes in Reading
+Subtopic: Introduction to Reading as a Cognitive Process
+Character Count: 4806
+============================================================
+
+### Introduction to Reading as a Cognitive Process
+
+Understanding reading as a cognitive process involves exploring how our brains interpret and comprehend written language. This subtopic delves into the various cognitive functions that come into play during the reading process. It’s essential to grasp these functions as they form the foundation for understanding how we process written information.
+
+### Cognitive Functions Involved in Reading
+
+Reading is not merely a sensory act, but a complex cognitive process involving multiple functions including perception, attention, memory, and executive functions. Let's discuss these functions in detail.
+
+#### Perception
+
+Reading begins with the perception of letters, which are seen as visual stimuli. This process can be modeled using the principles of psychophysics, where the sensitivity to letters can be quantified. Consider the following example of a letter recognition task:
+```python
+import psychopy.visual
+from psychopy import core
+
+# Create a visual letter
+visual_letter = psychopy.visual.TextStim(win=None, text='A', height=0.1)
+
+# Test sensitivity to the letter 'A'
+core.wait(0.2)
+response = win.getKeys(keyList=['a', 'not-a'], waitRelease=False)
+
+# Determine sensitivity
+sensitivity = len(response) / core.getTime()
+print("Sensitivity to letter 'A':", sensitivity)
+```
+The sensitivity to a specific letter, like 'A', can be measured and used to understand how easily one can perceive and recognize it.
+
+#### Attention
+
+Attention plays a crucial role in reading, particularly when the text contains multiple stimuli. The attentional spotlight model suggests that our visual system focuses on specific regions of the visual field, including the text. This model can be represented mathematically using Bayesian decision making frameworks, where the model calculates the probability of the next letter being correct given the current context.
+
+```python
+from bayespy import nodes, inference
+
+# Define a Bayesian model for attentional reading
+attention_model = nodes.MixtureNode(nodes.NormalNode, nodes.NormalNode)
+attention_model.observe([0, 1], [0.8, 0.2])
+
+# Predict the next letter based on current focus
+predicted_letter = nodes.NormalNode(0.8, 0.1)
+attention_model.observe(predicted_letter)
+```
+This model helps in predicting the correct next letter in the text based on the current focus.
+
+#### Memory
+
+Reading involves the integration of short-term memory and long-term memory. Short-term memory holds the current letter, while long-term memory stores the knowledge about the word structure and meaning. The working memory model explains this process, suggesting that the brain holds the current and recent letters while processing the meaning of the word. This can be simulated using computational models that track the flow of information through the working memory.
+
+```python
+# Working Memory Simulation
+def working_memory_process(text):
+    current_text = []
+    for letter in text:
+        # Simulate memory update
+        current_text.append(letter)
+        if len(current_text) > 3:  # Limit working memory to 3 letters
+            current_text.pop(0)
+    return current_text
+
+# Test the function
+working_memory_process("hello")
+```
+The function tracks the current text in a queue and updates based on the limit of working memory.
+
+#### Executive Functions
+
+Executive functions, such as working memory and inhibitory control, are critical in reading. Working memory is used to hold and manipulate the current sequence of letters, while inhibitory control helps in ignoring irrelevant or distracting information. For instance, when reading a word like "readable," an individual must suppress the urge to read it as "re-able."
+
+```python
+# Inhibitory Control Simulation
+def control_over_text(text, suppress):
+    for letter in text:
+        if not suppress:
+            yield letter
+        elif letter == 'r' and not suppress:
+            suppress = True
+        else:
+            suppress = False
+    yield None  # End of text
+
+# Test the function
+for letter in control_over_text("readable", False):
+    print(letter)
+```
+This function demonstrates how suppressing the initial 'r' allows the reader to correctly read the word "readable."
+
+### Conclusion
+
+In conclusion, reading is a cognitive process that involves multiple functions including perception, attention, memory, and executive functions. Understanding these functions provides a foundation for comprehending how the brain processes written language. Through models and simulations, we can delve deeper into the intricacies of reading, enhancing our understanding of this fundamental cognitive skill.
+
+By exploring the technical details of these cognitive processes, educators can provide a comprehensive framework for students to understand the complexities of reading.

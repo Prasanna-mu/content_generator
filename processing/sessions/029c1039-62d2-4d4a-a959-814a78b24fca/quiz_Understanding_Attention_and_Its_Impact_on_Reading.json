@@ -1,0 +1,59 @@
+{
+  "questions": [
+    {
+      "question": "Which type of attention is most critical when reading a complex text that requires focusing on multiple details simultaneously?",
+      "options": [
+        "A. Selective Attention",
+        "B. Divided Attention",
+        "C. Sustained Attention",
+        "D. All of the above"
+      ],
+      "correct_answer": 1,
+      "explanation": "Divided attention is crucial when reading complex texts that require focusing on multiple details at the same time. This subtopic covers the challenge of divided attention in reading."
+    },
+    {
+      "question": "When reading, why is it important to have sustained attention rather than just selective attention?",
+      "options": [
+        "A. To focus on a single detail",
+        "B. To avoid distractions and maintain focus over time",
+        "C. To quickly skim through text",
+        "D. To understand the main idea of a text"
+      ],
+      "correct_answer": 1,
+      "explanation": "Sustained attention is important for maintaining focus over time, which is crucial for understanding the main ideas and details in a text. This subtopic covers the role of sustained attention in reading."
+    },
+    {
+      "question": "What is the best strategy to overcome divided attention while reading a challenging text?",
+      "options": [
+        "A. Skimming the text quickly",
+        "B. Using a highlighter to mark important points",
+        "C. Taking frequent breaks to rest the mind",
+        "D. Focusing on one section at a time"
+      ],
+      "correct_answer": 3,
+      "explanation": "Focusing on one section at a time is a strategy to combat divided attention when reading challenging texts. This subtopic covers the challenge of divided attention in reading."
+    },
+    {
+      "question": "How does selective attention affect reading comprehension when reading a novel versus a technical manual?",
+      "options": [
+        "A. It does not affect comprehension",
+        "B. It helps in understanding the technical aspects of a technical manual",
+        "C. It helps in grasping the narrative and character development in a novel",
+        "D. It aids in memorizing technical details"
+      ],
+      "correct_answer": 2,
+      "explanation": "Selective attention helps in grasping the narrative and character development in a novel, which is crucial for understanding its meaning and impact. This subtopic covers the importance of selective attention in reading."
+    },
+    {
+      "question": "Which of the following best describes the role of attention in overcoming reading challenges such as fatigue and distractions?",
+      "options": [
+        "A. Attention is irrelevant in overcoming reading challenges",
+        "B. Attention can help maintain focus and reduce distractions",
+        "C. Attention only matters for complex texts",
+        "D. Attention only helps with selective attention"
+      ],
+      "correct_answer": 1,
+      "explanation": "Attention can help maintain focus and reduce distractions, which is crucial for overcoming reading challenges like fatigue and distractions. This subtopic covers the role of attention in overcoming reading challenges."
+    }
+  ]
+}

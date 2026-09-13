@@ -1,0 +1,424 @@
+{
+  "tasks": [
+    {
+      "lesson_title": "Understanding the Psychology of Reading",
+      "subtopic_title": "The Role of Attention in Different Types of Reading",
+      "completed": true,
+      "content_file": "The_Role_of_Attention_in_Different_Types_of_Reading.txt"
+    },
+    {
+      "lesson_title": "Understanding the Psychology of Reading",
+      "subtopic_title": "The Impact of Reading for Entertainment vs. Information",
+      "completed": false,
+      "content_file": null
+    },
+    {
+      "lesson_title": "Understanding the Psychology of Reading",
+      "subtopic_title": "The Role of Memory in Reading",
+      "completed": false,
+      "content_file": null
+    },
+    {
+      "lesson_title": "Understanding the Psychology of Reading",
+      "subtopic_title": "The Influence of Motivation on Reading Behavior",
+      "completed": false,
+      "content_file": null
+    },
+    {
+      "lesson_title": "Understanding the Psychology of Reading",
+      "subtopic_title": "The Role of Emotion in Reading",
+      "completed": false,
+      "content_file": null
+    },
+    {
+      "lesson_title": "Understanding the Psychology of Reading",
+      "subtopic_title": "The Impact of Reading Habits on Reading Performance",
+      "completed": false,
+      "content_file": null
+    },
+    {
+      "lesson_title": "Understanding the Psychology of Reading",
+      "subtopic_title": "The Role of Reading Strategies in Enhancing Comprehension",
+      "completed": false,
+      "content_file": null
+    },
+    {
+      "lesson_title": "Understanding Attention and Its Impact on Reading",
+      "subtopic_title": "The Importance of Attention in Reading",
+      "completed": true,
+      "content_file": "The_Importance_of_Attention_in_Reading.txt"
+    },
+    {
+      "lesson_title": "Understanding Attention and Its Impact on Reading",
+      "subtopic_title": "Types of Attention and Their Impact on Reading",
+      "completed": false,
+      "content_file": null
+    },
+    {
+      "lesson_title": "Understanding Attention and Its Impact on Reading",
+      "subtopic_title": "Selecting Relevant Information During Reading",
+      "completed": false,
+      "content_file": null
+    },
+    {
+      "lesson_title": "Understanding Attention and Its Impact on Reading",
+      "subtopic_title": "Divided Attention and Its Challenges in Reading",
+      "completed": false,
+      "content_file": null
+    },
+    {
+      "lesson_title": "Understanding Attention and Its Impact on Reading",
+      "subtopic_title": "Sustained Attention and Its Role in Reading",
+      "completed": false,
+      "content_file": null
+    },
+    {
+      "lesson_title": "Understanding Attention and Its Impact on Reading",
+      "subtopic_title": "The Role of Attention in Overcoming Reading Challenges",
+      "completed": false,
+      "content_file": null
+    },
+    {
+      "lesson_title": "Understanding Attention and Its Impact on Reading",
+      "subtopic_title": "Conclusion and Future Learning",
+      "completed": false,
+      "content_file": null
+    },
+    {
+      "lesson_title": "Understanding Motivation and Its Impact on Reading",
+      "subtopic_title": "Understanding Intrinsic Motivation in Reading",
+      "completed": true,
+      "content_file": "Understanding_Intrinsic_Motivation_in_Reading.txt"
+    },
+    {
+      "lesson_title": "Understanding Motivation and Its Impact on Reading",
+      "subtopic_title": "The Role of Extrinsic Motivation in Reading",
+      "completed": false,
+      "content_file": null
+    },
+    {
+      "lesson_title": "Understanding Motivation and Its Impact on Reading",
+      "subtopic_title": "Motivation and Reading Comprehension",
+      "completed": false,
+      "content_file": null
+    },
+    {
+      "lesson_title": "Understanding Motivation and Its Impact on Reading",
+      "subtopic_title": "Influences of Motivation on Reading Behavior",
+      "completed": false,
+      "content_file": null
+    },
+    {
+      "lesson_title": "Understanding Motivation and Its Impact on Reading",
+      "subtopic_title": "Motivation and Reading Strategies",
+      "completed": false,
+      "content_file": null
+    },
+    {
+      "lesson_title": "Understanding Motivation and Its Impact on Reading",
+      "subtopic_title": "Motivation and Reading Difficulties",
+      "completed": false,
+      "content_file": null
+    },
+    {
+      "lesson_title": "Understanding Motivation and Its Impact on Reading",
+      "subtopic_title": "Motivation in the Digital Age",
+      "completed": false,
+      "content_file": null
+    },
+    {
+      "lesson_title": "Understanding Cognitive Processes in Reading",
+      "subtopic_title": "Introduction to Reading as a Cognitive Process",
+      "completed": true,
+      "content_file": "Introduction_to_Reading_as_a_Cognitive_Process.txt"
+    },
+    {
+      "lesson_title": "Understanding Cognitive Processes in Reading",
+      "subtopic_title": "The Stages of Reading: From Perception to Comprehension",
+      "completed": false,
+      "content_file": null
+    },
+    {
+      "lesson_title": "Understanding Cognitive Processes in Reading",
+      "subtopic_title": "Decoding: The Process of Converting Symbols to Meaning",
+      "completed": false,
+      "content_file": null
+    },
+    {
+      "lesson_title": "Understanding Cognitive Processes in Reading",
+      "subtopic_title": "Comprehension: Understanding the Meaning of Text",
+      "completed": false,
+      "content_file": null
+    },
+    {
+      "lesson_title": "Understanding Cognitive Processes in Reading",
+      "subtopic_title": "Memory in Reading: How We Remember What We Read",
+      "completed": false,
+      "content_file": null
+    },
+    {
+      "lesson_title": "Understanding Cognitive Processes in Reading",
+      "subtopic_title": "Individual Differences in Reading: Factors Affecting Reading Performance",
+      "completed": false,
+      "content_file": null
+    },
+    {
+      "lesson_title": "Understanding Cognitive Processes in Reading",
+      "subtopic_title": "The Role of Technology in Reading: Enhancing Cognitive Processes",
+      "completed": false,
+      "content_file": null
+    },
+    {
+      "lesson_title": "Understanding Emotions in Reading: From Comprehension to Engagement",
+      "subtopic_title": "The Impact of Emotions on Reading Comprehension",
+      "completed": true,
+      "content_file": "The_Impact_of_Emotions_on_Reading_Comprehension.txt"
+    },
+    {
+      "lesson_title": "Understanding Emotions in Reading: From Comprehension to Engagement",
+      "subtopic_title": "Reading Speed and Emotions: A Closer Look",
+      "completed": false,
+      "content_file": null
+    },
+    {
+      "lesson_title": "Understanding Emotions in Reading: From Comprehension to Engagement",
+      "subtopic_title": "Engagement and Emotions: A Reader's Perspective",
+      "completed": false,
+      "content_file": null
+    },
+    {
+      "lesson_title": "Understanding Emotions in Reading: From Comprehension to Engagement",
+      "subtopic_title": "The Role of Emotions in Text Interpretation",
+      "completed": false,
+      "content_file": null
+    },
+    {
+      "lesson_title": "Understanding Emotions in Reading: From Comprehension to Engagement",
+      "subtopic_title": "Emotional Response to Texts: A Comparative Study",
+      "completed": false,
+      "content_file": null
+    },
+    {
+      "lesson_title": "Understanding Emotions in Reading: From Comprehension to Engagement",
+      "subtopic_title": "Emotional Literacy and Reading",
+      "completed": false,
+      "content_file": null
+    },
+    {
+      "lesson_title": "Understanding Emotions in Reading: From Comprehension to Engagement",
+      "subtopic_title": "Emotions and Reading Disorders",
+      "completed": false,
+      "content_file": null
+    },
+    {
+      "lesson_title": "Exploring the Psychology of Effective Reading",
+      "subtopic_title": "Understanding Reading Comprehension as a Psychological Process",
+      "completed": true,
+      "content_file": "Understanding_Reading_Comprehension_as_a_Psychological_Process.txt"
+    },
+    {
+      "lesson_title": "Exploring the Psychology of Effective Reading",
+      "subtopic_title": "The Role of Attention in Effective Reading",
+      "completed": false,
+      "content_file": null
+    },
+    {
+      "lesson_title": "Exploring the Psychology of Effective Reading",
+      "subtopic_title": "Memory and Its Impact on Reading Comprehension",
+      "completed": false,
+      "content_file": null
+    },
+    {
+      "lesson_title": "Exploring the Psychology of Effective Reading",
+      "subtopic_title": "Metacognition in Reading: The Power of Self-Assessment",
+      "completed": false,
+      "content_file": null
+    },
+    {
+      "lesson_title": "Exploring the Psychology of Effective Reading",
+      "subtopic_title": "Strategies for Enhancing Reading Comprehension: Summarization and Prediction",
+      "completed": false,
+      "content_file": null
+    },
+    {
+      "lesson_title": "Exploring the Psychology of Effective Reading",
+      "subtopic_title": "Evaluation and Reflection: The Final Step in Effective Reading",
+      "completed": false,
+      "content_file": null
+    },
+    {
+      "lesson_title": "Exploring the Psychology of Effective Reading",
+      "subtopic_title": "Overcoming Reading Challenges: Strategies for Diverse Learners",
+      "completed": false,
+      "content_file": null
+    },
+    {
+      "lesson_title": "Enhancing Memory Through Effective Reading Strategies",
+      "subtopic_title": "Understanding Memory Types in Reading",
+      "completed": true,
+      "content_file": "Understanding_Memory_Types_in_Reading.txt"
+    },
+    {
+      "lesson_title": "Enhancing Memory Through Effective Reading Strategies",
+      "subtopic_title": "Active Reading Techniques for Enhanced Memory",
+      "completed": false,
+      "content_file": null
+    },
+    {
+      "lesson_title": "Enhancing Memory Through Effective Reading Strategies",
+      "subtopic_title": "Mindful Reading Practices for Better Memory",
+      "completed": false,
+      "content_file": null
+    },
+    {
+      "lesson_title": "Enhancing Memory Through Effective Reading Strategies",
+      "subtopic_title": "The Impact of Reading Comprehension on Memory",
+      "completed": false,
+      "content_file": null
+    },
+    {
+      "lesson_title": "Enhancing Memory Through Effective Reading Strategies",
+      "subtopic_title": "Memory Strategies for Reading Difficulties",
+      "completed": false,
+      "content_file": null
+    },
+    {
+      "lesson_title": "Enhancing Memory Through Effective Reading Strategies",
+      "subtopic_title": "The Role of Sleep in Memory After Reading",
+      "completed": false,
+      "content_file": null
+    },
+    {
+      "lesson_title": "Enhancing Memory Through Effective Reading Strategies",
+      "subtopic_title": "Mindful Reading and Memory in Different Learning Environments",
+      "completed": false,
+      "content_file": null
+    },
+    {
+      "lesson_title": "Exploring the Psychology of Reading for Various Purposes",
+      "subtopic_title": "Understanding the Purpose of Reading",
+      "completed": true,
+      "content_file": "Understanding_the_Purpose_of_Reading.txt"
+    },
+    {
+      "lesson_title": "Exploring the Psychology of Reading for Various Purposes",
+      "subtopic_title": "Academic Reading Strategies",
+      "completed": false,
+      "content_file": null
+    },
+    {
+      "lesson_title": "Exploring the Psychology of Reading for Various Purposes",
+      "subtopic_title": "Professional Reading Strategies",
+      "completed": false,
+      "content_file": null
+    },
+    {
+      "lesson_title": "Exploring the Psychology of Reading for Various Purposes",
+      "subtopic_title": "Personal Reading Strategies",
+      "completed": false,
+      "content_file": null
+    },
+    {
+      "lesson_title": "Exploring the Psychology of Reading for Various Purposes",
+      "subtopic_title": "The Impact of Purpose on Reading Speed and Comprehension",
+      "completed": false,
+      "content_file": null
+    },
+    {
+      "lesson_title": "Exploring the Psychology of Reading for Various Purposes",
+      "subtopic_title": "Reading Strategies for Different Text Types",
+      "completed": false,
+      "content_file": null
+    },
+    {
+      "lesson_title": "Exploring the Psychology of Reading for Various Purposes",
+      "subtopic_title": "The Role of Motivation in Reading",
+      "completed": false,
+      "content_file": null
+    },
+    {
+      "lesson_title": "Exploring Reading Across Cultures and Societies",
+      "subtopic_title": "The Impact of Cultural Norms on Reading Habits",
+      "completed": true,
+      "content_file": "The_Impact_of_Cultural_Norms_on_Reading_Habits.txt"
+    },
+    {
+      "lesson_title": "Exploring Reading Across Cultures and Societies",
+      "subtopic_title": "Cognitive Biases and Reading Performance",
+      "completed": false,
+      "content_file": null
+    },
+    {
+      "lesson_title": "Exploring Reading Across Cultures and Societies",
+      "subtopic_title": "Emotional Responses to Texts Across Cultures",
+      "completed": false,
+      "content_file": null
+    },
+    {
+      "lesson_title": "Exploring Reading Across Cultures and Societies",
+      "subtopic_title": "Reading as a Social Activity: Group Dynamics and Reading Practices",
+      "completed": false,
+      "content_file": null
+    },
+    {
+      "lesson_title": "Exploring Reading Across Cultures and Societies",
+      "subtopic_title": "The Role of Language in Reading Across Cultures",
+      "completed": false,
+      "content_file": null
+    },
+    {
+      "lesson_title": "Exploring Reading Across Cultures and Societies",
+      "subtopic_title": "The Psychological Impact of Reading on Well-being",
+      "completed": false,
+      "content_file": null
+    },
+    {
+      "lesson_title": "Exploring Reading Across Cultures and Societies",
+      "subtopic_title": "Reading as a Cultural Marker: How Reading Practices Reflect Societal Values",
+      "completed": false,
+      "content_file": null
+    },
+    {
+      "lesson_title": "Final Mastery: Advanced Reading and Comprehension Strategies",
+      "subtopic_title": "Understanding Metacognitive Strategies for Advanced Reading",
+      "completed": true,
+      "content_file": "Understanding_Metacognitive_Strategies_for_Advanced_Reading.txt"
+    },
+    {
+      "lesson_title": "Final Mastery: Advanced Reading and Comprehension Strategies",
+      "subtopic_title": "Self-Regulation Techniques for Effective Reading",
+      "completed": false,
+      "content_file": null
+    },
+    {
+      "lesson_title": "Final Mastery: Advanced Reading and Comprehension Strategies",
+      "subtopic_title": "Collaborative Learning in Reading: Group Work and Peer Interaction",
+      "completed": false,
+      "content_file": null
+    },
+    {
+      "lesson_title": "Final Mastery: Advanced Reading and Comprehension Strategies",
+      "subtopic_title": "Advanced Techniques for Enhancing Reading Comprehension",
+      "completed": false,
+      "content_file": null
+    },
+    {
+      "lesson_title": "Final Mastery: Advanced Reading and Comprehension Strategies",
+      "subtopic_title": "The Role of Feedback in Reading Improvement",
+      "completed": false,
+      "content_file": null
+    },
+    {
+      "lesson_title": "Final Mastery: Advanced Reading and Comprehension Strategies",
+      "subtopic_title": "Cognitive Load Theory and Its Impact on Reading",
+      "completed": false,
+      "content_file": null
+    },
+    {
+      "lesson_title": "Final Mastery: Advanced Reading and Comprehension Strategies",
+      "subtopic_title": "Emotional Intelligence in Reading and Comprehension",
+      "completed": false,
+      "content_file": null
+    }
+  ]
+}

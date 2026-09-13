@@ -24,7 +24,7 @@ class OllamaProvider(BaseLLMProvider):
         if system_prompt:
             payload["system"] = system_prompt
 
-        response = requests.post(self.api_url, json=payload, timeout=300)
+        response = requests.post(self.api_url, json=payload, timeout=None)
         response.raise_for_status()
         return response.json().get("response", "").strip()
 
@@ -45,7 +45,7 @@ class OllamaProvider(BaseLLMProvider):
         if system_prompt:
             payload["system"] = system_prompt
 
-        response = requests.post(self.api_url, json=payload, timeout=300)
+        response = requests.post(self.api_url, json=payload, timeout=None)
         response.raise_for_status()
         
         result_text = response.json().get("response", "").strip()

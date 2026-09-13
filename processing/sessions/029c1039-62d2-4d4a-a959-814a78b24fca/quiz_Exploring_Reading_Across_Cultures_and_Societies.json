@@ -1,0 +1,59 @@
+{
+  "questions": [
+    {
+      "question": "How does the concept of 'face' in Confucian cultures influence reading habits?",
+      "options": [
+        "A. People read more to maintain face in social interactions.",
+        "B. People avoid reading as it's seen as a sign of weakness.",
+        "C. Face is irrelevant to reading habits in Confucian cultures.",
+        "D. People read less to avoid conflict in social settings."
+      ],
+      "correct_answer": 0,
+      "explanation": "In Confucian cultures, the concept of 'face' (li) is crucial for maintaining social harmony. People often read more to preserve their reputation and avoid losing face in social situations."
+    },
+    {
+      "question": "Which cognitive bias is most likely to affect a reader's comprehension when they have preconceived notions about the text's content?",
+      "options": [
+        "A. Anchoring bias",
+        "B. Confirmation bias",
+        "C. Hindsight bias",
+        "D. Availability bias"
+      ],
+      "correct_answer": 1,
+      "explanation": "Confirmation bias occurs when readers unconsciously seek out information that confirms their existing beliefs, potentially hindering their ability to understand the text objectively."
+    },
+    {
+      "question": "How might the emotional response to texts differ between cultures where reading is considered a solitary activity versus one where it's a communal experience?",
+      "options": [
+        "A. Solitary reading cultures may experience more emotional engagement.",
+        "B. Communal reading cultures might find texts less engaging.",
+        "C. Emotional responses are universally similar across all cultures.",
+        "D. There is no significant difference in emotional responses between cultures."
+      ],
+      "correct_answer": 2,
+      "explanation": "In solitary reading cultures, individuals may find texts more emotionally engaging as they can relate to the text on a personal level. In communal reading cultures, texts might be seen as less personal, leading to less emotional engagement."
+    },
+    {
+      "question": "How do language barriers affect reading practices in multilingual societies?",
+      "options": [
+        "A. They have no significant impact on reading habits.",
+        "B. They enhance reading comprehension by forcing readers to use multiple languages.",
+        "C. They can hinder reading as readers may struggle with unfamiliar texts.",
+        "D. They increase the speed of reading as readers quickly switch between languages."
+      ],
+      "correct_answer": 3,
+      "explanation": "Language barriers can slow down reading as readers may struggle to understand texts in unfamiliar languages. This can affect reading speed and comprehension."
+    },
+    {
+      "question": "Which psychological impact of reading is most likely to be influenced by societal values in a collectivist culture?",
+      "options": [
+        "A. Reading as a solitary activity",
+        "B. Reading as a communal activity",
+        "C. Reading for personal enjoyment",
+        "D. Reading for academic purposes"
+      ],
+      "correct_answer": 1,
+      "explanation": "In collectivist cultures, reading is often seen as a communal activity. This reflects societal values that prioritize group harmony and shared experiences over individual pursuits."
+    }
+  ]
+}
