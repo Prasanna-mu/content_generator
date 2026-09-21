@@ -1,0 +1,16 @@
+{
+  "lessons": [
+    {
+      "title": "Introduction to Python and Django",
+      "description": "In this lesson, students will learn the basics of Python programming and how to install and set up Django. They will also be introduced to the Django command line and basic Django project structure."
+    },
+    {
+      "title": "Building a Simple Django Application",
+      "description": "Students will create a simple Django application from scratch, including setting up models, views, and templates. They will also learn about database migrations and how to run the development server."
+    },
+    {
+      "title": "Advanced Django Features and Best Practices",
+      "description": "In this lesson, students will explore more advanced features of Django such as authentication, sessions, and internationalization. They will also learn about best practices for building maintainable and scalable Django applications."
+    }
+  ]
+}

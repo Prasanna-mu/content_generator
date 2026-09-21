@@ -1,0 +1,59 @@
+{
+  "questions": [
+    {
+      "question": "What is the default authentication backend used by Django by default?",
+      "options": [
+        "A) Django.contrib.auth.backends.ModelBackend",
+        "B) Django.contrib.auth.backends.UsernameBackend",
+        "C) Django.contrib.auth.backends.ModelBackend",
+        "D) Django.contrib.auth.backends.ModelBackend"
+      ],
+      "correct_answer": 0,
+      "explanation": "The default authentication backend in Django is `Django.contrib.auth.backends.ModelBackend`, which uses the user model defined in Django's default user model."
+    },
+    {
+      "question": "Which of the following is a way to handle session data in Django?",
+      "options": [
+        "A) session = {}",
+        "B) session = []",
+        "C) session = []",
+        "D) session = {}"
+      ],
+      "correct_answer": 0,
+      "explanation": "In Django, session data is handled using the `session` object, which is a dictionary-like object that stores session data in the database."
+    },
+    {
+      "question": "What is the primary function of the Django `django.middleware.locale.LocaleMiddleware`?",
+      "options": [
+        "A) To handle session data",
+        "B) To handle user authentication",
+        "C) To handle locale settings for internationalization",
+        "D) To handle user sessions"
+      ],
+      "correct_answer": 2,
+      "explanation": "The `django.middleware.locale.LocaleMiddleware` is responsible for setting the locale based on the user's language preference, which is crucial for internationalization in Django."
+    },
+    {
+      "question": "Which of the following is a best practice for improving the scalability of a Django application?",
+      "options": [
+        "A) Use many-to-many relationships extensively",
+        "B) Use asynchronous tasks with Celery",
+        "C) Use a single database for all data",
+        "D) Use a single-threaded database connection"
+      ],
+      "correct_answer": 1,
+      "explanation": "Using asynchronous tasks with Celery is a best practice for improving scalability in Django applications, as it allows for non-blocking I/O operations and can handle high concurrency."
+    },
+    {
+      "question": "What is the purpose of the `django.middleware.csrf.CsrfViewMiddleware`?",
+      "options": [
+        "A) To handle user authentication",
+        "B) To handle session data",
+        "C) To handle CSRF attacks by adding a token to forms",
+        "D) To handle locale settings"
+      ],
+      "correct_answer": 2,
+      "explanation": "The `django.middleware.csrf.CsrfViewMiddleware` is responsible for adding a CSRF token to forms to prevent cross-site request forgery attacks."
+    }
+  ]
+}

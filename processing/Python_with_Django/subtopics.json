@@ -1,0 +1,38 @@
+[
+  {
+    "lesson_title": "Python and Django Fundamentals",
+    "title": "Installing and Configuring Python and Django",
+    "description": "In this subtopic, students will learn how to install Python and Django on their system. They will also set up their environment by configuring virtual environments and installing necessary packages. The subtopic will cover the importance of using virtual environments and how to manage dependencies with pip. Students will be guided through the process of creating a Django project and understanding the basic structure of a Django project, including the directory structure and the main files such as settings.py, urls.py, and views.py. The subtopic will also include a brief overview of the Django admin interface and how to run the development server.",
+    "estimated_chars": 600
+  },
+  {
+    "lesson_title": "Python and Django Fundamentals",
+    "title": "Navigating the Django Command Line",
+    "description": "This subtopic will focus on teaching students how to navigate the Django command line. Students will learn how to create a new Django project, run migrations, and manage database operations. They will also be introduced to the Django shell, how to use it, and how to interact with the database using the Django ORM. The subtopic will cover basic Django management commands such as makemigrations, migrate, and creating and managing models. Additionally, students will be shown how to run tests and manage static files.",
+    "estimated_chars": 600
+  },
+  {
+    "lesson_title": "Advanced Python with Django: Building a Simple Application",
+    "title": "Setting Up the Django Environment",
+    "description": "In this subtopic, we will cover the initial steps required to set up a Django environment. This includes installing Python and Django, setting up a virtual environment, and creating a new Django project. We will also discuss the importance of organizing our project structure and setting up a database connection. The focus will be on ensuring that all necessary components are in place for the subsequent development stages.",
+    "estimated_chars": 550
+  },
+  {
+    "lesson_title": "Advanced Python with Django: Building a Simple Application",
+    "title": "Creating and Configuring Models",
+    "description": "This subtopic delves into the creation and configuration of models within a Django application. We will explore how to define models using Django's ORM (Object-Relational Mapping) system, including defining fields, relationships, and constraints. Additionally, we will discuss how to use Django's admin interface to manage our models. We will also cover the process of defining migrations to update our database schema and how to apply these migrations using Django\u2019s built-in migration commands.",
+    "estimated_chars": 650
+  },
+  {
+    "lesson_title": "Expert-Level Django Features and Practices",
+    "title": "Authentication in Django",
+    "description": "In this subtopic, we will explore how to implement user authentication in Django, including creating custom user models, setting up authentication backends, and integrating authentication into views and templates. We will also cover password management, email verification, and social authentication. The goal is to provide a robust and secure user authentication system for our Django applications.",
+    "estimated_chars": 650
+  },
+  {
+    "lesson_title": "Expert-Level Django Features and Practices",
+    "title": "Internationalization and Localization in Django",
+    "description": "This subtopic focuses on how to handle internationalization and localization in Django. We will cover the use of Django's internationalization and localization features, including translation of messages, formatting of dates and numbers, and handling of different languages and character sets. We will also discuss best practices for managing translations and ensuring a consistent user experience across different locales.",
+    "estimated_chars": 700
+  }
+]

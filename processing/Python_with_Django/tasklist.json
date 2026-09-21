@@ -1,0 +1,40 @@
+{
+  "tasks": [
+    {
+      "lesson_title": "Python and Django Fundamentals",
+      "subtopic_title": "Installing and Configuring Python and Django",
+      "completed": false,
+      "content_file": null
+    },
+    {
+      "lesson_title": "Python and Django Fundamentals",
+      "subtopic_title": "Navigating the Django Command Line",
+      "completed": false,
+      "content_file": null
+    },
+    {
+      "lesson_title": "Advanced Python with Django: Building a Simple Application",
+      "subtopic_title": "Setting Up the Django Environment",
+      "completed": false,
+      "content_file": null
+    },
+    {
+      "lesson_title": "Advanced Python with Django: Building a Simple Application",
+      "subtopic_title": "Creating and Configuring Models",
+      "completed": false,
+      "content_file": null
+    },
+    {
+      "lesson_title": "Expert-Level Django Features and Practices",
+      "subtopic_title": "Authentication in Django",
+      "completed": false,
+      "content_file": null
+    },
+    {
+      "lesson_title": "Expert-Level Django Features and Practices",
+      "subtopic_title": "Internationalization and Localization in Django",
+      "completed": false,
+      "content_file": null
+    }
+  ]
+}

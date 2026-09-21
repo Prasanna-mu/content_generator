@@ -1,0 +1,93 @@
+Lesson: Python and Django Fundamentals
+Subtopic: Navigating the Django Command Line
+Character Count: 3252
+============================================================
+
+Navigating the Django Command Line
+
+In the world of Python and Django, the command line is a powerful tool for managing your projects. Let's dive into some fundamental tasks you'll perform regularly in the Django command line.
+
+### Creating a New Django Project
+
+The first step in any Django project is to create a new project. This is done using the `django-admin` command, which is part of the Django package.
+
+```bash
+django-admin startproject myproject
+```
+
+Replace `myproject` with the name you want for your project. The `startproject` command will set up your project directory with the basic structure needed for a Django app. It creates a settings file, a URL configuration, and more. You can then customize this setup as needed.
+
+### Running Migrations and Managing Database Operations
+
+Once your project is set up, you'll often need to make changes to your database models. The `makemigrations` command allows you to create new migration files based on the changes you've made to your models.
+
+```bash
+python manage.py makemigrations
+```
+
+This command examines your model changes and generates a migration file. After making model changes, you can apply these changes to the database by running:
+
+```bash
+python manage.py migrate
+```
+
+This command updates your database schema according to the changes in the migration files.
+
+### The Django Shell
+
+The Django shell, accessed by running:
+
+```bash
+python manage.py shell
+```
+
+is a great tool for interacting with your models directly. You can import models and query them to inspect your data. For instance, to check the number of objects in a model:
+
+```python
+from myproject.models import MyModel
+
+MyModel.objects.count()
+```
+
+### Using the Django ORM for Queries
+
+Django's Object-Relational Mapping (ORM) allows you to interact with your database using Python objects. You can perform queries and manipulate data in a way that's more natural for Python programmers.
+
+Here’s an example of creating a model and then querying it:
+
+```python
+# models.py
+from django.db import models
+
+class MyModel(models.Model):
+    name = models.CharField(max_length=100)
+
+# Using the shell to query the model
+python manage.py shell
+import myproject.models
+myproject.models.MyModel.objects.all()
+```
+
+### Running Tests and Managing Static Files
+
+Testing is a crucial part of any project. You can run all your tests with:
+
+```bash
+python manage.py test
+```
+
+For managing static files, which are files that will be served over HTTP (like CSS, JavaScript, images, etc.), you can use the `collectstatic` command to compile and collect all the static files in your project into a single directory:
+
+```bash
+python manage.py collectstatic
+```
+
+This command copies all static files to the `static` directory inside your project's root directory. Remember to include the paths in your `settings.py`:
+
+```python
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'static'),
+]
+```
+
+Navigating the Django command line efficiently is crucial for managing your projects. With commands like `makemigrations`, `migrate`, and `shell`, you can manage your models and database, and interact directly with your data. Additionally, Django provides powerful tools like tests and static file management to keep your project in order.

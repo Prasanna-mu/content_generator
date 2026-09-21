@@ -1,0 +1,11 @@
+{
+  "prompt": "Python with Django",
+  "num_lessons": 3,
+  "subtopics_per_lesson": 2,
+  "content_quality": "intermediate",
+  "content_length": "medium",
+  "quiz_question_count": 5,
+  "quiz_difficulty": "intermediate",
+  "question_bank_count": 3,
+  "web_search_needed": false
+}

@@ -1,0 +1,176 @@
+Lesson: Expert-Level Django Features and Practices
+Subtopic: Authentication in Django
+Character Count: 6246
+============================================================
+
+In this lesson, we delve into the advanced features of Django's user authentication system, ensuring your applications offer a robust and secure user authentication experience. We'll start by exploring custom user models, then move on to setting up authentication backends, integrating these into views and templates, and finally, we'll cover password management, email verification, and social authentication.
+
+### Custom User Models
+
+Django's default user model is a good starting point, but often users need to extend it to meet specific requirements. Let's create a custom user model by extending Django's AbstractUser. This involves creating a new model and modifying the AUTH_USER_MODEL setting in settings.py.
+
+```python
+# models.py
+from django.contrib.auth.models import AbstractUser
+from django.db import models
+
+class CustomUser(AbstractUser):
+    bio = models.TextField(blank=True)
+    avatar = models.ImageField(upload_to='avatars/', null=True, blank=True)
+```
+
+Next, update settings.py:
+
+```python
+# settings.py
+AUTH_USER_MODEL = 'yourappname.CustomUser'
+```
+
+### Setting Up Authentication Backends
+
+By default, Django uses the default authentication backend, which is `django.contrib.auth.backends.ModelBackend`. However, you might want to extend this by adding custom authentication backends. Here’s how you can set up a custom backend that uses a database to authenticate users.
+
+```python
+# backends.py
+from django.contrib.auth.backends import ModelBackend
+from .models import CustomUser
+
+class CustomAuthBackend(ModelBackend):
+    def authenticate(self, request, username=None, password=None):
+        try:
+            user = CustomUser.objects.get(username=username)
+            if user.check_password(password):
+                return user
+        except CustomUser.DoesNotExist:
+            return None
+```
+
+In settings.py, make sure to include your custom authentication backend:
+
+```python
+# settings.py
+AUTHENTICATION_BACKENDS = (
+    'yourappname.backends.CustomAuthBackend',
+    'django.contrib.auth.backends.ModelBackend',
+)
+```
+
+### Integrating Authentication in Views and Templates
+
+Now that we have our custom user model and authentication backend set up, we need to integrate these into our views and templates. This typically involves checking if a user is authenticated and setting a session variable or cookie to track the authenticated state.
+
+```python
+# views.py
+from django.contrib.auth import authenticate, login
+from django.shortcuts import render
+
+def user_login(request):
+    if request.method == 'POST':
+        username = request.POST['username']
+        password = request.POST['password']
+        user = authenticate(username=username, password=password)
+        if user is not None:
+            login(request, user)
+            return redirect('home')
+    return render(request, 'login.html')
+```
+
+In your template, you can check if the user is authenticated and display appropriate content based on that:
+
+```html
+<!-- login.html -->
+{% if user.is_authenticated %}
+  <p>Welcome, {{ user.username }}!</p>
+{% else %}
+  <p><a href="{% url 'login' %}">Login</a></p>
+{% endif %}
+```
+
+### Password Management
+
+Managing passwords securely is crucial. Django provides tools to hash and manage passwords efficiently.
+
+```python
+# settings.py
+AUTH_PASSWORD_VALIDATORS = [
+    {
+        'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
+    },
+    {
+        'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',
+        'OPTIONS': {
+            'min_length': 8,
+        },
+    },
+    {
+        'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',
+    },
+    {
+        'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
+    },
+]
+```
+
+You can also use Django’s password validation utilities in your forms:
+
+```python
+# forms.py
+from django import forms
+from django.contrib.auth import get_user_model
+from django.core.exceptions import ValidationError
+from django.core.validators import MinLengthValidator
+
+User = get_user_model()
+
+class CustomUserCreationForm(forms.ModelForm):
+    password1 = forms.CharField(label='Password', widget=forms.PasswordInput)
+    password2 = forms.CharField(label='Password confirmation', widget=forms.PasswordInput)
+
+    class Meta:
+        model = User
+        fields = ('username',)
+
+    def clean_password2(self):
+        password1 = self.cleaned_data.get('password1')
+        password2 = self.cleaned_data.get('password2')
+        if password1 and password2 and password1 != password2:
+            raise ValidationError('Passwords do not match')
+        return password2
+
+    def save(self, commit=True):
+        user = super(CustomUserCreationForm, self).save(commit=False)
+        user.set_password(self.cleaned_data['password1'])
+        if commit:
+            user.save()
+        return user
+```
+
+### Email Verification
+
+For added security, we can implement email verification. Django’s `send_mail` function can be used to send emails, and we can use Django’s `User` model’s email field to track whether a user has verified their email.
+
+```python
+# views.py
+from django.core.mail import send_mail
+from django.http import HttpResponseRedirect
+from django.shortcuts import render
+from django.contrib.auth import get_user_model
+
+User = get_user_model()
+
+def verify_email(request, token):
+    user = User.objects.get(email_verification_token=token)
+    if user and not user.email_verified:
+        user.email_verified = True
+        user.email_verification_token = None
+        user.save()
+        return render(request, 'email_verified.html')
+    else:
+        return render(request, 'invalid_token.html')
+```
+
+### Social Authentication
+
+Finally, integrating social authentication services like Google, Facebook, or GitHub can greatly simplify the process for users. Django’s `allauth` package simplifies this integration. Follow the instructions provided by allauth to set up your project and integrate the authentication services.
+
+By implementing these features, you can create a comprehensive user authentication system in Django that is both secure and user-friendly. This ensures your application can handle a wide range of user interactions securely and efficiently.
