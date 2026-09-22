@@ -1,0 +1,20 @@
+{
+  "lesson_title": "Lesson 2: Advanced Presentation and Communication Techniques in English",
+  "lesson_description": "This lesson builds on the foundational skills learned in previous lessons by focusing on advanced techniques for presenting and communicating in English. Students will delve deeper into structuring their presentations, mastering persuasive language, and delivering messages with confidence and impact. They will also engage in role-plays and discussions to apply these skills in real-world scenarios, enhancing their proficiency in the English language.",
+  "subtopics": [
+    {
+      "title": "Subtopic 1: Structuring Effective Presentations",
+      "description": "In this subtopic, we will explore the structure of effective presentations. We will cover the importance of an introduction, body, and conclusion. We will also discuss how to use visual aids such as slides, charts, and graphs to enhance the presentation. Additionally, we will delve into the art of storytelling and how to engage your audience through compelling narratives. The subtopic will also include a detailed look at how to handle Q&A sessions and manage potential interruptions or challenges during your presentation.",
+      "estimated_chars": 1111,
+      "actual_chars": 3525
+    },
+    {
+      "title": "Subtopic 2: Mastering Persuasive Language and Delivery",
+      "description": "In this subtopic, we will focus on the art of persuasion. We will cover how to use persuasive language effectively, including the use of rhetorical questions, analogies, and metaphors. We will also discuss the importance of tone, pace, and volume in delivering your message with impact. We will explore different types of persuasive appeals such as pathos (emotions), logos (logic), and ethos (credibility). The subtopic will also include practical exercises to help students practice their persuasive delivery skills in various scenarios.",
+      "estimated_chars": 1102,
+      "actual_chars": 4583
+    }
+  ],
+  "quiz_question_count": 5,
+  "question_bank_count": 10
+}

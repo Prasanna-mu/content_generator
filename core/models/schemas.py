@@ -81,12 +81,14 @@ class QuizQuestion(BaseModel):
     options: List[str]
     correct_answer: int
     explanation: str
+    k_level: str = Field(..., pattern="^K[1-6]$")
 
 
 class QuestionBankItem(BaseModel):
     question: str
     answer: str
     difficulty: str
+    k_level: str = Field(..., pattern="^K[1-6]$")
 
 
 class LessonOutput(BaseModel):

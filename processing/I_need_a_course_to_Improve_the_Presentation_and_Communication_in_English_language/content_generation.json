@@ -1,0 +1,71 @@
+{
+  "session_id": "46d457e4-d377-496b-9e04-6b3c514a45d7",
+  "prompt": "I need a course to Improve the Presentation and Communication in English language",
+  "generated_on": "2026-09-21T16:57:41.130304",
+  "subtopics": [
+    {
+      "lesson_title": "Lesson 1: Mastering Basic English Communication Skills",
+      "subtopic_title": "Subtopic 1: Clear Articulation and Pronunciation",
+      "subtopic_description": "In this subtopic, students will learn the importance of clear articulation and proper pronunciation in English. We will cover techniques for improving pronunciation, including vowel sounds, consonant sounds, and intonation. Students will practice these skills through various exercises and activities, such as listening to native speakers and repeating phrases and sentences.",
+      "subtopic_estimated_chars": 450,
+      "co": "Demonstrate improvement in presenting ideas clearly and concisely",
+      "po": "Language Arts/English Language",
+      "k_level": "intermediate",
+      "status": "completed",
+      "output_file": "output\\46d457e4-d377-496b-9e04-6b3c514a45d7\\Lesson_1__Mastering_Basic_English_Communication_Skills\\01_01_I_need_a_course_to_Improve_the_Presentation_and_Communication_in_English_language.txt",
+      "metadata": {
+        "actual_chars": 3249
+      },
+      "export_status": "completed",
+      "docx_path": "output\\delivery\\46d457e4-d377-496b-9e04-6b3c514a45d7\\01_Lesson_1__Mastering_Basic_English_Communication_Skills\\01.01_Subtopic_1__Clear_Articulation_and_Pronunciation.docx"
+    },
+    {
+      "lesson_title": "Lesson 1: Mastering Basic English Communication Skills",
+      "subtopic_title": "Subtopic 2: Sentence Structure and Grammar",
+      "subtopic_description": "This subtopic focuses on mastering sentence structure and grammar. Students will learn about different types of sentences (declarative, interrogative, imperative, exclamatory), and how to construct them correctly. We will also cover important grammar points such as verb tenses, subject-verb agreement, and punctuation rules. Students will engage in activities that require them to create sentences and paragraphs using proper grammar and sentence structure.",
+      "subtopic_estimated_chars": 500,
+      "co": "Demonstrate improvement in presenting ideas clearly and concisely",
+      "po": "Language Arts/English Language",
+      "k_level": "intermediate",
+      "status": "completed",
+      "output_file": "output\\46d457e4-d377-496b-9e04-6b3c514a45d7\\Lesson_1__Mastering_Basic_English_Communication_Skills\\01_02_I_need_a_course_to_Improve_the_Presentation_and_Communication_in_English_language.txt",
+      "metadata": {
+        "actual_chars": 3731
+      },
+      "export_status": "completed",
+      "docx_path": "output\\delivery\\46d457e4-d377-496b-9e04-6b3c514a45d7\\01_Lesson_1__Mastering_Basic_English_Communication_Skills\\01.02_Subtopic_2__Sentence_Structure_and_Grammar.docx"
+    },
+    {
+      "lesson_title": "Lesson 2: Advanced Presentation and Communication Techniques in English",
+      "subtopic_title": "Subtopic 1: Structuring Effective Presentations",
+      "subtopic_description": "In this subtopic, we will explore the structure of effective presentations. We will cover the importance of an introduction, body, and conclusion. We will also discuss how to use visual aids such as slides, charts, and graphs to enhance the presentation. Additionally, we will delve into the art of storytelling and how to engage your audience through compelling narratives. The subtopic will also include a detailed look at how to handle Q&A sessions and manage potential interruptions or challenges during your presentation.",
+      "subtopic_estimated_chars": 1111,
+      "co": "Demonstrate improvement in presenting ideas clearly and concisely",
+      "po": "Language Arts/English Language",
+      "k_level": "intermediate",
+      "status": "completed",
+      "output_file": "output\\46d457e4-d377-496b-9e04-6b3c514a45d7\\Lesson_2__Advanced_Presentation_and_Communication_Techniques_in_English\\02_01_I_need_a_course_to_Improve_the_Presentation_and_Communication_in_English_language.txt",
+      "metadata": {
+        "actual_chars": 3525
+      },
+      "export_status": "completed",
+      "docx_path": "output\\delivery\\46d457e4-d377-496b-9e04-6b3c514a45d7\\02_Lesson_2__Advanced_Presentation_and_Communication_Techniques_in_English\\02.01_Subtopic_1__Structuring_Effective_Presentations.docx"
+    },
+    {
+      "lesson_title": "Lesson 2: Advanced Presentation and Communication Techniques in English",
+      "subtopic_title": "Subtopic 2: Mastering Persuasive Language and Delivery",
+      "subtopic_description": "In this subtopic, we will focus on the art of persuasion. We will cover how to use persuasive language effectively, including the use of rhetorical questions, analogies, and metaphors. We will also discuss the importance of tone, pace, and volume in delivering your message with impact. We will explore different types of persuasive appeals such as pathos (emotions), logos (logic), and ethos (credibility). The subtopic will also include practical exercises to help students practice their persuasive delivery skills in various scenarios.",
+      "subtopic_estimated_chars": 1102,
+      "co": "Demonstrate improvement in presenting ideas clearly and concisely",
+      "po": "Language Arts/English Language",
+      "k_level": "intermediate",
+      "status": "completed",
+      "output_file": "output\\46d457e4-d377-496b-9e04-6b3c514a45d7\\Lesson_2__Advanced_Presentation_and_Communication_Techniques_in_English\\02_02_I_need_a_course_to_Improve_the_Presentation_and_Communication_in_English_language.txt",
+      "metadata": {
+        "actual_chars": 4583
+      },
+      "export_status": "completed",
+      "docx_path": "output\\delivery\\46d457e4-d377-496b-9e04-6b3c514a45d7\\02_Lesson_2__Advanced_Presentation_and_Communication_Techniques_in_English\\02.02_Subtopic_2__Mastering_Persuasive_Language_and_Delivery.docx"
+    }
+  ]
+}

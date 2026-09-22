@@ -1,0 +1,69 @@
+Lesson: Lesson 1: Mastering Basic English Communication Skills
+Subtopic: Subtopic 2: Sentence Structure and Grammar
+Character Count: 3731
+============================================================
+
+### Lesson 1: Mastering Basic English Communication Skills
+
+In this lesson, we will focus on sentence structure and grammar. Understanding and correctly using different types of sentences and mastering grammar points like verb tenses, subject-verb agreement, and punctuation will significantly enhance your English communication skills.
+
+#### Types of Sentences
+
+There are four main types of sentences in English:
+
+1. **Declarative Sentences**
+   - These sentences make a statement. They do not ask for anything or give a command.
+   - Example: "It is raining today."
+   - Structure: Subject + Verb + Object (if any)
+
+2. **Interrogative Sentences**
+   - These sentences ask a question. They use question marks.
+   - Example: "Is it raining today?"
+   - Structure: Wh-word or other interrogative word + Subject + Verb
+
+3. **Imperative Sentences**
+   - These sentences give a command or an instruction. They do not use question marks.
+   - Example: "Please open the window."
+   - Structure: Base form of the verb
+
+4. **Exclamatory Sentences**
+   - These sentences express strong feelings or emotions.
+   - Example: "Wow, it's a beautiful day!"
+   - Structure: Exclamation point + Intensifier + Subject + Verb
+
+#### Important Grammar Points
+
+1. **Verb Tenses**
+   - **Simple Present**: Used for habitual actions, facts, and general truths.
+     - Example: "She eats breakfast every morning."
+   - **Simple Past**: Used for actions that happened in the past.
+     - Example: "He went to the store last week."
+   - **Present Continuous**: Used for actions happening now.
+     - Example: "I am learning English now."
+   - **Past Continuous**: Used for actions that happened at a specific time in the past.
+     - Example: "I was studying when the phone rang."
+   - **Future Continuous**: Used for actions that will happen in the future.
+     - Example: "I will be working on my project tomorrow."
+   - **Future Perfect**: Used for actions that will have been completed by a specific time in the future.
+     - Example: "By then, I will have finished my homework."
+
+2. **Subject-Verb Agreement**
+   - Ensure the subject and verb agree in number (singular or plural).
+   - Example: "The cat catches mice." (Correct)
+   - Example: "The cats catch mice." (Incorrect - should be "catches" to match the plural "cats")
+
+3. **Punctuation Rules**
+   - **Periods** are used for declarative sentences to indicate the end of a statement.
+   - **Question Marks** are used for interrogative sentences to indicate the end of a question.
+   - **Exclamation Points** are used for exclamatory sentences to indicate strong emotion or emphasis.
+   - **Commas** are used to separate items in a list, after introductory words or phrases, and to indicate a pause in a sentence.
+   - Example: "I went to the store, bought some apples, and came home."
+
+#### Practice Activities
+
+- **Sentence Structure Exercise**: Write sentences using the different types of sentences. For example, write a sentence in the simple past tense, a declarative sentence, and an imperative sentence.
+- **Verb Tenses Exercise**: Write sentences using the correct verb tense. For instance, write a sentence in the simple present, simple past, and future perfect tenses.
+- **Subject-Verb Agreement Exercise**: Identify and correct sentences where the subject and verb do not agree in number.
+- **Punctuation Exercise**: Rewrite sentences using correct punctuation. For example, add a comma where needed in a list or after an introductory phrase.
+
+By mastering sentence structure and grammar, you will be able to communicate more effectively and accurately in English. Practice these skills regularly to reinforce your understanding and improve your presentation and communication skills.

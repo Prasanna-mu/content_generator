@@ -1,0 +1,40 @@
+{
+  "tasks": [
+    {
+      "lesson_title": "Mastering Java with Spring Boot: Intermediate to Advanced",
+      "subtopic_title": "Advanced Java Concepts and Best Practices",
+      "completed": false,
+      "content_file": null
+    },
+    {
+      "lesson_title": "Mastering Java with Spring Boot: Intermediate to Advanced",
+      "subtopic_title": "Spring Boot Features and Best Practices",
+      "completed": false,
+      "content_file": null
+    },
+    {
+      "lesson_title": "Mastering Advanced Java and Spring Boot with ELobrado",
+      "subtopic_title": "Advanced Dependency Injection in Spring Boot",
+      "completed": false,
+      "content_file": null
+    },
+    {
+      "lesson_title": "Mastering Advanced Java and Spring Boot with ELobrado",
+      "subtopic_title": "Spring Boot Security and Database Integration",
+      "completed": false,
+      "content_file": null
+    },
+    {
+      "lesson_title": "Mastering Java with Spring Boot: Advanced Project Development",
+      "subtopic_title": "Design Patterns and Best Practices in Spring Boot Applications",
+      "completed": false,
+      "content_file": null
+    },
+    {
+      "lesson_title": "Mastering Java with Spring Boot: Advanced Project Development",
+      "subtopic_title": "Performance Optimization Techniques in Spring Boot Applications",
+      "completed": false,
+      "content_file": null
+    }
+  ]
+}

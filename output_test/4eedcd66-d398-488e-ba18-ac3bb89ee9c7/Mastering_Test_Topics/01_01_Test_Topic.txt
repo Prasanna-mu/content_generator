@@ -1,0 +1,25 @@
+Lesson: Mastering Test Topics
+Subtopic: Understanding Test Definitions and Types
+Character Count: 1271
+============================================================
+
+### Understanding Test Definitions and Types
+
+Tests are used in education and psychology to measure what a person knows or can do. Understanding their definitions and types helps you use them better.
+
+#### Key Definitions:
+- **Test**: An assessment used to evaluate knowledge, skills, or abilities.
+- **Objective Test**: Questions that have one right answer. Example: Multiple choice.
+- **Subjective Test**: Questions that require a response that can’t be reduced to a single correct answer. Example: Essay questions.
+- **Formative Test**: Used during the learning process to monitor progress and adjust teaching methods.
+- **Summative Test**: Used at the end of a course to evaluate overall learning.
+
+#### Types of Tests:
+- **Objective Test**: Quickly checks understanding. Example: A math test with multiple choice questions.
+- **Subjective Test**: More detailed, checks deeper understanding. Example: Writing an essay about a historical event.
+
+#### Differences:
+- **Formative Test**: Adjusts teaching based on feedback. Example: A teacher might give a quiz to see what students have understood.
+- **Summative Test**: Measures overall learning. Example: Final exams at the end of a semester.
+
+Understanding these basics will help you use tests effectively and fairly.

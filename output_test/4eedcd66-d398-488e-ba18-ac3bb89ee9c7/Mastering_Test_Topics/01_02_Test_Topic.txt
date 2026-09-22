@@ -1,0 +1,18 @@
+Lesson: Mastering Test Topics
+Subtopic: Common Test Formats and Their Applications
+Character Count: 1048
+============================================================
+
+### Mastering Test Formats
+
+In test topics, you'll find different ways to ask questions to test what you know. Here are some common types:
+
+1. **Multiple Choice:** You see a question with different answers, and pick the one that's right. It's like a guessing game where one option is the winner.
+
+2. **True or False:** Here, you decide if a statement is true or false. It’s like when you tell a fib and someone catches you!
+
+3. **Matching:** You have a list of items, and you match each one to something else. It’s like sorting your toys into different boxes.
+
+4. **Fill in the Blank:** This one asks you to write in the missing words. It’s like when you forget a word in a story and have to remember it or make one up.
+
+Each type helps test different things you learned. For example, multiple choice checks how well you remember facts, while true or false tests your judgment. Matching helps see if you can relate ideas, and fill in the blank checks your spelling and creativity. Understanding these formats can make test time easier and more fun!

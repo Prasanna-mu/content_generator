@@ -1,0 +1,103 @@
+{
+  "session_id": "5d313c64-add3-42ab-80be-52c99ad0f28e",
+  "prompt": "Generate a ELobratoed Professional course for Java With Springboot Intermediate to master",
+  "generated_on": "2026-09-21T15:48:08.821903",
+  "subtopics": [
+    {
+      "lesson_title": "Mastering Java with Spring Boot: Intermediate to Advanced",
+      "subtopic_title": "Advanced Java Concepts and Best Practices",
+      "subtopic_description": "In this subtopic, we will explore advanced Java concepts such as generics, streams, and functional programming. We will also discuss best practices for writing clean, efficient, and maintainable Java code. By the end of this subtopic, you will be able to apply these advanced Java techniques in your Spring Boot projects.",
+      "subtopic_estimated_chars": 650,
+      "co": "Develop and deploy microservices using Spring Boot",
+      "po": "Java and Spring Boot Development",
+      "k_level": "intermediate",
+      "status": "completed",
+      "output_file": "output\\5d313c64-add3-42ab-80be-52c99ad0f28e\\Mastering_Java_with_Spring_Boot__Intermediate_to_Advanced\\01_01_Generate_a_ELobratoed_Professional_course_for_Java_With_Springboot_Intermediate_to_master.txt",
+      "metadata": {
+        "actual_chars": 3789
+      },
+      "export_status": "completed",
+      "docx_path": "output\\delivery\\5d313c64-add3-42ab-80be-52c99ad0f28e\\01_Mastering_Java_with_Spring_Boot__Intermediate_to_Advanced\\01.01_Advanced_Java_Concepts_and_Best_Practices.docx"
+    },
+    {
+      "lesson_title": "Mastering Java with Spring Boot: Intermediate to Advanced",
+      "subtopic_title": "Spring Boot Features and Best Practices",
+      "subtopic_description": "This subtopic will cover in-depth exploration of Spring Boot features such as dependency injection, configuration management, and reactive programming. We will also discuss best practices for building robust and scalable Spring Boot applications. By the end of this subtopic, you will be proficient in creating advanced Spring Boot applications.",
+      "subtopic_estimated_chars": 650,
+      "co": "Develop and deploy microservices using Spring Boot",
+      "po": "Java and Spring Boot Development",
+      "k_level": "intermediate",
+      "status": "completed",
+      "output_file": "output\\5d313c64-add3-42ab-80be-52c99ad0f28e\\Mastering_Java_with_Spring_Boot__Intermediate_to_Advanced\\01_02_Generate_a_ELobratoed_Professional_course_for_Java_With_Springboot_Intermediate_to_master.txt",
+      "metadata": {
+        "actual_chars": 3522
+      },
+      "export_status": "completed",
+      "docx_path": "output\\delivery\\5d313c64-add3-42ab-80be-52c99ad0f28e\\01_Mastering_Java_with_Spring_Boot__Intermediate_to_Advanced\\01.02_Spring_Boot_Features_and_Best_Practices.docx"
+    },
+    {
+      "lesson_title": "Mastering Advanced Java and Spring Boot with ELobrado",
+      "subtopic_title": "Advanced Dependency Injection in Spring Boot",
+      "subtopic_description": "In this subtopic, we will explore advanced concepts of dependency injection in Spring Boot. We will cover advanced annotations, such as @Autowired, @Qualifier, and @Primary. Additionally, we will discuss how to use constructor injection, setter injection, and field injection. We will also examine how to work with interfaces and abstract classes in the context of dependency injection. This subtopic will help you understand how to effectively manage and inject dependencies in your Spring Boot applications, ensuring they are robust and maintainable.",
+      "subtopic_estimated_chars": 450,
+      "co": "Develop and deploy microservices using Spring Boot",
+      "po": "Java and Spring Boot Development",
+      "k_level": "intermediate",
+      "status": "completed",
+      "output_file": "output\\5d313c64-add3-42ab-80be-52c99ad0f28e\\Mastering_Advanced_Java_and_Spring_Boot_with_ELobrado\\02_01_Generate_a_ELobratoed_Professional_course_for_Java_With_Springboot_Intermediate_to_master.txt",
+      "metadata": {
+        "actual_chars": 5605
+      },
+      "export_status": "completed",
+      "docx_path": "output\\delivery\\5d313c64-add3-42ab-80be-52c99ad0f28e\\02_Mastering_Advanced_Java_and_Spring_Boot_with_ELobrado\\02.01_Advanced_Dependency_Injection_in_Spring_Boot.docx"
+    },
+    {
+      "lesson_title": "Mastering Advanced Java and Spring Boot with ELobrado",
+      "subtopic_title": "Spring Boot Security and Database Integration",
+      "subtopic_description": "This subtopic will delve into the security features provided by Spring Boot, including how to secure your application with annotations, HTTP headers, and HTTP methods. We will also cover how to implement security for RESTful APIs. Additionally, we will explore how to integrate Spring Boot with different databases, such as MySQL, PostgreSQL, and MongoDB. We will discuss the configuration options for each database and how to handle transactions and data persistence. This subtopic will equip you with the skills to create secure and database-integrated Spring Boot applications.",
+      "subtopic_estimated_chars": 550,
+      "co": "Develop and deploy microservices using Spring Boot",
+      "po": "Java and Spring Boot Development",
+      "k_level": "intermediate",
+      "status": "completed",
+      "output_file": "output\\5d313c64-add3-42ab-80be-52c99ad0f28e\\Mastering_Advanced_Java_and_Spring_Boot_with_ELobrado\\02_02_Generate_a_ELobratoed_Professional_course_for_Java_With_Springboot_Intermediate_to_master.txt",
+      "metadata": {
+        "actual_chars": 4679
+      },
+      "export_status": "completed",
+      "docx_path": "output\\delivery\\5d313c64-add3-42ab-80be-52c99ad0f28e\\02_Mastering_Advanced_Java_and_Spring_Boot_with_ELobrado\\02.02_Spring_Boot_Security_and_Database_Integration.docx"
+    },
+    {
+      "lesson_title": "Mastering Java with Spring Boot: Advanced Project Development",
+      "subtopic_title": "Design Patterns and Best Practices in Spring Boot Applications",
+      "subtopic_description": "In this subtopic, we will explore advanced design patterns and best practices for building robust and maintainable Spring Boot applications. Topics include the use of Spring Data JPA, Spring Security, and Spring Boot Actuator. We will also cover strategies for handling exceptions, managing transactions, and securing your application. The subtopic will include hands-on exercises to apply these concepts in real-world scenarios. Estimated Character Count: 450",
+      "subtopic_estimated_chars": 450,
+      "co": "Develop and deploy microservices using Spring Boot",
+      "po": "Java and Spring Boot Development",
+      "k_level": "intermediate",
+      "status": "completed",
+      "output_file": "output\\5d313c64-add3-42ab-80be-52c99ad0f28e\\Mastering_Java_with_Spring_Boot__Advanced_Project_Development\\03_01_Generate_a_ELobratoed_Professional_course_for_Java_With_Springboot_Intermediate_to_master.txt",
+      "metadata": {
+        "actual_chars": 6005
+      },
+      "export_status": "completed",
+      "docx_path": "output\\delivery\\5d313c64-add3-42ab-80be-52c99ad0f28e\\03_Mastering_Java_with_Spring_Boot__Advanced_Project_Development\\03.01_Design_Patterns_and_Best_Practices_in_Spring_Boot_Applications.docx"
+    },
+    {
+      "lesson_title": "Mastering Java with Spring Boot: Advanced Project Development",
+      "subtopic_title": "Performance Optimization Techniques in Spring Boot Applications",
+      "subtopic_description": "This subtopic focuses on performance optimization techniques in Spring Boot applications. We will cover strategies for improving application performance, such as caching, database optimization, and optimizing Spring Boot configuration. Additionally, we will discuss how to measure and monitor application performance using tools like Spring Boot Actuator and JMX. The subtopic will include practical examples and exercises to help you implement these optimizations. Estimated Character Count: 550",
+      "subtopic_estimated_chars": 550,
+      "co": "Develop and deploy microservices using Spring Boot",
+      "po": "Java and Spring Boot Development",
+      "k_level": "intermediate",
+      "status": "completed",
+      "output_file": "output\\5d313c64-add3-42ab-80be-52c99ad0f28e\\Mastering_Java_with_Spring_Boot__Advanced_Project_Development\\03_02_Generate_a_ELobratoed_Professional_course_for_Java_With_Springboot_Intermediate_to_master.txt",
+      "metadata": {
+        "actual_chars": 5429
+      },
+      "export_status": "completed",
+      "docx_path": "output\\delivery\\5d313c64-add3-42ab-80be-52c99ad0f28e\\03_Mastering_Java_with_Spring_Boot__Advanced_Project_Development\\03.02_Performance_Optimization_Techniques_in_Spring_Boot_Applications.docx"
+    }
+  ]
+}

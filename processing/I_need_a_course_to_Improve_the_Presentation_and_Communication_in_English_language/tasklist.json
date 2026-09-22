@@ -1,0 +1,28 @@
+{
+  "tasks": [
+    {
+      "lesson_title": "Lesson 1: Mastering Basic English Communication Skills",
+      "subtopic_title": "Subtopic 1: Clear Articulation and Pronunciation",
+      "completed": false,
+      "content_file": null
+    },
+    {
+      "lesson_title": "Lesson 1: Mastering Basic English Communication Skills",
+      "subtopic_title": "Subtopic 2: Sentence Structure and Grammar",
+      "completed": false,
+      "content_file": null
+    },
+    {
+      "lesson_title": "Lesson 2: Advanced Presentation and Communication Techniques in English",
+      "subtopic_title": "Subtopic 1: Structuring Effective Presentations",
+      "completed": false,
+      "content_file": null
+    },
+    {
+      "lesson_title": "Lesson 2: Advanced Presentation and Communication Techniques in English",
+      "subtopic_title": "Subtopic 2: Mastering Persuasive Language and Delivery",
+      "completed": false,
+      "content_file": null
+    }
+  ]
+}

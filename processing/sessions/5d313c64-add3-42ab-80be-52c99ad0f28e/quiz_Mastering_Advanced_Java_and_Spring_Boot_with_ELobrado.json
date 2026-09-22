@@ -1,0 +1,64 @@
+{
+  "questions": [
+    {
+      "question": "Which of the following is a correct way to inject a bean that implements a custom interface in Spring Boot?",
+      "options": [
+        "A. @Autowired private MyCustomService myCustomService;",
+        "B. @Autowired private MyCustomService myCustomService; MyCustomService service = new MyCustomService();",
+        "C. @Autowired private MyCustomService myCustomService; service = new MyCustomService();",
+        "D. @Autowired private MyCustomService myCustomService;"
+      ],
+      "correct_answer": 0,
+      "explanation": "In Spring Boot, the correct way to inject a bean that implements a custom interface is to use the `@Autowired` annotation directly on the field or setter method, without creating a new instance.",
+      "k_level": "K2"
+    },
+    {
+      "question": "In Spring Boot, which of the following is used to configure a bean that is not managed by the Spring container?",
+      "options": [
+        "A. @Configuration",
+        "B. @Component",
+        "C. @Bean",
+        "D. @Service"
+      ],
+      "correct_answer": 0,
+      "explanation": "In Spring Boot, `@Configuration` is used to define beans and configurations, `@Component` is used for components like services, `@Bean` is used to define beans in a configuration class, and `@Service` is a stereotype that can be used with `@Component`.",
+      "k_level": "K3"
+    },
+    {
+      "question": "Which Spring Boot auto-configuration feature automatically configures a database connection?",
+      "options": [
+        "A. JPA",
+        "B. Hibernate",
+        "C. DataSourceAutoConfiguration",
+        "D. MyBatis"
+      ],
+      "correct_answer": 2,
+      "explanation": "DataSourceAutoConfiguration is a Spring Boot auto-configuration that automatically configures a DataSource bean for database connections.",
+      "k_level": "K4"
+    },
+    {
+      "question": "Which of the following is a correct way to configure Spring Security in a Spring Boot application?",
+      "options": [
+        "A. @EnableWebSecurity @Configuration public class SecurityConfig extends WebSecurityConfigurerAdapter { ... }",
+        "B. @EnableWebSecurity @Configuration public class SecurityConfig extends WebSecurityConfig { ... }",
+        "C. @EnableWebSecurity @Configuration public class SecurityConfig extends WebSecurityAdapter { ... }",
+        "D. @EnableWebSecurity @Configuration public class SecurityConfig extends WebSecurityConfigAdapter { ... }"
+      ],
+      "correct_answer": 0,
+      "explanation": "In Spring Boot, `@EnableWebSecurity` is used to enable security, and `@Configuration` is used to define a configuration class. The correct configuration class extends `WebSecurityConfigurerAdapter` or `WebSecurityConfig`.",
+      "k_level": "K5"
+    },
+    {
+      "question": "Which Spring Boot security feature automatically configures a JWT token for authentication?",
+      "options": [
+        "A. OAuth2",
+        "B. JWT",
+        "C. BasicAuth",
+        "D. FormLogin"
+      ],
+      "correct_answer": 1,
+      "explanation": "Spring Security's JWT feature automatically configures a JSON Web Token for authentication and authorization.",
+      "k_level": "K6"
+    }
+  ]
+}

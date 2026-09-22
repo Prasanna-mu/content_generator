@@ -1,0 +1,20 @@
+{
+  "prompt": "Generate a ELobratoed Professional course for Java With Springboot Intermediate to master",
+  "config": {
+    "prompt": "Generate a ELobratoed Professional course for Java With Springboot Intermediate to master",
+    "num_lessons": 3,
+    "subtopics_per_lesson": 2,
+    "content_quality": "intermediate",
+    "content_length": "medium",
+    "quiz_question_count": 5,
+    "quiz_difficulty": "intermediate",
+    "question_bank_count": 10,
+    "web_search_needed": false
+  },
+  "total_lessons": 0,
+  "total_subtopics": 0,
+  "total_content_chars": 0,
+  "total_quiz_questions": 0,
+  "total_question_bank_items": 0,
+  "lessons": []
+}

@@ -10,10 +10,15 @@ class BaseLLMProvider(ABC):
         self.model_name = model_name
         self.base_url = base_url
         self._output_dir: Optional[Path] = None
+        self.reference_context: str = ""
 
     def set_output_dir(self, output_dir: Path):
         self._output_dir = output_dir
         output_dir.mkdir(parents=True, exist_ok=True)
+
+    def set_reference_context(self, reference_context: str):
+        """Set the reference context for content generation."""
+        self.reference_context = reference_context
 
     def _save_intermediate_json(self, filename: str, data: Dict[str, Any]):
         if self._output_dir:
@@ -101,6 +106,13 @@ class BaseLLMProvider(ABC):
                 return False
             if q["correct_answer"] < 0 or q["correct_answer"] > 3:
                 return False
+            # Check k_level
+            k_level = q.get("k_level")
+            if not k_level or not isinstance(k_level, str):
+                return False
+            import re
+            if not re.match(r'^K[1-6]$', k_level):
+                return False
         return True
 
     def validate_question_bank_json(self, data: Dict[str, Any], expected_count: int = 0) -> bool:
@@ -115,6 +127,13 @@ class BaseLLMProvider(ABC):
             if not isinstance(q, dict):
                 return False
             if not q.get("question") or not q.get("answer"):
+                return False
+            # Check k_level
+            k_level = q.get("k_level")
+            if not k_level or not isinstance(k_level, str):
+                return False
+            import re
+            if not re.match(r'^K[1-6]$', k_level):
                 return False
         return True
 
@@ -249,8 +268,16 @@ Return JSON format:
             "beginner": "simple explanations, analogies, minimal jargon"
         }
         
+        reference_section = ""
+        if self.reference_context:
+            reference_section = f"""
+Reference Material:
+{self.reference_context}
+
+"""
+        
         return f"""
-Write content for subtopic: "{subtopic.title}"
+{reference_section}Write content for subtopic: "{subtopic.title}"
 Lesson: "{lesson_title}"
 Main topic: {user_input.prompt}
 Subtopic description: {subtopic.description}
@@ -279,12 +306,13 @@ Requirements:
 - Difficulty: {difficulty_guide.get(user_input.quiz_difficulty.value, "moderate")}
 - Multiple choice with 4 options each
 - Include correct answer index (0-3) and explanation
+- Include knowledge level (K1-K6) for each question
 - Cover all subtopics
 
 Return JSON format:
 {{
     "questions": [
-        {{"question": "...", "options": ["A", "B", "C", "D"], "correct_answer": 0, "explanation": "..."}},
+        {{"question": "...", "options": ["A", "B", "C", "D"], "correct_answer": 0, "explanation": "...", "k_level": "K1"}},
         ...
     ]
 }}
@@ -298,13 +326,14 @@ Lesson description: {lesson.description}
 Requirements:
 - Mix of question types (short answer, essay, problem-solving)
 - Include difficulty level (beginner/intermediate/technical)
+- Include knowledge level (K1-K6) for each item
 - Provide model answers
 - Cover all subtopics comprehensively
 
 Return JSON format:
 {{
     "questions": [
-        {{"question": "...", "answer": "...", "difficulty": "intermediate"}},
+        {{"question": "...", "answer": "...", "difficulty": "intermediate", "k_level": "K1"}},
         ...
     ]
 }}

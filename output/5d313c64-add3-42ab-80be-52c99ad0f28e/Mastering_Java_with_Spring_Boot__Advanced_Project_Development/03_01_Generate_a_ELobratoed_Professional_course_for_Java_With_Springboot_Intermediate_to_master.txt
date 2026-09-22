@@ -1,0 +1,163 @@
+Lesson: Mastering Java with Spring Boot: Advanced Project Development
+Subtopic: Design Patterns and Best Practices in Spring Boot Applications
+Character Count: 6005
+============================================================
+
+### Mastering Java with Spring Boot: Advanced Project Development
+
+In this subtopic, we will explore advanced design patterns and best practices for building robust and maintainable Spring Boot applications. We will dive into how to leverage Spring Data JPA for database interactions, Spring Security for application security, and Spring Boot Actuator for monitoring and management features. 
+
+#### Advanced Design Patterns
+1. **Repository Pattern**
+   - Introduce the concept of Spring Data JPA's `JpaRepository` which simplifies CRUD operations.
+   - Example: Using `JpaRepository` to interact with a `User` entity.
+   
+   ```java
+   public interface UserRepository extends JpaRepository<User, Long> {
+       User findByUsername(String username);
+   }
+   ```
+
+2. **Repository Pattern with Custom Queries**
+   - Demonstrating how to write custom queries using `@Query` and `@EntityGraph`.
+   - Example: Fetching a user with their associated orders.
+
+   ```java
+   @EntityGraph(attributePaths = "orders", type = EntityGraph.EntityGraphType.LOAD)
+   @Query("SELECT u FROM User u WHERE u.username = :username")
+   User findUserWithOrders(@Param("username") String username);
+   ```
+
+3. **Command Pattern**
+   - Show how to use `@RestController` with `@RequestMapping` to map HTTP requests to business commands.
+   - Example: Handling a `POST /users` request to create a new user.
+
+   ```java
+   @RestController
+   @RequestMapping("/users")
+   public class UserController {
+       @PostMapping
+       public ResponseEntity<User> createUser(@Valid @RequestBody User user) {
+           User savedUser = userRepository.save(user);
+           return ResponseEntity.ok(savedUser);
+       }
+   }
+   ```
+
+#### Best Practices for Security
+1. **Spring Security Configuration**
+   - Setting up Spring Security for authentication and authorization.
+   - Example: Configuring JWT for JWT-based authentication.
+
+   ```java
+   @Configuration
+   public class SecurityConfig extends WebSecurityConfigurerAdapter {
+       @Override
+       protected void configure(HttpSecurity http) throws Exception {
+           http
+               .authorizeRequests()
+               .antMatchers("/public/**").permitAll()
+               .anyRequest().authenticated()
+               .and()
+               .formLogin()
+               .loginPage("/login")
+               .permitAll()
+               .and()
+               .logout().logoutSuccessUrl("/");
+       }
+   }
+   ```
+
+2. **JWT Token Handling**
+   - Implement JWT for securing API endpoints.
+   - Example: How to decode and verify JWT tokens within a controller method.
+
+   ```java
+   @RestController
+   public class UserController {
+       @GetMapping("/user")
+       public ResponseEntity<User> getUser(@RequestHeader("Authorization") String token) {
+           if (token == null || token.isEmpty()) {
+               return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body(null);
+           }
+           Claims claims = Jwts.parser().setSigningKey(SECRET_KEY).parseClaimsJws(token).getBody();
+           User user = userRepository.findByUsername(claims.getSubject());
+           return ResponseEntity.ok(user);
+       }
+   }
+   ```
+
+#### Managing Exceptions and Transactions
+1. **Exception Handling**
+   - Use `@ControllerAdvice` to handle exceptions globally.
+   - Example: Custom exception handling for database connection issues.
+
+   ```java
+   @ControllerAdvice
+   public class CustomExceptionHandler {
+       @ExceptionHandler(DataAccessException.class)
+       public ResponseEntity<String> handleDataAccessException(DataAccessException ex) {
+           return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(ex.getMessage());
+       }
+   }
+   ```
+
+2. **Transaction Management**
+   - Use `@Transactional` to control the transactional behavior of service methods.
+   - Example: Ensuring a service method only commits if no exceptions occur.
+
+   ```java
+   @Service
+   public class UserService {
+       @Transactional
+       public void createUser(User user) {
+           userRepository.save(user);
+       }
+   }
+   ```
+
+#### Monitoring and Management with Spring Boot Actuator
+1. **Actuator Metrics**
+   - Expose metrics for your Spring Boot application.
+   - Example: Configuring and exposing metrics for CPU usage, memory, and database connection metrics.
+
+   ```java
+   @Configuration
+   public class ActuatorConfig {
+       @Bean
+       public PrometheusHttpMetricsFilter httpMetricsFilter() {
+           return new PrometheusHttpMetricsFilter();
+       }
+   }
+   ```
+
+2. **Actuator Health Checks**
+   - Integrate health checks to monitor the health of your application components.
+   - Example: Creating custom health checks for database connectivity and application status.
+
+   ```java
+   @Component
+   public class CustomHealthCheck implements HealthIndicator {
+       @Override
+       public Health health() {
+           boolean isDatabaseHealthy = checkDatabaseConnection();
+           boolean isApplicationHealthy = checkApplicationStatus();
+           return new CustomHealth(isDatabaseHealthy, isApplicationHealthy);
+       }
+   }
+   ```
+
+### Hands-On Exercises
+1. **Custom Authentication and Authorization**
+   - Develop a custom authentication mechanism using Spring Security and JWT.
+   - Implement JWT generation and validation within a controller method.
+
+2. **Exception Handling with Logging**
+   - Customize exception handling to log detailed information about exceptions.
+   - Create a custom exception handler that logs stack traces and provides more context.
+
+3. **Database Health Checks**
+   - Integrate database health checks to monitor the status of your database connections.
+   - Write custom logic to check database connectivity and performance.
+
+By mastering these advanced design patterns and best practices, you can build more robust, secure, and maintainable Spring Boot applications. Dive into these examples and apply them to real-world projects to see how they improve the overall quality and functionality of your applications.

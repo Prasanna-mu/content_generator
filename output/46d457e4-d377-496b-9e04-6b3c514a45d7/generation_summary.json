@@ -1,0 +1,31 @@
+{
+  "prompt": "I need a course to Improve the Presentation and Communication in English language",
+  "config": {
+    "prompt": "I need a course to Improve the Presentation and Communication in English language",
+    "num_lessons": 2,
+    "subtopics_per_lesson": 2,
+    "content_quality": "intermediate",
+    "content_length": "medium",
+    "quiz_question_count": 5,
+    "quiz_difficulty": "intermediate",
+    "question_bank_count": 10,
+    "web_search_needed": false
+  },
+  "total_lessons": 2,
+  "total_subtopics": 4,
+  "total_content_chars": 15088,
+  "total_quiz_questions": 10,
+  "total_question_bank_items": 20,
+  "lessons": [
+    {
+      "title": "Lesson 1: Mastering Basic English Communication Skills",
+      "subtopic_count": 2,
+      "total_chars": 6980
+    },
+    {
+      "title": "Lesson 2: Advanced Presentation and Communication Techniques in English",
+      "subtopic_count": 2,
+      "total_chars": 8108
+    }
+  ]
+}

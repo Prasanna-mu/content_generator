@@ -1,0 +1,20 @@
+{
+  "lesson_title": "Lesson 1: Mastering Basic English Communication Skills",
+  "lesson_description": "In this lesson, students will build a strong foundation in effective communication in English. They will learn about clear articulation, proper grammar, and sentence structure. Through various exercises and activities, students will practice these skills to enhance their ability to express themselves clearly and coherently. This foundational knowledge will serve as a stepping stone for more advanced courses in presentation and communication in English.",
+  "subtopics": [
+    {
+      "title": "Subtopic 1: Clear Articulation and Pronunciation",
+      "description": "In this subtopic, students will learn the importance of clear articulation and proper pronunciation in English. We will cover techniques for improving pronunciation, including vowel sounds, consonant sounds, and intonation. Students will practice these skills through various exercises and activities, such as listening to native speakers and repeating phrases and sentences.",
+      "estimated_chars": 450,
+      "actual_chars": 3249
+    },
+    {
+      "title": "Subtopic 2: Sentence Structure and Grammar",
+      "description": "This subtopic focuses on mastering sentence structure and grammar. Students will learn about different types of sentences (declarative, interrogative, imperative, exclamatory), and how to construct them correctly. We will also cover important grammar points such as verb tenses, subject-verb agreement, and punctuation rules. Students will engage in activities that require them to create sentences and paragraphs using proper grammar and sentence structure.",
+      "estimated_chars": 500,
+      "actual_chars": 3731
+    }
+  ],
+  "quiz_question_count": 5,
+  "question_bank_count": 10
+}

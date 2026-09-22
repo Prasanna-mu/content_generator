@@ -65,7 +65,7 @@ class OutputWriter:
         file_path = lesson_dir / "quiz.csv"
         with open(file_path, 'w', newline='', encoding='utf-8') as f:
             writer = csv.writer(f)
-            writer.writerow(["Question", "Option A", "Option B", "Option C", "Option D", "Correct Answer", "Explanation"])
+            writer.writerow(["Question", "Option A", "Option B", "Option C", "Option D", "Correct Answer", "Explanation", "Knowledge Level"])
             for q in quiz_questions:
                 writer.writerow([
                     q.question,
@@ -74,16 +74,17 @@ class OutputWriter:
                     q.options[2] if len(q.options) > 2 else "",
                     q.options[3] if len(q.options) > 3 else "",
                     q.correct_answer,
-                    q.explanation
+                    q.explanation,
+                    q.k_level
                 ])
 
     def _write_question_bank_csv(self, question_bank: List[QuestionBankItem], lesson_dir: Path):
         file_path = lesson_dir / "question_bank.csv"
         with open(file_path, 'w', newline='', encoding='utf-8') as f:
             writer = csv.writer(f)
-            writer.writerow(["Question", "Answer", "Difficulty"])
+            writer.writerow(["Question", "Answer", "Difficulty", "Knowledge Level"])
             for q in question_bank:
-                writer.writerow([q.question, q.answer, q.difficulty])
+                writer.writerow([q.question, q.answer, q.difficulty, q.k_level])
 
     def _write_lesson_summary_json(self, lesson_output: LessonOutput, lesson_dir: Path):
         summary = {

@@ -1,0 +1,209 @@
+Lesson: Mastering Advanced Java and Spring Boot with ELobrado
+Subtopic: Advanced Dependency Injection in Spring Boot
+Character Count: 5605
+============================================================
+
+In this subtopic, we'll dive into advanced concepts of dependency injection in Spring Boot, focusing on annotations like @Autowired, @Qualifier, and @Primary. We'll explore various injection methods including constructor injection, setter injection, and field injection, and how to handle dependencies using interfaces and abstract classes. Understanding these concepts will help you create more robust and maintainable Spring Boot applications.
+
+### Understanding Advanced Annotations
+
+#### @Autowired
+- **Basic Usage**: `@Autowired` allows Spring to automatically inject a bean of the correct type. For example, a `HelloController` could be autowired to inject a `HelloService`.
+- **Default Scopes**: `@Autowired` defaults to a `singleton` scope. If you need a `prototype`, use `@Autowired(required=false)` or specify the scope explicitly.
+
+Example:
+```java
+@RestController
+public class HelloController {
+    @Autowired
+    private HelloService helloService;
+
+    @GetMapping("/hello")
+    public String sayHello() {
+        return helloService.getMessage();
+    }
+}
+```
+
+#### @Qualifier
+- **Purpose**: When multiple beans are of the same type, `@Qualifier` is used to specify which bean to inject.
+- **Usage**: Define a qualifier in the `applicationContext` and use it to autowire the correct bean.
+
+Example:
+```java
+@Service
+@Qualifier("dataService")
+public class DataService implements DataService {
+    // implementation details
+}
+```
+```java
+@Service
+@Qualifier("service")
+public class Service implements DataService {
+    // implementation details
+}
+```
+```java
+@Service
+@Qualifier("dataService")
+public class DataServiceImpl implements DataService {
+    // implementation details
+}
+```
+```java
+@Autowired
+private DataService dataService;
+```
+
+#### @Primary
+- **Purpose**: When there are multiple beans of the same type, `@Primary` ensures that the primary bean is injected. The primary bean has a higher priority than others.
+- **Usage**: Simply annotate the class with `@Primary`.
+
+Example:
+```java
+@Service
+@Primary
+public class PrimaryServiceImpl implements DataService {
+    // implementation details
+}
+```
+```java
+@Service
+public class Service implements DataService {
+    // implementation details
+}
+```
+```java
+@Autowired
+private DataService dataService;
+```
+
+### Injection Methods: Constructor, Setter, Field
+
+#### Constructor Injection
+- **Principle**: The constructor should be used to inject dependencies, making the class immutable.
+- **Example**: The `HelloController` could use a constructor to inject a `HelloService`.
+
+Example:
+```java
+@RestController
+public class HelloController {
+    private final HelloService helloService;
+
+    @Autowired
+    public HelloController(HelloService helloService) {
+        this.helloService = helloService;
+    }
+
+    @GetMapping("/hello")
+    public String sayHello() {
+        return helloService.getMessage();
+    }
+}
+```
+
+#### Setter Injection
+- **Principle**: Useful when the bean's dependencies are not known at the time of class definition.
+- **Example**: The `HelloController` could use a setter to inject a `HelloService`.
+
+Example:
+```java
+@RestController
+public class HelloController {
+    private HelloService helloService;
+
+    @Autowired
+    public void setHelloService(HelloService helloService) {
+        this.helloService = helloService;
+    }
+
+    @GetMapping("/hello")
+    public String sayHello() {
+        return helloService.getMessage();
+    }
+}
+```
+
+#### Field Injection
+- **Principle**: Avoids the use of constructors and setters, which is considered bad practice.
+- **Example**: The `HelloController` could use a field to inject a `HelloService`.
+
+Example:
+```java
+@RestController
+public class HelloController {
+    private HelloService helloService;
+
+    @Autowired
+    public HelloController(HelloService helloService) {
+        this.helloService = helloService;
+    }
+
+    @GetMapping("/hello")
+    public String sayHello() {
+        return helloService.getMessage();
+    }
+}
+```
+
+### Interfaces and Abstract Classes
+
+#### Interfaces
+- **Purpose**: Useful for specifying a contract that all implementing classes must adhere to.
+- **Example**: An `IService` interface could define the methods `doSomething()`, `doSomethingElse()`, etc.
+
+Example:
+```java
+public interface IService {
+    String doSomething();
+    String doSomethingElse();
+}
+
+@Service
+public class Service implements IService {
+    @Override
+    public String doSomething() {
+        return "Doing something";
+    }
+
+    @Override
+    public String doSomethingElse() {
+        return "Doing something else";
+    }
+}
+```
+
+#### Abstract Classes
+- **Purpose**: Used to provide default implementations for common methods and configurations.
+- **Example**: An `AbstractService` could provide a base implementation of methods and configurations.
+
+Example:
+```java
+public abstract class AbstractService implements IService {
+    @Override
+    public String doSomething() {
+        return "Default doing something";
+    }
+
+    @Override
+    public String doSomethingElse() {
+        return "Default doing something else";
+    }
+}
+
+@Service
+public class Service extends AbstractService {
+    @Override
+    public String doSomething() {
+        return "Doing something";
+    }
+
+    @Override
+    public String doSomethingElse() {
+        return "Doing something else";
+    }
+}
+```
+
+By mastering these advanced concepts, you can create Spring Boot applications that are more robust, maintainable, and easier to manage. This subtopic is designed for Intermediate to Advanced Java and Spring Boot users looking to deepen their understanding of dependency injection.

@@ -2,6 +2,7 @@ from pathlib import Path
 from typing import List, Optional, Dict, Any
 import os
 import json
+import shutil
 from datetime import datetime
 from core.models.schemas import UserInput, Lesson, LessonOutput, GeneratedContent, Subtopic, PipelineConfig
 from core.llm.factory import LLMFactory
@@ -53,6 +54,7 @@ class PipelineOrchestrator:
         self.user_input: Optional[UserInput] = None
         self.lessons: List[Lesson] = []
         self.prompt_analysis: Optional[Dict[str, Any]] = None
+        self.reference_context: Optional[str] = None
 
     def initialize_session_manager(self):
         """Initialize only the session manager (for listing sessions, etc.)"""
@@ -84,6 +86,32 @@ class PipelineOrchestrator:
         self.content_generator = ContentGenerator(self.llm, self.worker_count, self.processing_dir)
         self.output_writer = OutputWriter(self.output_dir)
         self.web_search_manager = WebSearchManager(self.llm, self.worker_count)
+        # Load reference materials
+        self.reference_context = self._load_reference_materials()
+        # Set reference context in LLM
+        self.llm.set_reference_context(self.reference_context)
+
+    def _load_reference_materials(self) -> str:
+        """Load all .md files from the reference directory and return combined content."""
+        reference_dir = Path("reference")
+        reference_dir.mkdir(exist_ok=True)
+        md_files = list(reference_dir.glob("*.md"))
+        if not md_files:
+            print("    No reference .md files found in reference/ directory.")
+            return ""
+        
+        print(f"    Loading {len(md_files)} reference .md files...")
+        combined_content = []
+        for md_file in md_files:
+            try:
+                with open(md_file, 'r', encoding='utf-8-sig') as f:
+                    content = f.read()
+                combined_content.append(f"--- Reference from {md_file.name} ---\n{content}")
+                print(f"      Loaded: {md_file.name}")
+            except Exception as e:
+                print(f"      Warning: Failed to load {md_file.name}: {e}")
+        
+        return "\n\n".join(combined_content)
 
     def _sanitize_folder_name(self, name: str) -> str:
         """Sanitize a string to be used as a folder name."""
@@ -419,6 +447,17 @@ class PipelineOrchestrator:
             print(f"[DOCX_EXPORT] Failed: {e}")
             raise
 
+    def _save_lesson_outputs_to_session(self, lesson_outputs: List[LessonOutput]):
+        """Save lesson outputs to session directory for OutputWriter consumption."""
+        session_dir = self.processing_dir / "sessions" / self.session_id
+        session_dir.mkdir(parents=True, exist_ok=True)
+        output_file = session_dir / "lesson_outputs.json"
+        data = {
+            "lesson_outputs": [lo.model_dump() for lo in lesson_outputs if lo is not None]
+        }
+        with open(output_file, 'w', encoding='utf-8') as f:
+            json.dump(data, f, indent=2, ensure_ascii=False)
+
     def _restore_stage_output(self, stage: PipelineStage, output_data: Dict[str, Any]):
         if stage == PipelineStage.PROMPT_ANALYSIS:
             pass
@@ -460,7 +499,11 @@ class PipelineOrchestrator:
             # Update checklist
             self._update_checklist_stage(stage, "completed")
         elif stage == PipelineStage.CONTENT_GENERATION:
-            pass
+            # Restore lesson outputs from checkpoint and save to session directory
+            lesson_outputs_data = output_data.get("lesson_outputs", [])
+            if lesson_outputs_data:
+                lesson_outputs = [LessonOutput(**lo) for lo in lesson_outputs_data]
+                self._save_lesson_outputs_to_session(lesson_outputs)
             # Update checklist
             self._update_checklist_stage(stage, "completed")
         elif stage == PipelineStage.OUTPUT_WRITING:
@@ -851,6 +894,9 @@ class PipelineOrchestrator:
         )
         print(f"    Generated {total_chars:,} characters of content")
         
+        # Save lesson outputs to session directory for OutputWriter
+        self._save_lesson_outputs_to_session(lesson_outputs)
+        
         self.session_manager.update_session_status(
             self.session_id, SessionStatus.RUNNING,
             completed_lessons=len(lesson_outputs)
@@ -888,6 +934,9 @@ class PipelineOrchestrator:
             delivery_base_dir = self.output_dir / "delivery" / prompt_folder
         
         delivery_base_dir.mkdir(parents=True, exist_ok=True)
+        
+        # Keep track of lessons for which we have copied quiz and question bank
+        lessons_copied = set()
         
         # Prepare mappings for lesson and subtopic numbers
         lesson_num_map = {}
@@ -989,6 +1038,33 @@ class PipelineOrchestrator:
                 lesson_delivery_dir = delivery_base_dir / lesson_folder
                 lesson_delivery_dir.mkdir(parents=True, exist_ok=True)
                 
+                # Copy quiz and question bank files for the lesson (once per lesson)
+                if lesson_title not in lessons_copied:
+                    # Output lesson directory (same as in OutputWriter)
+                    if self.session_id:
+                        output_base_dir = self.output_writer.base_output_dir / self.session_id
+                    else:
+                        prompt_folder = self._sanitize_folder_name(self.user_input.prompt)
+                        output_base_dir = self.output_writer.base_output_dir / prompt_folder
+                    
+                    output_lesson_dir = output_base_dir / self._sanitize_folder_name(lesson_title)
+                    
+                    # Define files to copy
+                    files_to_copy = ["quiz.csv", "question_bank.csv"]
+                    for file_name in files_to_copy:
+                        src_file = output_lesson_dir / file_name
+                        dst_file = lesson_delivery_dir / file_name
+                        if src_file.exists():
+                            try:
+                                shutil.copy2(src_file, dst_file)
+                                print(f"        Copied {file_name} to delivery")
+                            except Exception as e:
+                                print(f"        Warning: Failed to copy {file_name}: {e}")
+                        else:
+                            print(f"        Warning: {file_name} not found in output lesson directory: {output_lesson_dir}")
+                    
+                    lessons_copied.add(lesson_title)
+                
                 docx_file_path = lesson_delivery_dir / filename
                 doc.save(docx_file_path)
                 
@@ -1022,7 +1098,19 @@ class PipelineOrchestrator:
             raise RuntimeError(f"DOCX export incomplete: {missing} completed subtopics missing DOCX files")
         
         print(f"    DOCX export complete: {exported_count} exported, {failed_count} failed")
-        
+        # Validate that quiz and question bank CSV files exist in delivery for each lesson
+        for lesson in self.lessons:
+            sanitized_lesson = self._sanitize_folder_name(lesson.title)
+            lesson_number = lesson_num_map[lesson.title]
+            lesson_folder = f"{lesson_number:02d}_{sanitized_lesson}"
+            lesson_delivery_dir = delivery_base_dir / lesson_folder
+            quiz_path = lesson_delivery_dir / "quiz.csv"
+            question_bank_path = lesson_delivery_dir / "question_bank.csv"
+            if not quiz_path.exists():
+                raise RuntimeError(f"Quiz CSV missing for lesson {lesson.title} in delivery: {quiz_path}")
+            if not question_bank_path.exists():
+                raise RuntimeError(f"Question bank CSV missing for lesson {lesson.title} in delivery: {question_bank_path}")
+
         return {
             "delivery_dir": str(delivery_base_dir),
             "exported_count": exported_count,
