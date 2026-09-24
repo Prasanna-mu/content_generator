@@ -1,0 +1,68 @@
+{
+  "lesson_title": "Lesson 1: Foundations of Writing Skills",
+  "lesson_description": "In this lesson, students will explore the fundamentals of writing, including essential grammar, vocabulary, and specific writing techniques such as the passive voice, reported speech, signpost words, and cohesive devices. We will also cover the basics of technical and project report writing, including definitions, structure, types of reports, and the importance of avoiding plagiarism. Students will learn how to write effectively for different audiences and purposes, with a focus on STEM field-specific report writing and experimental research methods.",
+  "subtopics": [
+    {
+      "title": "Subtopic 1: Introduction to Writing Skills",
+      "description": "This subtopic introduces the importance of writing skills in various fields, including STEM and experimental research. It covers the basics of effective writing for different audiences and purposes.",
+      "estimated_chars": 450,
+      "actual_chars": 2725
+    },
+    {
+      "title": "Subtopic 2: Essential Grammar and Vocabulary",
+      "description": "Learn the basics of grammar and vocabulary that are essential for clear and effective writing. This includes understanding and using correct tenses, pronouns, and sentence structures.",
+      "estimated_chars": 500,
+      "actual_chars": 4559
+    },
+    {
+      "title": "Subtopic 3: Passive Voice and Reported Speech",
+      "description": "Explore the use of the passive voice and reported speech. Understand when and how to use these structures to convey information more effectively.",
+      "estimated_chars": 400,
+      "actual_chars": 3665
+    },
+    {
+      "title": "Subtopic 4: Concord and Cohesive Devices",
+      "description": "Discover how to use concord and cohesive devices to link ideas and maintain a flow in your writing. This includes coordinating and subordinating conjunctions, and pronouns.",
+      "estimated_chars": 450,
+      "actual_chars": 4242
+    },
+    {
+      "title": "Subtopic 5: Signpost Words in Paragraph Writing",
+      "description": "Learn how to use signpost words to guide readers through your writing. Understand the importance of signposting in maintaining clarity and coherence.",
+      "estimated_chars": 400,
+      "actual_chars": 3015
+    },
+    {
+      "title": "Subtopic 6: Technical Writing Basics",
+      "description": "This subtopic covers the basics of technical writing, including the definition, structure, and types of technical reports. Understand the importance of avoiding plagiarism in technical writing.",
+      "estimated_chars": 550,
+      "actual_chars": 3001
+    },
+    {
+      "title": "Subtopic 7: STEM Field-Specific Report Writing",
+      "description": "Explore how to write effective technical reports in STEM fields. Understand the unique challenges and requirements of writing in these fields.",
+      "estimated_chars": 450,
+      "actual_chars": 3614
+    },
+    {
+      "title": "Subtopic 8: Experimental Research Methods",
+      "description": "Learn about experimental research methods and how to write about them in your reports. Understand the importance of being clear and concise when describing your research methods.",
+      "estimated_chars": 500,
+      "actual_chars": 3871
+    },
+    {
+      "title": "Subtopic 9: Plagiarism in Writing",
+      "description": "Understand what plagiarism is and how to avoid it in your writing. Learn about the importance of citing sources and using quotation marks when necessary.",
+      "estimated_chars": 450,
+      "actual_chars": 1973
+    },
+    {
+      "title": "Subtopic 10: Writing for Different Audiences and Purposes",
+      "description": "This subtopic covers how to write effectively for different audiences and purposes. Understand the importance of tailoring your writing to the reader and the purpose of the report.",
+      "estimated_chars": 450,
+      "actual_chars": 3098
+    }
+  ],
+  "quiz_question_count": 20,
+  "question_bank_count": 10
+}

@@ -1,0 +1,68 @@
+{
+  "lesson_title": "Lesson 4: STEM Project Reports and Experiments",
+  "lesson_description": "In this lesson, students will delve into the specific requirements and writing styles for project reports in STEM fields. They will also learn about conducting experiments and performing statistical analysis in their reports, laying a strong foundation for future projects.",
+  "subtopics": [
+    {
+      "title": "Subtopic 1: Grammar and Vocabulary",
+      "description": "This subtopic covers essential grammar and vocabulary skills for writing project reports. It includes learning about passive voice, reported speech, and concord. Estimated Characters: 250",
+      "estimated_chars": 250,
+      "actual_chars": 1494
+    },
+    {
+      "title": "Subtopic 2: Signpost Words and Cohesive Devices",
+      "description": "Understanding and using signpost words and cohesive devices to improve paragraph writing in project reports. Estimated Characters: 270",
+      "estimated_chars": 270,
+      "actual_chars": 3035
+    },
+    {
+      "title": "Subtopic 3: Technical vs. General Writing",
+      "description": "Distinguishing between technical writing in STEM fields and general writing. Estimated Characters: 280",
+      "estimated_chars": 280,
+      "actual_chars": 2097
+    },
+    {
+      "title": "Subtopic 4: Project Report Definition",
+      "description": "Defining what a project report is and its importance in STEM fields. Estimated Characters: 260",
+      "estimated_chars": 260,
+      "actual_chars": 4459
+    },
+    {
+      "title": "Subtopic 5: Project Report Structure",
+      "description": "Learning the basic structure of a project report, including introduction, methods, results, and conclusion sections. Estimated Characters: 290",
+      "estimated_chars": 290,
+      "actual_chars": 2901
+    },
+    {
+      "title": "Subtopic 6: Types of Reports in STEM",
+      "description": "Identifying different types of project reports used in STEM fields, such as research reports and case studies. Estimated Characters: 270",
+      "estimated_chars": 270,
+      "actual_chars": 1867
+    },
+    {
+      "title": "Subtopic 7: Purpose and Audience of Reports",
+      "description": "Understanding the purpose and intended audience for different types of project reports. Estimated Characters: 280",
+      "estimated_chars": 280,
+      "actual_chars": 2802
+    },
+    {
+      "title": "Subtopic 8: Plagiarism and Proper Citations",
+      "description": "Recognizing and avoiding plagiarism in project reports, including proper citation methods. Estimated Characters: 270",
+      "estimated_chars": 270,
+      "actual_chars": 2532
+    },
+    {
+      "title": "Subtopic 9: Conducting Experiments",
+      "description": "Learning how to design and conduct experiments as part of a project report. Estimated Characters: 280",
+      "estimated_chars": 280,
+      "actual_chars": 2661
+    },
+    {
+      "title": "Subtopic 10: Statistical Analysis in Reports",
+      "description": "Understanding and applying statistical analysis techniques in project reports. Estimated Characters: 260",
+      "estimated_chars": 260,
+      "actual_chars": 3246
+    }
+  ],
+  "quiz_question_count": 20,
+  "question_bank_count": 10
+}

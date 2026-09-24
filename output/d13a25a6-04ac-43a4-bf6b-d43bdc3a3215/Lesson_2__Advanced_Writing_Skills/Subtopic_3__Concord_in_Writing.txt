@@ -1,0 +1,72 @@
+Lesson: Lesson 2: Advanced Writing Skills
+Subtopic: Subtopic 3: Concord in Writing
+Character Count: 3506
+============================================================
+
+### Lesson 2: Advanced Writing Skills
+
+#### Subtopic 3: Concord in Writing
+
+**Objective:** Understand and apply the concept of concord to improve verb and noun agreement in sentences.
+
+**Introduction to Concord:**
+Concord refers to the agreement in tense, number, and person between the subject and verb in a sentence. It is also related to the agreement between nouns and their modifiers. In this lesson, we will explore how concord affects verb and noun agreement in technical writing.
+
+**What is Concord?**
+In English, concord occurs when the form of a word agrees with another word in a sentence. This agreement can be seen in verb-noun pairs, where the verb agrees with the subject, and in noun-adjective pairs, where the adjective agrees with the noun. 
+
+For example, in the sentence "The cat is sleeping," the verb "is" agrees with the singular subject "cat." In "The cats are sleeping," the verb "are" agrees with the plural subject "cats."
+
+**Concord in Passive Voice:**
+Passive voice involves using a form of "be" (e.g., is, are, was, were, have been) followed by a past participle. The subject is not mentioned in the sentence but is implied. 
+
+Example: 
+- Active: The students submitted their assignments. 
+- Passive: The assignments were submitted by the students.
+
+In passive voice, the subject and the verb remain in agreement. However, if the subject is not mentioned (implied), the verb must agree with the implied subject.
+
+Example: 
+- Active: The teacher corrected the students' tests. 
+- Passive: The tests were corrected by the teacher.
+
+**Concord in Reported Speech:**
+In reported speech, the verb agrees with the source of the information, not the listener. This is important for maintaining correct concord.
+
+Example: 
+- Active: The students discussed the assignments. 
+- Reported speech: The teacher said that the students had discussed the assignments.
+
+Here, "had" agrees with "discussed," even though "discussed" refers to the students, who are the implied source of the information.
+
+**Concord in Technical Writing:**
+In technical writing, concord is crucial for clarity and precision. Technical writers often use passive voice and reported speech, so ensuring that verbs and nouns agree is essential.
+
+Example: 
+- Active: The experiment was designed by the team. 
+- Passive: The team designed the experiment.
+
+**Signpost Words and Cohesive Devices:**
+Signpost words and cohesive devices help to maintain concord across paragraphs. These can include transition words, pronouns, and reference phrases.
+
+Example: 
+- Transition word: "Moreover," used to show additional information.
+- Pronoun: "They," used to refer to previously mentioned subjects.
+- Reference phrase: "As stated earlier," used to connect ideas.
+
+**Concord in Sentence Structure:**
+In technical writing, concord is crucial for clarity and precision. Ensuring that verbs and nouns agree is essential.
+
+Example: 
+- Active: The new software improved the user experience. 
+- Passive: The user experience was improved by the new software.
+
+**Exercise:**
+Identify concord issues in the following sentences:
+1. The committee voted to approve the plan.
+2. The plan was approved by the committee.
+3. The experiment was conducted by the team.
+4. The team conducted the experiment.
+
+**Conclusion:**
+Understanding and applying concord rules is crucial for writing clear and effective sentences. In technical writing, concord helps ensure consistency and precision, making your writing more engaging and easier to understand.

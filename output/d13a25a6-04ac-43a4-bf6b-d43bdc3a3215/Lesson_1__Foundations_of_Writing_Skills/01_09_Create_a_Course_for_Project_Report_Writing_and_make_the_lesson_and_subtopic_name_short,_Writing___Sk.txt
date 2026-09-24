@@ -1,0 +1,37 @@
+Lesson: Lesson 1: Foundations of Writing Skills
+Subtopic: Subtopic 9: Plagiarism in Writing
+Character Count: 1973
+============================================================
+
+### Lesson 1: Foundations of Writing Skills
+
+#### Subtopic 1: Plagiarism in Writing
+
+**Understanding Plagiarism**
+
+Plagiarism is a serious offense in academic and professional writing. It involves presenting someone else’s work as your own without proper citation. This includes text, ideas, data, or images. In STEM fields, plagiarism can lead to severe consequences, including failing grades or professional sanctions.
+
+**How to Avoid Plagiarism**
+
+1. **Paraphrasing:** Rewrite ideas in your own words. Use synonyms and avoid direct copying.
+   - Example: Instead of saying, "According to Smith (2010),..." try saying, "Smith (2010) believed...".
+
+2. **Citation:** Always cite the source from where you took information. Use APA, MLA, or Chicago style, depending on the field.
+   - Example: (Smith, 2010).
+
+3. **Paraphrase with Attribution:** If directly quoting, use quotation marks and include the citation.
+   - Example: (Smith, 2010) argues that...
+
+**Tools to Detect Plagiarism**
+
+- **Turnitin:** A tool that compares your work against a vast database of previously submitted papers.
+- **Grammarly:** An online writing tool that checks for plagiarism and suggests improvements.
+- **Grammarly Premium:** Offers advanced features like a plagiarism checker, which can help you identify and avoid plagiarism.
+
+**Importance of Citing Sources**
+
+Citing sources shows you have done your research and provides credibility to your work. It also gives credit to the original authors, which is fair and ethical. Using quotation marks is crucial when you are directly quoting someone. Not using quotation marks can be considered plagiarism.
+
+**Conclusion**
+
+Avoiding plagiarism is crucial in writing. Paraphrasing, using proper citations, and using tools like Turnitin can help you avoid accidental plagiarism. Understanding the importance of citing sources and using quotation marks is essential for maintaining academic integrity and building a strong reputation in any field.

@@ -1,0 +1,68 @@
+{
+  "lesson_title": "Lesson 5: System Thinking & Concept Exploration",
+  "lesson_description": "In this lesson, students will explore system thinking, understanding complex systems, and the process of generating and evaluating solution concepts. They will also learn about building a compelling value proposition and applying design thinking tools such as Minimum Usable Prototypes (MUP), designing and testing value propositions, and conducting customer development processes through interviews and field visits. Students will also learn about concept generation, including exploring and iterating on solution concepts, assessing feasibility, and evaluating technology alternatives and solution concepts.",
+  "subtopics": [
+    {
+      "title": "Understanding System Thinking",
+      "description": "Explore the basics of system thinking, including examples of complex systems and how they function.",
+      "estimated_chars": 200,
+      "actual_chars": 4491
+    },
+    {
+      "title": "Human-Centered Design Principles",
+      "description": "Learn about human-centered design principles, including empathy-building techniques and customer development processes.",
+      "estimated_chars": 300,
+      "actual_chars": 4233
+    },
+    {
+      "title": "Minimum Usable Prototype (MUP) Challenges",
+      "description": "Understand the challenges associated with creating a Minimum Usable Prototype and how to brief and craft a compelling value proposition.",
+      "estimated_chars": 350,
+      "actual_chars": 5067
+    },
+    {
+      "title": "Designing Value Propositions",
+      "description": "Discover the process and tools for designing and testing value propositions, including conducting customer interviews and field visits.",
+      "estimated_chars": 300,
+      "actual_chars": 5156
+    },
+    {
+      "title": "Concept Generation and Iteration",
+      "description": "Learn how to conceptualize and iterate on solution concepts, assessing feasibility and evaluating technology alternatives.",
+      "estimated_chars": 300,
+      "actual_chars": 3181
+    },
+    {
+      "title": "Systematic Concept Generation",
+      "description": "Explore systematic approaches to generating and evaluating solution concepts, including assessing capability and usability.",
+      "estimated_chars": 300,
+      "actual_chars": 6170
+    },
+    {
+      "title": "Customer Validation Techniques",
+      "description": "Understand customer validation methods, including problem validation and customer discovery, and how to identify and validate target users and user personas.",
+      "estimated_chars": 400,
+      "actual_chars": 3784
+    },
+    {
+      "title": "Applying Design Thinking Tools",
+      "description": "Learn about applying design thinking tools such as Minimum Usable Prototypes (MUP), value proposition design, and customer development processes.",
+      "estimated_chars": 300,
+      "actual_chars": 2650
+    },
+    {
+      "title": "System Thinking and Complex Systems",
+      "description": "Study examples of complex systems and how to understand and apply system thinking to solve problems.",
+      "estimated_chars": 200,
+      "actual_chars": 4424
+    },
+    {
+      "title": "Validation Risk Mitigation",
+      "description": "Learn about mitigating validation risk using tools like the Forge 231 Ovation Rubric and case studies.",
+      "estimated_chars": 300,
+      "actual_chars": 3415
+    }
+  ],
+  "quiz_question_count": 20,
+  "question_bank_count": 10
+}

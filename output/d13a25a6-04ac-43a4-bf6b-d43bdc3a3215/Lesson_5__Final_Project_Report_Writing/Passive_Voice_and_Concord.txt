@@ -1,0 +1,62 @@
+Lesson: Lesson 5: Final Project Report Writing
+Subtopic: Passive Voice and Concord
+Character Count: 3313
+============================================================
+
+### Lesson: Final Project Report Writing
+
+#### Subtopic: Passive Voice and Concord
+
+**Introduction to Passive Voice and Concord**
+
+In the realm of project report writing, mastering the use of passive voice and concord is crucial. Passive voice is essential for maintaining a formal and objective tone, especially in technical and scientific writing. Concord, on the other hand, involves proper subject-verb agreement and pronoun usage to ensure clarity and precision.
+
+**Passive Voice in Project Reports**
+
+1. **Definition and Purpose**
+   - Passive voice uses the auxiliary verb "to be" (is, are, was, were, etc.) followed by a past participle to form the passive structure.
+   - Common examples in scientific papers include attributing findings or processes to a method or procedure.
+
+2. **Example in Technical Writing**
+   - Instead of saying, "We conducted the experiment," a passive sentence could be, "The experiment was conducted by the team."
+   - This keeps the focus on the experiment rather than the team conducting it.
+
+3. **Concord in Technical Writing**
+   - Concord involves matching the number and person of the subject with the verb.
+   - For example, in a sentence like "The team has completed the experiment," both "team" (plural) and "completed" (past tense, plural) agree.
+
+**Example of Concord Issues**
+- Incorrect: "The team have completed the experiment."
+- Correct: "The team has completed the experiment."
+
+**Passive Voice in Concord**
+
+- **Subject-Verb Agreement:** Ensure that the subject and verb agree in number (singular or plural) and tense.
+- **Avoid Overuse:** Passive voice can sometimes make writing less direct and more convoluted. Use it judiciously, especially in formal reports.
+
+**Concord Examples**
+
+1. **Subject-Verb Agreement**
+   - In a sentence like "The experiment was analyzed by the team," both "experiment" (singular) and "was analyzed" (past tense, singular) agree.
+   - Incorrect: "The experiments were analyzed by the team."
+   - Correct: "The experiment was analyzed by the team."
+
+2. **Pronoun Usage**
+   - When using "one" or "ones," ensure it agrees with the number of subjects it refers to.
+   - Example: "The study used one method for analysis."
+   - Incorrect: "The study used one methods for analysis."
+   - Correct: "The study used one method for analysis."
+
+**Concord in Technical Reports**
+
+- **Subject-Verb Agreement:** In sentences like "The findings were reviewed by the team," both "findings" (plural) and "were reviewed" (past tense, plural) agree.
+- **Avoiding Ambiguity:** When using "one," ensure it aligns with the subjects it refers to. For instance, "One of the findings was significant."
+- **Avoid Overuse:** Passive voice can sometimes be redundant. Use it sparingly, especially in formal technical reports.
+
+**Conclusion**
+
+Mastering the use of passive voice and concord is key to effective project report writing. By maintaining proper subject-verb agreement and ensuring concord, you can create clear, precise, and professional documents. Remember to use passive voice judiciously and avoid ambiguity by using consistent and appropriate pronoun usage.
+
+---
+
+This lesson provides a foundation for understanding and applying passive voice and concord in project reports, essential for both technical and general writing in STEM fields.

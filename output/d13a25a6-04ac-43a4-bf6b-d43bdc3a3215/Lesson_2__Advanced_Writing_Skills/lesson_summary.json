@@ -1,0 +1,68 @@
+{
+  "lesson_title": "Lesson 2: Advanced Writing Skills",
+  "lesson_description": "In this lesson, students will focus on essential grammar and vocabulary, including passive voice, reported speech, concord, signpost words, and cohesive devices. They will also learn about technical vs. general writing, with an introduction to project report writing, including definition, structure, types of reports, and plagiarism. The lesson will conclude with an overview of report writing in STEM fields, including experiments and statistical analysis.",
+  "subtopics": [
+    {
+      "title": "Subtopic 1: Passive Voice Basics",
+      "description": "Learn the structure and usage of passive voice in writing. Understand when to use it and how to avoid awkward phrasing.",
+      "estimated_chars": 250,
+      "actual_chars": 3659
+    },
+    {
+      "title": "Subtopic 2: Reported Speech: How to Paraphrase Accurately",
+      "description": "Master the art of reporting speech accurately. Understand the difference between direct and indirect reported speech.",
+      "estimated_chars": 280,
+      "actual_chars": 2331
+    },
+    {
+      "title": "Subtopic 3: Concord in Writing",
+      "description": "Explore the concept of concord and how it affects verb and noun agreement in sentences.",
+      "estimated_chars": 220,
+      "actual_chars": 3506
+    },
+    {
+      "title": "Subtopic 4: Signpost Words: Guiding Readers Through Your Writing",
+      "description": "Discover how signpost words help guide readers through your text, making it more coherent and easier to follow.",
+      "estimated_chars": 300,
+      "actual_chars": 3624
+    },
+    {
+      "title": "Subtopic 5: Cohesive Devices: Linking Ideas Together",
+      "description": "Learn about cohesive devices such as pronouns, conjunctions, and prepositions that help connect ideas and maintain a logical flow in writing.",
+      "estimated_chars": 350,
+      "actual_chars": 3373
+    },
+    {
+      "title": "Subtopic 6: Advanced Sentence Structure in Paragraph Writing",
+      "description": "Enhance your paragraph writing skills by exploring more complex sentence structures and how they contribute to a well-structured paragraph.",
+      "estimated_chars": 280,
+      "actual_chars": 7223
+    },
+    {
+      "title": "Subtopic 7: Technical vs. General Writing: Understanding the Differences",
+      "description": "Distinguish between technical and general writing, and understand the appropriate style and tone for each.",
+      "estimated_chars": 270,
+      "actual_chars": 4033
+    },
+    {
+      "title": "Subtopic 8: Project Report Writing: Introduction and Structure",
+      "description": "Get introduced to the concept of project reports and learn about their structure, including sections like introduction, methods, results, and conclusion.",
+      "estimated_chars": 290,
+      "actual_chars": 5128
+    },
+    {
+      "title": "Subtopic 9: Project Report Writing: Purpose and Audience",
+      "description": "Understand the purpose of a project report and how to tailor your writing to a specific audience, whether it's peers, superiors, or clients.",
+      "estimated_chars": 300,
+      "actual_chars": 5307
+    },
+    {
+      "title": "Subtopic 10: Avoiding Plagiarism in Project Reports",
+      "description": "Learn strategies to avoid plagiarism in your project reports, including proper citation and paraphrasing techniques.",
+      "estimated_chars": 260,
+      "actual_chars": 4600
+    }
+  ],
+  "quiz_question_count": 20,
+  "question_bank_count": 10
+}

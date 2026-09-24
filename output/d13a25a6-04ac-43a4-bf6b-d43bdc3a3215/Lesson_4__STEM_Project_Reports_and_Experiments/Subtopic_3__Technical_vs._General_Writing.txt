@@ -1,0 +1,45 @@
+Lesson: Lesson 4: STEM Project Reports and Experiments
+Subtopic: Subtopic 3: Technical vs. General Writing
+Character Count: 2097
+============================================================
+
+### Subtopic: Technical vs. General Writing
+
+#### Lesson: Technical vs. General Writing
+
+In STEM project reports and experiments, you'll often find yourself writing in both technical and general contexts. Understanding the differences is crucial for effective communication. Here’s a quick guide:
+
+**Technical Writing:**
+- **Purpose:** Detailed, specialized content for experts in the field.
+- **Audience:** Colleagues, industry professionals, experts.
+- **Structure:** Clear, concise, and detailed. Uses technical terms and jargon.
+- **Examples:** Code snippets, detailed explanations, diagrams.
+
+**General Writing:**
+- **Purpose:** Broad, accessible content for a general audience.
+- **Audience:** Students, general readers, non-specialists.
+- **Structure:** More conversational, uses simpler language, less technical terms.
+- **Examples:** Introduction, background, discussion.
+
+**Key Differences:**
+- **Jargon:** Technical uses specialized terms, general avoids.
+- **Clarity:** Technical is precise, general is clear and accessible.
+- **Examples:** A technical report might describe a complex algorithm, a general write-up could explain the algorithm's basics.
+
+**Concordance in STEM:**
+- **Technical Writing:** Uses terms like "API," "API gateway," "microservice."
+- **General Writing:** Uses "web service," "interface," "service layer."
+
+**Signpost Words:**
+- **Technical:** "First, second, then, finally," "Subsequently, concurrently."
+- **General:** "In the beginning, next, then, lastly."
+
+**Cohesive Devices:**
+- **Technical:** "Hence," "Therefore," "As a result."
+- **General:** "So," "And," "Then," "Finally."
+
+**Example Paragraph:**
+- **Technical:** "The microservice architecture is a design pattern where applications are built as a suite of small services, each running its own process."
+- **General:** "Microservices are small, independent programs that work together to create a larger application."
+
+Understanding these differences will help you tailor your writing to the right audience and purpose, making your STEM project reports and experiments more effective and engaging.

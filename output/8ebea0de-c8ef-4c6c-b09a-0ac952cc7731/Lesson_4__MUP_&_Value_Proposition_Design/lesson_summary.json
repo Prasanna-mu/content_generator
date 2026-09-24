@@ -1,0 +1,68 @@
+{
+  "lesson_title": "Lesson 4: MUP & Value Proposition Design",
+  "lesson_description": "In this lesson, students will learn about the Minimum Usable Prototype (MUP) and how to create one. They will also explore and design a value proposition, including how to validate it effectively through customer interviews and field visits. The lesson will cover the importance of customer-centric innovation, including problem validation, user personas, and the customer development process. Students will also learn about concept generation and system thinking, focusing on understanding and evaluating solution concepts and technology alternatives.",
+  "subtopics": [
+    {
+      "title": "Understanding Human-Centered Design",
+      "description": "Learn about the importance of understanding human needs and behaviors in the design process. Explore the stages of the innovation process and how to identify areas of opportunity for innovation.",
+      "estimated_chars": 450,
+      "actual_chars": 3818
+    },
+    {
+      "title": "Customer Interviews and Empathy Building",
+      "description": "Master the art of customer interviews to gain deep insights. Learn empathy-building techniques to connect with users and understand their needs better.",
+      "estimated_chars": 450,
+      "actual_chars": 3355
+    },
+    {
+      "title": "Problem Validation and Customer Discovery",
+      "description": "Discover how to validate problems and understand their significance. Explore the customer development process and how to conduct effective customer interviews and field visits.",
+      "estimated_chars": 500,
+      "actual_chars": 3671
+    },
+    {
+      "title": "User Personas and User Stories",
+      "description": "Create user personas and user stories to represent your target users. Understand how to use these tools to guide your design process.",
+      "estimated_chars": 450,
+      "actual_chars": 5264
+    },
+    {
+      "title": "Minimum Usable Prototype (MUP) Challenge Brief",
+      "description": "Learn how to create a MUP challenge brief. Understand the importance of the MUP in the design process and how to use it to test and validate your ideas.",
+      "estimated_chars": 500,
+      "actual_chars": 4287
+    },
+    {
+      "title": "Designing and Crafting the Value Proposition",
+      "description": "Explore the concept of value proposition design. Learn how to design and test compelling value propositions to ensure they meet customer needs.",
+      "estimated_chars": 450,
+      "actual_chars": 3315
+    },
+    {
+      "title": "Concept Generation and System Thinking",
+      "description": "Understand the concept of concept generation and its role in innovation. Learn how to evaluate technology alternatives and solution concepts using system thinking.",
+      "estimated_chars": 500,
+      "actual_chars": 3640
+    },
+    {
+      "title": "Concept Exploration and Iteration",
+      "description": "Learn how to conceptualize and explore solution concepts. Understand the importance of iteration and learning in the design process.",
+      "estimated_chars": 450,
+      "actual_chars": 3298
+    },
+    {
+      "title": "System Thinking in Design",
+      "description": "Gain an understanding of system thinking and its applications in design. Explore examples of complex systems and how to understand and manage them.",
+      "estimated_chars": 500,
+      "actual_chars": 2278
+    },
+    {
+      "title": "Mitigating Validation Risk with FIR",
+      "description": "Learn about the Forge 231 ovation rubric for mitigating validation risk. Understand how to use this tool to validate your ideas effectively.",
+      "estimated_chars": 450,
+      "actual_chars": 4407
+    }
+  ],
+  "quiz_question_count": 20,
+  "question_bank_count": 10
+}

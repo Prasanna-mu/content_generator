@@ -1,0 +1,14 @@
+{
+  "prompt": "Create a Course for Project Report Writing and make the lesson and subtopic name short, Writing   Skills   -   Essential  Grammar   and   Vocabulary   -   Passive Voice,   Reported   Speech,Concord, Signpost  words, Cohesive Devices - Paragraph writing  - Technical Writing vs.General Writing. Project Report - Definition, Structure, Types of Reports, Purpose - Intended Audience -Plagiarism - Report Writing in STEM fields - Experiment - Statistical Analysis.",
+  "session_id": "d13a25a6-04ac-43a4-bf6b-d43bdc3a3215",
+  "stages": {
+    "subtopic_generation": "completed",
+    "lesson_generation": "completed",
+    "content_generation": "completed",
+    "output_writing": "completed",
+    "docx_export": "completed"
+  },
+  "lessons": [],
+  "subtopics": [],
+  "tasklist": []
+}

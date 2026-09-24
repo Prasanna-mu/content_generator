@@ -1,0 +1,304 @@
+{
+  "tasks": [
+    {
+      "lesson_title": "Lesson 1: Introduction to Design Thinking Principles",
+      "subtopic_title": "Human-Centered Design",
+      "completed": false,
+      "content_file": null
+    },
+    {
+      "lesson_title": "Lesson 1: Introduction to Design Thinking Principles",
+      "subtopic_title": "Identifying Opportunities",
+      "completed": false,
+      "content_file": null
+    },
+    {
+      "lesson_title": "Lesson 1: Introduction to Design Thinking Principles",
+      "subtopic_title": "Interview Techniques",
+      "completed": false,
+      "content_file": null
+    },
+    {
+      "lesson_title": "Lesson 1: Introduction to Design Thinking Principles",
+      "subtopic_title": "Validation Risk Mitigation",
+      "completed": false,
+      "content_file": null
+    },
+    {
+      "lesson_title": "Lesson 1: Introduction to Design Thinking Principles",
+      "subtopic_title": "User Personas and Stories",
+      "completed": false,
+      "content_file": null
+    },
+    {
+      "lesson_title": "Lesson 1: Introduction to Design Thinking Principles",
+      "subtopic_title": "Customer Development Process",
+      "completed": false,
+      "content_file": null
+    },
+    {
+      "lesson_title": "Lesson 1: Introduction to Design Thinking Principles",
+      "subtopic_title": "Minimum Usable Prototype (MUP)",
+      "completed": false,
+      "content_file": null
+    },
+    {
+      "lesson_title": "Lesson 1: Introduction to Design Thinking Principles",
+      "subtopic_title": "Concept Generation and Solution Exploration",
+      "completed": false,
+      "content_file": null
+    },
+    {
+      "lesson_title": "Lesson 1: Introduction to Design Thinking Principles",
+      "subtopic_title": "System Thinking",
+      "completed": false,
+      "content_file": null
+    },
+    {
+      "lesson_title": "Lesson 1: Introduction to Design Thinking Principles",
+      "subtopic_title": "Complex Systems",
+      "completed": false,
+      "content_file": null
+    },
+    {
+      "lesson_title": "Lesson 2: Design Thinking Principles and Empathy",
+      "subtopic_title": "Subtopic 1: Design Thinking Principles Overview",
+      "completed": false,
+      "content_file": null
+    },
+    {
+      "lesson_title": "Lesson 2: Design Thinking Principles and Empathy",
+      "subtopic_title": "Subtopic 2: Innovation Process and Opportunity Areas",
+      "completed": false,
+      "content_file": null
+    },
+    {
+      "lesson_title": "Lesson 2: Design Thinking Principles and Empathy",
+      "subtopic_title": "Subtopic 3: Empathy Building Techniques",
+      "completed": false,
+      "content_file": null
+    },
+    {
+      "lesson_title": "Lesson 2: Design Thinking Principles and Empathy",
+      "subtopic_title": "Subtopic 4: Validation Risk Mitigation with FIR",
+      "completed": false,
+      "content_file": null
+    },
+    {
+      "lesson_title": "Lesson 2: Design Thinking Principles and Empathy",
+      "subtopic_title": "Subtopic 5: Case Studies in User-Centric Innovation",
+      "completed": false,
+      "content_file": null
+    },
+    {
+      "lesson_title": "Lesson 2: Design Thinking Principles and Empathy",
+      "subtopic_title": "Subtopic 6: Problem Validation and Customer Discovery",
+      "completed": false,
+      "content_file": null
+    },
+    {
+      "lesson_title": "Lesson 2: Design Thinking Principles and Empathy",
+      "subtopic_title": "Subtopic 7: User Personas and Stories",
+      "completed": false,
+      "content_file": null
+    },
+    {
+      "lesson_title": "Lesson 2: Design Thinking Principles and Empathy",
+      "subtopic_title": "Subtopic 8: Customer Development Process",
+      "completed": false,
+      "content_file": null
+    },
+    {
+      "lesson_title": "Lesson 2: Design Thinking Principles and Empathy",
+      "subtopic_title": "Subtopic 9: Minimum Usable Prototype (MUP) Challenges",
+      "completed": false,
+      "content_file": null
+    },
+    {
+      "lesson_title": "Lesson 2: Design Thinking Principles and Empathy",
+      "subtopic_title": "Subtopic 10: Concept Generation and Solution Exploration",
+      "completed": false,
+      "content_file": null
+    },
+    {
+      "lesson_title": "Lesson 3: Validation and Case Studies",
+      "subtopic_title": "Understanding Validation Techniques",
+      "completed": false,
+      "content_file": null
+    },
+    {
+      "lesson_title": "Lesson 3: Validation and Case Studies",
+      "subtopic_title": "User-Centric Innovation",
+      "completed": false,
+      "content_file": null
+    },
+    {
+      "lesson_title": "Lesson 3: Validation and Case Studies",
+      "subtopic_title": "Customer Interviews and Field Visits",
+      "completed": false,
+      "content_file": null
+    },
+    {
+      "lesson_title": "Lesson 3: Validation and Case Studies",
+      "subtopic_title": "Minimum Usable Prototype (MUP) Challenges",
+      "completed": false,
+      "content_file": null
+    },
+    {
+      "lesson_title": "Lesson 3: Validation and Case Studies",
+      "subtopic_title": "Designing a Compelling Value Proposition",
+      "completed": false,
+      "content_file": null
+    },
+    {
+      "lesson_title": "Lesson 3: Validation and Case Studies",
+      "subtopic_title": "Concept Generation and Evaluation",
+      "completed": false,
+      "content_file": null
+    },
+    {
+      "lesson_title": "Lesson 3: Validation and Case Studies",
+      "subtopic_title": "System Thinking in Innovation",
+      "completed": false,
+      "content_file": null
+    },
+    {
+      "lesson_title": "Lesson 3: Validation and Case Studies",
+      "subtopic_title": "Concept Validation and Technology Alternatives",
+      "completed": false,
+      "content_file": null
+    },
+    {
+      "lesson_title": "Lesson 3: Validation and Case Studies",
+      "subtopic_title": "Empathy and User Validation",
+      "completed": false,
+      "content_file": null
+    },
+    {
+      "lesson_title": "Lesson 3: Validation and Case Studies",
+      "subtopic_title": "Customer Development Process",
+      "completed": false,
+      "content_file": null
+    },
+    {
+      "lesson_title": "Lesson 4: MUP & Value Proposition Design",
+      "subtopic_title": "Understanding Human-Centered Design",
+      "completed": false,
+      "content_file": null
+    },
+    {
+      "lesson_title": "Lesson 4: MUP & Value Proposition Design",
+      "subtopic_title": "Customer Interviews and Empathy Building",
+      "completed": false,
+      "content_file": null
+    },
+    {
+      "lesson_title": "Lesson 4: MUP & Value Proposition Design",
+      "subtopic_title": "Problem Validation and Customer Discovery",
+      "completed": false,
+      "content_file": null
+    },
+    {
+      "lesson_title": "Lesson 4: MUP & Value Proposition Design",
+      "subtopic_title": "User Personas and User Stories",
+      "completed": false,
+      "content_file": null
+    },
+    {
+      "lesson_title": "Lesson 4: MUP & Value Proposition Design",
+      "subtopic_title": "Minimum Usable Prototype (MUP) Challenge Brief",
+      "completed": false,
+      "content_file": null
+    },
+    {
+      "lesson_title": "Lesson 4: MUP & Value Proposition Design",
+      "subtopic_title": "Designing and Crafting the Value Proposition",
+      "completed": false,
+      "content_file": null
+    },
+    {
+      "lesson_title": "Lesson 4: MUP & Value Proposition Design",
+      "subtopic_title": "Concept Generation and System Thinking",
+      "completed": false,
+      "content_file": null
+    },
+    {
+      "lesson_title": "Lesson 4: MUP & Value Proposition Design",
+      "subtopic_title": "Concept Exploration and Iteration",
+      "completed": false,
+      "content_file": null
+    },
+    {
+      "lesson_title": "Lesson 4: MUP & Value Proposition Design",
+      "subtopic_title": "System Thinking in Design",
+      "completed": false,
+      "content_file": null
+    },
+    {
+      "lesson_title": "Lesson 4: MUP & Value Proposition Design",
+      "subtopic_title": "Mitigating Validation Risk with FIR",
+      "completed": false,
+      "content_file": null
+    },
+    {
+      "lesson_title": "Lesson 5: System Thinking & Concept Exploration",
+      "subtopic_title": "Understanding System Thinking",
+      "completed": false,
+      "content_file": null
+    },
+    {
+      "lesson_title": "Lesson 5: System Thinking & Concept Exploration",
+      "subtopic_title": "Human-Centered Design Principles",
+      "completed": false,
+      "content_file": null
+    },
+    {
+      "lesson_title": "Lesson 5: System Thinking & Concept Exploration",
+      "subtopic_title": "Minimum Usable Prototype (MUP) Challenges",
+      "completed": false,
+      "content_file": null
+    },
+    {
+      "lesson_title": "Lesson 5: System Thinking & Concept Exploration",
+      "subtopic_title": "Designing Value Propositions",
+      "completed": false,
+      "content_file": null
+    },
+    {
+      "lesson_title": "Lesson 5: System Thinking & Concept Exploration",
+      "subtopic_title": "Concept Generation and Iteration",
+      "completed": false,
+      "content_file": null
+    },
+    {
+      "lesson_title": "Lesson 5: System Thinking & Concept Exploration",
+      "subtopic_title": "Systematic Concept Generation",
+      "completed": false,
+      "content_file": null
+    },
+    {
+      "lesson_title": "Lesson 5: System Thinking & Concept Exploration",
+      "subtopic_title": "Customer Validation Techniques",
+      "completed": false,
+      "content_file": null
+    },
+    {
+      "lesson_title": "Lesson 5: System Thinking & Concept Exploration",
+      "subtopic_title": "Applying Design Thinking Tools",
+      "completed": false,
+      "content_file": null
+    },
+    {
+      "lesson_title": "Lesson 5: System Thinking & Concept Exploration",
+      "subtopic_title": "System Thinking and Complex Systems",
+      "completed": false,
+      "content_file": null
+    },
+    {
+      "lesson_title": "Lesson 5: System Thinking & Concept Exploration",
+      "subtopic_title": "Validation Risk Mitigation",
+      "completed": false,
+      "content_file": null
+    }
+  ]
+}

@@ -1,0 +1,74 @@
+Lesson: Lesson 2: Advanced Writing Skills
+Subtopic: Subtopic 1: Passive Voice Basics
+Character Count: 3659
+============================================================
+
+### Lesson 2: Advanced Writing Skills - Passive Voice, Concord, and Cohesive Devices
+
+#### Subtopic: Passive Voice Basics
+
+**Objective:** Learn the structure and usage of passive voice in writing. Understand when to use it and how to avoid awkward phrasing.
+
+**Structure of Passive Voice:**
+
+Passive voice is formed by placing the object of the sentence before the verb and using a form of the verb "to be" (is, am, are, was, were, etc.) followed by the past participle of the main verb. The general structure is:
+
+**Subject + to be + past participle + by + agent.**
+
+Example: The cake was baked by John.
+
+**Avoiding Awkward Phrasing:**
+
+- **Explicit Agents:** Sometimes the agent performing the action can be omitted, making the sentence more concise and natural. For example, "The cake was baked" instead of "The cake was baked by John."
+- **Active Voice:** Passive voice can sometimes be avoided by rephrasing the sentence in active voice, which often sounds more natural and is easier to understand.
+
+**Examples:**
+
+1. **Passive:** The experiment was conducted by the team.
+   - **Active:** The team conducted the experiment.
+   
+2. **Passive:** The report was written by the team.
+   - **Active:** The team wrote the report.
+
+**Passive Voice in STEM Fields:**
+
+In scientific writing, passive voice is frequently used to maintain objectivity and avoid the appearance of bias. For example, in a STEM report, you might use passive voice when describing experimental results:
+
+- **Passive:** The results were analyzed using statistical software.
+- **Active:** The team analyzed the results using statistical software.
+
+**Concord and Cohesive Devices:**
+
+- **Concord:** Concord refers to the agreement between words or phrases in terms of tense, number, and person. In passive voice, concord is maintained by using the correct form of "to be" and the past participle.
+- **Cohesive Devices:** These are elements that connect ideas within a sentence or between sentences. In passive voice, devices like pronouns and conjunctions can help maintain clarity and coherence.
+
+**Examples:**
+
+- **Pronouns:** The report was reviewed by the team and found to be satisfactory.
+- **Conjunctions:** The report was reviewed by the team; however, the findings were inconclusive.
+
+**Signpost Words:**
+
+- **Signpost Words:** These words help the reader understand the structure and organization of the text. In passive voice, phrases like "it was revealed that" or "it was concluded that" can be used to signal the use of passive voice.
+
+**Example:**
+
+- **Active:** The team found the results inconclusive.
+- **Passive:** It was concluded that the results were inconclusive.
+
+**Paragraph Writing:**
+
+In passive voice, concord and cohesive devices are crucial for maintaining clarity and coherence. Passive voice is often used in STEM reports to maintain objectivity and avoid bias, but it should be used judiciously to ensure the writing is clear and concise.
+
+**Technical vs. General Writing:**
+
+- **Technical Writing:** Often uses passive voice for objectivity and to avoid sounding accusatory.
+- **General Writing:** May use active voice for a more engaging and direct tone.
+
+**Plagiarism:**
+
+When using passive voice in writing, ensure that the source of information is cited properly to avoid plagiarism. Proper attribution is key to academic and professional writing.
+
+### Summary
+
+Understanding and using passive voice effectively is an essential skill in writing. By mastering its structure and when to use it, writers can craft clear, concise, and professional text. Whether in STEM fields or general writing, passive voice can be a powerful tool when used correctly.

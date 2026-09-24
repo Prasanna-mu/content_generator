@@ -1,0 +1,46 @@
+{
+  "prompt": "Create a Course for Project Report Writing and make the lesson and subtopic name short, Writing   Skills   -   Essential  Grammar   and   Vocabulary   -   Passive Voice,   Reported   Speech,Concord, Signpost  words, Cohesive Devices - Paragraph writing  - Technical Writing vs.General Writing. Project Report - Definition, Structure, Types of Reports, Purpose - Intended Audience -Plagiarism - Report Writing in STEM fields - Experiment - Statistical Analysis.",
+  "config": {
+    "prompt": "Create a Course for Project Report Writing and make the lesson and subtopic name short, Writing   Skills   -   Essential  Grammar   and   Vocabulary   -   Passive Voice,   Reported   Speech,Concord, Signpost  words, Cohesive Devices - Paragraph writing  - Technical Writing vs.General Writing. Project Report - Definition, Structure, Types of Reports, Purpose - Intended Audience -Plagiarism - Report Writing in STEM fields - Experiment - Statistical Analysis.",
+    "num_lessons": 5,
+    "subtopics_per_lesson": 10,
+    "content_quality": "technical",
+    "content_length": "medium",
+    "quiz_question_count": 20,
+    "quiz_difficulty": "intermediate",
+    "question_bank_count": 10,
+    "web_search_needed": false
+  },
+  "total_lessons": 5,
+  "total_subtopics": 50,
+  "total_content_chars": 188051,
+  "total_quiz_questions": 80,
+  "total_question_bank_items": 40,
+  "lessons": [
+    {
+      "title": "Lesson 1: Foundations of Writing Skills",
+      "subtopic_count": 10,
+      "total_chars": 33763
+    },
+    {
+      "title": "Lesson 2: Advanced Writing Skills",
+      "subtopic_count": 10,
+      "total_chars": 42784
+    },
+    {
+      "title": "Lesson 3: Project Report Structure and Types",
+      "subtopic_count": 10,
+      "total_chars": 40283
+    },
+    {
+      "title": "Lesson 4: STEM Project Reports and Experiments",
+      "subtopic_count": 10,
+      "total_chars": 27094
+    },
+    {
+      "title": "Lesson 5: Final Project Report Writing",
+      "subtopic_count": 10,
+      "total_chars": 44127
+    }
+  ]
+}

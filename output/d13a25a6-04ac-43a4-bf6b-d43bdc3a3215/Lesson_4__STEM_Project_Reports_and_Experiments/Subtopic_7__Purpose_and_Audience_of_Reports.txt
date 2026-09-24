@@ -1,0 +1,51 @@
+Lesson: Lesson 4: STEM Project Reports and Experiments
+Subtopic: Subtopic 7: Purpose and Audience of Reports
+Character Count: 2802
+============================================================
+
+### Subtopic: Purpose and Audience of Reports
+
+#### Lesson: Project Reports and Experiments
+
+Understanding the purpose and intended audience for different types of project reports is crucial for effective STEM project communication. Here’s a breakdown of key points to consider:
+
+**Purpose of Reports:**
+- **Inform**: To inform the audience about the project findings, challenges, and solutions.
+- **Advise**: To provide recommendations based on the project outcomes.
+- **Educate**: To share knowledge and educate the audience about a particular topic or method.
+
+**Intended Audience:**
+- **Experts**: For experts, the report should be detailed and technical, including complex formulas and data analysis.
+- **General Public**: Simplified versions for a broader audience, avoiding technical jargon.
+- **Policy Makers**: Inform and persuade policymakers about the importance of the project’s findings.
+- **Collaborators**: Detailed reports for other team members to understand the project’s scope and progress.
+
+**Plagiarism:**
+- **Avoid**: Ensure all information is cited and referenced properly to avoid plagiarism.
+- **Use Quotation Marks**: For direct quotes and unique phrases, use quotation marks.
+
+**Experiment and Statistical Analysis:**
+- **Define Experiment**: A controlled trial to test a hypothesis, often involving variables and observations.
+- **Statistical Analysis**: Methods used to analyze the data collected from experiments, using tools like Excel or specialized software.
+
+#### Example: STEM Project Report Structure
+
+**Types of Reports in STEM:**
+- **Technical Reports**: Detailed, often requiring complex language and detailed data.
+- **Research Reports**: Focus on the methodology and results of research.
+- **User Manuals**: Step-by-step guides, suitable for users not familiar with the technical details.
+
+**Purpose and Audience in STEM:**
+- **Purpose**: To share research findings, educate, or support policy decisions.
+- **Audience**: Experts, general public, or policymakers depending on the project’s focus.
+
+**Key Terms and Devices:**
+- **Signpost Words**: E.g., "In conclusion," "To summarize," help guide the reader through the report.
+- **Cohesive Devices**: Repeating concepts, linking ideas with pronouns, and providing context with appropriate transitions.
+
+**Technical vs. General Writing:**
+- **Technical Writing**: Requires precision and clarity, often with complex language and specialized terms.
+- **General Writing**: Uses simpler language and avoids technical jargon, aimed at a broader audience.
+
+**Lesson Summary:**
+Creating clear, well-structured project reports and experiments is essential in STEM. Understanding the purpose and audience is key to effective communication. This knowledge helps in crafting reports that are both informative and impactful.

@@ -1,0 +1,53 @@
+Lesson: Lesson 4: STEM Project Reports and Experiments
+Subtopic: Subtopic 8: Plagiarism and Proper Citations
+Character Count: 2532
+============================================================
+
+### Subtopic: Plagiarism and Proper Citations
+
+#### Lesson: Plagiarism and Proper Citations
+
+**Subtopic Description:** Recognizing and avoiding plagiarism in project reports, including proper citation methods. Estimated Characters: 270
+
+**Lesson Objectives:**
+- Understand what constitutes plagiarism in project reports.
+- Learn proper citation methods to avoid plagiarism.
+- Write effective and ethical STEM project reports.
+
+**Key Points:**
+
+**Plagiarism:** Plagiarism occurs when someone uses another person's work or ideas without proper attribution. In project reports, this can be seen in direct copying of text, ideas, or data. It's crucial to provide proper citations to avoid plagiarism.
+
+**Proper Citations:**
+- **APA Style:** Use APA style for scientific and technical reports. For example, when quoting a source, include the author’s name, year of publication, and page number.
+  - **Example:** (Smith, 2023, p. 12)
+- **MLA Style:** MLA style is more common for humanities and social sciences. Include the author's last name and page number.
+  - **Example:** (Smith, 2023, p. 12)
+- **Chicago Style:** Uses footnotes or endnotes. Include the author’s last name, year of publication, and page number in the footnote.
+  - **Example:** Smith, 2023, p. 12.
+
+**Avoiding Plagiarism:**
+- **Quoting:** Directly quote from the source and include citations.
+- **Summarizing:** Briefly summarize the source and provide citations.
+- **Paraphrasing:** Rewrite ideas in your own words and include citations.
+- **Using Data:** Cite all data sources, including raw data, charts, and tables.
+
+**Tools to Avoid Plagiarism:**
+- **Turnitin:** An online tool to check originality of your text.
+- **Grammarly:** A writing tool that checks for plagiarism.
+- **Mendeley:** A reference management tool that helps organize and cite sources.
+
+**Example Project Report Structure:**
+
+- **Introduction:** Briefly introduce the topic and objectives.
+- **Methodology:** Describe the methods used in the project.
+- **Results:** Present the results, using charts, graphs, and tables.
+- **Discussion:** Interpret the results and their implications.
+- **Conclusion:** Summarize findings and their significance.
+- **References:** List all sources used in APA or MLA format.
+
+**Practice:**
+- Write a section of your project report and ensure it includes proper citations.
+- Use plagiarism detection tools to check your work.
+
+By understanding and applying proper citation methods, you can write ethical and credible STEM project reports that avoid plagiarism.

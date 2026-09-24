@@ -1,0 +1,11 @@
+{
+  "prompt": "Create a Course for a subject applied design thinking which includes and make lesson and subtopic name shorter, DESIGN THINKING PRINCIPLES  9 Exploring   Human-   centered   Design   -   Understanding   the   Innovation   process,   discoveringareas of opportunity, Interviewing & empathy-building techniques, Mitigate validation riskwith FIR [Forge 231 ovation rubric] - Case studies. ENDUSER-CENTRIC INNOVATION, Importance of customer-centric innovation - Problem Validation and Customer Discovery -Understanding problem significance and problem incidence - Customer Validation. Targetuser,   User   persona   &   user   stories.   Activity:   Customer   development   process   -   Customerinterviews and field visit. APPLIED DESIGN THINKING TOOLS   Concept   of   Minimum   Usable   Prototype   [MUP]   -   MUP   challenge   brief   -   Designing   &Crafting   the   value   proposition   -   Designing   and   Testing   Value   Proposition;   Design   acompelling value proposition; Process, tools and techniques of Value Proposition Design.CONCEPT GENERATION   Solution   Exploration, Concepts   Generation   and   MUP   design-   Conceptualize   the   solutionconcept; explore, iterate and learn; build the right prototype; Assess capability, usability andfeasibility.   Systematic   concept   generation;   evaluation   of   technology   alternatives   and   thesolution concepts. SYSTEM THINKING  System Thinking, Understanding Systems, Examples and Understandings, Complex Systems.",
+  "num_lessons": 5,
+  "subtopics_per_lesson": 10,
+  "content_quality": "technical",
+  "content_length": "medium",
+  "quiz_question_count": 20,
+  "quiz_difficulty": "intermediate",
+  "question_bank_count": 10,
+  "web_search_needed": false
+}

@@ -1,0 +1,61 @@
+Lesson: Lesson 1: Foundations of Writing Skills
+Subtopic: Subtopic 3: Passive Voice and Reported Speech
+Character Count: 3665
+============================================================
+
+### Lesson: Foundations of Writing Skills - Essential Grammar and Vocabulary - Passive Voice, Reported Speech, Concord, Signpost Words, Cohesive Devices - Technical Writing
+
+#### Subtopic: Passive Voice and Reported Speech
+
+**Understanding Passive Voice and Reported Speech**
+
+**Passive Voice:**
+- **Definition:** Passive voice is used when the focus is on the action rather than the doer of the action. It is formed by using the auxiliary verb "to be" (is, am, are, was, were, etc.) followed by the past participle of the main verb.
+- **Example:** The cake was baked by Sarah.
+- **When to Use:** Useful when you want to emphasize the action or object, rather than the person doing it.
+
+**Reported Speech:**
+- **Definition:** Reported speech, also known as indirect speech, is used when the speaker's words are being quoted. It uses the past tense to describe what was said and follows the same sentence structure as the original.
+- **Example:** Sarah said, "The cake was baked by me."
+- **When to Use:** Used in writing to maintain consistency and clarity, especially in formal and academic writing.
+
+**Concord:**
+- **Definition:** Concord refers to the agreement of verbs and their subjects or objects. In passive voice, the subject (the one who is acted upon) often takes a passive form.
+- **Example:** The cake was baked by Sarah.
+  - In this sentence, "Sarah" is the subject of the verb "baked" and is in the active voice.
+
+**Signpost Words:**
+- **Definition:** Signpost words are used to show the progression of ideas and to guide the reader. In passive voice, these words can help clarify the relationship between sentences.
+- **Example:** 
+  - "As we can see," indicates a transition from one idea to the next.
+  - "It is clear," helps to reinforce a point.
+
+**Cohesive Devices:**
+- **Definition:** Cohesive devices are words or phrases that help connect ideas within a sentence or paragraph. In passive voice, these can be used to link passive sentences.
+- **Example:** 
+  - "In conclusion," used to transition to the final sentence.
+  - "Therefore," used to show a result or consequence.
+
+**Technical Writing vs. General Writing:**
+- **Technical Writing:** Focuses on clarity and precision, using active voice for emphasis. Uses technical jargon and specific terminology.
+- **General Writing:** More conversational and less formal, uses active voice for engagement and uses simpler language.
+
+**Example in Technical Writing:**
+"In the experiment, the sample was analyzed using the spectrophotometer."
+
+**Example in General Writing:**
+"The scientists used the spectrophotometer to analyze the sample."
+
+**Experiment and Statistical Analysis:**
+- **Experiment:** A controlled test designed to observe and measure the effect of one or more variables. In a report, experiments are often discussed in passive voice to maintain objectivity.
+- **Statistical Analysis:** The process of analyzing collected data to draw conclusions. This can also be written in passive voice for a more formal tone.
+
+**Plagiarism:**
+- **Definition:** Avoiding plagiarism is crucial in academic and professional writing. It involves proper attribution of ideas, quotes, and research findings.
+
+**Example of Plagiarism:**
+- Directly copying text without proper citation.
+- Paraphrasing without modifying the source text.
+
+**Conclusion:**
+Understanding and applying passive voice and reported speech effectively can significantly enhance your writing skills, making your reports clear and engaging. Familiarity with these techniques, along with other writing skills like concord, signpost words, and cohesive devices, is essential for creating effective technical and project reports.

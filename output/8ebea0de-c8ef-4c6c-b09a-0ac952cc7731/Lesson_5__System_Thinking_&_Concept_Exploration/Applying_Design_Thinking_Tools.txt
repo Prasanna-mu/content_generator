@@ -1,0 +1,49 @@
+Lesson: Lesson 5: System Thinking & Concept Exploration
+Subtopic: Applying Design Thinking Tools
+Character Count: 2650
+============================================================
+
+### Design Thinking Principles: Applying Tools
+
+#### Lesson: Human-Centered Design - Exploring Innovation Process
+
+#### Subtopic: Applied Design Thinking Tools
+
+**Objectives:**
+- Understand the role of Minimum Usable Prototypes (MUP).
+- Learn value proposition design and customer development process.
+
+**Introduction:**
+Design thinking is a problem-solving approach that focuses on understanding the user's needs and designing solutions that meet those needs. Applied design thinking tools help in validating these solutions and refining them. This lesson will cover key tools like Minimum Usable Prototypes (MUP), value proposition design, and the customer development process.
+
+**Key Tools:**
+
+#### **Minimum Usable Prototype (MUP)**
+MUP is a lightweight prototype used to test assumptions and gather feedback. It's designed to be simple and quick to produce, often taking less than 24 hours. Here's a basic MUP challenge brief:
+1. Identify a specific problem or need.
+2. Brainstorm possible solutions.
+3. Create a simple, minimal version of a solution (MUP).
+
+**Example:**
+Create a MUP for a coffee vending machine app. The MUP would include a basic user interface, a flowchart of the process, and a simple mock-up of the app. 
+
+**Value Proposition Design**
+Value proposition design is about creating a clear, compelling value proposition that articulates the benefits of a product or service. The Forge 231 Ovation Rubric is a tool to help validate the value proposition:
+- Value to customer: What value does the product provide?
+- Feasibility: Is the technology feasible and cost-effective?
+- Acceptability: Will customers accept and use the product?
+
+**Example:**
+Design a value proposition for a subscription-based health coaching service. The value proposition might be "Expert guidance tailored to your health goals, 24/7 access, and a personalized health plan."
+
+**Customer Development Process**
+The customer development process involves interviewing customers, observing them, and validating your assumptions. It's often facilitated by a customer development coach. The main steps are:
+1. Identify key customer segments.
+2. Conduct customer interviews and field visits.
+3. Analyze the data to identify opportunities and risks.
+
+**Example:**
+Identify a segment of health-conscious millennials. Conduct interviews to understand their needs and preferences, then observe them using a product or service. 
+
+**Conclusion:**
+By applying these tools, you can move from understanding user needs to validating and refining your solutions effectively. This process helps reduce validation risk and increases the likelihood of successful innovation.

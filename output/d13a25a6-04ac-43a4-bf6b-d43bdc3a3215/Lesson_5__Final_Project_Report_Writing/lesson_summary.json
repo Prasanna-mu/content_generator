@@ -1,0 +1,68 @@
+{
+  "lesson_title": "Lesson 5: Final Project Report Writing",
+  "lesson_description": "In this final lesson, students will apply all the skills learned throughout the course to write a comprehensive project report. They will receive feedback and guidance on their work, including essential grammar and vocabulary, passive voice, reported speech, concord, signpost words, and cohesive devices. The lesson will cover technical writing versus general writing, the definition and structure of project reports, the purpose and intended audience, plagiarism, and report writing in STEM fields, including experiments and statistical analysis.",
+  "subtopics": [
+    {
+      "title": "Technical vs. General Writing",
+      "description": "Discuss the differences between technical and general writing, focusing on the appropriate language and tone for project reports.",
+      "estimated_chars": 250,
+      "actual_chars": 4265
+    },
+    {
+      "title": "Project Report Structure",
+      "description": "Outline the basic structure of a project report, including introduction, body, and conclusion sections.",
+      "estimated_chars": 200,
+      "actual_chars": 4583
+    },
+    {
+      "title": "Types of Project Reports",
+      "description": "Identify and describe the different types of project reports, such as technical, scientific, and managerial reports.",
+      "estimated_chars": 250,
+      "actual_chars": 6934
+    },
+    {
+      "title": "Purpose and Audience",
+      "description": "Explore the purpose and intended audience for project reports in various fields, including STEM.",
+      "estimated_chars": 200,
+      "actual_chars": 3887
+    },
+    {
+      "title": "Avoiding Plagiarism",
+      "description": "Provide strategies for avoiding plagiarism in project reports, including proper citation and paraphrasing techniques.",
+      "estimated_chars": 250,
+      "actual_chars": 4539
+    },
+    {
+      "title": "Experiment Writing",
+      "description": "Guide students on how to write about experiments in project reports, including methods, results, and conclusions.",
+      "estimated_chars": 250,
+      "actual_chars": 4870
+    },
+    {
+      "title": "Statistical Analysis in Reports",
+      "description": "Teach students how to write about statistical analysis in project reports, including interpreting data and presenting findings.",
+      "estimated_chars": 250,
+      "actual_chars": 4025
+    },
+    {
+      "title": "Grammar and Vocabulary",
+      "description": "Review essential grammar and vocabulary skills for project reports, including active voice, subject-verb agreement, and prepositions.",
+      "estimated_chars": 200,
+      "actual_chars": 3338
+    },
+    {
+      "title": "Passive Voice and Concord",
+      "description": "Introduce the use of passive voice and concord in project reports, including subject-verb agreement and pronoun usage.",
+      "estimated_chars": 200,
+      "actual_chars": 3313
+    },
+    {
+      "title": "Signpost Words and Cohesive Devices",
+      "description": "Explain the use of signpost words and cohesive devices in project reports, including transition words and linking phrases.",
+      "estimated_chars": 250,
+      "actual_chars": 4373
+    }
+  ],
+  "quiz_question_count": 0,
+  "question_bank_count": 0
+}

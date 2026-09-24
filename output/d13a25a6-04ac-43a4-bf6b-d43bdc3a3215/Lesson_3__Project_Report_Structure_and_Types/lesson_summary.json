@@ -1,0 +1,68 @@
+{
+  "lesson_title": "Lesson 3: Project Report Structure and Types",
+  "lesson_description": "In this lesson, students will learn about the essential components of project reports, including their definition, structure, and types. We will cover the purpose and intended audience of project reports, emphasizing the importance of avoiding plagiarism. Additionally, students will explore specific aspects of project report writing in STEM fields, such as conducting experiments and performing statistical analysis.",
+  "subtopics": [
+    {
+      "title": "Project Report Definition",
+      "description": "Defines what a project report is and its importance in various fields.",
+      "estimated_chars": 250,
+      "actual_chars": 4215
+    },
+    {
+      "title": "Project Report Structure Overview",
+      "description": "Introduces the basic structure of a project report, including introduction, methods, results, discussion, and conclusion sections.",
+      "estimated_chars": 300,
+      "actual_chars": 4068
+    },
+    {
+      "title": "Types of Project Reports",
+      "description": "Covers different types of project reports such as technical, formal, and informal reports.",
+      "estimated_chars": 250,
+      "actual_chars": 4774
+    },
+    {
+      "title": "Purpose and Intended Audience",
+      "description": "Explains the purpose of project reports and who they are intended for, including educational and professional settings.",
+      "estimated_chars": 280,
+      "actual_chars": 3542
+    },
+    {
+      "title": "Avoiding Plagiarism",
+      "description": "Discusses strategies for avoiding plagiarism in project reports, including proper citation and referencing.",
+      "estimated_chars": 270,
+      "actual_chars": 3381
+    },
+    {
+      "title": "STEM Field Specifics",
+      "description": "Explains how project reports are used in STEM fields, including conducting experiments and performing statistical analysis.",
+      "estimated_chars": 300,
+      "actual_chars": 4347
+    },
+    {
+      "title": "Experiment Writing Tips",
+      "description": "Provides tips on how to write about experiments, including how to describe procedures, results, and conclusions.",
+      "estimated_chars": 280,
+      "actual_chars": 3166
+    },
+    {
+      "title": "Statistical Analysis in Reports",
+      "description": "Explains how to incorporate statistical analysis into project reports, including data interpretation and presentation.",
+      "estimated_chars": 300,
+      "actual_chars": 3246
+    },
+    {
+      "title": "Writing for STEM vs. General Audiences",
+      "description": "Compares the differences in writing style and content for STEM and general audiences in project reports.",
+      "estimated_chars": 270,
+      "actual_chars": 7184
+    },
+    {
+      "title": "Conclusion and Final Thoughts",
+      "description": "Summarizes key points and provides final thoughts on effective project report writing.",
+      "estimated_chars": 250,
+      "actual_chars": 2360
+    }
+  ],
+  "quiz_question_count": 20,
+  "question_bank_count": 10
+}

@@ -1,0 +1,80 @@
+Lesson: Lesson 1: Foundations of Writing Skills
+Subtopic: Subtopic 7: STEM Field-Specific Report Writing
+Character Count: 3614
+============================================================
+
+### Lesson 1: Foundations of Writing Skills - Technical Writing - STEM Fields
+
+#### Subtopic: Write Effective Technical Reports in STEM Fields
+
+Effective writing is crucial in STEM fields, where clear and precise communication is essential. This lesson explores how to write effective technical reports, focusing on specific techniques and challenges unique to STEM.
+
+#### Essential Grammar and Vocabulary - Passive Voice, Reported Speech, Concord, Signpost Words, Cohesive Devices
+
+1. **Passive Voice and Concord**:
+   - **Passive Voice**: Used to minimize the focus on the doer of an action.
+     ```java
+     // Example in Java
+     String message = "The experiment was conducted by the team.";
+     ```
+   - **Concord**: Ensures agreement between words, like subject and verb.
+     ```java
+     // Example in Java
+     String message = "The experiment was conducted by the team.";
+     ```
+2. **Signpost Words and Cohesive Devices**:
+   - **Signpost Words**: Indicate the structure of a sentence or paragraph.
+     - **Sentence Level**: E.g., "In conclusion" or "However"
+     - **Paragraph Level**: E.g., "In this section" or "To summarize"
+   - **Cohesive Devices**: Linking words and phrases to show relationships.
+     - **Referring Words**: E.g., "this", "these", "that", "those"
+     - **Coordinating Conjunctions**: E.g., "and", "but", "or", "nor", "yet", "so"
+3. **Technical Writing vs. General Writing**:
+   - **Technical Writing**: More formal, precise, and data-driven.
+   - **General Writing**: More casual, opinionated, and less technical.
+
+#### Technical Writing - Definition, Structure, Types of Reports
+
+- **Definition**: Writing that includes technical jargon and detailed data analysis.
+- **Structure**:
+  - **Introduction**: Background, objectives, and scope.
+  - **Methodology**: Methods used in the experiment.
+  - **Results**: Data and findings.
+  - **Discussion**: Interpretation and implications.
+  - **Conclusion**: Summary and future directions.
+- **Types of Reports**:
+  - **Descriptive Reports**: Detailing experiments and data.
+  - **Analytical Reports**: Interpreting data and making conclusions.
+  - **Comparative Reports**: Comparing data with other studies.
+- **Purpose and Audience**:
+  - **Purpose**: To inform, educate, or advise.
+  - **Audience**: Colleagues, researchers, students.
+- **Plagiarism**:
+  - **Avoid**: Directly copying text or ideas without proper citation.
+- **Experiment and Statistical Analysis**:
+  - **Experiment**: Controlled tests to measure results.
+  - **Statistical Analysis**: Using mathematical methods to interpret results.
+  - **Example**:
+     ```java
+     // Statistical Analysis in Java
+     double mean = 0;
+     for (int i = 0; i < data.length; i++) {
+         mean += data[i];
+     }
+     mean /= data.length;
+     System.out.println("Mean: " + mean);
+     ```
+
+#### Report Writing in STEM Fields
+
+Writing technical reports in STEM fields requires a blend of precision and clarity. Here are some tips:
+
+- **Use Active Voice When Possible**: Makes text more direct and engaging.
+- **Be Clear and Concise**: Avoid unnecessary jargon.
+- **Include Proper Citations**: References your sources to avoid plagiarism.
+- **Use Signpost Words**: Guide the reader through your report.
+- **Proofread and Edit**: Check for errors, consistency, and clarity.
+
+#### Conclusion
+
+Effective writing is a key skill in STEM. Understanding and applying techniques like passive voice, reported speech, and signpost words can greatly enhance your technical reports. By following these guidelines, you can create clear, concise, and impactful reports in your field.

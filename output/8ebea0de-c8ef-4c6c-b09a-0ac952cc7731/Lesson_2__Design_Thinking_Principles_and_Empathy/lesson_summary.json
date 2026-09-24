@@ -1,0 +1,68 @@
+{
+  "lesson_title": "Lesson 2: Design Thinking Principles and Empathy",
+  "lesson_description": "In this lesson, students explore the core principles of design thinking, focusing on human-centered design and empathy-building techniques. They will engage in role-playing activities and group discussions to understand the innovation process, conduct interviews for empathy, and validate solutions using the Forge 231 Ovation Rubric. Students will also learn about user-centric innovation, including problem validation, customer discovery, and user personas, through case studies and the customer development process. Additionally, they will apply design thinking tools such as Minimum Usable Prototypes, value proposition design, and systematic concept generation to develop and test compelling solutions.",
+  "subtopics": [
+    {
+      "title": "Subtopic 1: Design Thinking Principles Overview",
+      "description": "Introduces the core principles of design thinking, including empathy and human-centered design. Estimated character count: 150",
+      "estimated_chars": 150,
+      "actual_chars": 4009
+    },
+    {
+      "title": "Subtopic 2: Innovation Process and Opportunity Areas",
+      "description": "Explains the innovation process and identifies areas of opportunity. Estimated character count: 200",
+      "estimated_chars": 200,
+      "actual_chars": 2545
+    },
+    {
+      "title": "Subtopic 3: Empathy Building Techniques",
+      "description": "Describes empathy-building techniques and their importance in design thinking. Estimated character count: 250",
+      "estimated_chars": 250,
+      "actual_chars": 3824
+    },
+    {
+      "title": "Subtopic 4: Validation Risk Mitigation with FIR",
+      "description": "Introduces the Forge 231 Ovation Rubric for validating solutions. Estimated character count: 180",
+      "estimated_chars": 180,
+      "actual_chars": 3207
+    },
+    {
+      "title": "Subtopic 5: Case Studies in User-Centric Innovation",
+      "description": "Analyzes case studies to understand user-centric innovation and its application. Estimated character count: 220",
+      "estimated_chars": 220,
+      "actual_chars": 3833
+    },
+    {
+      "title": "Subtopic 6: Problem Validation and Customer Discovery",
+      "description": "Explains problem validation and customer discovery techniques. Estimated character count: 200",
+      "estimated_chars": 200,
+      "actual_chars": 3335
+    },
+    {
+      "title": "Subtopic 7: User Personas and Stories",
+      "description": "Describes creating user personas and user stories. Estimated character count: 250",
+      "estimated_chars": 250,
+      "actual_chars": 3207
+    },
+    {
+      "title": "Subtopic 8: Customer Development Process",
+      "description": "Introduces the customer development process, including customer interviews and field visits. Estimated character count: 200",
+      "estimated_chars": 200,
+      "actual_chars": 4907
+    },
+    {
+      "title": "Subtopic 9: Minimum Usable Prototype (MUP) Challenges",
+      "description": "Explains the concept of MUP and challenges. Estimated character count: 170",
+      "estimated_chars": 170,
+      "actual_chars": 4102
+    },
+    {
+      "title": "Subtopic 10: Concept Generation and Solution Exploration",
+      "description": "Introduces concept generation and solution exploration techniques. Estimated character count: 200",
+      "estimated_chars": 200,
+      "actual_chars": 2257
+    }
+  ],
+  "quiz_question_count": 20,
+  "question_bank_count": 10
+}

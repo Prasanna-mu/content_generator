@@ -1,0 +1,58 @@
+Lesson: Lesson 5: Final Project Report Writing
+Subtopic: Technical vs. General Writing
+Character Count: 4265
+============================================================
+
+### Lesson: Technical vs. General Writing
+
+#### Subtopic: Technical vs. General Writing
+
+In the realm of project reports, understanding the difference between technical and general writing is crucial. This lesson explores the appropriate language and tone for project reports in STEM fields, focusing on how to write effectively for a technical audience versus a general audience.
+
+#### Key Concepts
+
+- **Technical Writing**: Focuses on providing clear, detailed, and precise information to experts in the field. The language is specialized and technical terms are used frequently.
+- **General Writing**: Targets a broader audience, including non-experts. The language is more conversational and simplifies complex ideas.
+
+#### Differences in Language and Tone
+
+**Technical Writing:**
+- **Language**: Uses specialized jargon, technical terms, and precise language.
+- **Tone**: Formal, precise, and authoritative.
+- **Example**: Writing a technical report on a scientific experiment might use terms like "genetic mutation," "PCR amplification," and "gene expression analysis."
+- **Code Example**: A section of code for a machine learning experiment might include terms like "gradient descent," "activation function," and "loss function."
+
+**General Writing:**
+- **Language**: Uses simpler, more everyday language and avoids jargon.
+- **Tone**: Informal, conversational, and accessible.
+- **Example**: A general report on the impact of climate change might use terms like "global warming," "carbon footprint," and "renewable energy."
+- **Example**: A news article discussing climate change might use phrases like "rising temperatures," "environmental policies," and "sustainability initiatives."
+
+#### Application in Project Reports
+
+**Technical Reports:**
+- **Purpose**: Provide detailed explanations of experiments, methodologies, and results.
+- **Audience**: Experts in the field, such as researchers, professors, and students.
+- **Example**: A technical report on a new drug trial might detail the trial process, data collection methods, and statistical analysis, using terms like "randomized controlled trial," "blinding," and "statistical significance."
+
+**General Reports:**
+- **Purpose**: Share findings with a wider audience, including non-experts.
+- **Audience**: Stakeholders, policymakers, and the general public.
+- **Example**: A general report on climate change might discuss its impacts, propose solutions, and include charts and graphs to illustrate key points, using simpler terms like "global warming" and "carbon emissions."
+
+#### Concord and Signpost Words
+
+**Concord**: Refers to the matching of words and their roles within a sentence. In technical writing, concord is crucial for clarity and precision. For example, using "the results show" instead of "the results are showing" ensures consistency.
+- **Example**: In a technical report, you might say, "The hypothesis was confirmed by the results," whereas in general writing, you might say, "The results confirm the hypothesis."
+
+**Signpost Words**: Used to guide the reader through the content, indicating the flow of ideas and structure. In technical writing, signpost words like "In this section," "Furthermore," and "Consequently" are essential for maintaining clarity and coherence.
+- **Example**: "In this section, we will discuss the methodology used in the experiment." This helps the reader understand the structure of the report.
+
+#### Cohesive Devices
+
+**Cohesive Devices** are tools used to connect sentences and paragraphs, ensuring the report flows smoothly and logically. In technical writing, cohesive devices like "however," "therefore," and "on the other hand" are vital.
+- **Example**: In a technical report, you might use "However, the results did not match our initial hypothesis," whereas in general writing, you might say, "But the results did not align with our expectations."
+
+#### Conclusion
+
+In project reports, understanding the difference between technical and general writing is crucial. Technical writing requires precise language and specialized terms, while general writing should be accessible and conversational. By mastering the appropriate language and tone, writers can effectively communicate their findings to both technical and non-technical audiences.

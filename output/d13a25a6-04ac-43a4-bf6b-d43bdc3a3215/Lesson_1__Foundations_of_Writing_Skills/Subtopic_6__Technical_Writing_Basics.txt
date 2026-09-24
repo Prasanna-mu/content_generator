@@ -1,0 +1,59 @@
+Lesson: Lesson 1: Foundations of Writing Skills
+Subtopic: Subtopic 6: Technical Writing Basics
+Character Count: 3001
+============================================================
+
+### Lesson 1: Foundations of Writing Skills
+
+#### Subtopic: Technical Writing Basics
+
+**Definition of Technical Writing:**
+Technical writing involves crafting clear and concise documents that explain technical concepts and procedures. It's used in STEM (Science, Technology, Engineering, and Mathematics) fields where precise information is crucial.
+
+**Core Concepts in Technical Writing:**
+1. **Definition of Technical Reports:**
+   - **Purpose:** To provide detailed information about a specific topic.
+   - **Intended Audience:** Experts in the field or those who need specific technical details.
+   - **Plagiarism:** Avoiding copying others' work and giving credit where necessary.
+   - **Experiment Writing:** Detailing the steps and results of experiments.
+   - **Statistical Analysis:** Using data to support claims or conclusions.
+
+**Technical Writing vs. General Writing:**
+- **Technical Writing:** Focused on explaining complex ideas in a clear, precise manner.
+- **General Writing:** Aimed at a broader audience, explaining ideas simply and using more descriptive language.
+
+**Structure of Technical Reports:**
+- **Introduction:** Brief overview of the topic.
+- **Methodology:** Detailed description of how the experiment was conducted.
+- **Results:** Presentation of data collected from experiments.
+- **Conclusion:** Interpretation of results and their implications.
+- **References:** Citing sources used in the report.
+
+**Types of Technical Reports:**
+- **Descriptive Reports:** Focus on describing a process or system.
+- **Explanatory Reports:** Explain how something works or why something happens.
+- **Analytical Reports:** Provide detailed analysis of data or experiments.
+- **Instructional Reports:** Teach users how to do something, like a step-by-step guide.
+
+**Signpost Words and Cohesive Devices:**
+- **Signpost Words:** Words that signal shifts in meaning or information, such as “In this section,” “Next,” and “Conversely.”
+- **Cohesive Devices:** Repeating words or phrases to link ideas together, like “As mentioned earlier,” or “It can be observed.”
+
+**Passive Voice vs. Active Voice:**
+- **Passive Voice:** Used when the emphasis is on the action rather than the actor.
+- **Active Voice:** Used when the actor is more important or when it's clearer.
+
+### Example of Passive Voice in a Report:
+- **Original:** The experiment was conducted by the team.
+- **Passive:** The experiment was conducted.
+
+### Example of Active Voice in a Report:
+- **Original:** The team conducted the experiment.
+- **Active:** The team conducted the experiment.
+
+**Concord:**
+- **Meaning:** Consistency in tense, voice, and number.
+- **Example:** “The team conducted the experiment” is consistent in tense and voice.
+
+### Conclusion:
+Understanding technical writing is crucial for effective communication in STEM fields. By mastering the basics of technical writing, including definitions, structure, and types of reports, you can ensure your reports are clear, precise, and free from plagiarism.

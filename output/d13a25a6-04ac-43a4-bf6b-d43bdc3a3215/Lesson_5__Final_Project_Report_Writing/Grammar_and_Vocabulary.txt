@@ -1,0 +1,53 @@
+Lesson: Lesson 5: Final Project Report Writing
+Subtopic: Grammar and Vocabulary
+Character Count: 3338
+============================================================
+
+### Lesson: Writing Skills - Essential Grammar and Vocabulary - Passive Voice, Reported Speech, Concord, Signpost Words, Cohesive Devices - Technical Writing vs. General Writing
+
+#### Subtopic: Passive Voice, Reported Speech, Concord, Signpost Words, and Cohesive Devices
+
+**Grammar and Vocabulary Review for Project Reports**
+
+In project reports, effective communication is key. This lesson focuses on mastering essential grammar and vocabulary skills, specifically passive voice, reported speech, concord, signpost words, and cohesive devices. Understanding and applying these elements will significantly enhance the clarity and impact of your project reports.
+
+**Passive Voice and Concord**
+
+Passive voice is used when the focus is on the action rather than the doer. Concord ensures that verbs agree in tense and number with their subjects. For example, "The experiment was conducted by the team" uses passive voice and concord, whereas "The team conducted the experiment" uses active voice and agrees in number.
+
+**Signpost Words and Cohesive Devices**
+
+Signpost words like "furthermore," "however," and "in conclusion" help guide the reader through the report. Cohesive devices, such as pronouns and reference markers, ensure sentences connect logically. For example, "As previously mentioned, the results showed a significant improvement" uses both signpost words and cohesive devices to maintain flow and clarity.
+
+**Technical Writing vs. General Writing**
+
+Technical writing is precise and detail-oriented, used in fields like STEM. General writing is broader, used in humanities and social sciences. Technical reports often require conciseness, precise language, and detailed explanations, while general reports focus on summarizing and synthesizing information.
+
+**Project Report Structure and Types**
+
+A typical project report structure includes an introduction, methods, results, discussion, and conclusion. Types of project reports include experimental reports, review papers, and technical manuals. Understanding your intended audience is crucial for tailoring the report appropriately.
+
+**Plagiarism**
+
+To avoid plagiarism, always cite sources. Use bibliographies and in-text citations in a consistent style like APA, MLA, or Chicago.
+
+**Experiment and Statistical Analysis**
+
+In STEM projects, experiments must be detailed and methodologically sound. Statistical analysis should be transparent and clearly explained. For instance, a t-test result might be presented as: "The mean difference was statistically significant at p < 0.05."
+
+**Concord Examples**
+
+- General Writing: "The researcher conducted the experiment."
+- Technical Writing: "The experiment was conducted by the researcher."
+
+**Signpost Words Example**
+
+- General Writing: "In conclusion, the data supports the hypothesis."
+- Technical Writing: "Conclusively, the data indicates the hypothesis is valid."
+
+**Cohesive Devices Example**
+
+- General Writing: "As we discussed in the previous section, the results align with the hypothesis."
+- Technical Writing: "As previously discussed, the results align with the hypothesis."
+
+By mastering these techniques, you can write more effective and precise project reports. Practice these skills in your own projects, and remember to integrate them into your writing to make your reports clearer and more impactful.
