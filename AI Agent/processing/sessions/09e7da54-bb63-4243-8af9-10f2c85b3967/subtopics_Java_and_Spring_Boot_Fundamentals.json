@@ -1,0 +1,14 @@
+{
+  "subtopics": [
+    {
+      "title": "Setting Up a Spring Boot Project",
+      "description": "Learn how to create a basic Spring Boot project using Spring Initializr, configure dependencies, and understand the project structure including src/main/java, src/main/resources, and src/test/java. This subtopic covers setting up the foundation for building Spring Boot applications and understanding their directory structure.",
+      "estimated_chars": 1500
+    },
+    {
+      "title": "Dependency Injection and Configuration",
+      "description": "Explore the concept of dependency injection in Spring Boot, including how to inject beans, use constructors for dependency injection, and configure beans using annotations and XML. Understand how to manage configurations and properties in a Spring Boot application.",
+      "estimated_chars": 1500
+    }
+  ]
+}

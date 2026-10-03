@@ -1,0 +1,20 @@
+{
+  "lesson_title": "Python and Django Fundamentals and Project Setup",
+  "lesson_description": "In this lesson, students will learn the basics of Python programming and how to set up a Django project. They will then write their first Django application and understand the structure of a Django project, laying a strong foundation for future development work.",
+  "subtopics": [
+    {
+      "title": "Configuring Virtual Environment and Installing Dependencies",
+      "description": "Learn how to set up a virtual environment for your Python project and install necessary dependencies using pip. Understand the importance of a virtual environment in managing project-specific libraries and dependencies, and how to manage them efficiently with pip.",
+      "estimated_chars": 1500,
+      "actual_chars": 0
+    },
+    {
+      "title": "Creating and Configuring a Django Project",
+      "description": "Discover how to create a new Django project, configure settings, manage databases, and set up middleware and authentication. Explore the structure and purpose of each configuration file.",
+      "estimated_chars": 1500,
+      "actual_chars": 0
+    }
+  ],
+  "quiz_question_count": 0,
+  "question_bank_count": 0
+}

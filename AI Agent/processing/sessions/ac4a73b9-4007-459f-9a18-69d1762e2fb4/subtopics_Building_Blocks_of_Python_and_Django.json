@@ -1,0 +1,14 @@
+{
+  "subtopics": [
+    {
+      "title": "Python Syntax Basics",
+      "description": "Learn about variables, data types, operators, and basic control structures in Python.",
+      "estimated_chars": 1500
+    },
+    {
+      "title": "Django Models and Views",
+      "description": "Explore how to define models and create views in a Django project to structure data and user interactions.",
+      "estimated_chars": 1500
+    }
+  ]
+}

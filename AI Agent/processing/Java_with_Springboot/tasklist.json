@@ -1,0 +1,36 @@
+{
+  "tasks": [
+    {
+      "lesson_id": "c2bce39a-4d32-4831-ba7e-b8a81420093a",
+      "lesson_title": "Java and Spring Boot Fundamentals",
+      "subtopic_id": "9883e98c-24f7-497d-ac5a-764ba43de0d1",
+      "subtopic_title": "Setting Up a Spring Boot Project",
+      "completed": false,
+      "content_file": null
+    },
+    {
+      "lesson_id": "c2bce39a-4d32-4831-ba7e-b8a81420093a",
+      "lesson_title": "Java and Spring Boot Fundamentals",
+      "subtopic_id": "3da02d36-9a9e-4e61-8e6e-d60d9506a051",
+      "subtopic_title": "Dependency Injection and Configuration",
+      "completed": false,
+      "content_file": null
+    },
+    {
+      "lesson_id": "f415600b-1d29-4437-b488-650f031d1515",
+      "lesson_title": "Mastering Advanced Spring Boot: Security, Data, and Microservices",
+      "subtopic_id": "3fdc4873-e9a6-4174-ab63-4cf48e3166f8",
+      "subtopic_title": "Advanced Security Practices in Spring Boot",
+      "completed": false,
+      "content_file": null
+    },
+    {
+      "lesson_id": "f415600b-1d29-4437-b488-650f031d1515",
+      "lesson_title": "Mastering Advanced Spring Boot: Security, Data, and Microservices",
+      "subtopic_id": "b3b698da-aa8a-46e0-9ce3-8da85cc61afd",
+      "subtopic_title": "Optimizing Data Access with Spring Data JPA",
+      "completed": false,
+      "content_file": null
+    }
+  ]
+}

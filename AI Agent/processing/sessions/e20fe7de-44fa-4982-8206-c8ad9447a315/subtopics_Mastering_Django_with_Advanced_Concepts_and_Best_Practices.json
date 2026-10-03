@@ -1,0 +1,14 @@
+{
+  "subtopics": [
+    {
+      "title": "Advanced User Authentication with Django",
+      "description": "Explore advanced techniques for user authentication in Django, including custom authentication backends, social authentication, and multi-factor authentication. Understand how to secure user accounts and manage authentication states effectively.",
+      "estimated_chars": 1500
+    },
+    {
+      "title": "Optimizing Form Handling and Validation in Django",
+      "description": "Delve into advanced form handling and validation techniques in Django, including custom form classes, formsets, form validation strategies, and form rendering options. Learn how to create efficient and user-friendly forms that adhere to best practices.",
+      "estimated_chars": 1500
+    }
+  ]
+}

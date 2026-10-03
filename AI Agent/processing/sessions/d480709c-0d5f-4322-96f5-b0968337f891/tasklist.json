@@ -1,0 +1,20 @@
+{
+  "tasks": [
+    {
+      "lesson_id": "cbc4d31b-ab7b-42a5-8ab7-8b3b8c820383",
+      "lesson_title": "Python and Django Fundamentals",
+      "subtopic_id": "8d48dbe2-5b1a-468d-99be-5f29df598be4",
+      "subtopic_title": "Setting Up the Django Environment",
+      "completed": true,
+      "content_file": "01_01_Setting_Up_the_Django_Environment.txt"
+    },
+    {
+      "lesson_id": "cbc4d31b-ab7b-42a5-8ab7-8b3b8c820383",
+      "lesson_title": "Python and Django Fundamentals",
+      "subtopic_id": "d1cb36e7-2370-4453-9321-d7ac1cc48652",
+      "subtopic_title": "Writing Your First Django Project",
+      "completed": true,
+      "content_file": "01_02_Writing_Your_First_Django_Project.txt"
+    }
+  ]
+}

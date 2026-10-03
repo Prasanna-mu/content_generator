@@ -1,0 +1,36 @@
+{
+  "tasks": [
+    {
+      "lesson_id": "54927d14-f3ab-49a6-99e4-0545cc97e0f8",
+      "lesson_title": "Fundamentals of Python and Django",
+      "subtopic_id": "5a8a7a56-e023-4730-a3d2-bba78d8f058e",
+      "subtopic_title": "Setting Up the Development Environment",
+      "completed": true,
+      "content_file": "01_01_Setting_Up_the_Development_Environment.txt"
+    },
+    {
+      "lesson_id": "54927d14-f3ab-49a6-99e4-0545cc97e0f8",
+      "lesson_title": "Fundamentals of Python and Django",
+      "subtopic_id": "5b4931ac-e152-4f6a-9616-41117ff16205",
+      "subtopic_title": "Creating a Django Project and Understanding Models",
+      "completed": true,
+      "content_file": "01_02_Creating_a_Django_Project_and_Understanding_Models.txt"
+    },
+    {
+      "lesson_id": "9f5cd89e-46d1-4338-9cc7-888ab4536524",
+      "lesson_title": "Expert Django Development",
+      "subtopic_id": "c9b36a8b-89af-4578-94e7-eea630bc2da6",
+      "subtopic_title": "Advanced Form Handling with Django",
+      "completed": true,
+      "content_file": "02_01_Advanced_Form_Handling_with_Django.txt"
+    },
+    {
+      "lesson_id": "9f5cd89e-46d1-4338-9cc7-888ab4536524",
+      "lesson_title": "Expert Django Development",
+      "subtopic_id": "9be21cbc-4d1e-4561-a373-9f0cbbf9b2b8",
+      "subtopic_title": "Secure Authentication and Authorization in Django",
+      "completed": true,
+      "content_file": "02_02_Secure_Authentication_and_Authorization_in_Django.txt"
+    }
+  ]
+}

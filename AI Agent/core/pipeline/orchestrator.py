@@ -3,6 +3,8 @@ from typing import List, Optional, Dict, Any
 import os
 import json
 import shutil
+import re
+import tempfile
 from datetime import datetime
 from core.models.schemas import UserInput, Lesson, LessonOutput, GeneratedContent, Subtopic, PipelineConfig
 from core.llm.factory import LLMFactory
@@ -119,6 +121,178 @@ class PipelineOrchestrator:
         for char in invalid_chars:
             name = name.replace(char, '_')
         return name.strip().replace(' ', '_')[:100]
+
+    def _sanitize_filename(self, name: str, max_length: int = 100) -> str:
+        """
+        Sanitize a string to be a safe Windows filename.
+        - Removes invalid Windows characters
+        - Normalizes whitespace
+        - Handles reserved names (CON, PRN, AUX, NUL, COM1-9, LPT1-9)
+        - Enforces maximum length
+        """
+        # Remove invalid Windows characters
+        invalid_chars = '<>:"/\\|?*'
+        for char in invalid_chars:
+            name = name.replace(char, '_')
+        
+        # Normalize whitespace (replace multiple spaces/underscores with single underscore)
+        name = re.sub(r'[\s_]+', '_', name)
+        name = name.strip('_')
+        
+        # Handle Windows reserved names
+        reserved_names = {
+            'CON', 'PRN', 'AUX', 'NUL',
+            'COM1', 'COM2', 'COM3', 'COM4', 'COM5', 'COM6', 'COM7', 'COM8', 'COM9',
+            'LPT1', 'LPT2', 'LPT3', 'LPT4', 'LPT5', 'LPT6', 'LPT7', 'LPT8', 'LPT9'
+        }
+        name_upper = name.upper()
+        if name_upper in reserved_names or any(name_upper.startswith(r + '.') for r in reserved_names):
+            name = '_' + name
+        
+        # Enforce maximum length (leave room for extension)
+        if len(name) > max_length:
+            name = name[:max_length].rstrip('_')
+        
+        # Ensure not empty
+        if not name:
+            name = 'unnamed'
+        
+        return name
+
+    def _build_subtopic_filename(self, lesson_number: int, subtopic_number: int, subtopic_title: str) -> str:
+        """
+        Build a standardized subtopic filename.
+        Format: {lesson_number:02d}_{subtopic_number:02d}_{sanitized_subtopic_title}.txt
+        """
+        sanitized_title = self._sanitize_filename(subtopic_title, max_length=80)
+        return f"{lesson_number:02d}_{subtopic_number:02d}_{sanitized_title}.txt"
+
+    def _markdown_to_docx(self, doc, markdown_text: str):
+        """
+        Convert Markdown text to Word formatting.
+        Supports:
+        - # Heading 1, ## Heading 2, ### Heading 3
+        - **bold**, *italic*
+        - Bullet lists (- item, * item)
+        - Numbered lists (1. item)
+        - Code blocks (```)
+        - Inline code (`code`)
+        - Paragraphs with proper spacing
+        """
+        from docx.shared import Pt, RGBColor
+        from docx.enum.style import WD_STYLE_TYPE
+        
+        lines = markdown_text.split('\n')
+        i = 0
+        in_code_block = False
+        code_block_lines = []
+        list_level = 0
+        
+        while i < len(lines):
+            line = lines[i]
+            
+            if line.strip().startswith('```'):
+                if not in_code_block:
+                    in_code_block = True
+                    code_block_lines = []
+                else:
+                    in_code_block = False
+                    # Add code block as a formatted paragraph
+                    if code_block_lines:
+                        code_para = doc.add_paragraph()
+                        code_para.style = doc.styles['Normal']
+                        run = code_para.add_run('\n'.join(code_block_lines))
+                        run.font.name = 'Consolas'
+                        run.font.size = Pt(9)
+                        run.font.color.rgb = RGBColor(0x2D, 0x2D, 0x2D)
+                        code_para.paragraph_format.space_after = Pt(6)
+                        code_para.paragraph_format.space_before = Pt(6)
+                i += 1
+                continue
+            
+            if in_code_block:
+                code_block_lines.append(line)
+                i += 1
+                continue
+            
+            stripped = line.lstrip()
+            leading_spaces = len(line) - len(stripped)
+            
+            if stripped.startswith('# '):
+                heading_text = stripped[2:].strip()
+                heading = doc.add_heading(heading_text, level=1)
+                heading.paragraph_format.space_after = Pt(12)
+                heading.paragraph_format.space_before = Pt(18)
+                i += 1
+                continue
+            
+            if stripped.startswith('## '):
+                heading_text = stripped[3:].strip()
+                heading = doc.add_heading(heading_text, level=2)
+                heading.paragraph_format.space_after = Pt(10)
+                heading.paragraph_format.space_before = Pt(14)
+                i += 1
+                continue
+            
+            if stripped.startswith('### '):
+                heading_text = stripped[4:].strip()
+                heading = doc.add_heading(heading_text, level=3)
+                heading.paragraph_format.space_after = Pt(8)
+                heading.paragraph_format.space_before = Pt(12)
+                i += 1
+                continue
+            
+            if stripped.startswith('- ') or stripped.startswith('* '):
+                list_text = stripped[2:].strip()
+                para = doc.add_paragraph(style='List Bullet')
+                self._add_formatted_text(para, list_text)
+                para.paragraph_format.space_after = Pt(2)
+                para.paragraph_format.space_before = Pt(2)
+                i += 1
+                continue
+            
+            if re.match(r'^\d+\.\s+', stripped):
+                list_text = re.sub(r'^\d+\.\s+', '', stripped)
+                para = doc.add_paragraph(style='List Number')
+                self._add_formatted_text(para, list_text)
+                para.paragraph_format.space_after = Pt(2)
+                para.paragraph_format.space_before = Pt(2)
+                i += 1
+                continue
+            
+            if stripped == '':
+                i += 1
+                continue
+            
+            para = doc.add_paragraph()
+            self._add_formatted_text(para, line)
+            para.paragraph_format.space_after = Pt(6)
+            i += 1
+
+    def _add_formatted_text(self, paragraph, text: str):
+        """
+        Add text to a paragraph with bold/italic/code formatting.
+        Supports **bold**, *italic*, `code`
+        """
+        from docx.shared import Pt, RGBColor
+        
+        parts = re.split(r'(\*\*.*?\*\*|\*.*?\*|`.*?`)', text)
+        
+        for part in parts:
+            if part.startswith('**') and part.endswith('**') and len(part) > 4:
+                run = paragraph.add_run(part[2:-2])
+                run.bold = True
+            elif part.startswith('*') and part.endswith('*') and len(part) > 2:
+                run = paragraph.add_run(part[1:-1])
+                run.italic = True
+            elif part.startswith('`') and part.endswith('`') and len(part) > 2:
+                run = paragraph.add_run(part[1:-1])
+                run.font.name = 'Consolas'
+                run.font.size = Pt(9)
+                run.font.color.rgb = RGBColor(0x2D, 0x2D, 0x2D)
+            else:
+                run = paragraph.add_run(part)
+            run.font.size = Pt(11)
 
     def _initialize_prompt_files(self):
         """Initialize JSON files in the prompt directory."""
@@ -242,6 +416,7 @@ class PipelineOrchestrator:
         lessons_data = []
         for lesson in self.lessons:
             lessons_data.append({
+                "id": lesson.id,
                 "title": lesson.title,
                 "description": lesson.description,
                 "estimated_total_chars": lesson.estimated_total_chars
@@ -256,10 +431,16 @@ class PipelineOrchestrator:
         for lesson in self.lessons:
             for subtopic in lesson.subtopics:
                 subtopics_data.append({
+                    "lesson_id": lesson.id,
                     "lesson_title": lesson.title,
+                    "subtopic_id": subtopic.id,
                     "title": subtopic.title,
                     "description": subtopic.description,
-                    "estimated_chars": subtopic.estimated_chars
+                    "estimated_chars": subtopic.estimated_chars,
+                    "validation_status": subtopic.validation_status,
+                    "validation_errors": subtopic.validation_errors,
+                    "regeneration_attempt": subtopic.regeneration_attempt,
+                    "regeneration_reason": subtopic.regeneration_reason
                 })
         with open(subtopics_file, 'w', encoding='utf-8') as f:
             json.dump(subtopics_data, f, indent=2)
@@ -271,7 +452,9 @@ class PipelineOrchestrator:
         for lesson in self.lessons:
             for subtopic in lesson.subtopics:
                 tasks.append({
+                    "lesson_id": lesson.id,
                     "lesson_title": lesson.title,
+                    "subtopic_id": subtopic.id,
                     "subtopic_title": subtopic.title,
                     "completed": False,
                     "content_file": None
@@ -281,6 +464,61 @@ class PipelineOrchestrator:
         }
         with open(tasklist_file, 'w', encoding='utf-8') as f:
             json.dump(tasklist_data, f, indent=2)
+
+    def _update_tasklist_entry(self, lesson_id: str, subtopic_id: str, content_filename: str):
+        """Update a single tasklist entry to mark it as completed."""
+        tasklist_file = self.prompt_dir / "tasklist.json"
+        if not tasklist_file.exists():
+            return
+        try:
+            with open(tasklist_file, 'r', encoding='utf-8') as f:
+                tasklist_data = json.load(f)
+            
+            if "tasks" in tasklist_data:
+                for task in tasklist_data["tasks"]:
+                    if task["lesson_id"] == lesson_id and task["subtopic_id"] == subtopic_id:
+                        task["completed"] = True
+                        task["content_file"] = content_filename
+                        break
+            
+            with open(tasklist_file, 'w', encoding='utf-8') as f:
+                json.dump(tasklist_data, f, indent=2)
+        except Exception as e:
+            print(f"Warning: Could not update tasklist: {e}")
+
+    def _sync_tasklist_from_content_generation(self):
+        """Sync tasklist with content_generation.json for resume - mark completed subtopics."""
+        content_gen_file = self.prompt_dir / "content_generation.json"
+        tasklist_file = self.prompt_dir / "tasklist.json"
+        if not content_gen_file.exists() or not tasklist_file.exists():
+            return
+        try:
+            with open(content_gen_file, 'r', encoding='utf-8') as f:
+                content_gen_data = json.load(f)
+            with open(tasklist_file, 'r', encoding='utf-8') as f:
+                tasklist_data = json.load(f)
+            
+            # Build a map of completed subtopics from content_generation.json
+            completed_map = {}
+            for entry in content_gen_data.get("subtopics", []):
+                if entry.get("status") == "completed" and entry.get("output_file"):
+                    lesson_id = entry["lesson_id"]
+                    subtopic_id = entry["subtopic_id"]
+                    filename = Path(entry["output_file"]).name
+                    completed_map[(lesson_id, subtopic_id)] = filename
+            
+            # Update tasklist
+            if "tasks" in tasklist_data:
+                for task in tasklist_data["tasks"]:
+                    key = (task["lesson_id"], task["subtopic_id"])
+                    if key in completed_map:
+                        task["completed"] = True
+                        task["content_file"] = completed_map[key]
+            
+            with open(tasklist_file, 'w', encoding='utf-8') as f:
+                json.dump(tasklist_data, f, indent=2)
+        except Exception as e:
+            print(f"Warning: Could not sync tasklist: {e}")
 
     def _load_or_create_session(self, user_input: UserInput) -> Session:
         config = {
@@ -329,14 +567,13 @@ class PipelineOrchestrator:
         
         session_dir = self.processing_dir / "sessions" / self.session_id
         session_dir.mkdir(parents=True, exist_ok=True)
-        # No intermediate folder as per sprint 3 requirements
         
-        # Create prompt-named folder in processing directory
-        prompt_folder = self._sanitize_folder_name(user_input.prompt)
-        self.prompt_dir = self.processing_dir / prompt_folder
+        # All intermediate files go under session_dir (NOT prompt-based)
+        # This ensures complete session isolation - repeated prompts create isolated state
+        self.prompt_dir = session_dir
         self.prompt_dir.mkdir(parents=True, exist_ok=True)
         
-        # Initialize checklist and JSON files in prompt directory
+        # Initialize checklist and JSON files in session directory
         self._initialize_prompt_files()
         
         # Update checklist with prompt and session info
@@ -504,6 +741,8 @@ class PipelineOrchestrator:
             if lesson_outputs_data:
                 lesson_outputs = [LessonOutput(**lo) for lo in lesson_outputs_data]
                 self._save_lesson_outputs_to_session(lesson_outputs)
+            # Sync tasklist with completed content from content_generation.json
+            self._sync_tasklist_from_content_generation()
             # Update checklist
             self._update_checklist_stage(stage, "completed")
         elif stage == PipelineStage.OUTPUT_WRITING:
@@ -520,7 +759,10 @@ class PipelineOrchestrator:
 
     def _run_web_search(self) -> Dict[str, Any]:
         self.web_search_report = self.web_search_manager.run_web_search(self.user_input)
-        print(f"    Web search completed: {self.web_search_report.reputable_results}/{self.web_search_report.total_results} reputable sources")
+        print(
+            f"    Web search completed: "
+            f"{self.web_search_report.quality_sources}/{self.web_search_report.total_results} quality sources"
+        )
         return {"report": self.web_search_report.model_dump()}
 
     def _run_lesson_generation(self) -> Dict[str, Any]:
@@ -542,6 +784,7 @@ class PipelineOrchestrator:
         return {"lessons": [l.model_dump() for l in self.lessons]}
 
     def _run_subtopic_generation(self) -> Dict[str, Any]:
+        # Generate subtopics with validation and regeneration (all done in generate_all)
         self.lessons = self.subtopic_generator.generate_all(self.lessons, self.user_input)
         total_subtopics = sum(len(l.subtopics) for l in self.lessons)
         print(f"    Generated {total_subtopics} subtopics")
@@ -561,11 +804,18 @@ class PipelineOrchestrator:
         return {"lessons": [l.model_dump() for l in self.lessons]}
 
     def _run_subtopic_validation(self) -> Dict[str, Any]:
+        # Final validation: check count and that no subtopics have failed status
         if not self.subtopic_generator.validate_subtopics(self.lessons, self.user_input):
-            print("    Validation failed, attempting to load from saved output...")
-            self.lessons = self.subtopic_generator.load_saved_subtopics(self.lessons, self.user_input)
-            if not self.subtopic_generator.validate_subtopics(self.lessons, self.user_input):
-                raise ValueError("Subtopic validation failed even after loading saved output")
+            # Check if there are failed subtopics we should report
+            failed_subtopics = []
+            for lesson in self.lessons:
+                for subtopic in lesson.subtopics:
+                    if subtopic.validation_status == "failed":
+                        failed_subtopics.append(f"{lesson.title}/{subtopic.title}: {subtopic.validation_errors}")
+            if failed_subtopics:
+                raise ValueError(f"Subtopic validation failed for: {'; '.join(failed_subtopics)}")
+            raise ValueError("Subtopic validation failed")
+        
         print("    Subtopics validated successfully")
         # Update subtopics.json in prompt directory
         self._update_subtopics_json()
@@ -580,6 +830,8 @@ class PipelineOrchestrator:
         # If the file already exists, do not overwrite (preserve resume capability)
         if content_gen_file.exists():
             print(f"    Content-generation JSON already exists, preserving existing progress.")
+            # Still need to migrate in case of schema changes
+            self._migrate_content_generation_json(content_gen_file)
             return
         
         # Determine CO, PO, K-level from prompt analysis
@@ -593,39 +845,188 @@ class PipelineOrchestrator:
             po = self.prompt_analysis.get("domain", "")  # Domain as Program Outcome
             k_level = self.prompt_analysis.get("complexity", "")  # Complexity as Knowledge level
         
-        # Build subtopics list
+        # Build lesson and subtopic number maps
+        lesson_num_map = {}  # lesson_id -> lesson_number
+        for idx, lesson in enumerate(self.lessons):
+            lesson_num_map[lesson.id] = idx + 1
+        
+        subtopic_num_map = {}  # (lesson_id, subtopic_id) -> subtopic_number
+        for lesson in self.lessons:
+            for idx, subtopic in enumerate(lesson.subtopics):
+                subtopic_num_map[(lesson.id, subtopic.id)] = idx + 1
+        
+        # Build subtopics list with complete schema
         subtopics_data = []
         for lesson in self.lessons:
             for subtopic in lesson.subtopics:
+                lesson_number = lesson_num_map.get(lesson.id, 0)
+                subtopic_number = subtopic_num_map.get((lesson.id, subtopic.id), 0)
                 subtopic_entry = {
+                    "lesson_id": lesson.id,
+                    "lesson_number": lesson_number,
                     "lesson_title": lesson.title,
+                    "subtopic_id": subtopic.id,
+                    "subtopic_number": subtopic_number,
                     "subtopic_title": subtopic.title,
                     "subtopic_description": subtopic.description,
                     "subtopic_estimated_chars": subtopic.estimated_chars,
+                    "subtopic_quality_score": getattr(subtopic, 'quality_score', None),
                     "co": co,
                     "po": po,
                     "k_level": k_level,
-                    "status": "pending",
+                    "status": "pending",  # pending, processing, completed, failed
                     "output_file": None,
+                    "content_file": None,  # relative path to .txt file
+                    "quiz_status": "pending",  # pending, processing, completed, failed
+                    "quiz_questions_count": 0,
+                    "question_bank_count": 0,
+                    "quiz_error": None,
+                    "quiz_generation_timestamp": None,
                     "metadata": {
-                        "actual_chars": 0
+                        "actual_chars": 0,
+                        "generation_timestamp": None,
+                        "error_message": None
                     }
                 }
                 subtopics_data.append(subtopic_entry)
         
         # Create the content-generation JSON structure
         content_gen_data = {
+            "version": 4,  # Schema version for migration tracking
             "session_id": self.session_id,
             "prompt": self.user_input.prompt if self.user_input else "",
             "generated_on": datetime.utcnow().isoformat(),
             "subtopics": subtopics_data
         }
         
-        # Write to file
-        with open(content_gen_file, 'w', encoding='utf-8') as f:
-            json.dump(content_gen_data, f, indent=2, ensure_ascii=False)
+        # Atomic write to file
+        self._atomic_write_json(content_gen_file, content_gen_data)
         
         print(f"    Created content-generation JSON with {len(subtopics_data)} subtopics")
+
+    def _migrate_content_generation_json(self, content_gen_file: Path):
+        """Migrate existing content_generation.json to current schema version."""
+        try:
+            with open(content_gen_file, 'r', encoding='utf-8') as f:
+                data = json.load(f)
+        except Exception as e:
+            print(f"    Warning: Could not load existing content_generation.json: {e}")
+            return
+        
+        # Check version
+        version = data.get("version", 1)
+        if version >= 4:
+            return  # Already current
+        
+        print(f"    Migrating content_generation.json from version {version} to 4...")
+        migrated = False
+        
+        # Build lesson and subtopic number maps for current lessons
+        lesson_num_map = {}  # lesson_id -> lesson_number
+        lesson_title_map = {}  # lesson_id -> lesson_title
+        for idx, lesson in enumerate(self.lessons):
+            lesson_num_map[lesson.id] = idx + 1
+            lesson_title_map[lesson.id] = lesson.title
+        
+        subtopic_num_map = {}  # (lesson_id, subtopic_id) -> subtopic_number
+        subtopic_title_map = {}  # (lesson_id, subtopic_id) -> subtopic_title
+        for lesson in self.lessons:
+            for idx, subtopic in enumerate(lesson.subtopics):
+                subtopic_num_map[(lesson.id, subtopic.id)] = idx + 1
+                subtopic_title_map[(lesson.id, subtopic.id)] = subtopic.title
+        
+        for entry in data.get("subtopics", []):
+            # Add missing fields with defaults
+            if "lesson_number" not in entry:
+                lesson_id = entry.get("lesson_id")
+                if lesson_id:
+                    entry["lesson_number"] = lesson_num_map.get(lesson_id, 0)
+                    entry["lesson_title"] = lesson_title_map.get(lesson_id, entry.get("lesson_title", ""))
+                    migrated = True
+            
+            if "subtopic_number" not in entry:
+                lesson_id = entry.get("lesson_id")
+                subtopic_id = entry.get("subtopic_id")
+                if lesson_id and subtopic_id:
+                    entry["subtopic_number"] = subtopic_num_map.get((lesson_id, subtopic_id), 0)
+                    migrated = True
+            
+            if "subtopic_quality_score" not in entry:
+                entry["subtopic_quality_score"] = None
+                migrated = True
+            
+            if "content_file" not in entry:
+                entry["content_file"] = None
+                migrated = True
+            
+            if "metadata" not in entry:
+                entry["metadata"] = {}
+                migrated = True
+            
+            if "generation_timestamp" not in entry["metadata"]:
+                entry["metadata"]["generation_timestamp"] = None
+                migrated = True
+            
+            if "error_message" not in entry["metadata"]:
+                entry["metadata"]["error_message"] = None
+                migrated = True
+            
+            # Migrate lesson_id if missing but lesson_title exists
+            if "lesson_id" not in entry and "lesson_title" in entry:
+                matching_lesson = next((l for l in self.lessons if l.title == entry["lesson_title"]), None)
+                if matching_lesson:
+                    entry["lesson_id"] = matching_lesson.id
+                    migrated = True
+            
+            # Migrate subtopic_id if missing but subtopic_title exists
+            if "subtopic_id" not in entry and "subtopic_title" in entry and "lesson_id" in entry:
+                matching_lesson = next((l for l in self.lessons if l.id == entry["lesson_id"]), None)
+                if matching_lesson:
+                    matching_subtopic = next((s for s in matching_lesson.subtopics if s.title == entry["subtopic_title"]), None)
+                    if matching_subtopic:
+                        entry["subtopic_id"] = matching_subtopic.id
+                        migrated = True
+            
+            # Add new quiz fields (version 4+)
+            if "quiz_status" not in entry:
+                entry["quiz_status"] = "pending"
+                migrated = True
+            if "quiz_questions_count" not in entry:
+                entry["quiz_questions_count"] = 0
+                migrated = True
+            if "question_bank_count" not in entry:
+                entry["question_bank_count"] = 0
+                migrated = True
+            if "quiz_error" not in entry:
+                entry["quiz_error"] = None
+                migrated = True
+            if "quiz_generation_timestamp" not in entry:
+                entry["quiz_generation_timestamp"] = None
+                migrated = True
+        
+        data["version"] = 4
+        
+        if migrated:
+            print(f"    Migrated content_generation.json to version 4")
+            self._atomic_write_json(content_gen_file, data)
+
+    def _atomic_write_json(self, filepath: Path, data: Dict[str, Any]):
+        """Write JSON atomically using temp file + rename."""
+        import tempfile
+        import os
+        temp_fd, temp_path = tempfile.mkstemp(dir=filepath.parent, suffix='.tmp', prefix=filepath.stem + '_')
+        try:
+            with os.fdopen(temp_fd, 'w', encoding='utf-8') as f:
+                json.dump(data, f, indent=2, ensure_ascii=False)
+            # Atomic rename on same filesystem
+            os.replace(temp_path, filepath)
+        except Exception:
+            # Clean up temp file on error
+            try:
+                os.unlink(temp_path)
+            except Exception:
+                pass
+            raise
 
     def _run_content_generation(self) -> Dict[str, Any]:
         print(f"    Generating content for {len(self.lessons)} lessons...")
@@ -635,19 +1036,23 @@ class PipelineOrchestrator:
         if not content_gen_file.exists():
             raise FileNotFoundError(f"Content-generation JSON not found: {content_gen_file}")
         
+        # Migrate if needed (handles schema updates)
+        self._migrate_content_generation_json(content_gen_file)
+        
         with open(content_gen_file, 'r', encoding='utf-8') as f:
             content_gen_data = json.load(f)
         
-        # Prepare mappings for lesson and subtopic numbers (1-indexed)
-        lesson_num_map = {}  # lesson_title -> lesson_number
+        # Prepare mappings for lesson and subtopic numbers (1-indexed) using stable IDs
+        lesson_num_map = {}  # lesson_id -> lesson_number
+        lesson_title_map = {}  # lesson_id -> lesson_title
         for idx, lesson in enumerate(self.lessons):
-            lesson_num_map[lesson.title] = idx + 1
+            lesson_num_map[lesson.id] = idx + 1
+            lesson_title_map[lesson.id] = lesson.title
         
-        subtopic_num_map = {}  # (lesson_title, subtopic_title) -> subtopic_number
+        subtopic_num_map = {}  # (lesson_id, subtopic_id) -> subtopic_number
         for lesson in self.lessons:
-            lesson_title = lesson.title
             for idx, subtopic in enumerate(lesson.subtopics):
-                subtopic_num_map[(lesson_title, subtopic.title)] = idx + 1
+                subtopic_num_map[(lesson.id, subtopic.id)] = idx + 1
         
         # Determine output directory (same as OutputWriter)
         if self.session_id:
@@ -656,26 +1061,26 @@ class PipelineOrchestrator:
             prompt_folder = self._sanitize_folder_name(self.user_input.prompt)
             output_base_dir = self.output_writer.base_output_dir / prompt_folder
         
-        # Dictionary to hold generated content per lesson: lesson_title -> list of GeneratedContent
-        lesson_contents = {lesson.title: [] for lesson in self.lessons}
+        # Dictionary to hold generated content per lesson: lesson_id -> list of GeneratedContent
+        lesson_contents = {lesson.id: [] for lesson in self.lessons}
         
         # Process each subtopic entry
-        updated = False
         for entry in content_gen_data["subtopics"]:
+            lesson_id = entry["lesson_id"]
+            subtopic_id = entry["subtopic_id"]
             lesson_title = entry["lesson_title"]
             subtopic_title = entry["subtopic_title"]
-            status = entry["status"]
+            status = entry.get("status", "pending")
             
             # Get lesson and subtopic numbers
-            lesson_number = lesson_num_map.get(lesson_title)
-            subtopic_number = subtopic_num_map.get((lesson_title, subtopic_title))
+            lesson_number = lesson_num_map.get(lesson_id)
+            subtopic_number = subtopic_num_map.get((lesson_id, subtopic_id))
             if lesson_number is None or subtopic_number is None:
-                print(f"    Warning: Could not find lesson/subtopic for {lesson_title}/{subtopic_title}")
+                print(f"    Warning: Could not find lesson/subtopic for {lesson_title}/{subtopic_title} (IDs: {lesson_id}/{subtopic_id})")
                 continue
             
             # Compute expected output file path
-            sanitized_prompt = self._sanitize_folder_name(self.user_input.prompt) if self.user_input else "topic"
-            filename = f"{lesson_number:02d}_{subtopic_number:02d}_{sanitized_prompt}.txt"
+            filename = self._build_subtopic_filename(lesson_number, subtopic_number, subtopic_title)
             lesson_folder = self._sanitize_folder_name(lesson_title)
             lesson_dir = output_base_dir / lesson_folder
             lesson_dir.mkdir(parents=True, exist_ok=True)
@@ -684,16 +1089,17 @@ class PipelineOrchestrator:
             if status == "completed":
                 # If already completed, try to read the content from the file
                 entry["output_file"] = str(output_file_path)
+                entry["content_file"] = str(output_file_path.relative_to(output_base_dir)) if output_base_dir in output_file_path.parents else str(output_file_path)
                 if output_file_path.exists():
                     try:
                         with open(output_file_path, 'r', encoding='utf-8') as f:
                             content_lines = f.readlines()
                         # Parse the file to extract content (format: Lesson:, Subtopic:, Character Count:, separator, then content)
-                        # We'll reconstruct the content as everything after the separator
                         content = ''.join(content_lines[6:])  # Skip first 6 lines
                         actual_chars = len(content)
                         # Update metadata
                         entry["metadata"]["actual_chars"] = actual_chars
+                        entry["metadata"]["generation_timestamp"] = datetime.utcnow().isoformat()
                         # Create GeneratedContent object
                         generated_content = GeneratedContent(
                             lesson_title=lesson_title,
@@ -701,10 +1107,9 @@ class PipelineOrchestrator:
                             content=content,
                             actual_chars=actual_chars
                         )
-                        lesson_contents[lesson_title].append(generated_content)
+                        lesson_contents[lesson_id].append(generated_content)
                     except Exception as e:
                         print(f"Warning: Could not read content from {output_file_path}: {e}. Treating as failed.")
-                        # Treat as failed so we regenerate
                         status = "failed"
                 else:
                     print(f"Warning: Output file not found for completed entry: {output_file_path}. Treating as failed.")
@@ -713,9 +1118,10 @@ class PipelineOrchestrator:
             if status in ("pending", "failed", "processing"):
                 # Generate content for this subtopic
                 entry["status"] = "processing"
-                # Save the JSON immediately to mark as processing
-                with open(content_gen_file, 'w', encoding='utf-8') as f:
-                    json.dump(content_gen_data, f, indent=2, ensure_ascii=False)
+                entry["metadata"]["generation_timestamp"] = datetime.utcnow().isoformat()
+                entry["metadata"]["error_message"] = None
+                # Atomic save to mark as processing
+                self._atomic_write_json(content_gen_file, content_gen_data)
                 
                 try:
                     # Create Subtopic object from entry data
@@ -729,170 +1135,112 @@ class PipelineOrchestrator:
                         lesson_title, subtopic_obj, self.user_input
                     )
                     
-                    # Write content to file
-                    with open(output_file_path, 'w', encoding='utf-8') as f:
-                        f.write(f"Lesson: {generated_content.lesson_title}\n")
-                        f.write(f"Subtopic: {generated_content.subtopic_title}\n")
-                        f.write(f"Character Count: {generated_content.actual_chars}\n")
-                        f.write("=" * 60 + "\n\n")
-                        f.write(generated_content.content)
+                    # Write content to file atomically
+                    self._atomic_write_content(output_file_path, generated_content)
+                    
+                    # Update tasklist to mark this subtopic as completed
+                    self._update_tasklist_entry(lesson_id, subtopic_id, filename)
                     
                     # Update entry with completed status and metadata
                     entry["status"] = "completed"
                     entry["output_file"] = str(output_file_path)
+                    entry["content_file"] = str(output_file_path.relative_to(output_base_dir)) if output_base_dir in output_file_path.parents else str(output_file_path)
                     entry["metadata"]["actual_chars"] = generated_content.actual_chars
+                    entry["metadata"]["generation_timestamp"] = datetime.utcnow().isoformat()
+                    entry["metadata"]["error_message"] = None
                     
                     # Add to lesson contents
-                    lesson_contents[lesson_title].append(generated_content)
+                    lesson_contents[lesson_id].append(generated_content)
                     
-                    updated = True
                     print(f"    Generated content for {lesson_title} - {subtopic_title}")
                 
                 except Exception as e:
                     entry["status"] = "failed"
-                    entry["error_message"] = str(e)
-                    updated = True
+                    entry["metadata"]["error_message"] = str(e)
+                    entry["metadata"]["generation_timestamp"] = datetime.utcnow().isoformat()
                     print(f"    Error generating content for {lesson_title} - {subtopic_title}: {e}")
             
-            # If we updated the entry, save the JSON
-            if updated:
-                with open(content_gen_file, 'w', encoding='utf-8') as f:
-                    json.dump(content_gen_data, f, indent=2, ensure_ascii=False)
-                updated = False  # Reset for next iteration
+            # Atomic save after each entry update
+            self._atomic_write_json(content_gen_file, content_gen_data)
         
-        # Final save of the JSON (in case we didn't save after the last update)
-        with open(content_gen_file, 'w', encoding='utf-8') as f:
-            json.dump(content_gen_data, f, indent=2, ensure_ascii=False)
+        # Final atomic save for content
+        self._atomic_write_json(content_gen_file, content_gen_data)
         
-        # Note: The quiz and question bank are not generated in this method.
-        # In the original flow, the content generator also generated quiz and question bank per lesson.
-        # We have not implemented that here. We need to generate them as well.
-        
-        # However, the user's requirement is about subtopic content generation.
-        # The original _run_content_generation returned lesson_outputs that included quiz and question bank.
-        # We must maintain compatibility with the output writer.
-        
-        # We have two options:
-        # 1. Generate quiz and question bank here as well (per lesson).
-        # 2. Leave them empty and let the output writer handle it? But the output writer expects them.
-        #
-        # Looking at the output writer, it writes quiz.csv and question_bank.csv for each lesson.
-        # If we don't provide them, the output writer will write empty files or crash.
-        #
-        # We need to generate the quiz and question bank for each lesson.
-        #
-        # We can do this after generating all subtopic content, or we can do it per lesson.
-        # Since the user's requirement is focused on subtopic content, we can generate the quiz and question bank
-        # for each lesson once we have all the subtopic content for that lesson.
-        #
-        # However, to minimize changes and reuse existing services, we can use the content_generator's methods
-        # to generate quiz and question bank per lesson, but note that the content_generator.generate_lesson_content
-        # method generates both content, quiz, and question bank for a lesson.
-        #
-        # We have not used that method; we are generating content per subtopic.
-        #
-        # We can change our approach: instead of generating content per subtopic using the LLM directly,
-        # we can use the content_generator to generate content for a lesson, but then we lose the ability to
-        # update the JSON per subtopic and save individual .txt files.
-        #
-        # Given the complexity, and since the user's requirement is to generate each subtopic sequentially and
-        # save individual .txt files, we will assume that the quiz and question bank are not required for
-        # the content-generation JSON and can be generated separately.
-        #
-        # But the output writer needs them.
-        #
-        # Let's generate the quiz and question bank for each lesson using the LLM, similar to how
-        # the content_generator does it.
-        #
-        # We'll do this after we have generated all subtopic content for a lesson.
-        #
-        # We'll modify the loop to also generate quiz and question bank per lesson when we finish
-        # processing all subtopics of a lesson.
-        #
-        # However, we are processing subtopics in an arbitrary order (based on the JSON).
-        #
-        # To keep it simple, we will generate the quiz and question bank for each lesson after
-        # we have processed all its subtopics. We can track which lessons we have completed.
-        #
-        # Given the time, and since the user's primary requirement is about the subtopic content
-        # and the content-generation JSON, we will leave the quiz and question bank as empty for now,
-        # and note that this is a limitation.
-        #
-        # Alternatively, we can call the original content_generator.generate_all_with_checkpoints
-        # for the quiz and question bank part, but that would defeat the purpose.
-        #
-        # We decide to generate the quiz and question bank per lesson using the LLM, similar to
-        # how the content_generator does it, but we will do it once per lesson after we have
-        # generated all subtopic content for that lesson.
-        #
-        # We'll need to know when we have finished all subtopics for a lesson.
-        #
-        # We can keep a set of lessons for which we have generated quiz and question bank.
-        #
-        # Let's do that.
-        #
-        # We'll add a set `lessons_processed_for_quiz` and then after processing each subtopic,
-        # we check if we have processed all subtopics for that lesson (by counting).
-        #
-        # This is getting complex.
-        #
-        # Given the scope of the user's request, which is about the content-generation workflow
-        # with two JSON single sources of truth and sequential subtopic generation, we will
-        # focus on that and assume that the quiz and question bank are out of scope for this
-        # change, or we can generate them in a separate stage.
-        #
-        # However, the user said: "verify the complete pipeline end-to-end", so we need to
-        # produce the same outputs as before.
-        #
-        # We will therefore generate the quiz and question bank for each lesson using the LLM,
-        # but we will do it in a batch after all subtopic content is generated, to keep the
-        # sequential subtopic generation intact.
-        #
-        # We'll add a step after the subtopic loop to generate quiz and question bank for each lesson.
-        #
-        # Let's do that.
-        #
-        # For each lesson in self.lessons:
-        #   quiz_questions = self.llm.generate_quiz(lesson, self.user_input)
-        #   question_bank = self.llm.generate_question_bank(lesson, self.user_input)
-        #
-        # Then assign them to the LessonOutput.
-        #
-        # We'll do this after we have built the lesson_outputs list (with empty quiz and question bank).
-        #
-        # Then we'll update each lesson_output with the generated quiz and question bank.
-        #
-        # This way, we don't interfere with the subtopic processing.
-        #
-        # Let's implement that.
-        #
-        # First, build lesson_outputs with empty quiz and question bank.
+        # Now generate quiz and question bank for each lesson - PART OF THE TRANSACTION
+        # Track quiz generation status in content_generation.json
         lesson_outputs = []
-        for lesson in self.lessons:
+        quiz_generation_failed = False
+        
+        for i, lesson in enumerate(self.lessons):
             lesson_output = LessonOutput(
                 lesson=lesson,
-                generated_contents=lesson_contents[lesson.title],
+                generated_contents=lesson_contents[lesson.id],
                 quiz_questions=[],  # placeholder
                 question_bank=[]    # placeholder
             )
             lesson_outputs.append(lesson_output)
         
-        # Generate quiz and question bank for each lesson
         for i, lesson in enumerate(self.lessons):
+            # Find all entries for this lesson to update quiz status
+            lesson_entries = [e for e in content_gen_data["subtopics"] if e["lesson_id"] == lesson.id]
+            
+            # Check if quiz already completed (resume case)
+            quiz_already_completed = all(e.get("quiz_status") == "completed" for e in lesson_entries)
+            if quiz_already_completed:
+                # Restore quiz data from existing lesson_outputs if available
+                if lesson_outputs[i].quiz_questions and lesson_outputs[i].question_bank:
+                    print(f"    Quiz already completed for lesson {i+1}/{len(self.lessons)}: {lesson.title}, skipping")
+                    continue
+                else:
+                    # Need to regenerate quiz even if content is done
+                    print(f"    Quiz missing for lesson {i+1}/{len(self.lessons)}: {lesson.title}, regenerating")
+            
+            # Mark lesson as quiz-generating
+            for entry in lesson_entries:
+                entry["quiz_status"] = "processing"
+                entry["quiz_generation_timestamp"] = datetime.utcnow().isoformat()
+            self._atomic_write_json(content_gen_file, content_gen_data)
+            
             try:
                 quiz_questions = self.llm.generate_quiz(lesson, self.user_input)
                 question_bank = self.llm.generate_question_bank(lesson, self.user_input)
+                
                 lesson_outputs[i].quiz_questions = quiz_questions
                 lesson_outputs[i].question_bank = question_bank
+                
+                # Mark all entries for this lesson as quiz-completed
+                for entry in lesson_entries:
+                    entry["quiz_status"] = "completed"
+                    entry["quiz_questions_count"] = len(quiz_questions)
+                    entry["question_bank_count"] = len(question_bank)
+                    entry["quiz_generation_timestamp"] = datetime.utcnow().isoformat()
+                
                 print(f"    Generated quiz and question bank for lesson {i+1}/{len(self.lessons)}: {lesson.title}")
+                
             except Exception as e:
+                # Quiz generation failed - mark lesson entries as failed
+                for entry in lesson_entries:
+                    entry["quiz_status"] = "failed"
+                    entry["quiz_error"] = str(e)
+                    entry["quiz_generation_timestamp"] = datetime.utcnow().isoformat()
+                
                 print(f"    Error generating quiz/question bank for {lesson.title}: {e}")
-                # Leave as empty
+                quiz_generation_failed = True
+            
+            # Atomic save after each lesson's quiz generation
+            self._atomic_write_json(content_gen_file, content_gen_data)
         
         total_chars = sum(
             c.actual_chars for lo in lesson_outputs for c in lo.generated_contents
         )
         print(f"    Generated {total_chars:,} characters of content")
+        
+        # If quiz generation failed for any lesson, fail the entire stage
+        if quiz_generation_failed:
+            raise RuntimeError("Quiz generation failed for one or more lessons. Check content_generation.json for details.")
+        
+        # Sync tasklist with completed content
+        self._sync_tasklist_from_content_generation()
         
         # Save lesson outputs to session directory for OutputWriter
         self._save_lesson_outputs_to_session(lesson_outputs)
@@ -903,6 +1251,26 @@ class PipelineOrchestrator:
         )
         
         return {"lesson_outputs": [lo.model_dump() for lo in lesson_outputs]}
+
+    def _atomic_write_content(self, filepath: Path, content: GeneratedContent):
+        """Write content file atomically using temp file + rename."""
+        import tempfile
+        import os
+        temp_fd, temp_path = tempfile.mkstemp(dir=filepath.parent, suffix='.tmp', prefix=filepath.stem + '_')
+        try:
+            with os.fdopen(temp_fd, 'w', encoding='utf-8') as f:
+                f.write(f"Lesson: {content.lesson_title}\n")
+                f.write(f"Subtopic: {content.subtopic_title}\n")
+                f.write(f"Character Count: {content.actual_chars}\n")
+                f.write("=" * 60 + "\n\n")
+                f.write(content.content)
+            os.replace(temp_path, filepath)
+        except Exception:
+            try:
+                os.unlink(temp_path)
+            except Exception:
+                pass
+            raise
 
     def _run_output_writing(self) -> Dict[str, Any]:
         lesson_outputs = self._load_lesson_outputs()
@@ -938,16 +1306,15 @@ class PipelineOrchestrator:
         # Keep track of lessons for which we have copied quiz and question bank
         lessons_copied = set()
         
-        # Prepare mappings for lesson and subtopic numbers
+        # Prepare mappings for lesson and subtopic numbers using stable IDs
         lesson_num_map = {}
         for idx, lesson in enumerate(self.lessons):
-            lesson_num_map[lesson.title] = idx + 1
+            lesson_num_map[lesson.id] = idx + 1
         
         subtopic_num_map = {}
         for lesson in self.lessons:
-            lesson_title = lesson.title
             for idx, subtopic in enumerate(lesson.subtopics):
-                subtopic_num_map[(lesson_title, subtopic.title)] = idx + 1
+                subtopic_num_map[(lesson.id, subtopic.id)] = idx + 1
         
         total_subtopics = len(content_gen_data.get("subtopics", []))
         completed_subtopics = [e for e in content_gen_data["subtopics"] if e.get("status") == "completed"]
@@ -957,6 +1324,8 @@ class PipelineOrchestrator:
         print(f"    Exporting {len(completed_subtopics)} completed subtopics to DOCX...")
         
         for entry in content_gen_data["subtopics"]:
+            lesson_id = entry.get("lesson_id") or entry["lesson_title"]
+            subtopic_id = entry.get("subtopic_id") or entry["subtopic_title"]
             lesson_title = entry["lesson_title"]
             subtopic_title = entry["subtopic_title"]
             status = entry.get("status", "pending")
@@ -985,11 +1354,11 @@ class PipelineOrchestrator:
                 json.dump(content_gen_data, f, indent=2, ensure_ascii=False)
             
             try:
-                # Get lesson and subtopic numbers
-                lesson_number = lesson_num_map.get(lesson_title)
-                subtopic_number = subtopic_num_map.get((lesson_title, subtopic_title))
+                # Get lesson and subtopic numbers using stable IDs
+                lesson_number = lesson_num_map.get(lesson_id)
+                subtopic_number = subtopic_num_map.get((lesson_id, subtopic_id))
                 if lesson_number is None or subtopic_number is None:
-                    raise ValueError(f"Could not find lesson/subtopic numbers for {lesson_title}/{subtopic_title}")
+                    raise ValueError(f"Could not find lesson/subtopic numbers for {lesson_title}/{subtopic_title} (IDs: {lesson_id}/{subtopic_id})")
                 
                 # Read content from .txt file
                 output_file_path = entry.get("output_file")
@@ -1027,7 +1396,7 @@ class PipelineOrchestrator:
                 
                 # Content
                 doc.add_heading("Content", level=2)
-                doc.add_paragraph(content)
+                self._markdown_to_docx(doc, content)
                 
                 # Build delivery path: delivery/{lesson_number}_{lesson_name}/{lesson_number}.{subtopic_number}_{subtopic_name}.docx
                 sanitized_lesson = self._sanitize_folder_name(lesson_title)
@@ -1101,7 +1470,7 @@ class PipelineOrchestrator:
         # Validate that quiz and question bank CSV files exist in delivery for each lesson
         for lesson in self.lessons:
             sanitized_lesson = self._sanitize_folder_name(lesson.title)
-            lesson_number = lesson_num_map[lesson.title]
+            lesson_number = lesson_num_map[lesson.id]
             lesson_folder = f"{lesson_number:02d}_{sanitized_lesson}"
             lesson_delivery_dir = delivery_base_dir / lesson_folder
             quiz_path = lesson_delivery_dir / "quiz.csv"

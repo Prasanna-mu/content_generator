@@ -1,0 +1,87 @@
+Lesson: Python and Django Fundamentals
+Subtopic: Creating a Django Project
+Character Count: 3700
+============================================================
+
+### Creating a Django Project from Scratch
+
+Django is a high-level Python web framework that encourages rapid development and clean, pragmatic design. It is built by experienced developers, with an emphasis on flexibility and ease of use. Creating a project in Django is a straightforward process that involves setting up your environment, creating a project directory, and configuring its settings. Let’s break down the steps to create a basic Django project.
+
+#### Step 1: Setting Up Your Environment
+Before you start, ensure you have Python and pip installed on your machine. You can then install Django by running:
+```
+pip install django
+```
+
+#### Step 2: Creating the Project Directory
+Create a directory where you will host your project:
+```
+mkdir my_project
+cd my_project
+```
+#### Step 3: Initializing the Project
+Create a new Django project using the command:
+```
+django-admin startproject my_project
+```
+This command creates a directory called `my_project` with the following files:
+- `manage.py`: A command-line utility for interacting with your Django project.
+- `my_project/settings.py`: Configuration file where you specify various settings about your project.
+- `my_project/wsgi.py`: Defines the WSGI application that Django uses to serve your project.
+- `my_project/urls.py`: Defines the URL configuration of your project.
+- `my_project/__init__.py`: Necessary for the directory to be considered a Python package.
+
+#### Step 4: Configuring Settings
+Open `settings.py` and you'll see a few default settings already defined. You might want to customize some of them for your project. Here are a few examples:
+```python
+# SECURITY WARNING: don't run with debug turned on in production!
+DEBUG = True
+
+# SECURITY WARNING: keep the secret key used in production secret!
+SECRET_KEY = 'your-secret-key'
+
+# Database
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+    }
+}
+
+# Internationalization
+LANGUAGE_CODE = 'en-us'
+TIME_ZONE = 'UTC'
+USE_I18N = True
+USE_L10N = True
+USE_TZ = True
+```
+Ensure your `DATABASES` is configured to match your environment (e.g., SQLite, PostgreSQL, MySQL).
+
+#### Step 5: Configuring URLs
+In `urls.py`, Django expects a default URL pattern that maps to your project's main app. Here is an example configuration:
+```python
+from django.contrib import admin
+from django.urls import path, include
+
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    path('', include('my_app.urls')),  # Include your app's URL configuration here
+]
+```
+Make sure you have a directory named `my_app` in your project, containing `urls.py` where you define your app-specific URLs.
+
+#### Step 6: Running Your Project
+Finally, you can run the development server by executing:
+```
+python manage.py runserver
+```
+This will start a local development server that you can use to view your site at `http://127.0.0.1:8000`.
+
+#### Summary
+In this lesson, we explored the basic steps to create a Django project. We installed Django, initialized a project, configured settings, defined URLs, and started the development server. This is the foundation of any Django application. From here, you can expand your project by adding more apps, customizing more settings, and developing your own views, models, and templates.
+
+Key takeaways:
+- `manage.py`: Essential for managing your project, like running the server and managing migrations.
+- `settings.py`: Where you define various settings about your project, including database configurations and security.
+- `urls.py`: Defines how your project’s URLs map to different views, apps, or templates.
+- `wsgi.py`: The WSGI application Django uses to serve your project.

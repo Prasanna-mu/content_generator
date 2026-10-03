@@ -1,0 +1,64 @@
+{
+  "questions": [
+    {
+      "question": "What is the first step in setting up a development environment for Python and Django?",
+      "options": [
+        "Install Python and pip",
+        "Install Django",
+        "Create a virtual environment",
+        "Install a web server"
+      ],
+      "correct_answer": 0,
+      "explanation": "The first step is to install Python and pip, which are essential for managing Python packages and dependencies. Django, a web framework, is installed separately after Python is set up.",
+      "k_level": "K2"
+    },
+    {
+      "question": "Which of the following is a core component of Django that represents data in a database?",
+      "options": [
+        "Models",
+        "Views",
+        "Templates",
+        "URLs"
+      ],
+      "correct_answer": 0,
+      "explanation": "Models in Django are used to define the data structures and interact with the database. They represent the entities in the database and provide a way to interact with them.",
+      "k_level": "K3"
+    },
+    {
+      "question": "When creating a Django project, what is the purpose of a virtual environment?",
+      "options": [
+        "To manage project dependencies",
+        "To speed up development process",
+        "To encrypt sensitive data",
+        "To increase project security"
+      ],
+      "correct_answer": 0,
+      "explanation": "A virtual environment in Django helps manage project dependencies by creating isolated Python environments, which can be very useful for different projects or versions of Python.",
+      "k_level": "K4"
+    },
+    {
+      "question": "In Django, what is the role of a view?",
+      "options": [
+        "To handle HTTP requests and return HTTP responses",
+        "To define the database schema",
+        "To render HTML templates",
+        "To manage project settings"
+      ],
+      "correct_answer": 0,
+      "explanation": "Views in Django are responsible for handling HTTP requests and returning HTTP responses. They are the main entry points for processing requests and returning data to the client.",
+      "k_level": "K5"
+    },
+    {
+      "question": "Which of the following is a key step in creating a Django project and understanding models?",
+      "options": [
+        "Writing HTML templates",
+        "Creating a virtual environment",
+        "Defining models in models.py",
+        "Setting up the database"
+      ],
+      "correct_answer": 2,
+      "explanation": "Defining models in models.py is a crucial step when creating a Django project. Models define the structure of the data in the database and are used by Django to interact with the database.",
+      "k_level": "K6"
+    }
+  ]
+}

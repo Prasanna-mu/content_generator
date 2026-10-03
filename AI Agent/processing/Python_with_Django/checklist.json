@@ -1,12 +1,13 @@
 {
-  "prompt": "Python with Django",
-  "session_id": "80be0af7-379b-4d3f-b785-52829b20f92f",
+  "prompt": "python with django",
+  "session_id": "8276dae5-3545-4563-b2cc-1a81de47dacc",
   "stages": {
     "subtopic_generation": "completed",
     "lesson_generation": "completed",
     "content_generation": "completed",
     "output_writing": "completed",
-    "docx_export": "completed"
+    "docx_export": "failed",
+    "web_search": "completed"
   },
   "lessons": [],
   "subtopics": [],

@@ -1,0 +1,14 @@
+{
+  "subtopics": [
+    {
+      "title": "Advanced Form Handling with Django",
+      "description": "Explore advanced form handling techniques including custom form validation, form field customization, and form rendering. Understand how to integrate forms with Django’s authentication system and use form signals for form lifecycle management. Learn best practices for form error handling and form submission.",
+      "estimated_chars": 1500
+    },
+    {
+      "title": "Secure Authentication and Authorization in Django",
+      "description": "Delve into Django’s authentication system, including user management, password hashing, and session management. Learn about different authentication backends and how to extend the default authentication system. Understand the importance of secure authentication and authorization practices in web applications, including session management, CSRF protection, and role-based access control. Explore advanced topics such as password reset functionality and multi-factor authentication.",
+      "estimated_chars": 1500
+    }
+  ]
+}

@@ -1,0 +1,64 @@
+{
+  "questions": [
+    {
+      "question": "Which of the following is a best practice for handling form validation in Django? Choose all that apply.",
+      "options": [
+        "A. Use Django's built-in form classes",
+        "B. Override the form's clean method to add custom validation",
+        "C. Use Django's form validation directly without custom methods",
+        "D. Use JavaScript to validate forms on the client side"
+      ],
+      "correct_answer": 1,
+      "explanation": "Best practice is to use Django's built-in form classes and override the form's clean method for custom validation.",
+      "k_level": "K2"
+    },
+    {
+      "question": "In Django, what is the primary difference between using Django's built-in authentication system and writing custom authentication logic?",
+      "options": [
+        "A. Built-in authentication is slower but more secure",
+        "B. Built-in authentication is easier to set up and secure",
+        "C. Built-in authentication is more flexible and secure",
+        "D. Built-in authentication is less secure and harder to set up"
+      ],
+      "correct_answer": 1,
+      "explanation": "Built-in authentication in Django is easier to set up and secure, provided you use the provided signals and middleware.",
+      "k_level": "K3"
+    },
+    {
+      "question": "Which Django feature is used to securely store user passwords and ensure they are not stored in plain text?",
+      "options": [
+        "A. Django's built-in authentication system",
+        "B. Django's form validation",
+        "C. Django's form handling",
+        "D. Django's database migrations"
+      ],
+      "correct_answer": 0,
+      "explanation": "Django's built-in authentication system uses Django's User model, which includes a secure method for storing passwords using the `set_password` method.",
+      "k_level": "K4"
+    },
+    {
+      "question": "Which of the following is a common method to handle form errors in Django without using Django's built-in form handling classes?",
+      "options": [
+        "A. Use Django's form validation directly",
+        "B. Use Django's form handling classes",
+        "C. Use JavaScript to handle errors on the client side",
+        "D. Use Django's custom form handling classes"
+      ],
+      "correct_answer": 2,
+      "explanation": "Handling form errors on the client side using JavaScript is a common method to provide a better user experience without relying on Django's form handling classes.",
+      "k_level": "K5"
+    },
+    {
+      "question": "In Django, what is the purpose of the `@login_required` decorator in views?",
+      "options": [
+        "A. To require users to be logged in to access the view",
+        "B. To require users to be logged out to access the view",
+        "C. To require users to be authenticated to access the view",
+        "D. To require users to be unauthenticated to access the view"
+      ],
+      "correct_answer": 0,
+      "explanation": "The `@login_required` decorator in Django is used to ensure that users must be authenticated to access the view.",
+      "k_level": "K6"
+    }
+  ]
+}

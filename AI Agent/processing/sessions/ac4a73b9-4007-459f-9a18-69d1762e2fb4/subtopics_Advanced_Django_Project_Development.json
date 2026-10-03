@@ -1,0 +1,14 @@
+{
+  "subtopics": [
+    {
+      "title": "Advanced Model Fields and Relationships",
+      "description": "Explore advanced model fields (e.g., ManyToManyField, ManyToManyField through intermediary models) and complex relationships.",
+      "estimated_chars": 1500
+    },
+    {
+      "title": "Optimizing Views and Templates for Performance",
+      "description": "Learn techniques to optimize view and template performance, including caching, lazy loading, and efficient template rendering.",
+      "estimated_chars": 1500
+    }
+  ]
+}

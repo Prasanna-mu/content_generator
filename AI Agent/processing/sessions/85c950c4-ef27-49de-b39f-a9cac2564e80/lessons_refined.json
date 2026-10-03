@@ -1,0 +1,14 @@
+{
+  "lessons": [
+    {
+      "id": "54927d14-f3ab-49a6-99e4-0545cc97e0f8",
+      "title": "Fundamentals of Python and Django",
+      "description": "In this lesson, students will delve into the basics of Python programming and explore how it seamlessly integrates with the Django framework. They will be introduced to the core components of Django, including models, views, and templates. The lesson will also cover setting up a basic Django project and developing a simple web application to provide hands-on experience with Django's functionalities."
+    },
+    {
+      "id": "9f5cd89e-46d1-4338-9cc7-888ab4536524",
+      "title": "Expert Django Development",
+      "description": "In this advanced lesson, students will explore in-depth topics such as form handling, authentication mechanisms, and integrating with external APIs. They will also master database migrations, unit testing, and deployment strategies. The lesson culminates with a comprehensive project where students build a sophisticated web application utilizing all the skills acquired."
+    }
+  ]
+}

@@ -1,38 +1,62 @@
 [
   {
-    "lesson_title": "Python and Django Fundamentals",
-    "title": "Installing and Configuring Python and Django",
-    "description": "In this subtopic, students will learn how to install Python and Django on their system. They will also set up their environment by configuring virtual environments and installing necessary packages. The subtopic will cover the importance of using virtual environments and how to manage dependencies with pip. Students will be guided through the process of creating a Django project and understanding the basic structure of a Django project, including the directory structure and the main files such as settings.py, urls.py, and views.py. The subtopic will also include a brief overview of the Django admin interface and how to run the development server.",
-    "estimated_chars": 600
+    "lesson_id": "f0de854b-95e7-4dde-928e-f178537bb32d",
+    "lesson_title": "Python and Django Fundamentals and Project Setup",
+    "subtopic_id": "6b9394cb-6193-4ca7-8cf2-60d0937ffa57",
+    "title": "Configuring Virtual Environment and Installing Dependencies",
+    "description": "Learn how to set up a virtual environment for your Python project and install necessary dependencies using pip. Understand the importance of a virtual environment in managing project-specific libraries and dependencies, and how to manage them efficiently with pip.",
+    "estimated_chars": 1500,
+    "validation_status": "valid",
+    "validation_errors": [
+      "Could be more specific about Python and Django setup",
+      "Lacks detail on virtual environment setup",
+      "Could include more on package management"
+    ],
+    "regeneration_attempt": 1,
+    "regeneration_reason": "Could be more specific about Python and Django setup; Lacks detail on virtual environment setup; Could include more on package management"
   },
   {
-    "lesson_title": "Python and Django Fundamentals",
-    "title": "Navigating the Django Command Line",
-    "description": "This subtopic will focus on teaching students how to navigate the Django command line. Students will learn how to create a new Django project, run migrations, and manage database operations. They will also be introduced to the Django shell, how to use it, and how to interact with the database using the Django ORM. The subtopic will cover basic Django management commands such as makemigrations, migrate, and creating and managing models. Additionally, students will be shown how to run tests and manage static files.",
-    "estimated_chars": 600
+    "lesson_id": "f0de854b-95e7-4dde-928e-f178537bb32d",
+    "lesson_title": "Python and Django Fundamentals and Project Setup",
+    "subtopic_id": "b760ce93-47a3-4882-9b92-355496cf8a46",
+    "title": "Creating and Configuring a Django Project",
+    "description": "Discover how to create a new Django project, configure settings, manage databases, and set up middleware and authentication. Explore the structure and purpose of each configuration file.",
+    "estimated_chars": 1500,
+    "validation_status": "valid",
+    "validation_errors": [
+      "Could be more specific in terms of Django version and Python version requirements",
+      "Could include more examples and exercises"
+    ],
+    "regeneration_attempt": 0,
+    "regeneration_reason": null
   },
   {
-    "lesson_title": "Advanced Python with Django: Building a Simple Application",
-    "title": "Setting Up the Django Environment",
-    "description": "In this subtopic, we will cover the initial steps required to set up a Django environment. This includes installing Python and Django, setting up a virtual environment, and creating a new Django project. We will also discuss the importance of organizing our project structure and setting up a database connection. The focus will be on ensuring that all necessary components are in place for the subsequent development stages.",
-    "estimated_chars": 550
+    "lesson_id": "c5736198-aec8-407f-80a3-f91b7d56e025",
+    "lesson_title": "Advanced Django: Form Handling, Authentication, and API Integration",
+    "subtopic_id": "c149db25-0bae-4fb4-b7fe-0278d820702b",
+    "title": "Advanced Form Handling in Django",
+    "description": "In this section, we will delve into advanced form handling techniques in Django, including custom form validation, formsets, and form wizards. Understanding these features will allow you to create more robust and user-friendly forms within your Django applications.",
+    "estimated_chars": 1500,
+    "validation_status": "valid",
+    "validation_errors": [
+      "Could be more specific in terms of Django version or Python version",
+      "Lacks information on form handling best practices"
+    ],
+    "regeneration_attempt": 0,
+    "regeneration_reason": null
   },
   {
-    "lesson_title": "Advanced Python with Django: Building a Simple Application",
-    "title": "Creating and Configuring Models",
-    "description": "This subtopic delves into the creation and configuration of models within a Django application. We will explore how to define models using Django's ORM (Object-Relational Mapping) system, including defining fields, relationships, and constraints. Additionally, we will discuss how to use Django's admin interface to manage our models. We will also cover the process of defining migrations to update our database schema and how to apply these migrations using Django\u2019s built-in migration commands.",
-    "estimated_chars": 650
-  },
-  {
-    "lesson_title": "Expert-Level Django Features and Practices",
-    "title": "Authentication in Django",
-    "description": "In this subtopic, we will explore how to implement user authentication in Django, including creating custom user models, setting up authentication backends, and integrating authentication into views and templates. We will also cover password management, email verification, and social authentication. The goal is to provide a robust and secure user authentication system for our Django applications.",
-    "estimated_chars": 650
-  },
-  {
-    "lesson_title": "Expert-Level Django Features and Practices",
-    "title": "Internationalization and Localization in Django",
-    "description": "This subtopic focuses on how to handle internationalization and localization in Django. We will cover the use of Django's internationalization and localization features, including translation of messages, formatting of dates and numbers, and handling of different languages and character sets. We will also discuss best practices for managing translations and ensuring a consistent user experience across different locales.",
-    "estimated_chars": 700
+    "lesson_id": "c5736198-aec8-407f-80a3-f91b7d56e025",
+    "lesson_title": "Advanced Django: Form Handling, Authentication, and API Integration",
+    "subtopic_id": "8134653d-2b9f-4438-84b6-a41d8d04ad5b",
+    "title": "Secure Authentication and Authorization in Django",
+    "description": "This part of the lesson will focus on secure user authentication and authorization mechanisms in Django. We will cover topics such as custom user models, session management, password hashing, and implementing role-based access control. Ensuring security is crucial in any Django application, and this section will equip you with the knowledge to protect your users and data effectively.",
+    "estimated_chars": 1500,
+    "validation_status": "valid",
+    "validation_errors": [
+      "Could benefit from more specific examples or case studies"
+    ],
+    "regeneration_attempt": 0,
+    "regeneration_reason": null
   }
 ]

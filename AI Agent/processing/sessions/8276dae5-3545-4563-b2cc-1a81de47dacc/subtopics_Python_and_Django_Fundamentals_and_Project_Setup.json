@@ -1,0 +1,14 @@
+{
+  "subtopics": [
+    {
+      "title": "Setting Up Python Environment",
+      "description": "Learn how to install Python, set up a virtual environment, and install necessary packages for Django development. Understand the importance of a clean environment for consistent project development.",
+      "estimated_chars": 1500
+    },
+    {
+      "title": "Creating and Configuring a Django Project",
+      "description": "Discover how to create a new Django project, configure settings, manage databases, and set up middleware and authentication. Explore the structure and purpose of each configuration file.",
+      "estimated_chars": 1500
+    }
+  ]
+}

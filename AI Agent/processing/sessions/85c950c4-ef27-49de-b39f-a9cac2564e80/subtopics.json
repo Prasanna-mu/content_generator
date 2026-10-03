@@ -1,0 +1,61 @@
+[
+  {
+    "lesson_id": "54927d14-f3ab-49a6-99e4-0545cc97e0f8",
+    "lesson_title": "Fundamentals of Python and Django",
+    "subtopic_id": "5a8a7a56-e023-4730-a3d2-bba78d8f058e",
+    "title": "Setting Up the Development Environment",
+    "description": "In this subtopic, students will learn how to set up their development environment for Python and Django. This includes installing necessary software like Python, Django, and a code editor. Understanding the environment setup is crucial for writing and running Python and Django code effectively. Students will also learn how to use virtual environments to manage dependencies. Setting up the environment is a foundational step that ensures a smooth development process.",
+    "estimated_chars": 1500,
+    "validation_status": "valid",
+    "validation_errors": [
+      "Could be more specific in terms of software versions and installation steps",
+      "Lacks advanced topics related to environment setup"
+    ],
+    "regeneration_attempt": 0,
+    "regeneration_reason": null
+  },
+  {
+    "lesson_id": "54927d14-f3ab-49a6-99e4-0545cc97e0f8",
+    "lesson_title": "Fundamentals of Python and Django",
+    "subtopic_id": "5b4931ac-e152-4f6a-9616-41117ff16205",
+    "title": "Creating a Django Project and Understanding Models",
+    "description": "Students will create their first Django project and dive into the core component of Django: models. They will learn how to define models, which represent the data structures in a Django application. This subtopic covers creating models, defining model fields, and understanding relationships between models. Understanding models is essential as they form the backbone of any Django application, allowing developers to store and retrieve data efficiently.",
+    "estimated_chars": 1500,
+    "validation_status": "valid",
+    "validation_errors": [
+      "Could be more specific in terms of what models do and how they interact with views and templates"
+    ],
+    "regeneration_attempt": 0,
+    "regeneration_reason": null
+  },
+  {
+    "lesson_id": "9f5cd89e-46d1-4338-9cc7-888ab4536524",
+    "lesson_title": "Expert Django Development",
+    "subtopic_id": "c9b36a8b-89af-4578-94e7-eea630bc2da6",
+    "title": "Advanced Form Handling with Django",
+    "description": "Explore advanced form handling techniques including custom form validation, form field customization, and form rendering. Understand how to integrate forms with Django\u2019s authentication system and use form signals for form lifecycle management. Learn best practices for form error handling and form submission.",
+    "estimated_chars": 1500,
+    "validation_status": "valid",
+    "validation_errors": [
+      "Could be more detailed",
+      "Overly concise description",
+      "Estimated character count seems low"
+    ],
+    "regeneration_attempt": 0,
+    "regeneration_reason": null
+  },
+  {
+    "lesson_id": "9f5cd89e-46d1-4338-9cc7-888ab4536524",
+    "lesson_title": "Expert Django Development",
+    "subtopic_id": "9be21cbc-4d1e-4561-a373-9f0cbbf9b2b8",
+    "title": "Secure Authentication and Authorization in Django",
+    "description": "Delve into Django\u2019s authentication system, including user management, password hashing, and session management. Learn about different authentication backends and how to extend the default authentication system. Understand the importance of secure authentication and authorization practices in web applications, including session management, CSRF protection, and role-based access control. Explore advanced topics such as password reset functionality and multi-factor authentication.",
+    "estimated_chars": 1500,
+    "validation_status": "valid",
+    "validation_errors": [
+      "Could benefit from more specific examples or case studies"
+    ],
+    "regeneration_attempt": 0,
+    "regeneration_reason": null
+  }
+]

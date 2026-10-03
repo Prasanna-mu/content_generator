@@ -1,0 +1,12 @@
+{
+  "lessons": [
+    {
+      "title": "Introduction to Python and Django",
+      "description": "In this lesson, students will learn the basics of Python programming and how to set up a Django project. They will write their first Django application and understand the structure of a Django project."
+    },
+    {
+      "title": "Advanced Django Concepts and Best Practices",
+      "description": "This lesson delves into more advanced topics such as form handling, authentication, and integration with external APIs. Students will also learn about testing and deployment strategies in Django."
+    }
+  ]
+}

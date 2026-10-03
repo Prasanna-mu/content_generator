@@ -1,0 +1,72 @@
+{
+  "subtopics": [
+    {
+      "lesson_title": "Python and Django Fundamentals and Project Setup",
+      "lesson_id": "f0de854b-95e7-4dde-928e-f178537bb32d",
+      "subtopics": [
+        {
+          "id": "6b9394cb-6193-4ca7-8cf2-60d0937ffa57",
+          "title": "Configuring Virtual Environment and Installing Dependencies",
+          "description": "Learn how to set up a virtual environment for your Python project and install necessary dependencies using pip. Understand the importance of a virtual environment in managing project-specific libraries and dependencies, and how to manage them efficiently with pip.",
+          "estimated_chars": 1500,
+          "validation_status": "valid",
+          "validation_errors": [
+            "Could be more specific about Python and Django setup",
+            "Lacks detail on virtual environment setup",
+            "Could include more on package management"
+          ],
+          "regeneration_attempt": 1,
+          "regeneration_reason": "Could be more specific about Python and Django setup; Lacks detail on virtual environment setup; Could include more on package management",
+          "quality_score": 5
+        },
+        {
+          "id": "b760ce93-47a3-4882-9b92-355496cf8a46",
+          "title": "Creating and Configuring a Django Project",
+          "description": "Discover how to create a new Django project, configure settings, manage databases, and set up middleware and authentication. Explore the structure and purpose of each configuration file.",
+          "estimated_chars": 1500,
+          "validation_status": "valid",
+          "validation_errors": [
+            "Could be more specific in terms of Django version and Python version requirements",
+            "Could include more examples and exercises"
+          ],
+          "regeneration_attempt": 0,
+          "regeneration_reason": null,
+          "quality_score": 6
+        }
+      ]
+    },
+    {
+      "lesson_title": "Advanced Django: Form Handling, Authentication, and API Integration",
+      "lesson_id": "c5736198-aec8-407f-80a3-f91b7d56e025",
+      "subtopics": [
+        {
+          "id": "c149db25-0bae-4fb4-b7fe-0278d820702b",
+          "title": "Advanced Form Handling in Django",
+          "description": "In this section, we will delve into advanced form handling techniques in Django, including custom form validation, formsets, and form wizards. Understanding these features will allow you to create more robust and user-friendly forms within your Django applications.",
+          "estimated_chars": 1500,
+          "validation_status": "valid",
+          "validation_errors": [
+            "Could be more specific in terms of Django version or Python version",
+            "Lacks information on form handling best practices"
+          ],
+          "regeneration_attempt": 0,
+          "regeneration_reason": null,
+          "quality_score": 6
+        },
+        {
+          "id": "8134653d-2b9f-4438-84b6-a41d8d04ad5b",
+          "title": "Secure Authentication and Authorization in Django",
+          "description": "This part of the lesson will focus on secure user authentication and authorization mechanisms in Django. We will cover topics such as custom user models, session management, password hashing, and implementing role-based access control. Ensuring security is crucial in any Django application, and this section will equip you with the knowledge to protect your users and data effectively.",
+          "estimated_chars": 1500,
+          "validation_status": "valid",
+          "validation_errors": [
+            "Could benefit from more specific examples or case studies"
+          ],
+          "regeneration_attempt": 0,
+          "regeneration_reason": null,
+          "quality_score": 7
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "prompt": "Java with Springboot",
+  "session_id": "09e7da54-bb63-4243-8af9-10f2c85b3967",
+  "stages": {
+    "subtopic_generation": "completed",
+    "lesson_generation": "completed",
+    "content_generation": "failed",
+    "output_writing": "pending",
+    "docx_export": "pending",
+    "web_search": "completed"
+  },
+  "lessons": [],
+  "subtopics": [],
+  "tasklist": []
+}

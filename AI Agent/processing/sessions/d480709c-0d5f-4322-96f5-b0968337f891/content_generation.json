@@ -1,0 +1,66 @@
+{
+  "version": 4,
+  "session_id": "d480709c-0d5f-4322-96f5-b0968337f891",
+  "prompt": "Python with Django",
+  "generated_on": "2026-10-03T17:31:58.114411",
+  "subtopics": [
+    {
+      "lesson_id": "cbc4d31b-ab7b-42a5-8ab7-8b3b8c820383",
+      "lesson_number": 1,
+      "lesson_title": "Python and Django Fundamentals",
+      "subtopic_id": "8d48dbe2-5b1a-468d-99be-5f29df598be4",
+      "subtopic_number": 1,
+      "subtopic_title": "Setting Up the Django Environment",
+      "subtopic_description": "Learn how to install Python and Django, and set up a development environment. Understand the importance of a clean environment for consistent project development.",
+      "subtopic_estimated_chars": 1500,
+      "subtopic_quality_score": 6,
+      "co": "Learn to set up a Django project",
+      "po": "Programming Languages and Web Development",
+      "k_level": "intermediate",
+      "status": "completed",
+      "output_file": "output\\d480709c-0d5f-4322-96f5-b0968337f891\\Python_and_Django_Fundamentals\\01_01_Setting_Up_the_Django_Environment.txt",
+      "content_file": "Python_and_Django_Fundamentals\\01_01_Setting_Up_the_Django_Environment.txt",
+      "quiz_status": "completed",
+      "quiz_questions_count": 5,
+      "question_bank_count": 10,
+      "quiz_error": null,
+      "quiz_generation_timestamp": "2026-10-03T17:48:40.409092",
+      "metadata": {
+        "actual_chars": 4539,
+        "generation_timestamp": "2026-10-03T17:36:04.975883",
+        "error_message": null
+      },
+      "export_status": "completed",
+      "docx_path": "output\\delivery\\d480709c-0d5f-4322-96f5-b0968337f891\\01_Python_and_Django_Fundamentals\\01.01_Setting_Up_the_Django_Environment.docx"
+    },
+    {
+      "lesson_id": "cbc4d31b-ab7b-42a5-8ab7-8b3b8c820383",
+      "lesson_number": 1,
+      "lesson_title": "Python and Django Fundamentals",
+      "subtopic_id": "d1cb36e7-2370-4453-9321-d7ac1cc48652",
+      "subtopic_number": 2,
+      "subtopic_title": "Writing Your First Django Project",
+      "subtopic_description": "Create a simple Django project from scratch. Explore the basic structure of a Django application, including the project structure, settings, and basic views. Understand the importance of a well-structured project for future scalability and maintenance.",
+      "subtopic_estimated_chars": 1500,
+      "subtopic_quality_score": 7,
+      "co": "Learn to set up a Django project",
+      "po": "Programming Languages and Web Development",
+      "k_level": "intermediate",
+      "status": "completed",
+      "output_file": "output\\d480709c-0d5f-4322-96f5-b0968337f891\\Python_and_Django_Fundamentals\\01_02_Writing_Your_First_Django_Project.txt",
+      "content_file": "Python_and_Django_Fundamentals\\01_02_Writing_Your_First_Django_Project.txt",
+      "quiz_status": "completed",
+      "quiz_questions_count": 5,
+      "question_bank_count": 10,
+      "quiz_error": null,
+      "quiz_generation_timestamp": "2026-10-03T17:48:40.409184",
+      "metadata": {
+        "actual_chars": 4336,
+        "generation_timestamp": "2026-10-03T17:39:27.700501",
+        "error_message": null
+      },
+      "export_status": "completed",
+      "docx_path": "output\\delivery\\d480709c-0d5f-4322-96f5-b0968337f891\\01_Python_and_Django_Fundamentals\\01.02_Writing_Your_First_Django_Project.docx"
+    }
+  ]
+}

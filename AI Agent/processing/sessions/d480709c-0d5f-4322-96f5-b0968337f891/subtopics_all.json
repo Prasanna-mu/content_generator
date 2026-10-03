@@ -1,0 +1,37 @@
+{
+  "subtopics": [
+    {
+      "lesson_title": "Python and Django Fundamentals",
+      "lesson_id": "cbc4d31b-ab7b-42a5-8ab7-8b3b8c820383",
+      "subtopics": [
+        {
+          "id": "8d48dbe2-5b1a-468d-99be-5f29df598be4",
+          "title": "Setting Up the Django Environment",
+          "description": "Learn how to install Python and Django, and set up a development environment. Understand the importance of a clean environment for consistent project development.",
+          "estimated_chars": 1500,
+          "validation_status": "valid",
+          "validation_errors": [
+            "Could be more specific in terms of installation steps",
+            "Lacks depth in explaining the importance of a clean environment"
+          ],
+          "regeneration_attempt": 0,
+          "regeneration_reason": null,
+          "quality_score": 6
+        },
+        {
+          "id": "d1cb36e7-2370-4453-9321-d7ac1cc48652",
+          "title": "Writing Your First Django Project",
+          "description": "Create a simple Django project from scratch. Explore the basic structure of a Django application, including the project structure, settings, and basic views. Understand the importance of a well-structured project for future scalability and maintenance.",
+          "estimated_chars": 1500,
+          "validation_status": "valid",
+          "validation_errors": [
+            "Could benefit from additional examples or exercises"
+          ],
+          "regeneration_attempt": 0,
+          "regeneration_reason": null,
+          "quality_score": 7
+        }
+      ]
+    }
+  ]
+}

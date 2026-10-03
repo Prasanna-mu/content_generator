@@ -1,0 +1,14 @@
+{
+  "subtopics": [
+    {
+      "title": "Setting Up the Development Environment",
+      "description": "In this subtopic, students will learn how to set up their development environment for Python and Django. This includes installing necessary software like Python, Django, and a code editor. Understanding the environment setup is crucial for writing and running Python and Django code effectively. Students will also learn how to use virtual environments to manage dependencies. Setting up the environment is a foundational step that ensures a smooth development process.",
+      "estimated_chars": 1500
+    },
+    {
+      "title": "Creating a Django Project and Understanding Models",
+      "description": "Students will create their first Django project and dive into the core component of Django: models. They will learn how to define models, which represent the data structures in a Django application. This subtopic covers creating models, defining model fields, and understanding relationships between models. Understanding models is essential as they form the backbone of any Django application, allowing developers to store and retrieve data efficiently.",
+      "estimated_chars": 1500
+    }
+  ]
+}

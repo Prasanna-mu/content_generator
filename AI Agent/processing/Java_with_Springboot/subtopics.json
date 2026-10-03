@@ -1,0 +1,61 @@
+[
+  {
+    "lesson_id": "c2bce39a-4d32-4831-ba7e-b8a81420093a",
+    "lesson_title": "Java and Spring Boot Fundamentals",
+    "subtopic_id": "9883e98c-24f7-497d-ac5a-764ba43de0d1",
+    "title": "Setting Up a Spring Boot Project",
+    "description": "Learn how to create a basic Spring Boot project using Spring Initializr, configure dependencies, and understand the project structure including src/main/java, src/main/resources, and src/test/java. This subtopic covers setting up the foundation for building Spring Boot applications and understanding their directory structure.",
+    "estimated_chars": 1500,
+    "validation_status": "valid",
+    "validation_errors": [
+      "Could benefit from more hands-on coding exercises",
+      "Lacks advanced project setup examples"
+    ],
+    "regeneration_attempt": 0,
+    "regeneration_reason": null
+  },
+  {
+    "lesson_id": "c2bce39a-4d32-4831-ba7e-b8a81420093a",
+    "lesson_title": "Java and Spring Boot Fundamentals",
+    "subtopic_id": "3da02d36-9a9e-4e61-8e6e-d60d9506a051",
+    "title": "Dependency Injection and Configuration",
+    "description": "Explore the concept of dependency injection in Spring Boot, including how to inject beans, use constructors for dependency injection, and configure beans using annotations and XML. Understand how to manage configurations and properties in a Spring Boot application.",
+    "estimated_chars": 1500,
+    "validation_status": "valid",
+    "validation_errors": [
+      "Could be more specific in terms of configuration details"
+    ],
+    "regeneration_attempt": 0,
+    "regeneration_reason": null
+  },
+  {
+    "lesson_id": "f415600b-1d29-4437-b488-650f031d1515",
+    "lesson_title": "Mastering Advanced Spring Boot: Security, Data, and Microservices",
+    "subtopic_id": "3fdc4873-e9a6-4174-ab63-4cf48e3166f8",
+    "title": "Advanced Security Practices in Spring Boot",
+    "description": "Learn how to secure your Spring Boot applications with OAuth2, JWT, and Spring Security. Understand best practices for securing APIs and protecting sensitive data.",
+    "estimated_chars": 1500,
+    "validation_status": "valid",
+    "validation_errors": [
+      "Could benefit from more detailed examples or code snippets",
+      "Lacks information on Spring Security configurations and best practices",
+      "Could include more on JWT and OAuth2 implementation details"
+    ],
+    "regeneration_attempt": 0,
+    "regeneration_reason": null
+  },
+  {
+    "lesson_id": "f415600b-1d29-4437-b488-650f031d1515",
+    "lesson_title": "Mastering Advanced Spring Boot: Security, Data, and Microservices",
+    "subtopic_id": "b3b698da-aa8a-46e0-9ce3-8da85cc61afd",
+    "title": "Optimizing Data Access with Spring Data JPA",
+    "description": "Explore advanced features of Spring Data JPA for efficient database interactions. Master techniques for lazy and eager loading, querydsl, and custom repositories. Understand how to optimize performance and scalability.",
+    "estimated_chars": 1500,
+    "validation_status": "valid",
+    "validation_errors": [
+      "Could be more specific in terms of techniques covered"
+    ],
+    "regeneration_attempt": 0,
+    "regeneration_reason": null
+  }
+]

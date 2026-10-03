@@ -1,0 +1,14 @@
+{
+  "lessons": [
+    {
+      "id": "271a8ce1-f5d9-4b49-a640-5df81c80d3e4",
+      "title": "Building Blocks of Python and Django",
+      "description": "In this lesson, students will start by learning the basics of Python and Django. They will begin by installing Python and Django, and then create their first Django project. The lesson will also introduce students to basic Python syntax and the fundamental structure of Django applications."
+    },
+    {
+      "id": "b64d6fa6-ac21-4b77-9ffd-18c44e5e9b5e",
+      "title": "Advanced Django Project Development",
+      "description": "In this lesson, students will build upon their existing knowledge of Django by exploring advanced features and best practices. They will expand their skills in creating complex models, views, and templates. Students will also work on a more intricate project, integrating and optimizing previously learned concepts for enhanced performance and functionality."
+    }
+  ]
+}

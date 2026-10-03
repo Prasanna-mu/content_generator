@@ -1,0 +1,14 @@
+{
+  "lessons": [
+    {
+      "id": "f0de854b-95e7-4dde-928e-f178537bb32d",
+      "title": "Python and Django Fundamentals and Project Setup",
+      "description": "In this lesson, students will learn the basics of Python programming and how to set up a Django project. They will then write their first Django application and understand the structure of a Django project, laying a strong foundation for future development work."
+    },
+    {
+      "id": "c5736198-aec8-407f-80a3-f91b7d56e025",
+      "title": "Advanced Django: Form Handling, Authentication, and API Integration",
+      "description": "This lesson further explores advanced topics in Django, focusing on form handling, user authentication, and integrating with external APIs. Students will also learn about testing and deployment strategies to enhance their Django applications."
+    }
+  ]
+}

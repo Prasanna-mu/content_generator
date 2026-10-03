@@ -1,0 +1,14 @@
+{
+  "subtopics": [
+    {
+      "title": "Setting Up Python Environment",
+      "description": "Learn how to install Python and set up a basic development environment. Understand the importance of a consistent environment for reproducible results and error isolation.",
+      "estimated_chars": 1500
+    },
+    {
+      "title": "Creating a Django Project",
+      "description": "Discover the process of creating a Django project from scratch. Explore the command-line interface and the structure of a Django project, including settings, URLs, and WSGI files. Understand the role of each component in a Django project.",
+      "estimated_chars": 1500
+    }
+  ]
+}

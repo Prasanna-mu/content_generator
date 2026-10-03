@@ -1,0 +1,20 @@
+{
+  "lesson_title": "Python and Django Fundamentals",
+  "lesson_description": "In this lesson, we will delve into the basics of Python and Django. We will cover what Django is, its usefulness, and how to install and set up a Django environment. We will then write our first Django project and explore the basic structure of a Django application, laying the groundwork for more advanced topics.",
+  "subtopics": [
+    {
+      "title": "Setting Up the Django Environment",
+      "description": "Learn how to install Python and Django, and set up a development environment. Understand the importance of a clean environment for consistent project development.",
+      "estimated_chars": 1500,
+      "actual_chars": 4539
+    },
+    {
+      "title": "Writing Your First Django Project",
+      "description": "Create a simple Django project from scratch. Explore the basic structure of a Django application, including the project structure, settings, and basic views. Understand the importance of a well-structured project for future scalability and maintenance.",
+      "estimated_chars": 1500,
+      "actual_chars": 4336
+    }
+  ],
+  "quiz_question_count": 5,
+  "question_bank_count": 10
+}

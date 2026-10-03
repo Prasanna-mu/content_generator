@@ -1,0 +1,14 @@
+{
+  "prompt": "python with django",
+  "session_id": "85c950c4-ef27-49de-b39f-a9cac2564e80",
+  "stages": {
+    "subtopic_generation": "completed",
+    "lesson_generation": "completed",
+    "content_generation": "failed",
+    "output_writing": "pending",
+    "docx_export": "pending"
+  },
+  "lessons": [],
+  "subtopics": [],
+  "tasklist": []
+}

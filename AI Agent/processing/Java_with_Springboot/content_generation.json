@@ -1,0 +1,96 @@
+{
+  "version": 4,
+  "session_id": "09e7da54-bb63-4243-8af9-10f2c85b3967",
+  "prompt": "Java with Springboot",
+  "generated_on": "2026-10-03T15:12:13.492917",
+  "subtopics": [
+    {
+      "lesson_id": "c2bce39a-4d32-4831-ba7e-b8a81420093a",
+      "lesson_number": 1,
+      "lesson_title": "Java and Spring Boot Fundamentals",
+      "subtopic_id": "9883e98c-24f7-497d-ac5a-764ba43de0d1",
+      "subtopic_number": 1,
+      "subtopic_title": "Setting Up a Spring Boot Project",
+      "subtopic_description": "Learn how to create a basic Spring Boot project using Spring Initializr, configure dependencies, and understand the project structure including src/main/java, src/main/resources, and src/test/java. This subtopic covers setting up the foundation for building Spring Boot applications and understanding their directory structure.",
+      "subtopic_estimated_chars": 1500,
+      "subtopic_quality_score": 7,
+      "co": "Understand the basics of Java and Spring Boot",
+      "po": "Programming Languages and Frameworks",
+      "k_level": "intermediate",
+      "status": "pending",
+      "output_file": null,
+      "content_file": null,
+      "metadata": {
+        "actual_chars": 0,
+        "generation_timestamp": null,
+        "error_message": null
+      }
+    },
+    {
+      "lesson_id": "c2bce39a-4d32-4831-ba7e-b8a81420093a",
+      "lesson_number": 1,
+      "lesson_title": "Java and Spring Boot Fundamentals",
+      "subtopic_id": "3da02d36-9a9e-4e61-8e6e-d60d9506a051",
+      "subtopic_number": 2,
+      "subtopic_title": "Dependency Injection and Configuration",
+      "subtopic_description": "Explore the concept of dependency injection in Spring Boot, including how to inject beans, use constructors for dependency injection, and configure beans using annotations and XML. Understand how to manage configurations and properties in a Spring Boot application.",
+      "subtopic_estimated_chars": 1500,
+      "subtopic_quality_score": 7,
+      "co": "Understand the basics of Java and Spring Boot",
+      "po": "Programming Languages and Frameworks",
+      "k_level": "intermediate",
+      "status": "pending",
+      "output_file": null,
+      "content_file": null,
+      "metadata": {
+        "actual_chars": 0,
+        "generation_timestamp": null,
+        "error_message": null
+      }
+    },
+    {
+      "lesson_id": "f415600b-1d29-4437-b488-650f031d1515",
+      "lesson_number": 2,
+      "lesson_title": "Mastering Advanced Spring Boot: Security, Data, and Microservices",
+      "subtopic_id": "3fdc4873-e9a6-4174-ab63-4cf48e3166f8",
+      "subtopic_number": 1,
+      "subtopic_title": "Advanced Security Practices in Spring Boot",
+      "subtopic_description": "Learn how to secure your Spring Boot applications with OAuth2, JWT, and Spring Security. Understand best practices for securing APIs and protecting sensitive data.",
+      "subtopic_estimated_chars": 1500,
+      "subtopic_quality_score": 6,
+      "co": "Understand the basics of Java and Spring Boot",
+      "po": "Programming Languages and Frameworks",
+      "k_level": "intermediate",
+      "status": "pending",
+      "output_file": null,
+      "content_file": null,
+      "metadata": {
+        "actual_chars": 0,
+        "generation_timestamp": null,
+        "error_message": null
+      }
+    },
+    {
+      "lesson_id": "f415600b-1d29-4437-b488-650f031d1515",
+      "lesson_number": 2,
+      "lesson_title": "Mastering Advanced Spring Boot: Security, Data, and Microservices",
+      "subtopic_id": "b3b698da-aa8a-46e0-9ce3-8da85cc61afd",
+      "subtopic_number": 2,
+      "subtopic_title": "Optimizing Data Access with Spring Data JPA",
+      "subtopic_description": "Explore advanced features of Spring Data JPA for efficient database interactions. Master techniques for lazy and eager loading, querydsl, and custom repositories. Understand how to optimize performance and scalability.",
+      "subtopic_estimated_chars": 1500,
+      "subtopic_quality_score": 7,
+      "co": "Understand the basics of Java and Spring Boot",
+      "po": "Programming Languages and Frameworks",
+      "k_level": "intermediate",
+      "status": "pending",
+      "output_file": null,
+      "content_file": null,
+      "metadata": {
+        "actual_chars": 0,
+        "generation_timestamp": null,
+        "error_message": null
+      }
+    }
+  ]
+}

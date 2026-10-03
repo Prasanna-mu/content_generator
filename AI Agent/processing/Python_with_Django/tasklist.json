@@ -1,38 +1,34 @@
 {
   "tasks": [
     {
-      "lesson_title": "Python and Django Fundamentals",
-      "subtopic_title": "Installing and Configuring Python and Django",
+      "lesson_id": "f0de854b-95e7-4dde-928e-f178537bb32d",
+      "lesson_title": "Python and Django Fundamentals and Project Setup",
+      "subtopic_id": "6b9394cb-6193-4ca7-8cf2-60d0937ffa57",
+      "subtopic_title": "Configuring Virtual Environment and Installing Dependencies",
       "completed": false,
       "content_file": null
     },
     {
-      "lesson_title": "Python and Django Fundamentals",
-      "subtopic_title": "Navigating the Django Command Line",
+      "lesson_id": "f0de854b-95e7-4dde-928e-f178537bb32d",
+      "lesson_title": "Python and Django Fundamentals and Project Setup",
+      "subtopic_id": "b760ce93-47a3-4882-9b92-355496cf8a46",
+      "subtopic_title": "Creating and Configuring a Django Project",
       "completed": false,
       "content_file": null
     },
     {
-      "lesson_title": "Advanced Python with Django: Building a Simple Application",
-      "subtopic_title": "Setting Up the Django Environment",
+      "lesson_id": "c5736198-aec8-407f-80a3-f91b7d56e025",
+      "lesson_title": "Advanced Django: Form Handling, Authentication, and API Integration",
+      "subtopic_id": "c149db25-0bae-4fb4-b7fe-0278d820702b",
+      "subtopic_title": "Advanced Form Handling in Django",
       "completed": false,
       "content_file": null
     },
     {
-      "lesson_title": "Advanced Python with Django: Building a Simple Application",
-      "subtopic_title": "Creating and Configuring Models",
-      "completed": false,
-      "content_file": null
-    },
-    {
-      "lesson_title": "Expert-Level Django Features and Practices",
-      "subtopic_title": "Authentication in Django",
-      "completed": false,
-      "content_file": null
-    },
-    {
-      "lesson_title": "Expert-Level Django Features and Practices",
-      "subtopic_title": "Internationalization and Localization in Django",
+      "lesson_id": "c5736198-aec8-407f-80a3-f91b7d56e025",
+      "lesson_title": "Advanced Django: Form Handling, Authentication, and API Integration",
+      "subtopic_id": "8134653d-2b9f-4438-84b6-a41d8d04ad5b",
+      "subtopic_title": "Secure Authentication and Authorization in Django",
       "completed": false,
       "content_file": null
     }

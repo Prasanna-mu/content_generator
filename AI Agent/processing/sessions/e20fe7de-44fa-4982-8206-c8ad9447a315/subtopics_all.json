@@ -1,0 +1,69 @@
+{
+  "subtopics": [
+    {
+      "lesson_title": "Python and Django Fundamentals",
+      "lesson_id": "5aee6ccb-65ee-429f-8864-bf9ea3329e7c",
+      "subtopics": [
+        {
+          "id": "6136cc9e-66db-4fc3-b33a-9784f36047a8",
+          "title": "Setting Up Python Environment",
+          "description": "Learn how to install Python and set up a basic development environment. Understand the importance of a consistent environment for reproducible results and error isolation.",
+          "estimated_chars": 1500,
+          "validation_status": "valid",
+          "validation_errors": [
+            "Could be more concise to fit estimated character length",
+            "Could include more details on specific installation steps and troubleshooting"
+          ],
+          "regeneration_attempt": 0,
+          "regeneration_reason": null,
+          "quality_score": 6
+        },
+        {
+          "id": "933a35e9-4c94-4cc0-92f2-9f12e83423fe",
+          "title": "Creating a Django Project",
+          "description": "Discover the process of creating a Django project from scratch. Explore the command-line interface and the structure of a Django project, including settings, URLs, and WSGI files. Understand the role of each component in a Django project.",
+          "estimated_chars": 1500,
+          "validation_status": "valid",
+          "validation_errors": [
+            "Could be more specific in terms of what exactly is covered within the Django project creation process"
+          ],
+          "regeneration_attempt": 0,
+          "regeneration_reason": null,
+          "quality_score": 7
+        }
+      ]
+    },
+    {
+      "lesson_title": "Mastering Django with Advanced Concepts and Best Practices",
+      "lesson_id": "d67e1d10-ba19-4363-a7aa-e1997ce67ccc",
+      "subtopics": [
+        {
+          "id": "2ca23c71-d850-4f71-aabe-ec911299b751",
+          "title": "Advanced User Authentication with Django",
+          "description": "Explore advanced techniques for user authentication in Django, including custom authentication backends, social authentication, and multi-factor authentication. Understand how to secure user accounts and manage authentication states effectively.",
+          "estimated_chars": 1500,
+          "validation_status": "valid",
+          "validation_errors": [
+            "Could be more specific in terms of techniques covered"
+          ],
+          "regeneration_attempt": 0,
+          "regeneration_reason": null,
+          "quality_score": 6
+        },
+        {
+          "id": "26365732-420c-4053-b8a1-2f9a4bf4cebc",
+          "title": "Optimizing Form Handling and Validation in Django",
+          "description": "Delve into advanced form handling and validation techniques in Django, including custom form classes, formsets, form validation strategies, and form rendering options. Learn how to create efficient and user-friendly forms that adhere to best practices.",
+          "estimated_chars": 1500,
+          "validation_status": "valid",
+          "validation_errors": [
+            "Could be more specific in terms of form handling techniques covered"
+          ],
+          "regeneration_attempt": 0,
+          "regeneration_reason": null,
+          "quality_score": 7
+        }
+      ]
+    }
+  ]
+}

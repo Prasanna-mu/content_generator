@@ -1,0 +1,64 @@
+{
+  "questions": [
+    {
+      "question": "What is the first step in setting up a Python project to ensure that it doesn't interfere with other projects and dependencies?",
+      "options": [
+        "Create a virtual environment",
+        "Install Django",
+        "Write the first line of code",
+        "Configure the database"
+      ],
+      "correct_answer": 0,
+      "explanation": "Creating a virtual environment allows you to manage project dependencies separately from system-wide Python packages, which is crucial for a clean and organized project setup.",
+      "k_level": "K2"
+    },
+    {
+      "question": "Which of the following is a correct sequence of steps to install Django in a Python environment?",
+      "options": [
+        "Install Python, then Django",
+        "Install Django, then Python",
+        "Install Django, then pip",
+        "Install pip, then Django"
+      ],
+      "correct_answer": 3,
+      "explanation": "To install Django, you first need to have pip (Python's package installer) installed. After installing pip, you can then install Django.",
+      "k_level": "K3"
+    },
+    {
+      "question": "In Django, what does the command 'python manage.py startapp myapp' do?",
+      "options": [
+        "Creates a new Django application",
+        "Starts the Django development server",
+        "Generates a new database schema",
+        "Imports the app in the settings.py file"
+      ],
+      "correct_answer": 0,
+      "explanation": "The 'python manage.py startapp myapp' command creates a new Django application named 'myapp' within the project's apps directory.",
+      "k_level": "K4"
+    },
+    {
+      "question": "Which of the following is not a necessary step when configuring a Django project's settings.py file?",
+      "options": [
+        "Configure database settings",
+        "Set up URL routing",
+        "Define middleware classes",
+        "Configure static files"
+      ],
+      "correct_answer": 1,
+      "explanation": "Setting up URL routing is typically done in the urls.py file, not the settings.py file. The settings.py file is where you configure settings like database settings, middleware, and static files.",
+      "k_level": "K5"
+    },
+    {
+      "question": "What is the purpose of using a virtual environment in a Django project setup?",
+      "options": [
+        "To manage project dependencies",
+        "To isolate the project from system-wide Python packages",
+        "To speed up the development process",
+        "To simplify database management"
+      ],
+      "correct_answer": 1,
+      "explanation": "Using a virtual environment in a Django project allows you to manage project dependencies separately from system-wide Python packages, ensuring a clean and organized project setup.",
+      "k_level": "K6"
+    }
+  ]
+}

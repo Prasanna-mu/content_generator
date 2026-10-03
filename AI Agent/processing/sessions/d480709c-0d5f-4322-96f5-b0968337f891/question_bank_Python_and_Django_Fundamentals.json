@@ -1,0 +1,64 @@
+{
+  "questions": [
+    {
+      "question": "What is Django and how does it differ from other web frameworks? Provide a brief explanation.",
+      "answer": "Django is a high-level Python web framework that encourages rapid development and clean, pragmatic design. It differs from other web frameworks in that it provides a lot of functionality out of the box, such as an ORM (Object-Relational Mapping), authentication, and admin interface, which can save a lot of time and effort compared to building these features from scratch. Django also follows the DRY (Don't Repeat Yourself) principle, which means that it tries to minimize code duplication.",
+      "difficulty": "intermediate",
+      "k_level": "K1"
+    },
+    {
+      "question": "Explain the steps involved in setting up a Django environment on a local machine. Include the installation of Python, Django, and any necessary database management system.",
+      "answer": "To set up a Django environment on a local machine, you need to have Python installed. After installing Python, you can install Django by running the command `pip install django` in your command line or terminal. Once Django is installed, you can create a new project by running `django-admin startproject myproject` in your project directory. For a database, you can use SQLite, PostgreSQL, or MySQL. You can install the database by running the appropriate command for your database system. For example, to install SQLite, you can run `pip install sqlite3`.",
+      "difficulty": "intermediate",
+      "k_level": "K2"
+    },
+    {
+      "question": "Write a simple Django view that returns a 'Hello, World!' message. Explain the structure of a Django view and how it interacts with the request and response objects.",
+      "answer": "Here's a simple Django view that returns a 'Hello, World!' message:\n```python\ndef hello_world(request):\n    return HttpResponse('Hello, World!')\n```\nA Django view is a function that takes a request object as its first argument and returns a response object. The request object contains information about the client's request, such as the method (GET, POST, etc.), headers, and any data submitted with the request. The response object is used to send data back to the client, such as HTML, JSON, or plain text. In this example, the view simply returns the string 'Hello, World!' as a response.",
+      "difficulty": "intermediate",
+      "k_level": "K3"
+    },
+    {
+      "question": "Describe the basic structure of a Django project and explain the purpose of each directory and file within it. Provide examples of what you would find in the `myproject` directory and the `myapp` directory.",
+      "answer": "A Django project typically consists of the following directories and files:\n- `myproject/` (project directory): Contains the project's settings, urls, and wsgi file. The project's settings file (`settings.py`) contains configurations for the project, such as database settings, installed apps, and middleware. The urls file (`urls.py`) defines the project's URLs, and the wsgi file (`wsgi.py`) is used to run the project.\n- `myapp/` (application directory): Contains the application's models, views, and other files. The application's models file (`models.py`) defines the application's data models, the views file (`views.py`) contains the application's views, and the urls file (`urls.py`) defines the application's URLs. The application's settings file (`settings.py`) contains configurations specific to the application, such as database settings and installed apps.",
+      "difficulty": "intermediate",
+      "k_level": "K4"
+    },
+    {
+      "question": "What is the purpose of the `urls.py` file in a Django project? How does it interact with the `views.py` file to handle requests?",
+      "answer": "The `urls.py` file in a Django project is responsible for mapping URLs to views. It contains a list of URL patterns, where each pattern is a regular expression that matches a URL and a corresponding view function. When a user requests a URL, Django looks up the URL pattern that matches the requested URL and calls the corresponding view function. The view function processes the request and returns a response, which is then sent back to the user.",
+      "difficulty": "intermediate",
+      "k_level": "K5"
+    },
+    {
+      "question": "Explain the concept of a Django model and how it interacts with the database. Provide an example of a simple Django model and explain how it can be used to interact with a database.",
+      "answer": "A Django model is a Python class that represents a database table. It contains fields that define the table's columns and methods that define how the table should be manipulated. Django models interact with the database through the ORM (Object-Relational Mapping) system. When a Django model is defined, Django automatically creates a corresponding table in the database. You can then use the ORM methods to interact with the table, such as querying, creating, updating, and deleting records.",
+      "difficulty": "intermediate",
+      "k_level": "K6"
+    },
+    {
+      "question": "How do you set up a database in Django and configure the database settings in the `settings.py` file? Provide an example of how to configure a database connection for SQLite.",
+      "answer": "To set up a database in Django, you need to choose a database system and install the appropriate database adapter. For example, to use SQLite, you can install the `sqlite3` package by running `pip install sqlite3`. Once the database adapter is installed, you can configure the database settings in the `settings.py` file. Here's an example of how to configure a SQLite database connection:\n```python\nDATABASES = {\n    'default': {\n        'ENGINE': 'django.db.backends.sqlite3',\n        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),\n    }\n}\n```\nIn this example, `ENGINE` specifies the database engine to use, `NAME` specifies the database file to use, and `BASE_DIR` is an environment variable that contains the project's base directory.",
+      "difficulty": "intermediate",
+      "k_level": "K6"
+    },
+    {
+      "question": "What is the purpose of the `admin.py` file in a Django project? How does it interact with the Django admin interface?",
+      "answer": "The `admin.py` file in a Django project is used to configure the Django admin interface, which is a powerful tool for managing the application's data. The admin interface allows you to create, update, and delete records in the database through a web-based interface. The `admin.py` file contains a list of model classes that should be included in the admin interface and any customizations to the admin interface, such as adding or removing fields or changing the display of fields.",
+      "difficulty": "intermediate",
+      "k_level": "K6"
+    },
+    {
+      "question": "How do you create a new Django app and configure the `INSTALLED_APPS` setting in the `settings.py` file? Provide an example of how to create a new app named `myapp`.",
+      "answer": "To create a new Django app, you can use the `django-admin startapp` command. For example, to create a new app named `myapp`, you can run `django-admin startapp myapp`. This command creates a new directory named `myapp` in the `myproject` directory. To configure the `INSTALLED_APPS` setting in the `settings.py` file, you need to add the new app to the list of installed apps. Here's an example of how to add the `myapp` app to the `INSTALLED_APPS` setting:\n```python\nINSTALLED_APPS = [\n    'myapp',\n    # other apps\n]\n```\nIn this example, `myapp` is the name of the new app, and other apps are the other apps that are already installed in the project.",
+      "difficulty": "intermediate",
+      "k_level": "K6"
+    },
+    {
+      "question": "Explain the concept of a Django middleware and how it can be used to intercept and modify requests and responses. Provide an example of a simple middleware that logs the time taken to process a request.",
+      "answer": "A Django middleware is a class that implements the `process_request` and `process_response` methods. These methods are called by Django before and after a view is executed, respectively. Middleware can be used to intercept and modify requests and responses. For example, to create a middleware that logs the time taken to process a request, you can create a class that implements the `process_request` and `process_response` methods. Here's an example of a simple middleware that logs the time taken to process a request:\n```python\nclass LoggingMiddleware:\n    def process_request(self, request):\n        request.start_time = time.time()\n\n    def process_response(self, request, response):\n        response.process_time = time.time() - request.start_time\n        return response\n```\nIn this example, the middleware logs the time taken to process a request by storing the start time in the request object and the time difference between the start time and the end time in the response object.",
+      "difficulty": "technical",
+      "k_level": "K6"
+    }
+  ]
+}

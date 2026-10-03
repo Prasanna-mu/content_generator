@@ -1,5 +1,6 @@
 from typing import List
 from pathlib import Path
+import uuid
 from core.models.schemas import UserInput, Lesson
 from core.llm.base import BaseLLMProvider
 import json
@@ -25,9 +26,9 @@ class LessonGenerator:
         return lessons
 
     def refine_lessons(self, lessons: List[Lesson], user_input: UserInput) -> List[Lesson]:
-        for i, lesson in enumerate(lessons):
+        for lesson in lessons:
             prompt = f"""
-Refine lesson {i+1}/{len(lessons)}:
+Refine lesson:
 Title: {lesson.title}
 Description: {lesson.description}
 Main topic: {user_input.prompt}
@@ -47,7 +48,7 @@ Return JSON: {{"title": "...", "description": "..."}}
 
     def _save_lessons(self, lessons: List[Lesson]):
         if self.llm._output_dir:
-            data = {"lessons": [{"title": l.title, "description": l.description} for l in lessons]}
+            data = {"lessons": [{"id": l.id, "title": l.title, "description": l.description} for l in lessons]}
             filepath = self.llm._output_dir / "lessons_refined.json"
             with open(filepath, 'w', encoding='utf-8') as f:
                 json.dump(data, f, indent=2, ensure_ascii=False)
@@ -63,6 +64,7 @@ Return JSON: {{"title": "...", "description": "..."}}
                 lessons = []
                 for lesson_data in data.get("lessons", []):
                     lesson = Lesson(
+                        id=lesson_data.get("id", str(uuid.uuid4())),
                         title=lesson_data["title"],
                         description=lesson_data["description"],
                         subtopics=[],

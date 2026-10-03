@@ -1,0 +1,14 @@
+{
+  "subtopics": [
+    {
+      "title": "Setting Up the Django Environment",
+      "description": "Learn how to install Python and Django, and set up a development environment. Understand the importance of a clean environment for consistent project development.",
+      "estimated_chars": 1500
+    },
+    {
+      "title": "Writing Your First Django Project",
+      "description": "Create a simple Django project from scratch. Explore the basic structure of a Django application, including the project structure, settings, and basic views. Understand the importance of a well-structured project for future scalability and maintenance.",
+      "estimated_chars": 1500
+    }
+  ]
+}

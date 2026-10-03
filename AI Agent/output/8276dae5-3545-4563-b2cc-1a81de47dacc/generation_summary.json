@@ -1,0 +1,36 @@
+{
+  "prompt": "python with django",
+  "config": {
+    "prompt": "python with django",
+    "num_lessons": 2,
+    "subtopics_per_lesson": 2,
+    "content_quality": "intermediate",
+    "content_length": "medium",
+    "quiz_question_count": 5,
+    "quiz_difficulty": "intermediate",
+    "question_bank_count": 10,
+    "web_search_needed": false,
+    "subtopic_quality": {
+      "max_title_length": 60,
+      "max_regeneration_attempts": 3,
+      "quality_threshold": 6
+    }
+  },
+  "total_lessons": 2,
+  "total_subtopics": 4,
+  "total_content_chars": 0,
+  "total_quiz_questions": 0,
+  "total_question_bank_items": 0,
+  "lessons": [
+    {
+      "title": "Python and Django Fundamentals and Project Setup",
+      "subtopic_count": 2,
+      "total_chars": 0
+    },
+    {
+      "title": "Advanced Django: Form Handling, Authentication, and API Integration",
+      "subtopic_count": 2,
+      "total_chars": 0
+    }
+  ]
+}

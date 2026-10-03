@@ -1,0 +1,36 @@
+{
+  "tasks": [
+    {
+      "lesson_id": "5aee6ccb-65ee-429f-8864-bf9ea3329e7c",
+      "lesson_title": "Python and Django Fundamentals",
+      "subtopic_id": "6136cc9e-66db-4fc3-b33a-9784f36047a8",
+      "subtopic_title": "Setting Up Python Environment",
+      "completed": true,
+      "content_file": "01_01_Setting_Up_Python_Environment.txt"
+    },
+    {
+      "lesson_id": "5aee6ccb-65ee-429f-8864-bf9ea3329e7c",
+      "lesson_title": "Python and Django Fundamentals",
+      "subtopic_id": "933a35e9-4c94-4cc0-92f2-9f12e83423fe",
+      "subtopic_title": "Creating a Django Project",
+      "completed": true,
+      "content_file": "01_02_Creating_a_Django_Project.txt"
+    },
+    {
+      "lesson_id": "d67e1d10-ba19-4363-a7aa-e1997ce67ccc",
+      "lesson_title": "Mastering Django with Advanced Concepts and Best Practices",
+      "subtopic_id": "2ca23c71-d850-4f71-aabe-ec911299b751",
+      "subtopic_title": "Advanced User Authentication with Django",
+      "completed": true,
+      "content_file": "02_01_Advanced_User_Authentication_with_Django.txt"
+    },
+    {
+      "lesson_id": "d67e1d10-ba19-4363-a7aa-e1997ce67ccc",
+      "lesson_title": "Mastering Django with Advanced Concepts and Best Practices",
+      "subtopic_id": "26365732-420c-4053-b8a1-2f9a4bf4cebc",
+      "subtopic_title": "Optimizing Form Handling and Validation in Django",
+      "completed": true,
+      "content_file": "02_02_Optimizing_Form_Handling_and_Validation_in_Django.txt"
+    }
+  ]
+}

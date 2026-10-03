@@ -1,0 +1,64 @@
+{
+  "questions": [
+    {
+      "question": "What is the correct method to handle user authentication in Django for creating a custom login view?",
+      "options": [
+        "A) def custom_login(request):",
+        "B) def custom_login(request, username, password):",
+        "C) def custom_login(request, username):",
+        "D) def custom_login(request, username, password, next_page):"
+      ],
+      "correct_answer": 0,
+      "explanation": "The correct method is to use a custom login view in Django, which is typically defined in a URL configuration and uses the `LoginView` class from `django.contrib.auth.views`.",
+      "k_level": "K3"
+    },
+    {
+      "question": "Which method is used in Django to validate form data before saving it to the database?",
+      "options": [
+        "A) form.save()",
+        "B) form.is_valid()",
+        "C) form.validate()",
+        "D) form.validate_data()"
+      ],
+      "correct_answer": 1,
+      "explanation": "The `is_valid()` method is used to validate the form data before saving the form instance to the database.",
+      "k_level": "K4"
+    },
+    {
+      "question": "In Django, which function is used to handle form errors and display them to the user in a template?",
+      "options": [
+        "A) form.error()",
+        "B) form.errors()",
+        "C) form.display_errors()",
+        "D) form.display_error()"
+      ],
+      "correct_answer": 1,
+      "explanation": "The `errors` attribute of a form object in Django can be accessed to get the list of errors and then used in a template to display them to the user.",
+      "k_level": "K5"
+    },
+    {
+      "question": "What is the best practice for organizing models in a Django project to ensure code reusability and maintainability?",
+      "options": [
+        "A) Place all models in a single file",
+        "B) Create a separate file for each model",
+        "C) Use a directory structure like models/, admin/, migrations/",
+        "D) Combine all models into a single model class"
+      ],
+      "correct_answer": 2,
+      "explanation": "Organizing models into a directory structure like `models/`, `admin/`, and `migrations/` is a best practice to keep the code organized and maintainable.",
+      "k_level": "K2"
+    },
+    {
+      "question": "Which of the following is a recommended way to write unit tests for a Django view that handles user authentication?",
+      "options": [
+        "A) Testing the view's logic directly",
+        "B) Using Django's `TestCase` class to test the view's response",
+        "C) Writing integration tests for the view",
+        "D) Using Selenium to test the view's UI"
+      ],
+      "correct_answer": 1,
+      "explanation": "Writing unit tests for a Django view that handles user authentication using Django's `TestCase` class is a recommended practice to ensure the view works as expected in isolation.",
+      "k_level": "K6"
+    }
+  ]
+}

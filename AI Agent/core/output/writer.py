@@ -48,18 +48,12 @@ class OutputWriter:
         self._write_lesson_summary_json(lesson_output, lesson_dir)
 
     def _write_subtopic_content(self, content: GeneratedContent, lesson_dir: Path):
-        # Create a sanitized filename for the subtopic content
-        import re
-        filename = re.sub(r'[<>:"/\\|?*]', '_', content.subtopic_title)
-        filename = filename.strip().replace(' ', '_')[:100] + ".txt"
-        file_path = lesson_dir / filename
-        
-        with open(file_path, 'w', encoding='utf-8') as f:
-            f.write(f"Lesson: {content.lesson_title}\n")
-            f.write(f"Subtopic: {content.subtopic_title}\n")
-            f.write(f"Character Count: {content.actual_chars}\n")
-            f.write("=" * 60 + "\n\n")
-            f.write(content.content)
+        """
+        DEPRECATED: TXT files are now written by _run_content_generation to ensure
+        single authoritative writer and correct naming.
+        This method is kept for backward compatibility but does nothing.
+        """
+        pass
 
     def _write_quiz_csv(self, quiz_questions: List[QuizQuestion], lesson_dir: Path):
         file_path = lesson_dir / "quiz.csv"

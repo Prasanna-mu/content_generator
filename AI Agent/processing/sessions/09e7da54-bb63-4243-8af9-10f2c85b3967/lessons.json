@@ -1,0 +1,12 @@
+{
+  "lessons": [
+    {
+      "title": "Introduction to Java and Spring Boot",
+      "description": "In this lesson, students will be introduced to the basics of Java programming and the Spring Boot framework. Students will learn about the structure of a Spring Boot application, how to set up a basic project, and the fundamental concepts of dependency injection and configuration. The lesson will include hands-on coding exercises to reinforce these concepts."
+    },
+    {
+      "title": "Advanced Spring Boot Features and Best Practices",
+      "description": "This lesson will delve into more advanced features of Spring Boot, such as security, data access, and microservices. Students will learn about Spring Security, Spring Data JPA, and how to build microservices with Spring Boot. The lesson will also cover best practices for developing maintainable and scalable applications. Students will work on a project that incorporates these advanced features."
+    }
+  ]
+}
