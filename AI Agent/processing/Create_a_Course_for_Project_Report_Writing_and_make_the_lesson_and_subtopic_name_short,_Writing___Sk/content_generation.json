@@ -1,0 +1,807 @@
+{
+  "session_id": "d13a25a6-04ac-43a4-bf6b-d43bdc3a3215",
+  "prompt": "Create a Course for Project Report Writing and make the lesson and subtopic name short, Writing   Skills   -   Essential  Grammar   and   Vocabulary   -   Passive Voice,   Reported   Speech,Concord, Signpost  words, Cohesive Devices - Paragraph writing  - Technical Writing vs.General Writing. Project Report - Definition, Structure, Types of Reports, Purpose - Intended Audience -Plagiarism - Report Writing in STEM fields - Experiment - Statistical Analysis.",
+  "generated_on": "2026-09-23T09:57:01.313334",
+  "subtopics": [
+    {
+      "lesson_title": "Lesson 1: Foundations of Writing Skills",
+      "subtopic_title": "Subtopic 1: Introduction to Writing Skills",
+      "subtopic_description": "This subtopic introduces the importance of writing skills in various fields, including STEM and experimental research. It covers the basics of effective writing for different audiences and purposes.",
+      "subtopic_estimated_chars": 450,
+      "co": "Demonstrate understanding of essential grammar and vocabulary",
+      "po": "Writing and Communication",
+      "k_level": "intermediate",
+      "status": "completed",
+      "output_file": "output\\d13a25a6-04ac-43a4-bf6b-d43bdc3a3215\\Lesson_1__Foundations_of_Writing_Skills\\01_01_Create_a_Course_for_Project_Report_Writing_and_make_the_lesson_and_subtopic_name_short,_Writing___Sk.txt",
+      "metadata": {
+        "actual_chars": 2725
+      },
+      "export_status": "completed",
+      "docx_path": "output\\delivery\\d13a25a6-04ac-43a4-bf6b-d43bdc3a3215\\01_Lesson_1__Foundations_of_Writing_Skills\\01.01_Subtopic_1__Introduction_to_Writing_Skills.docx"
+    },
+    {
+      "lesson_title": "Lesson 1: Foundations of Writing Skills",
+      "subtopic_title": "Subtopic 2: Essential Grammar and Vocabulary",
+      "subtopic_description": "Learn the basics of grammar and vocabulary that are essential for clear and effective writing. This includes understanding and using correct tenses, pronouns, and sentence structures.",
+      "subtopic_estimated_chars": 500,
+      "co": "Demonstrate understanding of essential grammar and vocabulary",
+      "po": "Writing and Communication",
+      "k_level": "intermediate",
+      "status": "completed",
+      "output_file": "output\\d13a25a6-04ac-43a4-bf6b-d43bdc3a3215\\Lesson_1__Foundations_of_Writing_Skills\\01_02_Create_a_Course_for_Project_Report_Writing_and_make_the_lesson_and_subtopic_name_short,_Writing___Sk.txt",
+      "metadata": {
+        "actual_chars": 4559
+      },
+      "export_status": "completed",
+      "docx_path": "output\\delivery\\d13a25a6-04ac-43a4-bf6b-d43bdc3a3215\\01_Lesson_1__Foundations_of_Writing_Skills\\01.02_Subtopic_2__Essential_Grammar_and_Vocabulary.docx"
+    },
+    {
+      "lesson_title": "Lesson 1: Foundations of Writing Skills",
+      "subtopic_title": "Subtopic 3: Passive Voice and Reported Speech",
+      "subtopic_description": "Explore the use of the passive voice and reported speech. Understand when and how to use these structures to convey information more effectively.",
+      "subtopic_estimated_chars": 400,
+      "co": "Demonstrate understanding of essential grammar and vocabulary",
+      "po": "Writing and Communication",
+      "k_level": "intermediate",
+      "status": "completed",
+      "output_file": "output\\d13a25a6-04ac-43a4-bf6b-d43bdc3a3215\\Lesson_1__Foundations_of_Writing_Skills\\01_03_Create_a_Course_for_Project_Report_Writing_and_make_the_lesson_and_subtopic_name_short,_Writing___Sk.txt",
+      "metadata": {
+        "actual_chars": 3665
+      },
+      "export_status": "completed",
+      "docx_path": "output\\delivery\\d13a25a6-04ac-43a4-bf6b-d43bdc3a3215\\01_Lesson_1__Foundations_of_Writing_Skills\\01.03_Subtopic_3__Passive_Voice_and_Reported_Speech.docx"
+    },
+    {
+      "lesson_title": "Lesson 1: Foundations of Writing Skills",
+      "subtopic_title": "Subtopic 4: Concord and Cohesive Devices",
+      "subtopic_description": "Discover how to use concord and cohesive devices to link ideas and maintain a flow in your writing. This includes coordinating and subordinating conjunctions, and pronouns.",
+      "subtopic_estimated_chars": 450,
+      "co": "Demonstrate understanding of essential grammar and vocabulary",
+      "po": "Writing and Communication",
+      "k_level": "intermediate",
+      "status": "completed",
+      "output_file": "output\\d13a25a6-04ac-43a4-bf6b-d43bdc3a3215\\Lesson_1__Foundations_of_Writing_Skills\\01_04_Create_a_Course_for_Project_Report_Writing_and_make_the_lesson_and_subtopic_name_short,_Writing___Sk.txt",
+      "metadata": {
+        "actual_chars": 4242
+      },
+      "export_status": "completed",
+      "docx_path": "output\\delivery\\d13a25a6-04ac-43a4-bf6b-d43bdc3a3215\\01_Lesson_1__Foundations_of_Writing_Skills\\01.04_Subtopic_4__Concord_and_Cohesive_Devices.docx"
+    },
+    {
+      "lesson_title": "Lesson 1: Foundations of Writing Skills",
+      "subtopic_title": "Subtopic 5: Signpost Words in Paragraph Writing",
+      "subtopic_description": "Learn how to use signpost words to guide readers through your writing. Understand the importance of signposting in maintaining clarity and coherence.",
+      "subtopic_estimated_chars": 400,
+      "co": "Demonstrate understanding of essential grammar and vocabulary",
+      "po": "Writing and Communication",
+      "k_level": "intermediate",
+      "status": "completed",
+      "output_file": "output\\d13a25a6-04ac-43a4-bf6b-d43bdc3a3215\\Lesson_1__Foundations_of_Writing_Skills\\01_05_Create_a_Course_for_Project_Report_Writing_and_make_the_lesson_and_subtopic_name_short,_Writing___Sk.txt",
+      "metadata": {
+        "actual_chars": 3015
+      },
+      "export_status": "completed",
+      "docx_path": "output\\delivery\\d13a25a6-04ac-43a4-bf6b-d43bdc3a3215\\01_Lesson_1__Foundations_of_Writing_Skills\\01.05_Subtopic_5__Signpost_Words_in_Paragraph_Writing.docx"
+    },
+    {
+      "lesson_title": "Lesson 1: Foundations of Writing Skills",
+      "subtopic_title": "Subtopic 6: Technical Writing Basics",
+      "subtopic_description": "This subtopic covers the basics of technical writing, including the definition, structure, and types of technical reports. Understand the importance of avoiding plagiarism in technical writing.",
+      "subtopic_estimated_chars": 550,
+      "co": "Demonstrate understanding of essential grammar and vocabulary",
+      "po": "Writing and Communication",
+      "k_level": "intermediate",
+      "status": "completed",
+      "output_file": "output\\d13a25a6-04ac-43a4-bf6b-d43bdc3a3215\\Lesson_1__Foundations_of_Writing_Skills\\01_06_Create_a_Course_for_Project_Report_Writing_and_make_the_lesson_and_subtopic_name_short,_Writing___Sk.txt",
+      "metadata": {
+        "actual_chars": 3001
+      },
+      "export_status": "completed",
+      "docx_path": "output\\delivery\\d13a25a6-04ac-43a4-bf6b-d43bdc3a3215\\01_Lesson_1__Foundations_of_Writing_Skills\\01.06_Subtopic_6__Technical_Writing_Basics.docx"
+    },
+    {
+      "lesson_title": "Lesson 1: Foundations of Writing Skills",
+      "subtopic_title": "Subtopic 7: STEM Field-Specific Report Writing",
+      "subtopic_description": "Explore how to write effective technical reports in STEM fields. Understand the unique challenges and requirements of writing in these fields.",
+      "subtopic_estimated_chars": 450,
+      "co": "Demonstrate understanding of essential grammar and vocabulary",
+      "po": "Writing and Communication",
+      "k_level": "intermediate",
+      "status": "completed",
+      "output_file": "output\\d13a25a6-04ac-43a4-bf6b-d43bdc3a3215\\Lesson_1__Foundations_of_Writing_Skills\\01_07_Create_a_Course_for_Project_Report_Writing_and_make_the_lesson_and_subtopic_name_short,_Writing___Sk.txt",
+      "metadata": {
+        "actual_chars": 3614
+      },
+      "export_status": "completed",
+      "docx_path": "output\\delivery\\d13a25a6-04ac-43a4-bf6b-d43bdc3a3215\\01_Lesson_1__Foundations_of_Writing_Skills\\01.07_Subtopic_7__STEM_Field-Specific_Report_Writing.docx"
+    },
+    {
+      "lesson_title": "Lesson 1: Foundations of Writing Skills",
+      "subtopic_title": "Subtopic 8: Experimental Research Methods",
+      "subtopic_description": "Learn about experimental research methods and how to write about them in your reports. Understand the importance of being clear and concise when describing your research methods.",
+      "subtopic_estimated_chars": 500,
+      "co": "Demonstrate understanding of essential grammar and vocabulary",
+      "po": "Writing and Communication",
+      "k_level": "intermediate",
+      "status": "completed",
+      "output_file": "output\\d13a25a6-04ac-43a4-bf6b-d43bdc3a3215\\Lesson_1__Foundations_of_Writing_Skills\\01_08_Create_a_Course_for_Project_Report_Writing_and_make_the_lesson_and_subtopic_name_short,_Writing___Sk.txt",
+      "metadata": {
+        "actual_chars": 3871
+      },
+      "export_status": "completed",
+      "docx_path": "output\\delivery\\d13a25a6-04ac-43a4-bf6b-d43bdc3a3215\\01_Lesson_1__Foundations_of_Writing_Skills\\01.08_Subtopic_8__Experimental_Research_Methods.docx"
+    },
+    {
+      "lesson_title": "Lesson 1: Foundations of Writing Skills",
+      "subtopic_title": "Subtopic 9: Plagiarism in Writing",
+      "subtopic_description": "Understand what plagiarism is and how to avoid it in your writing. Learn about the importance of citing sources and using quotation marks when necessary.",
+      "subtopic_estimated_chars": 450,
+      "co": "Demonstrate understanding of essential grammar and vocabulary",
+      "po": "Writing and Communication",
+      "k_level": "intermediate",
+      "status": "completed",
+      "output_file": "output\\d13a25a6-04ac-43a4-bf6b-d43bdc3a3215\\Lesson_1__Foundations_of_Writing_Skills\\01_09_Create_a_Course_for_Project_Report_Writing_and_make_the_lesson_and_subtopic_name_short,_Writing___Sk.txt",
+      "metadata": {
+        "actual_chars": 1973
+      },
+      "export_status": "completed",
+      "docx_path": "output\\delivery\\d13a25a6-04ac-43a4-bf6b-d43bdc3a3215\\01_Lesson_1__Foundations_of_Writing_Skills\\01.09_Subtopic_9__Plagiarism_in_Writing.docx"
+    },
+    {
+      "lesson_title": "Lesson 1: Foundations of Writing Skills",
+      "subtopic_title": "Subtopic 10: Writing for Different Audiences and Purposes",
+      "subtopic_description": "This subtopic covers how to write effectively for different audiences and purposes. Understand the importance of tailoring your writing to the reader and the purpose of the report.",
+      "subtopic_estimated_chars": 450,
+      "co": "Demonstrate understanding of essential grammar and vocabulary",
+      "po": "Writing and Communication",
+      "k_level": "intermediate",
+      "status": "completed",
+      "output_file": "output\\d13a25a6-04ac-43a4-bf6b-d43bdc3a3215\\Lesson_1__Foundations_of_Writing_Skills\\01_10_Create_a_Course_for_Project_Report_Writing_and_make_the_lesson_and_subtopic_name_short,_Writing___Sk.txt",
+      "metadata": {
+        "actual_chars": 3098
+      },
+      "export_status": "completed",
+      "docx_path": "output\\delivery\\d13a25a6-04ac-43a4-bf6b-d43bdc3a3215\\01_Lesson_1__Foundations_of_Writing_Skills\\01.10_Subtopic_10__Writing_for_Different_Audiences_and_Purposes.docx"
+    },
+    {
+      "lesson_title": "Lesson 2: Advanced Writing Skills",
+      "subtopic_title": "Subtopic 1: Passive Voice Basics",
+      "subtopic_description": "Learn the structure and usage of passive voice in writing. Understand when to use it and how to avoid awkward phrasing.",
+      "subtopic_estimated_chars": 250,
+      "co": "Demonstrate understanding of essential grammar and vocabulary",
+      "po": "Writing and Communication",
+      "k_level": "intermediate",
+      "status": "completed",
+      "output_file": "output\\d13a25a6-04ac-43a4-bf6b-d43bdc3a3215\\Lesson_2__Advanced_Writing_Skills\\02_01_Create_a_Course_for_Project_Report_Writing_and_make_the_lesson_and_subtopic_name_short,_Writing___Sk.txt",
+      "metadata": {
+        "actual_chars": 3659
+      },
+      "export_status": "completed",
+      "docx_path": "output\\delivery\\d13a25a6-04ac-43a4-bf6b-d43bdc3a3215\\02_Lesson_2__Advanced_Writing_Skills\\02.01_Subtopic_1__Passive_Voice_Basics.docx"
+    },
+    {
+      "lesson_title": "Lesson 2: Advanced Writing Skills",
+      "subtopic_title": "Subtopic 2: Reported Speech: How to Paraphrase Accurately",
+      "subtopic_description": "Master the art of reporting speech accurately. Understand the difference between direct and indirect reported speech.",
+      "subtopic_estimated_chars": 280,
+      "co": "Demonstrate understanding of essential grammar and vocabulary",
+      "po": "Writing and Communication",
+      "k_level": "intermediate",
+      "status": "completed",
+      "output_file": "output\\d13a25a6-04ac-43a4-bf6b-d43bdc3a3215\\Lesson_2__Advanced_Writing_Skills\\02_02_Create_a_Course_for_Project_Report_Writing_and_make_the_lesson_and_subtopic_name_short,_Writing___Sk.txt",
+      "metadata": {
+        "actual_chars": 2331
+      },
+      "export_status": "completed",
+      "docx_path": "output\\delivery\\d13a25a6-04ac-43a4-bf6b-d43bdc3a3215\\02_Lesson_2__Advanced_Writing_Skills\\02.02_Subtopic_2__Reported_Speech__How_to_Paraphrase_Accurately.docx"
+    },
+    {
+      "lesson_title": "Lesson 2: Advanced Writing Skills",
+      "subtopic_title": "Subtopic 3: Concord in Writing",
+      "subtopic_description": "Explore the concept of concord and how it affects verb and noun agreement in sentences.",
+      "subtopic_estimated_chars": 220,
+      "co": "Demonstrate understanding of essential grammar and vocabulary",
+      "po": "Writing and Communication",
+      "k_level": "intermediate",
+      "status": "completed",
+      "output_file": "output\\d13a25a6-04ac-43a4-bf6b-d43bdc3a3215\\Lesson_2__Advanced_Writing_Skills\\02_03_Create_a_Course_for_Project_Report_Writing_and_make_the_lesson_and_subtopic_name_short,_Writing___Sk.txt",
+      "metadata": {
+        "actual_chars": 3506
+      },
+      "export_status": "completed",
+      "docx_path": "output\\delivery\\d13a25a6-04ac-43a4-bf6b-d43bdc3a3215\\02_Lesson_2__Advanced_Writing_Skills\\02.03_Subtopic_3__Concord_in_Writing.docx"
+    },
+    {
+      "lesson_title": "Lesson 2: Advanced Writing Skills",
+      "subtopic_title": "Subtopic 4: Signpost Words: Guiding Readers Through Your Writing",
+      "subtopic_description": "Discover how signpost words help guide readers through your text, making it more coherent and easier to follow.",
+      "subtopic_estimated_chars": 300,
+      "co": "Demonstrate understanding of essential grammar and vocabulary",
+      "po": "Writing and Communication",
+      "k_level": "intermediate",
+      "status": "completed",
+      "output_file": "output\\d13a25a6-04ac-43a4-bf6b-d43bdc3a3215\\Lesson_2__Advanced_Writing_Skills\\02_04_Create_a_Course_for_Project_Report_Writing_and_make_the_lesson_and_subtopic_name_short,_Writing___Sk.txt",
+      "metadata": {
+        "actual_chars": 3624
+      },
+      "export_status": "completed",
+      "docx_path": "output\\delivery\\d13a25a6-04ac-43a4-bf6b-d43bdc3a3215\\02_Lesson_2__Advanced_Writing_Skills\\02.04_Subtopic_4__Signpost_Words__Guiding_Readers_Through_Your_Writing.docx"
+    },
+    {
+      "lesson_title": "Lesson 2: Advanced Writing Skills",
+      "subtopic_title": "Subtopic 5: Cohesive Devices: Linking Ideas Together",
+      "subtopic_description": "Learn about cohesive devices such as pronouns, conjunctions, and prepositions that help connect ideas and maintain a logical flow in writing.",
+      "subtopic_estimated_chars": 350,
+      "co": "Demonstrate understanding of essential grammar and vocabulary",
+      "po": "Writing and Communication",
+      "k_level": "intermediate",
+      "status": "completed",
+      "output_file": "output\\d13a25a6-04ac-43a4-bf6b-d43bdc3a3215\\Lesson_2__Advanced_Writing_Skills\\02_05_Create_a_Course_for_Project_Report_Writing_and_make_the_lesson_and_subtopic_name_short,_Writing___Sk.txt",
+      "metadata": {
+        "actual_chars": 3373
+      },
+      "export_status": "completed",
+      "docx_path": "output\\delivery\\d13a25a6-04ac-43a4-bf6b-d43bdc3a3215\\02_Lesson_2__Advanced_Writing_Skills\\02.05_Subtopic_5__Cohesive_Devices__Linking_Ideas_Together.docx"
+    },
+    {
+      "lesson_title": "Lesson 2: Advanced Writing Skills",
+      "subtopic_title": "Subtopic 6: Advanced Sentence Structure in Paragraph Writing",
+      "subtopic_description": "Enhance your paragraph writing skills by exploring more complex sentence structures and how they contribute to a well-structured paragraph.",
+      "subtopic_estimated_chars": 280,
+      "co": "Demonstrate understanding of essential grammar and vocabulary",
+      "po": "Writing and Communication",
+      "k_level": "intermediate",
+      "status": "completed",
+      "output_file": "output\\d13a25a6-04ac-43a4-bf6b-d43bdc3a3215\\Lesson_2__Advanced_Writing_Skills\\02_06_Create_a_Course_for_Project_Report_Writing_and_make_the_lesson_and_subtopic_name_short,_Writing___Sk.txt",
+      "metadata": {
+        "actual_chars": 7223
+      },
+      "export_status": "completed",
+      "docx_path": "output\\delivery\\d13a25a6-04ac-43a4-bf6b-d43bdc3a3215\\02_Lesson_2__Advanced_Writing_Skills\\02.06_Subtopic_6__Advanced_Sentence_Structure_in_Paragraph_Writing.docx"
+    },
+    {
+      "lesson_title": "Lesson 2: Advanced Writing Skills",
+      "subtopic_title": "Subtopic 7: Technical vs. General Writing: Understanding the Differences",
+      "subtopic_description": "Distinguish between technical and general writing, and understand the appropriate style and tone for each.",
+      "subtopic_estimated_chars": 270,
+      "co": "Demonstrate understanding of essential grammar and vocabulary",
+      "po": "Writing and Communication",
+      "k_level": "intermediate",
+      "status": "completed",
+      "output_file": "output\\d13a25a6-04ac-43a4-bf6b-d43bdc3a3215\\Lesson_2__Advanced_Writing_Skills\\02_07_Create_a_Course_for_Project_Report_Writing_and_make_the_lesson_and_subtopic_name_short,_Writing___Sk.txt",
+      "metadata": {
+        "actual_chars": 4033
+      },
+      "export_status": "completed",
+      "docx_path": "output\\delivery\\d13a25a6-04ac-43a4-bf6b-d43bdc3a3215\\02_Lesson_2__Advanced_Writing_Skills\\02.07_Subtopic_7__Technical_vs._General_Writing__Understanding_the_Differences.docx"
+    },
+    {
+      "lesson_title": "Lesson 2: Advanced Writing Skills",
+      "subtopic_title": "Subtopic 8: Project Report Writing: Introduction and Structure",
+      "subtopic_description": "Get introduced to the concept of project reports and learn about their structure, including sections like introduction, methods, results, and conclusion.",
+      "subtopic_estimated_chars": 290,
+      "co": "Demonstrate understanding of essential grammar and vocabulary",
+      "po": "Writing and Communication",
+      "k_level": "intermediate",
+      "status": "completed",
+      "output_file": "output\\d13a25a6-04ac-43a4-bf6b-d43bdc3a3215\\Lesson_2__Advanced_Writing_Skills\\02_08_Create_a_Course_for_Project_Report_Writing_and_make_the_lesson_and_subtopic_name_short,_Writing___Sk.txt",
+      "metadata": {
+        "actual_chars": 5128
+      },
+      "export_status": "completed",
+      "docx_path": "output\\delivery\\d13a25a6-04ac-43a4-bf6b-d43bdc3a3215\\02_Lesson_2__Advanced_Writing_Skills\\02.08_Subtopic_8__Project_Report_Writing__Introduction_and_Structure.docx"
+    },
+    {
+      "lesson_title": "Lesson 2: Advanced Writing Skills",
+      "subtopic_title": "Subtopic 9: Project Report Writing: Purpose and Audience",
+      "subtopic_description": "Understand the purpose of a project report and how to tailor your writing to a specific audience, whether it's peers, superiors, or clients.",
+      "subtopic_estimated_chars": 300,
+      "co": "Demonstrate understanding of essential grammar and vocabulary",
+      "po": "Writing and Communication",
+      "k_level": "intermediate",
+      "status": "completed",
+      "output_file": "output\\d13a25a6-04ac-43a4-bf6b-d43bdc3a3215\\Lesson_2__Advanced_Writing_Skills\\02_09_Create_a_Course_for_Project_Report_Writing_and_make_the_lesson_and_subtopic_name_short,_Writing___Sk.txt",
+      "metadata": {
+        "actual_chars": 5307
+      },
+      "export_status": "completed",
+      "docx_path": "output\\delivery\\d13a25a6-04ac-43a4-bf6b-d43bdc3a3215\\02_Lesson_2__Advanced_Writing_Skills\\02.09_Subtopic_9__Project_Report_Writing__Purpose_and_Audience.docx"
+    },
+    {
+      "lesson_title": "Lesson 2: Advanced Writing Skills",
+      "subtopic_title": "Subtopic 10: Avoiding Plagiarism in Project Reports",
+      "subtopic_description": "Learn strategies to avoid plagiarism in your project reports, including proper citation and paraphrasing techniques.",
+      "subtopic_estimated_chars": 260,
+      "co": "Demonstrate understanding of essential grammar and vocabulary",
+      "po": "Writing and Communication",
+      "k_level": "intermediate",
+      "status": "completed",
+      "output_file": "output\\d13a25a6-04ac-43a4-bf6b-d43bdc3a3215\\Lesson_2__Advanced_Writing_Skills\\02_10_Create_a_Course_for_Project_Report_Writing_and_make_the_lesson_and_subtopic_name_short,_Writing___Sk.txt",
+      "metadata": {
+        "actual_chars": 4600
+      },
+      "export_status": "completed",
+      "docx_path": "output\\delivery\\d13a25a6-04ac-43a4-bf6b-d43bdc3a3215\\02_Lesson_2__Advanced_Writing_Skills\\02.10_Subtopic_10__Avoiding_Plagiarism_in_Project_Reports.docx"
+    },
+    {
+      "lesson_title": "Lesson 3: Project Report Structure and Types",
+      "subtopic_title": "Project Report Definition",
+      "subtopic_description": "Defines what a project report is and its importance in various fields.",
+      "subtopic_estimated_chars": 250,
+      "co": "Demonstrate understanding of essential grammar and vocabulary",
+      "po": "Writing and Communication",
+      "k_level": "intermediate",
+      "status": "completed",
+      "output_file": "output\\d13a25a6-04ac-43a4-bf6b-d43bdc3a3215\\Lesson_3__Project_Report_Structure_and_Types\\03_01_Create_a_Course_for_Project_Report_Writing_and_make_the_lesson_and_subtopic_name_short,_Writing___Sk.txt",
+      "metadata": {
+        "actual_chars": 4215
+      },
+      "export_status": "completed",
+      "docx_path": "output\\delivery\\d13a25a6-04ac-43a4-bf6b-d43bdc3a3215\\03_Lesson_3__Project_Report_Structure_and_Types\\03.01_Project_Report_Definition.docx"
+    },
+    {
+      "lesson_title": "Lesson 3: Project Report Structure and Types",
+      "subtopic_title": "Project Report Structure Overview",
+      "subtopic_description": "Introduces the basic structure of a project report, including introduction, methods, results, discussion, and conclusion sections.",
+      "subtopic_estimated_chars": 300,
+      "co": "Demonstrate understanding of essential grammar and vocabulary",
+      "po": "Writing and Communication",
+      "k_level": "intermediate",
+      "status": "completed",
+      "output_file": "output\\d13a25a6-04ac-43a4-bf6b-d43bdc3a3215\\Lesson_3__Project_Report_Structure_and_Types\\03_02_Create_a_Course_for_Project_Report_Writing_and_make_the_lesson_and_subtopic_name_short,_Writing___Sk.txt",
+      "metadata": {
+        "actual_chars": 4068
+      },
+      "export_status": "completed",
+      "docx_path": "output\\delivery\\d13a25a6-04ac-43a4-bf6b-d43bdc3a3215\\03_Lesson_3__Project_Report_Structure_and_Types\\03.02_Project_Report_Structure_Overview.docx"
+    },
+    {
+      "lesson_title": "Lesson 3: Project Report Structure and Types",
+      "subtopic_title": "Types of Project Reports",
+      "subtopic_description": "Covers different types of project reports such as technical, formal, and informal reports.",
+      "subtopic_estimated_chars": 250,
+      "co": "Demonstrate understanding of essential grammar and vocabulary",
+      "po": "Writing and Communication",
+      "k_level": "intermediate",
+      "status": "completed",
+      "output_file": "output\\d13a25a6-04ac-43a4-bf6b-d43bdc3a3215\\Lesson_3__Project_Report_Structure_and_Types\\03_03_Create_a_Course_for_Project_Report_Writing_and_make_the_lesson_and_subtopic_name_short,_Writing___Sk.txt",
+      "metadata": {
+        "actual_chars": 4774
+      },
+      "export_status": "completed",
+      "docx_path": "output\\delivery\\d13a25a6-04ac-43a4-bf6b-d43bdc3a3215\\03_Lesson_3__Project_Report_Structure_and_Types\\03.03_Types_of_Project_Reports.docx"
+    },
+    {
+      "lesson_title": "Lesson 3: Project Report Structure and Types",
+      "subtopic_title": "Purpose and Intended Audience",
+      "subtopic_description": "Explains the purpose of project reports and who they are intended for, including educational and professional settings.",
+      "subtopic_estimated_chars": 280,
+      "co": "Demonstrate understanding of essential grammar and vocabulary",
+      "po": "Writing and Communication",
+      "k_level": "intermediate",
+      "status": "completed",
+      "output_file": "output\\d13a25a6-04ac-43a4-bf6b-d43bdc3a3215\\Lesson_3__Project_Report_Structure_and_Types\\03_04_Create_a_Course_for_Project_Report_Writing_and_make_the_lesson_and_subtopic_name_short,_Writing___Sk.txt",
+      "metadata": {
+        "actual_chars": 3542
+      },
+      "export_status": "completed",
+      "docx_path": "output\\delivery\\d13a25a6-04ac-43a4-bf6b-d43bdc3a3215\\03_Lesson_3__Project_Report_Structure_and_Types\\03.04_Purpose_and_Intended_Audience.docx"
+    },
+    {
+      "lesson_title": "Lesson 3: Project Report Structure and Types",
+      "subtopic_title": "Avoiding Plagiarism",
+      "subtopic_description": "Discusses strategies for avoiding plagiarism in project reports, including proper citation and referencing.",
+      "subtopic_estimated_chars": 270,
+      "co": "Demonstrate understanding of essential grammar and vocabulary",
+      "po": "Writing and Communication",
+      "k_level": "intermediate",
+      "status": "completed",
+      "output_file": "output\\d13a25a6-04ac-43a4-bf6b-d43bdc3a3215\\Lesson_3__Project_Report_Structure_and_Types\\03_05_Create_a_Course_for_Project_Report_Writing_and_make_the_lesson_and_subtopic_name_short,_Writing___Sk.txt",
+      "metadata": {
+        "actual_chars": 3381
+      },
+      "export_status": "completed",
+      "docx_path": "output\\delivery\\d13a25a6-04ac-43a4-bf6b-d43bdc3a3215\\03_Lesson_3__Project_Report_Structure_and_Types\\03.05_Avoiding_Plagiarism.docx"
+    },
+    {
+      "lesson_title": "Lesson 3: Project Report Structure and Types",
+      "subtopic_title": "STEM Field Specifics",
+      "subtopic_description": "Explains how project reports are used in STEM fields, including conducting experiments and performing statistical analysis.",
+      "subtopic_estimated_chars": 300,
+      "co": "Demonstrate understanding of essential grammar and vocabulary",
+      "po": "Writing and Communication",
+      "k_level": "intermediate",
+      "status": "completed",
+      "output_file": "output\\d13a25a6-04ac-43a4-bf6b-d43bdc3a3215\\Lesson_3__Project_Report_Structure_and_Types\\03_06_Create_a_Course_for_Project_Report_Writing_and_make_the_lesson_and_subtopic_name_short,_Writing___Sk.txt",
+      "metadata": {
+        "actual_chars": 4347
+      },
+      "export_status": "completed",
+      "docx_path": "output\\delivery\\d13a25a6-04ac-43a4-bf6b-d43bdc3a3215\\03_Lesson_3__Project_Report_Structure_and_Types\\03.06_STEM_Field_Specifics.docx"
+    },
+    {
+      "lesson_title": "Lesson 3: Project Report Structure and Types",
+      "subtopic_title": "Experiment Writing Tips",
+      "subtopic_description": "Provides tips on how to write about experiments, including how to describe procedures, results, and conclusions.",
+      "subtopic_estimated_chars": 280,
+      "co": "Demonstrate understanding of essential grammar and vocabulary",
+      "po": "Writing and Communication",
+      "k_level": "intermediate",
+      "status": "completed",
+      "output_file": "output\\d13a25a6-04ac-43a4-bf6b-d43bdc3a3215\\Lesson_3__Project_Report_Structure_and_Types\\03_07_Create_a_Course_for_Project_Report_Writing_and_make_the_lesson_and_subtopic_name_short,_Writing___Sk.txt",
+      "metadata": {
+        "actual_chars": 3166
+      },
+      "export_status": "completed",
+      "docx_path": "output\\delivery\\d13a25a6-04ac-43a4-bf6b-d43bdc3a3215\\03_Lesson_3__Project_Report_Structure_and_Types\\03.07_Experiment_Writing_Tips.docx"
+    },
+    {
+      "lesson_title": "Lesson 3: Project Report Structure and Types",
+      "subtopic_title": "Statistical Analysis in Reports",
+      "subtopic_description": "Explains how to incorporate statistical analysis into project reports, including data interpretation and presentation.",
+      "subtopic_estimated_chars": 300,
+      "co": "Demonstrate understanding of essential grammar and vocabulary",
+      "po": "Writing and Communication",
+      "k_level": "intermediate",
+      "status": "completed",
+      "output_file": "output\\d13a25a6-04ac-43a4-bf6b-d43bdc3a3215\\Lesson_3__Project_Report_Structure_and_Types\\03_08_Create_a_Course_for_Project_Report_Writing_and_make_the_lesson_and_subtopic_name_short,_Writing___Sk.txt",
+      "metadata": {
+        "actual_chars": 3246
+      },
+      "export_status": "completed",
+      "docx_path": "output\\delivery\\d13a25a6-04ac-43a4-bf6b-d43bdc3a3215\\03_Lesson_3__Project_Report_Structure_and_Types\\03.08_Statistical_Analysis_in_Reports.docx"
+    },
+    {
+      "lesson_title": "Lesson 3: Project Report Structure and Types",
+      "subtopic_title": "Writing for STEM vs. General Audiences",
+      "subtopic_description": "Compares the differences in writing style and content for STEM and general audiences in project reports.",
+      "subtopic_estimated_chars": 270,
+      "co": "Demonstrate understanding of essential grammar and vocabulary",
+      "po": "Writing and Communication",
+      "k_level": "intermediate",
+      "status": "completed",
+      "output_file": "output\\d13a25a6-04ac-43a4-bf6b-d43bdc3a3215\\Lesson_3__Project_Report_Structure_and_Types\\03_09_Create_a_Course_for_Project_Report_Writing_and_make_the_lesson_and_subtopic_name_short,_Writing___Sk.txt",
+      "metadata": {
+        "actual_chars": 7184
+      },
+      "export_status": "completed",
+      "docx_path": "output\\delivery\\d13a25a6-04ac-43a4-bf6b-d43bdc3a3215\\03_Lesson_3__Project_Report_Structure_and_Types\\03.09_Writing_for_STEM_vs._General_Audiences.docx"
+    },
+    {
+      "lesson_title": "Lesson 3: Project Report Structure and Types",
+      "subtopic_title": "Conclusion and Final Thoughts",
+      "subtopic_description": "Summarizes key points and provides final thoughts on effective project report writing.",
+      "subtopic_estimated_chars": 250,
+      "co": "Demonstrate understanding of essential grammar and vocabulary",
+      "po": "Writing and Communication",
+      "k_level": "intermediate",
+      "status": "completed",
+      "output_file": "output\\d13a25a6-04ac-43a4-bf6b-d43bdc3a3215\\Lesson_3__Project_Report_Structure_and_Types\\03_10_Create_a_Course_for_Project_Report_Writing_and_make_the_lesson_and_subtopic_name_short,_Writing___Sk.txt",
+      "metadata": {
+        "actual_chars": 2360
+      },
+      "export_status": "completed",
+      "docx_path": "output\\delivery\\d13a25a6-04ac-43a4-bf6b-d43bdc3a3215\\03_Lesson_3__Project_Report_Structure_and_Types\\03.10_Conclusion_and_Final_Thoughts.docx"
+    },
+    {
+      "lesson_title": "Lesson 4: STEM Project Reports and Experiments",
+      "subtopic_title": "Subtopic 1: Grammar and Vocabulary",
+      "subtopic_description": "This subtopic covers essential grammar and vocabulary skills for writing project reports. It includes learning about passive voice, reported speech, and concord. Estimated Characters: 250",
+      "subtopic_estimated_chars": 250,
+      "co": "Demonstrate understanding of essential grammar and vocabulary",
+      "po": "Writing and Communication",
+      "k_level": "intermediate",
+      "status": "completed",
+      "output_file": "output\\d13a25a6-04ac-43a4-bf6b-d43bdc3a3215\\Lesson_4__STEM_Project_Reports_and_Experiments\\04_01_Create_a_Course_for_Project_Report_Writing_and_make_the_lesson_and_subtopic_name_short,_Writing___Sk.txt",
+      "metadata": {
+        "actual_chars": 1494
+      },
+      "export_status": "completed",
+      "docx_path": "output\\delivery\\d13a25a6-04ac-43a4-bf6b-d43bdc3a3215\\04_Lesson_4__STEM_Project_Reports_and_Experiments\\04.01_Subtopic_1__Grammar_and_Vocabulary.docx"
+    },
+    {
+      "lesson_title": "Lesson 4: STEM Project Reports and Experiments",
+      "subtopic_title": "Subtopic 2: Signpost Words and Cohesive Devices",
+      "subtopic_description": "Understanding and using signpost words and cohesive devices to improve paragraph writing in project reports. Estimated Characters: 270",
+      "subtopic_estimated_chars": 270,
+      "co": "Demonstrate understanding of essential grammar and vocabulary",
+      "po": "Writing and Communication",
+      "k_level": "intermediate",
+      "status": "completed",
+      "output_file": "output\\d13a25a6-04ac-43a4-bf6b-d43bdc3a3215\\Lesson_4__STEM_Project_Reports_and_Experiments\\04_02_Create_a_Course_for_Project_Report_Writing_and_make_the_lesson_and_subtopic_name_short,_Writing___Sk.txt",
+      "metadata": {
+        "actual_chars": 3035
+      },
+      "export_status": "completed",
+      "docx_path": "output\\delivery\\d13a25a6-04ac-43a4-bf6b-d43bdc3a3215\\04_Lesson_4__STEM_Project_Reports_and_Experiments\\04.02_Subtopic_2__Signpost_Words_and_Cohesive_Devices.docx"
+    },
+    {
+      "lesson_title": "Lesson 4: STEM Project Reports and Experiments",
+      "subtopic_title": "Subtopic 3: Technical vs. General Writing",
+      "subtopic_description": "Distinguishing between technical writing in STEM fields and general writing. Estimated Characters: 280",
+      "subtopic_estimated_chars": 280,
+      "co": "Demonstrate understanding of essential grammar and vocabulary",
+      "po": "Writing and Communication",
+      "k_level": "intermediate",
+      "status": "completed",
+      "output_file": "output\\d13a25a6-04ac-43a4-bf6b-d43bdc3a3215\\Lesson_4__STEM_Project_Reports_and_Experiments\\04_03_Create_a_Course_for_Project_Report_Writing_and_make_the_lesson_and_subtopic_name_short,_Writing___Sk.txt",
+      "metadata": {
+        "actual_chars": 2097
+      },
+      "export_status": "completed",
+      "docx_path": "output\\delivery\\d13a25a6-04ac-43a4-bf6b-d43bdc3a3215\\04_Lesson_4__STEM_Project_Reports_and_Experiments\\04.03_Subtopic_3__Technical_vs._General_Writing.docx"
+    },
+    {
+      "lesson_title": "Lesson 4: STEM Project Reports and Experiments",
+      "subtopic_title": "Subtopic 4: Project Report Definition",
+      "subtopic_description": "Defining what a project report is and its importance in STEM fields. Estimated Characters: 260",
+      "subtopic_estimated_chars": 260,
+      "co": "Demonstrate understanding of essential grammar and vocabulary",
+      "po": "Writing and Communication",
+      "k_level": "intermediate",
+      "status": "completed",
+      "output_file": "output\\d13a25a6-04ac-43a4-bf6b-d43bdc3a3215\\Lesson_4__STEM_Project_Reports_and_Experiments\\04_04_Create_a_Course_for_Project_Report_Writing_and_make_the_lesson_and_subtopic_name_short,_Writing___Sk.txt",
+      "metadata": {
+        "actual_chars": 4459
+      },
+      "export_status": "completed",
+      "docx_path": "output\\delivery\\d13a25a6-04ac-43a4-bf6b-d43bdc3a3215\\04_Lesson_4__STEM_Project_Reports_and_Experiments\\04.04_Subtopic_4__Project_Report_Definition.docx"
+    },
+    {
+      "lesson_title": "Lesson 4: STEM Project Reports and Experiments",
+      "subtopic_title": "Subtopic 5: Project Report Structure",
+      "subtopic_description": "Learning the basic structure of a project report, including introduction, methods, results, and conclusion sections. Estimated Characters: 290",
+      "subtopic_estimated_chars": 290,
+      "co": "Demonstrate understanding of essential grammar and vocabulary",
+      "po": "Writing and Communication",
+      "k_level": "intermediate",
+      "status": "completed",
+      "output_file": "output\\d13a25a6-04ac-43a4-bf6b-d43bdc3a3215\\Lesson_4__STEM_Project_Reports_and_Experiments\\04_05_Create_a_Course_for_Project_Report_Writing_and_make_the_lesson_and_subtopic_name_short,_Writing___Sk.txt",
+      "metadata": {
+        "actual_chars": 2901
+      },
+      "export_status": "completed",
+      "docx_path": "output\\delivery\\d13a25a6-04ac-43a4-bf6b-d43bdc3a3215\\04_Lesson_4__STEM_Project_Reports_and_Experiments\\04.05_Subtopic_5__Project_Report_Structure.docx"
+    },
+    {
+      "lesson_title": "Lesson 4: STEM Project Reports and Experiments",
+      "subtopic_title": "Subtopic 6: Types of Reports in STEM",
+      "subtopic_description": "Identifying different types of project reports used in STEM fields, such as research reports and case studies. Estimated Characters: 270",
+      "subtopic_estimated_chars": 270,
+      "co": "Demonstrate understanding of essential grammar and vocabulary",
+      "po": "Writing and Communication",
+      "k_level": "intermediate",
+      "status": "completed",
+      "output_file": "output\\d13a25a6-04ac-43a4-bf6b-d43bdc3a3215\\Lesson_4__STEM_Project_Reports_and_Experiments\\04_06_Create_a_Course_for_Project_Report_Writing_and_make_the_lesson_and_subtopic_name_short,_Writing___Sk.txt",
+      "metadata": {
+        "actual_chars": 1867
+      },
+      "export_status": "completed",
+      "docx_path": "output\\delivery\\d13a25a6-04ac-43a4-bf6b-d43bdc3a3215\\04_Lesson_4__STEM_Project_Reports_and_Experiments\\04.06_Subtopic_6__Types_of_Reports_in_STEM.docx"
+    },
+    {
+      "lesson_title": "Lesson 4: STEM Project Reports and Experiments",
+      "subtopic_title": "Subtopic 7: Purpose and Audience of Reports",
+      "subtopic_description": "Understanding the purpose and intended audience for different types of project reports. Estimated Characters: 280",
+      "subtopic_estimated_chars": 280,
+      "co": "Demonstrate understanding of essential grammar and vocabulary",
+      "po": "Writing and Communication",
+      "k_level": "intermediate",
+      "status": "completed",
+      "output_file": "output\\d13a25a6-04ac-43a4-bf6b-d43bdc3a3215\\Lesson_4__STEM_Project_Reports_and_Experiments\\04_07_Create_a_Course_for_Project_Report_Writing_and_make_the_lesson_and_subtopic_name_short,_Writing___Sk.txt",
+      "metadata": {
+        "actual_chars": 2802
+      },
+      "export_status": "completed",
+      "docx_path": "output\\delivery\\d13a25a6-04ac-43a4-bf6b-d43bdc3a3215\\04_Lesson_4__STEM_Project_Reports_and_Experiments\\04.07_Subtopic_7__Purpose_and_Audience_of_Reports.docx"
+    },
+    {
+      "lesson_title": "Lesson 4: STEM Project Reports and Experiments",
+      "subtopic_title": "Subtopic 8: Plagiarism and Proper Citations",
+      "subtopic_description": "Recognizing and avoiding plagiarism in project reports, including proper citation methods. Estimated Characters: 270",
+      "subtopic_estimated_chars": 270,
+      "co": "Demonstrate understanding of essential grammar and vocabulary",
+      "po": "Writing and Communication",
+      "k_level": "intermediate",
+      "status": "completed",
+      "output_file": "output\\d13a25a6-04ac-43a4-bf6b-d43bdc3a3215\\Lesson_4__STEM_Project_Reports_and_Experiments\\04_08_Create_a_Course_for_Project_Report_Writing_and_make_the_lesson_and_subtopic_name_short,_Writing___Sk.txt",
+      "metadata": {
+        "actual_chars": 2532
+      },
+      "export_status": "completed",
+      "docx_path": "output\\delivery\\d13a25a6-04ac-43a4-bf6b-d43bdc3a3215\\04_Lesson_4__STEM_Project_Reports_and_Experiments\\04.08_Subtopic_8__Plagiarism_and_Proper_Citations.docx"
+    },
+    {
+      "lesson_title": "Lesson 4: STEM Project Reports and Experiments",
+      "subtopic_title": "Subtopic 9: Conducting Experiments",
+      "subtopic_description": "Learning how to design and conduct experiments as part of a project report. Estimated Characters: 280",
+      "subtopic_estimated_chars": 280,
+      "co": "Demonstrate understanding of essential grammar and vocabulary",
+      "po": "Writing and Communication",
+      "k_level": "intermediate",
+      "status": "completed",
+      "output_file": "output\\d13a25a6-04ac-43a4-bf6b-d43bdc3a3215\\Lesson_4__STEM_Project_Reports_and_Experiments\\04_09_Create_a_Course_for_Project_Report_Writing_and_make_the_lesson_and_subtopic_name_short,_Writing___Sk.txt",
+      "metadata": {
+        "actual_chars": 2661
+      },
+      "export_status": "completed",
+      "docx_path": "output\\delivery\\d13a25a6-04ac-43a4-bf6b-d43bdc3a3215\\04_Lesson_4__STEM_Project_Reports_and_Experiments\\04.09_Subtopic_9__Conducting_Experiments.docx"
+    },
+    {
+      "lesson_title": "Lesson 4: STEM Project Reports and Experiments",
+      "subtopic_title": "Subtopic 10: Statistical Analysis in Reports",
+      "subtopic_description": "Understanding and applying statistical analysis techniques in project reports. Estimated Characters: 260",
+      "subtopic_estimated_chars": 260,
+      "co": "Demonstrate understanding of essential grammar and vocabulary",
+      "po": "Writing and Communication",
+      "k_level": "intermediate",
+      "status": "completed",
+      "output_file": "output\\d13a25a6-04ac-43a4-bf6b-d43bdc3a3215\\Lesson_4__STEM_Project_Reports_and_Experiments\\04_10_Create_a_Course_for_Project_Report_Writing_and_make_the_lesson_and_subtopic_name_short,_Writing___Sk.txt",
+      "metadata": {
+        "actual_chars": 3246
+      },
+      "export_status": "completed",
+      "docx_path": "output\\delivery\\d13a25a6-04ac-43a4-bf6b-d43bdc3a3215\\04_Lesson_4__STEM_Project_Reports_and_Experiments\\04.10_Subtopic_10__Statistical_Analysis_in_Reports.docx"
+    },
+    {
+      "lesson_title": "Lesson 5: Final Project Report Writing",
+      "subtopic_title": "Technical vs. General Writing",
+      "subtopic_description": "Discuss the differences between technical and general writing, focusing on the appropriate language and tone for project reports.",
+      "subtopic_estimated_chars": 250,
+      "co": "Demonstrate understanding of essential grammar and vocabulary",
+      "po": "Writing and Communication",
+      "k_level": "intermediate",
+      "status": "completed",
+      "output_file": "output\\d13a25a6-04ac-43a4-bf6b-d43bdc3a3215\\Lesson_5__Final_Project_Report_Writing\\05_01_Create_a_Course_for_Project_Report_Writing_and_make_the_lesson_and_subtopic_name_short,_Writing___Sk.txt",
+      "metadata": {
+        "actual_chars": 4265
+      },
+      "export_status": "completed",
+      "docx_path": "output\\delivery\\d13a25a6-04ac-43a4-bf6b-d43bdc3a3215\\05_Lesson_5__Final_Project_Report_Writing\\05.01_Technical_vs._General_Writing.docx"
+    },
+    {
+      "lesson_title": "Lesson 5: Final Project Report Writing",
+      "subtopic_title": "Project Report Structure",
+      "subtopic_description": "Outline the basic structure of a project report, including introduction, body, and conclusion sections.",
+      "subtopic_estimated_chars": 200,
+      "co": "Demonstrate understanding of essential grammar and vocabulary",
+      "po": "Writing and Communication",
+      "k_level": "intermediate",
+      "status": "completed",
+      "output_file": "output\\d13a25a6-04ac-43a4-bf6b-d43bdc3a3215\\Lesson_5__Final_Project_Report_Writing\\05_02_Create_a_Course_for_Project_Report_Writing_and_make_the_lesson_and_subtopic_name_short,_Writing___Sk.txt",
+      "metadata": {
+        "actual_chars": 4583
+      },
+      "export_status": "completed",
+      "docx_path": "output\\delivery\\d13a25a6-04ac-43a4-bf6b-d43bdc3a3215\\05_Lesson_5__Final_Project_Report_Writing\\05.02_Project_Report_Structure.docx"
+    },
+    {
+      "lesson_title": "Lesson 5: Final Project Report Writing",
+      "subtopic_title": "Types of Project Reports",
+      "subtopic_description": "Identify and describe the different types of project reports, such as technical, scientific, and managerial reports.",
+      "subtopic_estimated_chars": 250,
+      "co": "Demonstrate understanding of essential grammar and vocabulary",
+      "po": "Writing and Communication",
+      "k_level": "intermediate",
+      "status": "completed",
+      "output_file": "output\\d13a25a6-04ac-43a4-bf6b-d43bdc3a3215\\Lesson_5__Final_Project_Report_Writing\\05_03_Create_a_Course_for_Project_Report_Writing_and_make_the_lesson_and_subtopic_name_short,_Writing___Sk.txt",
+      "metadata": {
+        "actual_chars": 6934
+      },
+      "export_status": "completed",
+      "docx_path": "output\\delivery\\d13a25a6-04ac-43a4-bf6b-d43bdc3a3215\\05_Lesson_5__Final_Project_Report_Writing\\05.03_Types_of_Project_Reports.docx"
+    },
+    {
+      "lesson_title": "Lesson 5: Final Project Report Writing",
+      "subtopic_title": "Purpose and Audience",
+      "subtopic_description": "Explore the purpose and intended audience for project reports in various fields, including STEM.",
+      "subtopic_estimated_chars": 200,
+      "co": "Demonstrate understanding of essential grammar and vocabulary",
+      "po": "Writing and Communication",
+      "k_level": "intermediate",
+      "status": "completed",
+      "output_file": "output\\d13a25a6-04ac-43a4-bf6b-d43bdc3a3215\\Lesson_5__Final_Project_Report_Writing\\05_04_Create_a_Course_for_Project_Report_Writing_and_make_the_lesson_and_subtopic_name_short,_Writing___Sk.txt",
+      "metadata": {
+        "actual_chars": 3887
+      },
+      "export_status": "completed",
+      "docx_path": "output\\delivery\\d13a25a6-04ac-43a4-bf6b-d43bdc3a3215\\05_Lesson_5__Final_Project_Report_Writing\\05.04_Purpose_and_Audience.docx"
+    },
+    {
+      "lesson_title": "Lesson 5: Final Project Report Writing",
+      "subtopic_title": "Avoiding Plagiarism",
+      "subtopic_description": "Provide strategies for avoiding plagiarism in project reports, including proper citation and paraphrasing techniques.",
+      "subtopic_estimated_chars": 250,
+      "co": "Demonstrate understanding of essential grammar and vocabulary",
+      "po": "Writing and Communication",
+      "k_level": "intermediate",
+      "status": "completed",
+      "output_file": "output\\d13a25a6-04ac-43a4-bf6b-d43bdc3a3215\\Lesson_5__Final_Project_Report_Writing\\05_05_Create_a_Course_for_Project_Report_Writing_and_make_the_lesson_and_subtopic_name_short,_Writing___Sk.txt",
+      "metadata": {
+        "actual_chars": 4539
+      },
+      "export_status": "completed",
+      "docx_path": "output\\delivery\\d13a25a6-04ac-43a4-bf6b-d43bdc3a3215\\05_Lesson_5__Final_Project_Report_Writing\\05.05_Avoiding_Plagiarism.docx"
+    },
+    {
+      "lesson_title": "Lesson 5: Final Project Report Writing",
+      "subtopic_title": "Experiment Writing",
+      "subtopic_description": "Guide students on how to write about experiments in project reports, including methods, results, and conclusions.",
+      "subtopic_estimated_chars": 250,
+      "co": "Demonstrate understanding of essential grammar and vocabulary",
+      "po": "Writing and Communication",
+      "k_level": "intermediate",
+      "status": "completed",
+      "output_file": "output\\d13a25a6-04ac-43a4-bf6b-d43bdc3a3215\\Lesson_5__Final_Project_Report_Writing\\05_06_Create_a_Course_for_Project_Report_Writing_and_make_the_lesson_and_subtopic_name_short,_Writing___Sk.txt",
+      "metadata": {
+        "actual_chars": 4870
+      },
+      "export_status": "completed",
+      "docx_path": "output\\delivery\\d13a25a6-04ac-43a4-bf6b-d43bdc3a3215\\05_Lesson_5__Final_Project_Report_Writing\\05.06_Experiment_Writing.docx"
+    },
+    {
+      "lesson_title": "Lesson 5: Final Project Report Writing",
+      "subtopic_title": "Statistical Analysis in Reports",
+      "subtopic_description": "Teach students how to write about statistical analysis in project reports, including interpreting data and presenting findings.",
+      "subtopic_estimated_chars": 250,
+      "co": "Demonstrate understanding of essential grammar and vocabulary",
+      "po": "Writing and Communication",
+      "k_level": "intermediate",
+      "status": "completed",
+      "output_file": "output\\d13a25a6-04ac-43a4-bf6b-d43bdc3a3215\\Lesson_5__Final_Project_Report_Writing\\05_07_Create_a_Course_for_Project_Report_Writing_and_make_the_lesson_and_subtopic_name_short,_Writing___Sk.txt",
+      "metadata": {
+        "actual_chars": 4025
+      },
+      "export_status": "completed",
+      "docx_path": "output\\delivery\\d13a25a6-04ac-43a4-bf6b-d43bdc3a3215\\05_Lesson_5__Final_Project_Report_Writing\\05.07_Statistical_Analysis_in_Reports.docx"
+    },
+    {
+      "lesson_title": "Lesson 5: Final Project Report Writing",
+      "subtopic_title": "Grammar and Vocabulary",
+      "subtopic_description": "Review essential grammar and vocabulary skills for project reports, including active voice, subject-verb agreement, and prepositions.",
+      "subtopic_estimated_chars": 200,
+      "co": "Demonstrate understanding of essential grammar and vocabulary",
+      "po": "Writing and Communication",
+      "k_level": "intermediate",
+      "status": "completed",
+      "output_file": "output\\d13a25a6-04ac-43a4-bf6b-d43bdc3a3215\\Lesson_5__Final_Project_Report_Writing\\05_08_Create_a_Course_for_Project_Report_Writing_and_make_the_lesson_and_subtopic_name_short,_Writing___Sk.txt",
+      "metadata": {
+        "actual_chars": 3338
+      },
+      "export_status": "completed",
+      "docx_path": "output\\delivery\\d13a25a6-04ac-43a4-bf6b-d43bdc3a3215\\05_Lesson_5__Final_Project_Report_Writing\\05.08_Grammar_and_Vocabulary.docx"
+    },
+    {
+      "lesson_title": "Lesson 5: Final Project Report Writing",
+      "subtopic_title": "Passive Voice and Concord",
+      "subtopic_description": "Introduce the use of passive voice and concord in project reports, including subject-verb agreement and pronoun usage.",
+      "subtopic_estimated_chars": 200,
+      "co": "Demonstrate understanding of essential grammar and vocabulary",
+      "po": "Writing and Communication",
+      "k_level": "intermediate",
+      "status": "completed",
+      "output_file": "output\\d13a25a6-04ac-43a4-bf6b-d43bdc3a3215\\Lesson_5__Final_Project_Report_Writing\\05_09_Create_a_Course_for_Project_Report_Writing_and_make_the_lesson_and_subtopic_name_short,_Writing___Sk.txt",
+      "metadata": {
+        "actual_chars": 3313
+      },
+      "export_status": "completed",
+      "docx_path": "output\\delivery\\d13a25a6-04ac-43a4-bf6b-d43bdc3a3215\\05_Lesson_5__Final_Project_Report_Writing\\05.09_Passive_Voice_and_Concord.docx"
+    },
+    {
+      "lesson_title": "Lesson 5: Final Project Report Writing",
+      "subtopic_title": "Signpost Words and Cohesive Devices",
+      "subtopic_description": "Explain the use of signpost words and cohesive devices in project reports, including transition words and linking phrases.",
+      "subtopic_estimated_chars": 250,
+      "co": "Demonstrate understanding of essential grammar and vocabulary",
+      "po": "Writing and Communication",
+      "k_level": "intermediate",
+      "status": "completed",
+      "output_file": "output\\d13a25a6-04ac-43a4-bf6b-d43bdc3a3215\\Lesson_5__Final_Project_Report_Writing\\05_10_Create_a_Course_for_Project_Report_Writing_and_make_the_lesson_and_subtopic_name_short,_Writing___Sk.txt",
+      "metadata": {
+        "actual_chars": 4373
+      },
+      "export_status": "completed",
+      "docx_path": "output\\delivery\\d13a25a6-04ac-43a4-bf6b-d43bdc3a3215\\05_Lesson_5__Final_Project_Report_Writing\\05.10_Signpost_Words_and_Cohesive_Devices.docx"
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "lessons": [
+    {
+      "title": "Lesson 1: Foundations of Writing Skills",
+      "description": "In this lesson, students will explore the fundamentals of writing, including essential grammar, vocabulary, and specific writing techniques such as the passive voice, reported speech, signpost words, and cohesive devices. We will also cover the basics of technical and project report writing, including definitions, structure, types of reports, and the importance of avoiding plagiarism. Students will learn how to write effectively for different audiences and purposes, with a focus on STEM field-specific report writing and experimental research methods."
+    },
+    {
+      "title": "Lesson 2: Advanced Writing Skills",
+      "description": "In this lesson, students will focus on essential grammar and vocabulary, including passive voice, reported speech, concord, signpost words, and cohesive devices. They will also learn about technical vs. general writing, with an introduction to project report writing, including definition, structure, types of reports, and plagiarism. The lesson will conclude with an overview of report writing in STEM fields, including experiments and statistical analysis."
+    },
+    {
+      "title": "Lesson 3: Project Report Structure and Types",
+      "description": "In this lesson, students will learn about the essential components of project reports, including their definition, structure, and types. We will cover the purpose and intended audience of project reports, emphasizing the importance of avoiding plagiarism. Additionally, students will explore specific aspects of project report writing in STEM fields, such as conducting experiments and performing statistical analysis."
+    },
+    {
+      "title": "Lesson 4: STEM Project Reports and Experiments",
+      "description": "In this lesson, students will delve into the specific requirements and writing styles for project reports in STEM fields. They will also learn about conducting experiments and performing statistical analysis in their reports, laying a strong foundation for future projects."
+    },
+    {
+      "title": "Lesson 5: Final Project Report Writing",
+      "description": "In this final lesson, students will apply all the skills learned throughout the course to write a comprehensive project report. They will receive feedback and guidance on their work, including essential grammar and vocabulary, passive voice, reported speech, concord, signpost words, and cohesive devices. The lesson will cover technical writing versus general writing, the definition and structure of project reports, the purpose and intended audience, plagiarism, and report writing in STEM fields, including experiments and statistical analysis."
+    }
+  ]
+}

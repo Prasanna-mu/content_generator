@@ -1,0 +1,59 @@
+{
+  "questions": [
+    {
+      "question": "What is the first step in installing Python and Django?",
+      "options": [
+        "Install Python and Django from their official websites",
+        "Create a virtual environment using Python's venv module",
+        "Install Django using pip and Python's virtual environment",
+        "Install Django using pip without creating a virtual environment"
+      ],
+      "correct_answer": 0,
+      "explanation": "The first step is to ensure Python is installed and then install Django using pip. Creating a virtual environment is a best practice to manage dependencies, but it's not the first step."
+    },
+    {
+      "question": "Which command should you use to start a new Django project?",
+      "options": [
+        "python manage.py startproject myproject",
+        "django-admin startproject myproject",
+        "python manage.py start myproject",
+        "django-admin start myproject myproject"
+      ],
+      "correct_answer": 1,
+      "explanation": "The correct command to start a new Django project is `django-admin startproject myproject` where `django-admin` is the command line tool for Django."
+    },
+    {
+      "question": "How do you navigate to the Django project's command line interface?",
+      "options": [
+        "cd myproject",
+        "cd manage.py",
+        "cd myproject/management",
+        "cd myproject/commands"
+      ],
+      "correct_answer": 0,
+      "explanation": "To navigate to the Django project's command line interface, you typically change directory to the project directory using `cd myproject`."
+    },
+    {
+      "question": "Which command would you use to run a Django server?",
+      "options": [
+        "python manage.py runserver",
+        "python manage.py runserver 8000",
+        "python manage.py server",
+        "python manage.py server 8000"
+      ],
+      "correct_answer": 0,
+      "explanation": "The correct command to run a Django development server is `python manage.py runserver` or `python manage.py runserver 8000` to specify a port."
+    },
+    {
+      "question": "What command would you use to apply migrations to your Django models?",
+      "options": [
+        "python manage.py migrate",
+        "python manage.py migrate models",
+        "python manage.py applymigrations",
+        "python manage.py applymigrations models"
+      ],
+      "correct_answer": 0,
+      "explanation": "The correct command to apply migrations in Django is `python manage.py migrate`."
+    }
+  ]
+}

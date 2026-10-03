@@ -1,0 +1,19 @@
+{
+  "subtopics": [
+    {
+      "lesson_title": "Mastering Test Topics",
+      "subtopics": [
+        {
+          "title": "Understanding Test Definitions and Types",
+          "description": "This subtopic introduces the fundamental definitions of tests and explores the various types of tests used in education and psychology. It covers the differences between different types of tests and their specific applications.",
+          "estimated_chars": 500
+        },
+        {
+          "title": "Common Test Formats and Their Applications",
+          "description": "In this subtopic, students will learn about the most common test formats used in educational and psychological settings. It will also cover the applications of these formats in evaluating knowledge and skills.",
+          "estimated_chars": 500
+        }
+      ]
+    }
+  ]
+}

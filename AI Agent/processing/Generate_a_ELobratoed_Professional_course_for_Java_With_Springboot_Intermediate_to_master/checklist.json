@@ -1,0 +1,14 @@
+{
+  "prompt": "Generate a ELobratoed Professional course for Java With Springboot Intermediate to master",
+  "session_id": "5d313c64-add3-42ab-80be-52c99ad0f28e",
+  "stages": {
+    "subtopic_generation": "completed",
+    "lesson_generation": "completed",
+    "content_generation": "completed",
+    "output_writing": "completed",
+    "docx_export": "failed"
+  },
+  "lessons": [],
+  "subtopics": [],
+  "tasklist": []
+}

@@ -1,0 +1,16 @@
+{
+  "tasks": [
+    {
+      "lesson_title": "Mastering Test Topics",
+      "subtopic_title": "Understanding Test Definitions and Types",
+      "completed": false,
+      "content_file": null
+    },
+    {
+      "lesson_title": "Mastering Test Topics",
+      "subtopic_title": "Common Test Formats and Their Applications",
+      "completed": false,
+      "content_file": null
+    }
+  ]
+}

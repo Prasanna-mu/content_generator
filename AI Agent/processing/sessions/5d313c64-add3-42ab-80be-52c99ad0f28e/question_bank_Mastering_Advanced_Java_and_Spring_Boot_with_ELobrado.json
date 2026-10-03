@@ -1,0 +1,64 @@
+{
+  "questions": [
+    {
+      "question": "Explain the concept of dependency injection in Spring Boot. How does it differ from traditional Java bean injection?",
+      "answer": "Dependency injection in Spring Boot is a design pattern where the dependencies of a class are provided by the framework rather than the class itself. In traditional Java bean injection, developers manually configure dependencies using annotations or XML configuration files. In contrast, Spring Boot automatically injects dependencies through constructor injection, setter injection, or field injection, making the code cleaner and more maintainable. This approach also allows for better testability and separation of concerns.",
+      "difficulty": "intermediate",
+      "k_level": "K2"
+    },
+    {
+      "question": "What is the purpose of Spring Boot's auto-configuration feature? Provide an example of a configuration that can be auto-configured by Spring Boot.",
+      "answer": "Spring Boot's auto-configuration feature automatically configures your application based on the dependencies and configuration properties you have set. It helps in reducing boilerplate code and simplifying the configuration process. For example, if you have configured your application to use a MySQL database, Spring Boot can automatically configure the DataSource, JPA entities, and other related configurations without requiring you to write any additional configuration code.",
+      "difficulty": "intermediate",
+      "k_level": "K3"
+    },
+    {
+      "question": "How does Spring Boot handle security in its default configuration? What are the steps to configure a basic security setup in a Spring Boot application?",
+      "answer": "Spring Boot handles security by default by providing a basic security configuration that includes HTTP Basic authentication. To configure a basic security setup, you need to enable security in your Spring Boot application by adding the Security dependency to your project. Then, you can configure the security settings such as setting up authentication and authorization rules. For example, you can use annotations like @EnableWebSecurity and @EnableGlobalMethodSecurity to enable security and specify security rules for your controllers and methods.",
+      "difficulty": "intermediate",
+      "k_level": "K4"
+    },
+    {
+      "question": "Explain how Spring Boot's auto-configuration works for database integration. Provide an example of a database configuration that can be auto-configured by Spring Boot.",
+      "answer": "Spring Boot's auto-configuration for database integration automatically configures your application to connect to a database based on the configuration properties you set. For example, if you configure your application to use a PostgreSQL database, Spring Boot will automatically configure the DataSource, JPA entities, and other related configurations without requiring you to write any additional configuration code. This includes setting up the connection URL, username, password, and other necessary properties.",
+      "difficulty": "intermediate",
+      "k_level": "K5"
+    },
+    {
+      "question": "What is the difference between constructor injection and setter injection in Spring Boot? Provide an example of each.",
+      "answer": "Constructor injection is a type of dependency injection where the dependencies are passed to the constructor of the class. This is a strong form of dependency injection and is considered a best practice. Setter injection, on the other hand, is a type of dependency injection where the dependencies are passed to the setter methods of the class. This is a weaker form of dependency injection and is used when the dependencies are not required to be passed at the time of object creation.",
+      "difficulty": "intermediate",
+      "k_level": "K6"
+    },
+    {
+      "question": "How does Spring Boot's auto-configuration feature help in reducing the complexity of a Spring Boot application? Provide an example of a configuration that can be auto-configured by Spring Boot.",
+      "answer": "Spring Boot's auto-configuration feature helps in reducing the complexity of a Spring Boot application by automatically configuring the necessary dependencies and settings based on the configuration properties you have set. For example, if you configure your application to use a MySQL database, Spring Boot will automatically configure the DataSource, JPA entities, and other related configurations without requiring you to write any additional configuration code. This reduces the amount of boilerplate code and simplifies the configuration process.",
+      "difficulty": "intermediate",
+      "k_level": "K1"
+    },
+    {
+      "question": "What is the difference between a configuration property file and a YAML configuration file in Spring Boot? Provide an example of how to use each.",
+      "answer": "In Spring Boot, configuration properties can be stored in either a properties file (usually named application.properties or application.yml) or a YAML file. Properties files are simple key-value pairs, while YAML files can be more complex and include nested structures. For example, you can use a properties file to store database connection details like this:\n\nspring.datasource.url=jdbc:mysql://localhost:3306/mydb\nspring.datasource.username=root\nspring.datasource.password=root\n\nAnd you can use a YAML file to store the same details like this:\n\nspring:\n  datasource:\n    url: jdbc:mysql://localhost:3306/mydb\n    username: root\n    password: root\n",
+      "difficulty": "intermediate",
+      "k_level": "K2"
+    },
+    {
+      "question": "Explain the concept of Spring Boot's `@EnableAutoConfiguration` annotation and how it interacts with the `@SpringBootApplication` annotation. Provide an example of a configuration that can be auto-configured by Spring Boot.",
+      "answer": "The `@EnableAutoConfiguration` annotation is used to enable auto-configuration in a Spring Boot application. It tells Spring Boot to automatically configure the necessary dependencies and settings based on the configuration properties you have set. The `@SpringBootApplication` annotation is a combination of `@Configuration`, `@EnableAutoConfiguration`, and `@ComponentScan` annotations. When you use the `@SpringBootApplication` annotation, Spring Boot automatically enables auto-configuration and scans the classes in your application for components to be managed by the application context.",
+      "difficulty": "intermediate",
+      "k_level": "K3"
+    },
+    {
+      "question": "What is the difference between `@ConfigurationProperties` and `@Value` annotations in Spring Boot? Provide an example of how to use each.",
+      "answer": "The `@Value` annotation is used to inject a simple property value into a bean. It is used when you need to inject a simple property value, such as a string or a number. The `@ConfigurationProperties` annotation is used to inject a complex configuration properties object into a bean. It is used when you need to inject a complex object, such as a configuration object with nested properties.",
+      "difficulty": "intermediate",
+      "k_level": "K4"
+    },
+    {
+      "question": "How does Spring Boot's auto-configuration feature handle third-party libraries? Provide an example of a third-party library that can be auto-configured by Spring Boot.",
+      "answer": "Spring Boot's auto-configuration feature handles third-party libraries by automatically configuring the necessary dependencies and settings based on the configuration properties you have set. For example, if you configure your application to use the Spring Data JPA library, Spring Boot will automatically configure the necessary dependencies and settings for you, such as the DataSource, JPA entities, and other related configurations.",
+      "difficulty": "intermediate",
+      "k_level": "K5"
+    }
+  ]
+}

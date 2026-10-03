@@ -1,0 +1,11 @@
+{
+  "prompt": "Test Topic",
+  "num_lessons": 1,
+  "subtopics_per_lesson": 2,
+  "content_quality": "beginner",
+  "content_length": "simple",
+  "quiz_question_count": 2,
+  "quiz_difficulty": "beginner",
+  "question_bank_count": 2,
+  "web_search_needed": false
+}

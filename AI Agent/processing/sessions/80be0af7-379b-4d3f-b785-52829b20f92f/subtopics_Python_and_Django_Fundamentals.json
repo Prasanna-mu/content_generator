@@ -1,0 +1,14 @@
+{
+  "subtopics": [
+    {
+      "title": "Installing and Configuring Python and Django",
+      "description": "In this subtopic, students will learn how to install Python and Django on their system. They will also set up their environment by configuring virtual environments and installing necessary packages. The subtopic will cover the importance of using virtual environments and how to manage dependencies with pip. Students will be guided through the process of creating a Django project and understanding the basic structure of a Django project, including the directory structure and the main files such as settings.py, urls.py, and views.py. The subtopic will also include a brief overview of the Django admin interface and how to run the development server.",
+      "estimated_chars": 600
+    },
+    {
+      "title": "Navigating the Django Command Line",
+      "description": "This subtopic will focus on teaching students how to navigate the Django command line. Students will learn how to create a new Django project, run migrations, and manage database operations. They will also be introduced to the Django shell, how to use it, and how to interact with the database using the Django ORM. The subtopic will cover basic Django management commands such as makemigrations, migrate, and creating and managing models. Additionally, students will be shown how to run tests and manage static files.",
+      "estimated_chars": 600
+    }
+  ]
+}

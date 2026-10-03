@@ -1,0 +1,807 @@
+{
+  "session_id": "8ebea0de-c8ef-4c6c-b09a-0ac952cc7731",
+  "prompt": "Create a Course for a subject applied design thinking which includes and make lesson and subtopic name shorter, DESIGN THINKING PRINCIPLES  9 Exploring   Human-   centered   Design   -   Understanding   the   Innovation   process,   discoveringareas of opportunity, Interviewing & empathy-building techniques, Mitigate validation riskwith FIR [Forge 231 ovation rubric] - Case studies. ENDUSER-CENTRIC INNOVATION, Importance of customer-centric innovation - Problem Validation and Customer Discovery -Understanding problem significance and problem incidence - Customer Validation. Targetuser,   User   persona   &   user   stories.   Activity:   Customer   development   process   -   Customerinterviews and field visit. APPLIED DESIGN THINKING TOOLS   Concept   of   Minimum   Usable   Prototype   [MUP]   -   MUP   challenge   brief   -   Designing   &Crafting   the   value   proposition   -   Designing   and   Testing   Value   Proposition;   Design   acompelling value proposition; Process, tools and techniques of Value Proposition Design.CONCEPT GENERATION   Solution   Exploration, Concepts   Generation   and   MUP   design-   Conceptualize   the   solutionconcept; explore, iterate and learn; build the right prototype; Assess capability, usability andfeasibility.   Systematic   concept   generation;   evaluation   of   technology   alternatives   and   thesolution concepts. SYSTEM THINKING  System Thinking, Understanding Systems, Examples and Understandings, Complex Systems.",
+  "generated_on": "2026-09-23T12:35:51.277572",
+  "subtopics": [
+    {
+      "lesson_title": "Lesson 1: Introduction to Design Thinking Principles",
+      "subtopic_title": "Human-Centered Design",
+      "subtopic_description": "Explore the principles of human-centered design and the innovation process.",
+      "subtopic_estimated_chars": 250,
+      "co": "Understand and apply the principles of design thinking",
+      "po": "Design Thinking",
+      "k_level": "intermediate",
+      "status": "completed",
+      "output_file": "output\\8ebea0de-c8ef-4c6c-b09a-0ac952cc7731\\Lesson_1__Introduction_to_Design_Thinking_Principles\\01_01_Create_a_Course_for_a_subject_applied_design_thinking_which_includes_and_make_lesson_and_subtopic_na.txt",
+      "metadata": {
+        "actual_chars": 3700
+      },
+      "export_status": "completed",
+      "docx_path": "output\\delivery\\8ebea0de-c8ef-4c6c-b09a-0ac952cc7731\\01_Lesson_1__Introduction_to_Design_Thinking_Principles\\01.01_Human-Centered_Design.docx"
+    },
+    {
+      "lesson_title": "Lesson 1: Introduction to Design Thinking Principles",
+      "subtopic_title": "Identifying Opportunities",
+      "subtopic_description": "Learn about identifying areas of opportunity for innovation and the importance of customer-centric innovation.",
+      "subtopic_estimated_chars": 300,
+      "co": "Understand and apply the principles of design thinking",
+      "po": "Design Thinking",
+      "k_level": "intermediate",
+      "status": "completed",
+      "output_file": "output\\8ebea0de-c8ef-4c6c-b09a-0ac952cc7731\\Lesson_1__Introduction_to_Design_Thinking_Principles\\01_02_Create_a_Course_for_a_subject_applied_design_thinking_which_includes_and_make_lesson_and_subtopic_na.txt",
+      "metadata": {
+        "actual_chars": 2615
+      },
+      "export_status": "completed",
+      "docx_path": "output\\delivery\\8ebea0de-c8ef-4c6c-b09a-0ac952cc7731\\01_Lesson_1__Introduction_to_Design_Thinking_Principles\\01.02_Identifying_Opportunities.docx"
+    },
+    {
+      "lesson_title": "Lesson 1: Introduction to Design Thinking Principles",
+      "subtopic_title": "Interview Techniques",
+      "subtopic_description": "Master the techniques for conducting effective customer interviews and building user empathy.",
+      "subtopic_estimated_chars": 280,
+      "co": "Understand and apply the principles of design thinking",
+      "po": "Design Thinking",
+      "k_level": "intermediate",
+      "status": "completed",
+      "output_file": "output\\8ebea0de-c8ef-4c6c-b09a-0ac952cc7731\\Lesson_1__Introduction_to_Design_Thinking_Principles\\01_03_Create_a_Course_for_a_subject_applied_design_thinking_which_includes_and_make_lesson_and_subtopic_na.txt",
+      "metadata": {
+        "actual_chars": 3207
+      },
+      "export_status": "completed",
+      "docx_path": "output\\delivery\\8ebea0de-c8ef-4c6c-b09a-0ac952cc7731\\01_Lesson_1__Introduction_to_Design_Thinking_Principles\\01.03_Interview_Techniques.docx"
+    },
+    {
+      "lesson_title": "Lesson 1: Introduction to Design Thinking Principles",
+      "subtopic_title": "Validation Risk Mitigation",
+      "subtopic_description": "Understand and apply the Forge 231 Ovation Rubric to mitigate validation risk.",
+      "subtopic_estimated_chars": 300,
+      "co": "Understand and apply the principles of design thinking",
+      "po": "Design Thinking",
+      "k_level": "intermediate",
+      "status": "completed",
+      "output_file": "output\\8ebea0de-c8ef-4c6c-b09a-0ac952cc7731\\Lesson_1__Introduction_to_Design_Thinking_Principles\\01_04_Create_a_Course_for_a_subject_applied_design_thinking_which_includes_and_make_lesson_and_subtopic_na.txt",
+      "metadata": {
+        "actual_chars": 3231
+      },
+      "export_status": "completed",
+      "docx_path": "output\\delivery\\8ebea0de-c8ef-4c6c-b09a-0ac952cc7731\\01_Lesson_1__Introduction_to_Design_Thinking_Principles\\01.04_Validation_Risk_Mitigation.docx"
+    },
+    {
+      "lesson_title": "Lesson 1: Introduction to Design Thinking Principles",
+      "subtopic_title": "User Personas and Stories",
+      "subtopic_description": "Create user personas and user stories to better understand and engage with users.",
+      "subtopic_estimated_chars": 270,
+      "co": "Understand and apply the principles of design thinking",
+      "po": "Design Thinking",
+      "k_level": "intermediate",
+      "status": "completed",
+      "output_file": "output\\8ebea0de-c8ef-4c6c-b09a-0ac952cc7731\\Lesson_1__Introduction_to_Design_Thinking_Principles\\01_05_Create_a_Course_for_a_subject_applied_design_thinking_which_includes_and_make_lesson_and_subtopic_na.txt",
+      "metadata": {
+        "actual_chars": 6275
+      },
+      "export_status": "completed",
+      "docx_path": "output\\delivery\\8ebea0de-c8ef-4c6c-b09a-0ac952cc7731\\01_Lesson_1__Introduction_to_Design_Thinking_Principles\\01.05_User_Personas_and_Stories.docx"
+    },
+    {
+      "lesson_title": "Lesson 1: Introduction to Design Thinking Principles",
+      "subtopic_title": "Customer Development Process",
+      "subtopic_description": "Participate in customer interviews and field visits to validate customer needs and preferences.",
+      "subtopic_estimated_chars": 300,
+      "co": "Understand and apply the principles of design thinking",
+      "po": "Design Thinking",
+      "k_level": "intermediate",
+      "status": "completed",
+      "output_file": "output\\8ebea0de-c8ef-4c6c-b09a-0ac952cc7731\\Lesson_1__Introduction_to_Design_Thinking_Principles\\01_06_Create_a_Course_for_a_subject_applied_design_thinking_which_includes_and_make_lesson_and_subtopic_na.txt",
+      "metadata": {
+        "actual_chars": 3486
+      },
+      "export_status": "completed",
+      "docx_path": "output\\delivery\\8ebea0de-c8ef-4c6c-b09a-0ac952cc7731\\01_Lesson_1__Introduction_to_Design_Thinking_Principles\\01.06_Customer_Development_Process.docx"
+    },
+    {
+      "lesson_title": "Lesson 1: Introduction to Design Thinking Principles",
+      "subtopic_title": "Minimum Usable Prototype (MUP)",
+      "subtopic_description": "Understand the concept of MUP and design and test a value proposition.",
+      "subtopic_estimated_chars": 280,
+      "co": "Understand and apply the principles of design thinking",
+      "po": "Design Thinking",
+      "k_level": "intermediate",
+      "status": "completed",
+      "output_file": "output\\8ebea0de-c8ef-4c6c-b09a-0ac952cc7731\\Lesson_1__Introduction_to_Design_Thinking_Principles\\01_07_Create_a_Course_for_a_subject_applied_design_thinking_which_includes_and_make_lesson_and_subtopic_na.txt",
+      "metadata": {
+        "actual_chars": 4494
+      },
+      "export_status": "completed",
+      "docx_path": "output\\delivery\\8ebea0de-c8ef-4c6c-b09a-0ac952cc7731\\01_Lesson_1__Introduction_to_Design_Thinking_Principles\\01.07_Minimum_Usable_Prototype_(MUP).docx"
+    },
+    {
+      "lesson_title": "Lesson 1: Introduction to Design Thinking Principles",
+      "subtopic_title": "Concept Generation and Solution Exploration",
+      "subtopic_description": "Learn about concept generation, solution exploration, and concept design, including the evaluation of technology alternatives and solution concepts.",
+      "subtopic_estimated_chars": 400,
+      "co": "Understand and apply the principles of design thinking",
+      "po": "Design Thinking",
+      "k_level": "intermediate",
+      "status": "completed",
+      "output_file": "output\\8ebea0de-c8ef-4c6c-b09a-0ac952cc7731\\Lesson_1__Introduction_to_Design_Thinking_Principles\\01_08_Create_a_Course_for_a_subject_applied_design_thinking_which_includes_and_make_lesson_and_subtopic_na.txt",
+      "metadata": {
+        "actual_chars": 3325
+      },
+      "export_status": "completed",
+      "docx_path": "output\\delivery\\8ebea0de-c8ef-4c6c-b09a-0ac952cc7731\\01_Lesson_1__Introduction_to_Design_Thinking_Principles\\01.08_Concept_Generation_and_Solution_Exploration.docx"
+    },
+    {
+      "lesson_title": "Lesson 1: Introduction to Design Thinking Principles",
+      "subtopic_title": "System Thinking",
+      "subtopic_description": "Understand the principles of system thinking and the importance of understanding complex systems.",
+      "subtopic_estimated_chars": 250,
+      "co": "Understand and apply the principles of design thinking",
+      "po": "Design Thinking",
+      "k_level": "intermediate",
+      "status": "completed",
+      "output_file": "output\\8ebea0de-c8ef-4c6c-b09a-0ac952cc7731\\Lesson_1__Introduction_to_Design_Thinking_Principles\\01_09_Create_a_Course_for_a_subject_applied_design_thinking_which_includes_and_make_lesson_and_subtopic_na.txt",
+      "metadata": {
+        "actual_chars": 3317
+      },
+      "export_status": "completed",
+      "docx_path": "output\\delivery\\8ebea0de-c8ef-4c6c-b09a-0ac952cc7731\\01_Lesson_1__Introduction_to_Design_Thinking_Principles\\01.09_System_Thinking.docx"
+    },
+    {
+      "lesson_title": "Lesson 1: Introduction to Design Thinking Principles",
+      "subtopic_title": "Complex Systems",
+      "subtopic_description": "Study examples of complex systems and their components.",
+      "subtopic_estimated_chars": 250,
+      "co": "Understand and apply the principles of design thinking",
+      "po": "Design Thinking",
+      "k_level": "intermediate",
+      "status": "completed",
+      "output_file": "output\\8ebea0de-c8ef-4c6c-b09a-0ac952cc7731\\Lesson_1__Introduction_to_Design_Thinking_Principles\\01_10_Create_a_Course_for_a_subject_applied_design_thinking_which_includes_and_make_lesson_and_subtopic_na.txt",
+      "metadata": {
+        "actual_chars": 2379
+      },
+      "export_status": "completed",
+      "docx_path": "output\\delivery\\8ebea0de-c8ef-4c6c-b09a-0ac952cc7731\\01_Lesson_1__Introduction_to_Design_Thinking_Principles\\01.10_Complex_Systems.docx"
+    },
+    {
+      "lesson_title": "Lesson 2: Design Thinking Principles and Empathy",
+      "subtopic_title": "Subtopic 1: Design Thinking Principles Overview",
+      "subtopic_description": "Introduces the core principles of design thinking, including empathy and human-centered design. Estimated character count: 150",
+      "subtopic_estimated_chars": 150,
+      "co": "Understand and apply the principles of design thinking",
+      "po": "Design Thinking",
+      "k_level": "intermediate",
+      "status": "completed",
+      "output_file": "output\\8ebea0de-c8ef-4c6c-b09a-0ac952cc7731\\Lesson_2__Design_Thinking_Principles_and_Empathy\\02_01_Create_a_Course_for_a_subject_applied_design_thinking_which_includes_and_make_lesson_and_subtopic_na.txt",
+      "metadata": {
+        "actual_chars": 4009
+      },
+      "export_status": "completed",
+      "docx_path": "output\\delivery\\8ebea0de-c8ef-4c6c-b09a-0ac952cc7731\\02_Lesson_2__Design_Thinking_Principles_and_Empathy\\02.01_Subtopic_1__Design_Thinking_Principles_Overview.docx"
+    },
+    {
+      "lesson_title": "Lesson 2: Design Thinking Principles and Empathy",
+      "subtopic_title": "Subtopic 2: Innovation Process and Opportunity Areas",
+      "subtopic_description": "Explains the innovation process and identifies areas of opportunity. Estimated character count: 200",
+      "subtopic_estimated_chars": 200,
+      "co": "Understand and apply the principles of design thinking",
+      "po": "Design Thinking",
+      "k_level": "intermediate",
+      "status": "completed",
+      "output_file": "output\\8ebea0de-c8ef-4c6c-b09a-0ac952cc7731\\Lesson_2__Design_Thinking_Principles_and_Empathy\\02_02_Create_a_Course_for_a_subject_applied_design_thinking_which_includes_and_make_lesson_and_subtopic_na.txt",
+      "metadata": {
+        "actual_chars": 2545
+      },
+      "export_status": "completed",
+      "docx_path": "output\\delivery\\8ebea0de-c8ef-4c6c-b09a-0ac952cc7731\\02_Lesson_2__Design_Thinking_Principles_and_Empathy\\02.02_Subtopic_2__Innovation_Process_and_Opportunity_Areas.docx"
+    },
+    {
+      "lesson_title": "Lesson 2: Design Thinking Principles and Empathy",
+      "subtopic_title": "Subtopic 3: Empathy Building Techniques",
+      "subtopic_description": "Describes empathy-building techniques and their importance in design thinking. Estimated character count: 250",
+      "subtopic_estimated_chars": 250,
+      "co": "Understand and apply the principles of design thinking",
+      "po": "Design Thinking",
+      "k_level": "intermediate",
+      "status": "completed",
+      "output_file": "output\\8ebea0de-c8ef-4c6c-b09a-0ac952cc7731\\Lesson_2__Design_Thinking_Principles_and_Empathy\\02_03_Create_a_Course_for_a_subject_applied_design_thinking_which_includes_and_make_lesson_and_subtopic_na.txt",
+      "metadata": {
+        "actual_chars": 3824
+      },
+      "export_status": "completed",
+      "docx_path": "output\\delivery\\8ebea0de-c8ef-4c6c-b09a-0ac952cc7731\\02_Lesson_2__Design_Thinking_Principles_and_Empathy\\02.03_Subtopic_3__Empathy_Building_Techniques.docx"
+    },
+    {
+      "lesson_title": "Lesson 2: Design Thinking Principles and Empathy",
+      "subtopic_title": "Subtopic 4: Validation Risk Mitigation with FIR",
+      "subtopic_description": "Introduces the Forge 231 Ovation Rubric for validating solutions. Estimated character count: 180",
+      "subtopic_estimated_chars": 180,
+      "co": "Understand and apply the principles of design thinking",
+      "po": "Design Thinking",
+      "k_level": "intermediate",
+      "status": "completed",
+      "output_file": "output\\8ebea0de-c8ef-4c6c-b09a-0ac952cc7731\\Lesson_2__Design_Thinking_Principles_and_Empathy\\02_04_Create_a_Course_for_a_subject_applied_design_thinking_which_includes_and_make_lesson_and_subtopic_na.txt",
+      "metadata": {
+        "actual_chars": 3207
+      },
+      "export_status": "completed",
+      "docx_path": "output\\delivery\\8ebea0de-c8ef-4c6c-b09a-0ac952cc7731\\02_Lesson_2__Design_Thinking_Principles_and_Empathy\\02.04_Subtopic_4__Validation_Risk_Mitigation_with_FIR.docx"
+    },
+    {
+      "lesson_title": "Lesson 2: Design Thinking Principles and Empathy",
+      "subtopic_title": "Subtopic 5: Case Studies in User-Centric Innovation",
+      "subtopic_description": "Analyzes case studies to understand user-centric innovation and its application. Estimated character count: 220",
+      "subtopic_estimated_chars": 220,
+      "co": "Understand and apply the principles of design thinking",
+      "po": "Design Thinking",
+      "k_level": "intermediate",
+      "status": "completed",
+      "output_file": "output\\8ebea0de-c8ef-4c6c-b09a-0ac952cc7731\\Lesson_2__Design_Thinking_Principles_and_Empathy\\02_05_Create_a_Course_for_a_subject_applied_design_thinking_which_includes_and_make_lesson_and_subtopic_na.txt",
+      "metadata": {
+        "actual_chars": 3833
+      },
+      "export_status": "completed",
+      "docx_path": "output\\delivery\\8ebea0de-c8ef-4c6c-b09a-0ac952cc7731\\02_Lesson_2__Design_Thinking_Principles_and_Empathy\\02.05_Subtopic_5__Case_Studies_in_User-Centric_Innovation.docx"
+    },
+    {
+      "lesson_title": "Lesson 2: Design Thinking Principles and Empathy",
+      "subtopic_title": "Subtopic 6: Problem Validation and Customer Discovery",
+      "subtopic_description": "Explains problem validation and customer discovery techniques. Estimated character count: 200",
+      "subtopic_estimated_chars": 200,
+      "co": "Understand and apply the principles of design thinking",
+      "po": "Design Thinking",
+      "k_level": "intermediate",
+      "status": "completed",
+      "output_file": "output\\8ebea0de-c8ef-4c6c-b09a-0ac952cc7731\\Lesson_2__Design_Thinking_Principles_and_Empathy\\02_06_Create_a_Course_for_a_subject_applied_design_thinking_which_includes_and_make_lesson_and_subtopic_na.txt",
+      "metadata": {
+        "actual_chars": 3335
+      },
+      "export_status": "completed",
+      "docx_path": "output\\delivery\\8ebea0de-c8ef-4c6c-b09a-0ac952cc7731\\02_Lesson_2__Design_Thinking_Principles_and_Empathy\\02.06_Subtopic_6__Problem_Validation_and_Customer_Discovery.docx"
+    },
+    {
+      "lesson_title": "Lesson 2: Design Thinking Principles and Empathy",
+      "subtopic_title": "Subtopic 7: User Personas and Stories",
+      "subtopic_description": "Describes creating user personas and user stories. Estimated character count: 250",
+      "subtopic_estimated_chars": 250,
+      "co": "Understand and apply the principles of design thinking",
+      "po": "Design Thinking",
+      "k_level": "intermediate",
+      "status": "completed",
+      "output_file": "output\\8ebea0de-c8ef-4c6c-b09a-0ac952cc7731\\Lesson_2__Design_Thinking_Principles_and_Empathy\\02_07_Create_a_Course_for_a_subject_applied_design_thinking_which_includes_and_make_lesson_and_subtopic_na.txt",
+      "metadata": {
+        "actual_chars": 3207
+      },
+      "export_status": "completed",
+      "docx_path": "output\\delivery\\8ebea0de-c8ef-4c6c-b09a-0ac952cc7731\\02_Lesson_2__Design_Thinking_Principles_and_Empathy\\02.07_Subtopic_7__User_Personas_and_Stories.docx"
+    },
+    {
+      "lesson_title": "Lesson 2: Design Thinking Principles and Empathy",
+      "subtopic_title": "Subtopic 8: Customer Development Process",
+      "subtopic_description": "Introduces the customer development process, including customer interviews and field visits. Estimated character count: 200",
+      "subtopic_estimated_chars": 200,
+      "co": "Understand and apply the principles of design thinking",
+      "po": "Design Thinking",
+      "k_level": "intermediate",
+      "status": "completed",
+      "output_file": "output\\8ebea0de-c8ef-4c6c-b09a-0ac952cc7731\\Lesson_2__Design_Thinking_Principles_and_Empathy\\02_08_Create_a_Course_for_a_subject_applied_design_thinking_which_includes_and_make_lesson_and_subtopic_na.txt",
+      "metadata": {
+        "actual_chars": 4907
+      },
+      "export_status": "completed",
+      "docx_path": "output\\delivery\\8ebea0de-c8ef-4c6c-b09a-0ac952cc7731\\02_Lesson_2__Design_Thinking_Principles_and_Empathy\\02.08_Subtopic_8__Customer_Development_Process.docx"
+    },
+    {
+      "lesson_title": "Lesson 2: Design Thinking Principles and Empathy",
+      "subtopic_title": "Subtopic 9: Minimum Usable Prototype (MUP) Challenges",
+      "subtopic_description": "Explains the concept of MUP and challenges. Estimated character count: 170",
+      "subtopic_estimated_chars": 170,
+      "co": "Understand and apply the principles of design thinking",
+      "po": "Design Thinking",
+      "k_level": "intermediate",
+      "status": "completed",
+      "output_file": "output\\8ebea0de-c8ef-4c6c-b09a-0ac952cc7731\\Lesson_2__Design_Thinking_Principles_and_Empathy\\02_09_Create_a_Course_for_a_subject_applied_design_thinking_which_includes_and_make_lesson_and_subtopic_na.txt",
+      "metadata": {
+        "actual_chars": 4102
+      },
+      "export_status": "completed",
+      "docx_path": "output\\delivery\\8ebea0de-c8ef-4c6c-b09a-0ac952cc7731\\02_Lesson_2__Design_Thinking_Principles_and_Empathy\\02.09_Subtopic_9__Minimum_Usable_Prototype_(MUP)_Challenges.docx"
+    },
+    {
+      "lesson_title": "Lesson 2: Design Thinking Principles and Empathy",
+      "subtopic_title": "Subtopic 10: Concept Generation and Solution Exploration",
+      "subtopic_description": "Introduces concept generation and solution exploration techniques. Estimated character count: 200",
+      "subtopic_estimated_chars": 200,
+      "co": "Understand and apply the principles of design thinking",
+      "po": "Design Thinking",
+      "k_level": "intermediate",
+      "status": "completed",
+      "output_file": "output\\8ebea0de-c8ef-4c6c-b09a-0ac952cc7731\\Lesson_2__Design_Thinking_Principles_and_Empathy\\02_10_Create_a_Course_for_a_subject_applied_design_thinking_which_includes_and_make_lesson_and_subtopic_na.txt",
+      "metadata": {
+        "actual_chars": 2257
+      },
+      "export_status": "completed",
+      "docx_path": "output\\delivery\\8ebea0de-c8ef-4c6c-b09a-0ac952cc7731\\02_Lesson_2__Design_Thinking_Principles_and_Empathy\\02.10_Subtopic_10__Concept_Generation_and_Solution_Exploration.docx"
+    },
+    {
+      "lesson_title": "Lesson 3: Validation and Case Studies",
+      "subtopic_title": "Understanding Validation Techniques",
+      "subtopic_description": "Explore the Forge 231 Ovation Rubric and its application in validating innovation solutions.",
+      "subtopic_estimated_chars": 282,
+      "co": "Understand and apply the principles of design thinking",
+      "po": "Design Thinking",
+      "k_level": "intermediate",
+      "status": "completed",
+      "output_file": "output\\8ebea0de-c8ef-4c6c-b09a-0ac952cc7731\\Lesson_3__Validation_and_Case_Studies\\03_01_Create_a_Course_for_a_subject_applied_design_thinking_which_includes_and_make_lesson_and_subtopic_na.txt",
+      "metadata": {
+        "actual_chars": 2539
+      },
+      "export_status": "completed",
+      "docx_path": "output\\delivery\\8ebea0de-c8ef-4c6c-b09a-0ac952cc7731\\03_Lesson_3__Validation_and_Case_Studies\\03.01_Understanding_Validation_Techniques.docx"
+    },
+    {
+      "lesson_title": "Lesson 3: Validation and Case Studies",
+      "subtopic_title": "User-Centric Innovation",
+      "subtopic_description": "Learn about problem and customer validation, user personas, and the customer development process.",
+      "subtopic_estimated_chars": 348,
+      "co": "Understand and apply the principles of design thinking",
+      "po": "Design Thinking",
+      "k_level": "intermediate",
+      "status": "completed",
+      "output_file": "output\\8ebea0de-c8ef-4c6c-b09a-0ac952cc7731\\Lesson_3__Validation_and_Case_Studies\\03_02_Create_a_Course_for_a_subject_applied_design_thinking_which_includes_and_make_lesson_and_subtopic_na.txt",
+      "metadata": {
+        "actual_chars": 4913
+      },
+      "export_status": "completed",
+      "docx_path": "output\\delivery\\8ebea0de-c8ef-4c6c-b09a-0ac952cc7731\\03_Lesson_3__Validation_and_Case_Studies\\03.02_User-Centric_Innovation.docx"
+    },
+    {
+      "lesson_title": "Lesson 3: Validation and Case Studies",
+      "subtopic_title": "Customer Interviews and Field Visits",
+      "subtopic_description": "Master the art of conducting customer interviews and field visits to gather insights.",
+      "subtopic_estimated_chars": 306,
+      "co": "Understand and apply the principles of design thinking",
+      "po": "Design Thinking",
+      "k_level": "intermediate",
+      "status": "completed",
+      "output_file": "output\\8ebea0de-c8ef-4c6c-b09a-0ac952cc7731\\Lesson_3__Validation_and_Case_Studies\\03_03_Create_a_Course_for_a_subject_applied_design_thinking_which_includes_and_make_lesson_and_subtopic_na.txt",
+      "metadata": {
+        "actual_chars": 2082
+      },
+      "export_status": "completed",
+      "docx_path": "output\\delivery\\8ebea0de-c8ef-4c6c-b09a-0ac952cc7731\\03_Lesson_3__Validation_and_Case_Studies\\03.03_Customer_Interviews_and_Field_Visits.docx"
+    },
+    {
+      "lesson_title": "Lesson 3: Validation and Case Studies",
+      "subtopic_title": "Minimum Usable Prototype (MUP) Challenges",
+      "subtopic_description": "Identify and address challenges in creating a Minimum Usable Prototype (MUP).",
+      "subtopic_estimated_chars": 310,
+      "co": "Understand and apply the principles of design thinking",
+      "po": "Design Thinking",
+      "k_level": "intermediate",
+      "status": "completed",
+      "output_file": "output\\8ebea0de-c8ef-4c6c-b09a-0ac952cc7731\\Lesson_3__Validation_and_Case_Studies\\03_04_Create_a_Course_for_a_subject_applied_design_thinking_which_includes_and_make_lesson_and_subtopic_na.txt",
+      "metadata": {
+        "actual_chars": 3697
+      },
+      "export_status": "completed",
+      "docx_path": "output\\delivery\\8ebea0de-c8ef-4c6c-b09a-0ac952cc7731\\03_Lesson_3__Validation_and_Case_Studies\\03.04_Minimum_Usable_Prototype_(MUP)_Challenges.docx"
+    },
+    {
+      "lesson_title": "Lesson 3: Validation and Case Studies",
+      "subtopic_title": "Designing a Compelling Value Proposition",
+      "subtopic_description": "Develop and craft a compelling value proposition for your solution.",
+      "subtopic_estimated_chars": 313,
+      "co": "Understand and apply the principles of design thinking",
+      "po": "Design Thinking",
+      "k_level": "intermediate",
+      "status": "completed",
+      "output_file": "output\\8ebea0de-c8ef-4c6c-b09a-0ac952cc7731\\Lesson_3__Validation_and_Case_Studies\\03_05_Create_a_Course_for_a_subject_applied_design_thinking_which_includes_and_make_lesson_and_subtopic_na.txt",
+      "metadata": {
+        "actual_chars": 4730
+      },
+      "export_status": "completed",
+      "docx_path": "output\\delivery\\8ebea0de-c8ef-4c6c-b09a-0ac952cc7731\\03_Lesson_3__Validation_and_Case_Studies\\03.05_Designing_a_Compelling_Value_Proposition.docx"
+    },
+    {
+      "lesson_title": "Lesson 3: Validation and Case Studies",
+      "subtopic_title": "Concept Generation and Evaluation",
+      "subtopic_description": "Learn the systematic process for generating and evaluating solution concepts.",
+      "subtopic_estimated_chars": 304,
+      "co": "Understand and apply the principles of design thinking",
+      "po": "Design Thinking",
+      "k_level": "intermediate",
+      "status": "completed",
+      "output_file": "output\\8ebea0de-c8ef-4c6c-b09a-0ac952cc7731\\Lesson_3__Validation_and_Case_Studies\\03_06_Create_a_Course_for_a_subject_applied_design_thinking_which_includes_and_make_lesson_and_subtopic_na.txt",
+      "metadata": {
+        "actual_chars": 4135
+      },
+      "export_status": "completed",
+      "docx_path": "output\\delivery\\8ebea0de-c8ef-4c6c-b09a-0ac952cc7731\\03_Lesson_3__Validation_and_Case_Studies\\03.06_Concept_Generation_and_Evaluation.docx"
+    },
+    {
+      "lesson_title": "Lesson 3: Validation and Case Studies",
+      "subtopic_title": "System Thinking in Innovation",
+      "subtopic_description": "Understand the principles of system thinking and its application in innovation.",
+      "subtopic_estimated_chars": 288,
+      "co": "Understand and apply the principles of design thinking",
+      "po": "Design Thinking",
+      "k_level": "intermediate",
+      "status": "completed",
+      "output_file": "output\\8ebea0de-c8ef-4c6c-b09a-0ac952cc7731\\Lesson_3__Validation_and_Case_Studies\\03_07_Create_a_Course_for_a_subject_applied_design_thinking_which_includes_and_make_lesson_and_subtopic_na.txt",
+      "metadata": {
+        "actual_chars": 4476
+      },
+      "export_status": "completed",
+      "docx_path": "output\\delivery\\8ebea0de-c8ef-4c6c-b09a-0ac952cc7731\\03_Lesson_3__Validation_and_Case_Studies\\03.07_System_Thinking_in_Innovation.docx"
+    },
+    {
+      "lesson_title": "Lesson 3: Validation and Case Studies",
+      "subtopic_title": "Concept Validation and Technology Alternatives",
+      "subtopic_description": "Evaluate technology alternatives and assess the feasibility of solution concepts.",
+      "subtopic_estimated_chars": 316,
+      "co": "Understand and apply the principles of design thinking",
+      "po": "Design Thinking",
+      "k_level": "intermediate",
+      "status": "completed",
+      "output_file": "output\\8ebea0de-c8ef-4c6c-b09a-0ac952cc7731\\Lesson_3__Validation_and_Case_Studies\\03_08_Create_a_Course_for_a_subject_applied_design_thinking_which_includes_and_make_lesson_and_subtopic_na.txt",
+      "metadata": {
+        "actual_chars": 3345
+      },
+      "export_status": "completed",
+      "docx_path": "output\\delivery\\8ebea0de-c8ef-4c6c-b09a-0ac952cc7731\\03_Lesson_3__Validation_and_Case_Studies\\03.08_Concept_Validation_and_Technology_Alternatives.docx"
+    },
+    {
+      "lesson_title": "Lesson 3: Validation and Case Studies",
+      "subtopic_title": "Empathy and User Validation",
+      "subtopic_description": "Build user personas and create user stories to validate user needs and expectations.",
+      "subtopic_estimated_chars": 311,
+      "co": "Understand and apply the principles of design thinking",
+      "po": "Design Thinking",
+      "k_level": "intermediate",
+      "status": "completed",
+      "output_file": "output\\8ebea0de-c8ef-4c6c-b09a-0ac952cc7731\\Lesson_3__Validation_and_Case_Studies\\03_09_Create_a_Course_for_a_subject_applied_design_thinking_which_includes_and_make_lesson_and_subtopic_na.txt",
+      "metadata": {
+        "actual_chars": 4058
+      },
+      "export_status": "completed",
+      "docx_path": "output\\delivery\\8ebea0de-c8ef-4c6c-b09a-0ac952cc7731\\03_Lesson_3__Validation_and_Case_Studies\\03.09_Empathy_and_User_Validation.docx"
+    },
+    {
+      "lesson_title": "Lesson 3: Validation and Case Studies",
+      "subtopic_title": "Customer Development Process",
+      "subtopic_description": "Master the customer development process to ensure successful innovation.",
+      "subtopic_estimated_chars": 306,
+      "co": "Understand and apply the principles of design thinking",
+      "po": "Design Thinking",
+      "k_level": "intermediate",
+      "status": "completed",
+      "output_file": "output\\8ebea0de-c8ef-4c6c-b09a-0ac952cc7731\\Lesson_3__Validation_and_Case_Studies\\03_10_Create_a_Course_for_a_subject_applied_design_thinking_which_includes_and_make_lesson_and_subtopic_na.txt",
+      "metadata": {
+        "actual_chars": 5085
+      },
+      "export_status": "completed",
+      "docx_path": "output\\delivery\\8ebea0de-c8ef-4c6c-b09a-0ac952cc7731\\03_Lesson_3__Validation_and_Case_Studies\\03.10_Customer_Development_Process.docx"
+    },
+    {
+      "lesson_title": "Lesson 4: MUP & Value Proposition Design",
+      "subtopic_title": "Understanding Human-Centered Design",
+      "subtopic_description": "Learn about the importance of understanding human needs and behaviors in the design process. Explore the stages of the innovation process and how to identify areas of opportunity for innovation.",
+      "subtopic_estimated_chars": 450,
+      "co": "Understand and apply the principles of design thinking",
+      "po": "Design Thinking",
+      "k_level": "intermediate",
+      "status": "completed",
+      "output_file": "output\\8ebea0de-c8ef-4c6c-b09a-0ac952cc7731\\Lesson_4__MUP_&_Value_Proposition_Design\\04_01_Create_a_Course_for_a_subject_applied_design_thinking_which_includes_and_make_lesson_and_subtopic_na.txt",
+      "metadata": {
+        "actual_chars": 3818
+      },
+      "export_status": "completed",
+      "docx_path": "output\\delivery\\8ebea0de-c8ef-4c6c-b09a-0ac952cc7731\\04_Lesson_4__MUP_&_Value_Proposition_Design\\04.01_Understanding_Human-Centered_Design.docx"
+    },
+    {
+      "lesson_title": "Lesson 4: MUP & Value Proposition Design",
+      "subtopic_title": "Customer Interviews and Empathy Building",
+      "subtopic_description": "Master the art of customer interviews to gain deep insights. Learn empathy-building techniques to connect with users and understand their needs better.",
+      "subtopic_estimated_chars": 450,
+      "co": "Understand and apply the principles of design thinking",
+      "po": "Design Thinking",
+      "k_level": "intermediate",
+      "status": "completed",
+      "output_file": "output\\8ebea0de-c8ef-4c6c-b09a-0ac952cc7731\\Lesson_4__MUP_&_Value_Proposition_Design\\04_02_Create_a_Course_for_a_subject_applied_design_thinking_which_includes_and_make_lesson_and_subtopic_na.txt",
+      "metadata": {
+        "actual_chars": 3355
+      },
+      "export_status": "completed",
+      "docx_path": "output\\delivery\\8ebea0de-c8ef-4c6c-b09a-0ac952cc7731\\04_Lesson_4__MUP_&_Value_Proposition_Design\\04.02_Customer_Interviews_and_Empathy_Building.docx"
+    },
+    {
+      "lesson_title": "Lesson 4: MUP & Value Proposition Design",
+      "subtopic_title": "Problem Validation and Customer Discovery",
+      "subtopic_description": "Discover how to validate problems and understand their significance. Explore the customer development process and how to conduct effective customer interviews and field visits.",
+      "subtopic_estimated_chars": 500,
+      "co": "Understand and apply the principles of design thinking",
+      "po": "Design Thinking",
+      "k_level": "intermediate",
+      "status": "completed",
+      "output_file": "output\\8ebea0de-c8ef-4c6c-b09a-0ac952cc7731\\Lesson_4__MUP_&_Value_Proposition_Design\\04_03_Create_a_Course_for_a_subject_applied_design_thinking_which_includes_and_make_lesson_and_subtopic_na.txt",
+      "metadata": {
+        "actual_chars": 3671
+      },
+      "export_status": "completed",
+      "docx_path": "output\\delivery\\8ebea0de-c8ef-4c6c-b09a-0ac952cc7731\\04_Lesson_4__MUP_&_Value_Proposition_Design\\04.03_Problem_Validation_and_Customer_Discovery.docx"
+    },
+    {
+      "lesson_title": "Lesson 4: MUP & Value Proposition Design",
+      "subtopic_title": "User Personas and User Stories",
+      "subtopic_description": "Create user personas and user stories to represent your target users. Understand how to use these tools to guide your design process.",
+      "subtopic_estimated_chars": 450,
+      "co": "Understand and apply the principles of design thinking",
+      "po": "Design Thinking",
+      "k_level": "intermediate",
+      "status": "completed",
+      "output_file": "output\\8ebea0de-c8ef-4c6c-b09a-0ac952cc7731\\Lesson_4__MUP_&_Value_Proposition_Design\\04_04_Create_a_Course_for_a_subject_applied_design_thinking_which_includes_and_make_lesson_and_subtopic_na.txt",
+      "metadata": {
+        "actual_chars": 5264
+      },
+      "export_status": "completed",
+      "docx_path": "output\\delivery\\8ebea0de-c8ef-4c6c-b09a-0ac952cc7731\\04_Lesson_4__MUP_&_Value_Proposition_Design\\04.04_User_Personas_and_User_Stories.docx"
+    },
+    {
+      "lesson_title": "Lesson 4: MUP & Value Proposition Design",
+      "subtopic_title": "Minimum Usable Prototype (MUP) Challenge Brief",
+      "subtopic_description": "Learn how to create a MUP challenge brief. Understand the importance of the MUP in the design process and how to use it to test and validate your ideas.",
+      "subtopic_estimated_chars": 500,
+      "co": "Understand and apply the principles of design thinking",
+      "po": "Design Thinking",
+      "k_level": "intermediate",
+      "status": "completed",
+      "output_file": "output\\8ebea0de-c8ef-4c6c-b09a-0ac952cc7731\\Lesson_4__MUP_&_Value_Proposition_Design\\04_05_Create_a_Course_for_a_subject_applied_design_thinking_which_includes_and_make_lesson_and_subtopic_na.txt",
+      "metadata": {
+        "actual_chars": 4287
+      },
+      "export_status": "completed",
+      "docx_path": "output\\delivery\\8ebea0de-c8ef-4c6c-b09a-0ac952cc7731\\04_Lesson_4__MUP_&_Value_Proposition_Design\\04.05_Minimum_Usable_Prototype_(MUP)_Challenge_Brief.docx"
+    },
+    {
+      "lesson_title": "Lesson 4: MUP & Value Proposition Design",
+      "subtopic_title": "Designing and Crafting the Value Proposition",
+      "subtopic_description": "Explore the concept of value proposition design. Learn how to design and test compelling value propositions to ensure they meet customer needs.",
+      "subtopic_estimated_chars": 450,
+      "co": "Understand and apply the principles of design thinking",
+      "po": "Design Thinking",
+      "k_level": "intermediate",
+      "status": "completed",
+      "output_file": "output\\8ebea0de-c8ef-4c6c-b09a-0ac952cc7731\\Lesson_4__MUP_&_Value_Proposition_Design\\04_06_Create_a_Course_for_a_subject_applied_design_thinking_which_includes_and_make_lesson_and_subtopic_na.txt",
+      "metadata": {
+        "actual_chars": 3315
+      },
+      "export_status": "completed",
+      "docx_path": "output\\delivery\\8ebea0de-c8ef-4c6c-b09a-0ac952cc7731\\04_Lesson_4__MUP_&_Value_Proposition_Design\\04.06_Designing_and_Crafting_the_Value_Proposition.docx"
+    },
+    {
+      "lesson_title": "Lesson 4: MUP & Value Proposition Design",
+      "subtopic_title": "Concept Generation and System Thinking",
+      "subtopic_description": "Understand the concept of concept generation and its role in innovation. Learn how to evaluate technology alternatives and solution concepts using system thinking.",
+      "subtopic_estimated_chars": 500,
+      "co": "Understand and apply the principles of design thinking",
+      "po": "Design Thinking",
+      "k_level": "intermediate",
+      "status": "completed",
+      "output_file": "output\\8ebea0de-c8ef-4c6c-b09a-0ac952cc7731\\Lesson_4__MUP_&_Value_Proposition_Design\\04_07_Create_a_Course_for_a_subject_applied_design_thinking_which_includes_and_make_lesson_and_subtopic_na.txt",
+      "metadata": {
+        "actual_chars": 3640
+      },
+      "export_status": "completed",
+      "docx_path": "output\\delivery\\8ebea0de-c8ef-4c6c-b09a-0ac952cc7731\\04_Lesson_4__MUP_&_Value_Proposition_Design\\04.07_Concept_Generation_and_System_Thinking.docx"
+    },
+    {
+      "lesson_title": "Lesson 4: MUP & Value Proposition Design",
+      "subtopic_title": "Concept Exploration and Iteration",
+      "subtopic_description": "Learn how to conceptualize and explore solution concepts. Understand the importance of iteration and learning in the design process.",
+      "subtopic_estimated_chars": 450,
+      "co": "Understand and apply the principles of design thinking",
+      "po": "Design Thinking",
+      "k_level": "intermediate",
+      "status": "completed",
+      "output_file": "output\\8ebea0de-c8ef-4c6c-b09a-0ac952cc7731\\Lesson_4__MUP_&_Value_Proposition_Design\\04_08_Create_a_Course_for_a_subject_applied_design_thinking_which_includes_and_make_lesson_and_subtopic_na.txt",
+      "metadata": {
+        "actual_chars": 3298
+      },
+      "export_status": "completed",
+      "docx_path": "output\\delivery\\8ebea0de-c8ef-4c6c-b09a-0ac952cc7731\\04_Lesson_4__MUP_&_Value_Proposition_Design\\04.08_Concept_Exploration_and_Iteration.docx"
+    },
+    {
+      "lesson_title": "Lesson 4: MUP & Value Proposition Design",
+      "subtopic_title": "System Thinking in Design",
+      "subtopic_description": "Gain an understanding of system thinking and its applications in design. Explore examples of complex systems and how to understand and manage them.",
+      "subtopic_estimated_chars": 500,
+      "co": "Understand and apply the principles of design thinking",
+      "po": "Design Thinking",
+      "k_level": "intermediate",
+      "status": "completed",
+      "output_file": "output\\8ebea0de-c8ef-4c6c-b09a-0ac952cc7731\\Lesson_4__MUP_&_Value_Proposition_Design\\04_09_Create_a_Course_for_a_subject_applied_design_thinking_which_includes_and_make_lesson_and_subtopic_na.txt",
+      "metadata": {
+        "actual_chars": 2278
+      },
+      "export_status": "completed",
+      "docx_path": "output\\delivery\\8ebea0de-c8ef-4c6c-b09a-0ac952cc7731\\04_Lesson_4__MUP_&_Value_Proposition_Design\\04.09_System_Thinking_in_Design.docx"
+    },
+    {
+      "lesson_title": "Lesson 4: MUP & Value Proposition Design",
+      "subtopic_title": "Mitigating Validation Risk with FIR",
+      "subtopic_description": "Learn about the Forge 231 ovation rubric for mitigating validation risk. Understand how to use this tool to validate your ideas effectively.",
+      "subtopic_estimated_chars": 450,
+      "co": "Understand and apply the principles of design thinking",
+      "po": "Design Thinking",
+      "k_level": "intermediate",
+      "status": "completed",
+      "output_file": "output\\8ebea0de-c8ef-4c6c-b09a-0ac952cc7731\\Lesson_4__MUP_&_Value_Proposition_Design\\04_10_Create_a_Course_for_a_subject_applied_design_thinking_which_includes_and_make_lesson_and_subtopic_na.txt",
+      "metadata": {
+        "actual_chars": 4407
+      },
+      "export_status": "completed",
+      "docx_path": "output\\delivery\\8ebea0de-c8ef-4c6c-b09a-0ac952cc7731\\04_Lesson_4__MUP_&_Value_Proposition_Design\\04.10_Mitigating_Validation_Risk_with_FIR.docx"
+    },
+    {
+      "lesson_title": "Lesson 5: System Thinking & Concept Exploration",
+      "subtopic_title": "Understanding System Thinking",
+      "subtopic_description": "Explore the basics of system thinking, including examples of complex systems and how they function.",
+      "subtopic_estimated_chars": 200,
+      "co": "Understand and apply the principles of design thinking",
+      "po": "Design Thinking",
+      "k_level": "intermediate",
+      "status": "completed",
+      "output_file": "output\\8ebea0de-c8ef-4c6c-b09a-0ac952cc7731\\Lesson_5__System_Thinking_&_Concept_Exploration\\05_01_Create_a_Course_for_a_subject_applied_design_thinking_which_includes_and_make_lesson_and_subtopic_na.txt",
+      "metadata": {
+        "actual_chars": 4491
+      },
+      "export_status": "completed",
+      "docx_path": "output\\delivery\\8ebea0de-c8ef-4c6c-b09a-0ac952cc7731\\05_Lesson_5__System_Thinking_&_Concept_Exploration\\05.01_Understanding_System_Thinking.docx"
+    },
+    {
+      "lesson_title": "Lesson 5: System Thinking & Concept Exploration",
+      "subtopic_title": "Human-Centered Design Principles",
+      "subtopic_description": "Learn about human-centered design principles, including empathy-building techniques and customer development processes.",
+      "subtopic_estimated_chars": 300,
+      "co": "Understand and apply the principles of design thinking",
+      "po": "Design Thinking",
+      "k_level": "intermediate",
+      "status": "completed",
+      "output_file": "output\\8ebea0de-c8ef-4c6c-b09a-0ac952cc7731\\Lesson_5__System_Thinking_&_Concept_Exploration\\05_02_Create_a_Course_for_a_subject_applied_design_thinking_which_includes_and_make_lesson_and_subtopic_na.txt",
+      "metadata": {
+        "actual_chars": 4233
+      },
+      "export_status": "completed",
+      "docx_path": "output\\delivery\\8ebea0de-c8ef-4c6c-b09a-0ac952cc7731\\05_Lesson_5__System_Thinking_&_Concept_Exploration\\05.02_Human-Centered_Design_Principles.docx"
+    },
+    {
+      "lesson_title": "Lesson 5: System Thinking & Concept Exploration",
+      "subtopic_title": "Minimum Usable Prototype (MUP) Challenges",
+      "subtopic_description": "Understand the challenges associated with creating a Minimum Usable Prototype and how to brief and craft a compelling value proposition.",
+      "subtopic_estimated_chars": 350,
+      "co": "Understand and apply the principles of design thinking",
+      "po": "Design Thinking",
+      "k_level": "intermediate",
+      "status": "completed",
+      "output_file": "output\\8ebea0de-c8ef-4c6c-b09a-0ac952cc7731\\Lesson_5__System_Thinking_&_Concept_Exploration\\05_03_Create_a_Course_for_a_subject_applied_design_thinking_which_includes_and_make_lesson_and_subtopic_na.txt",
+      "metadata": {
+        "actual_chars": 5067
+      },
+      "export_status": "completed",
+      "docx_path": "output\\delivery\\8ebea0de-c8ef-4c6c-b09a-0ac952cc7731\\05_Lesson_5__System_Thinking_&_Concept_Exploration\\05.03_Minimum_Usable_Prototype_(MUP)_Challenges.docx"
+    },
+    {
+      "lesson_title": "Lesson 5: System Thinking & Concept Exploration",
+      "subtopic_title": "Designing Value Propositions",
+      "subtopic_description": "Discover the process and tools for designing and testing value propositions, including conducting customer interviews and field visits.",
+      "subtopic_estimated_chars": 300,
+      "co": "Understand and apply the principles of design thinking",
+      "po": "Design Thinking",
+      "k_level": "intermediate",
+      "status": "completed",
+      "output_file": "output\\8ebea0de-c8ef-4c6c-b09a-0ac952cc7731\\Lesson_5__System_Thinking_&_Concept_Exploration\\05_04_Create_a_Course_for_a_subject_applied_design_thinking_which_includes_and_make_lesson_and_subtopic_na.txt",
+      "metadata": {
+        "actual_chars": 5156
+      },
+      "export_status": "completed",
+      "docx_path": "output\\delivery\\8ebea0de-c8ef-4c6c-b09a-0ac952cc7731\\05_Lesson_5__System_Thinking_&_Concept_Exploration\\05.04_Designing_Value_Propositions.docx"
+    },
+    {
+      "lesson_title": "Lesson 5: System Thinking & Concept Exploration",
+      "subtopic_title": "Concept Generation and Iteration",
+      "subtopic_description": "Learn how to conceptualize and iterate on solution concepts, assessing feasibility and evaluating technology alternatives.",
+      "subtopic_estimated_chars": 300,
+      "co": "Understand and apply the principles of design thinking",
+      "po": "Design Thinking",
+      "k_level": "intermediate",
+      "status": "completed",
+      "output_file": "output\\8ebea0de-c8ef-4c6c-b09a-0ac952cc7731\\Lesson_5__System_Thinking_&_Concept_Exploration\\05_05_Create_a_Course_for_a_subject_applied_design_thinking_which_includes_and_make_lesson_and_subtopic_na.txt",
+      "metadata": {
+        "actual_chars": 3181
+      },
+      "export_status": "completed",
+      "docx_path": "output\\delivery\\8ebea0de-c8ef-4c6c-b09a-0ac952cc7731\\05_Lesson_5__System_Thinking_&_Concept_Exploration\\05.05_Concept_Generation_and_Iteration.docx"
+    },
+    {
+      "lesson_title": "Lesson 5: System Thinking & Concept Exploration",
+      "subtopic_title": "Systematic Concept Generation",
+      "subtopic_description": "Explore systematic approaches to generating and evaluating solution concepts, including assessing capability and usability.",
+      "subtopic_estimated_chars": 300,
+      "co": "Understand and apply the principles of design thinking",
+      "po": "Design Thinking",
+      "k_level": "intermediate",
+      "status": "completed",
+      "output_file": "output\\8ebea0de-c8ef-4c6c-b09a-0ac952cc7731\\Lesson_5__System_Thinking_&_Concept_Exploration\\05_06_Create_a_Course_for_a_subject_applied_design_thinking_which_includes_and_make_lesson_and_subtopic_na.txt",
+      "metadata": {
+        "actual_chars": 6170
+      },
+      "export_status": "completed",
+      "docx_path": "output\\delivery\\8ebea0de-c8ef-4c6c-b09a-0ac952cc7731\\05_Lesson_5__System_Thinking_&_Concept_Exploration\\05.06_Systematic_Concept_Generation.docx"
+    },
+    {
+      "lesson_title": "Lesson 5: System Thinking & Concept Exploration",
+      "subtopic_title": "Customer Validation Techniques",
+      "subtopic_description": "Understand customer validation methods, including problem validation and customer discovery, and how to identify and validate target users and user personas.",
+      "subtopic_estimated_chars": 400,
+      "co": "Understand and apply the principles of design thinking",
+      "po": "Design Thinking",
+      "k_level": "intermediate",
+      "status": "completed",
+      "output_file": "output\\8ebea0de-c8ef-4c6c-b09a-0ac952cc7731\\Lesson_5__System_Thinking_&_Concept_Exploration\\05_07_Create_a_Course_for_a_subject_applied_design_thinking_which_includes_and_make_lesson_and_subtopic_na.txt",
+      "metadata": {
+        "actual_chars": 3784
+      },
+      "export_status": "completed",
+      "docx_path": "output\\delivery\\8ebea0de-c8ef-4c6c-b09a-0ac952cc7731\\05_Lesson_5__System_Thinking_&_Concept_Exploration\\05.07_Customer_Validation_Techniques.docx"
+    },
+    {
+      "lesson_title": "Lesson 5: System Thinking & Concept Exploration",
+      "subtopic_title": "Applying Design Thinking Tools",
+      "subtopic_description": "Learn about applying design thinking tools such as Minimum Usable Prototypes (MUP), value proposition design, and customer development processes.",
+      "subtopic_estimated_chars": 300,
+      "co": "Understand and apply the principles of design thinking",
+      "po": "Design Thinking",
+      "k_level": "intermediate",
+      "status": "completed",
+      "output_file": "output\\8ebea0de-c8ef-4c6c-b09a-0ac952cc7731\\Lesson_5__System_Thinking_&_Concept_Exploration\\05_08_Create_a_Course_for_a_subject_applied_design_thinking_which_includes_and_make_lesson_and_subtopic_na.txt",
+      "metadata": {
+        "actual_chars": 2650
+      },
+      "export_status": "completed",
+      "docx_path": "output\\delivery\\8ebea0de-c8ef-4c6c-b09a-0ac952cc7731\\05_Lesson_5__System_Thinking_&_Concept_Exploration\\05.08_Applying_Design_Thinking_Tools.docx"
+    },
+    {
+      "lesson_title": "Lesson 5: System Thinking & Concept Exploration",
+      "subtopic_title": "System Thinking and Complex Systems",
+      "subtopic_description": "Study examples of complex systems and how to understand and apply system thinking to solve problems.",
+      "subtopic_estimated_chars": 200,
+      "co": "Understand and apply the principles of design thinking",
+      "po": "Design Thinking",
+      "k_level": "intermediate",
+      "status": "completed",
+      "output_file": "output\\8ebea0de-c8ef-4c6c-b09a-0ac952cc7731\\Lesson_5__System_Thinking_&_Concept_Exploration\\05_09_Create_a_Course_for_a_subject_applied_design_thinking_which_includes_and_make_lesson_and_subtopic_na.txt",
+      "metadata": {
+        "actual_chars": 4424
+      },
+      "export_status": "completed",
+      "docx_path": "output\\delivery\\8ebea0de-c8ef-4c6c-b09a-0ac952cc7731\\05_Lesson_5__System_Thinking_&_Concept_Exploration\\05.09_System_Thinking_and_Complex_Systems.docx"
+    },
+    {
+      "lesson_title": "Lesson 5: System Thinking & Concept Exploration",
+      "subtopic_title": "Validation Risk Mitigation",
+      "subtopic_description": "Learn about mitigating validation risk using tools like the Forge 231 Ovation Rubric and case studies.",
+      "subtopic_estimated_chars": 300,
+      "co": "Understand and apply the principles of design thinking",
+      "po": "Design Thinking",
+      "k_level": "intermediate",
+      "status": "completed",
+      "output_file": "output\\8ebea0de-c8ef-4c6c-b09a-0ac952cc7731\\Lesson_5__System_Thinking_&_Concept_Exploration\\05_10_Create_a_Course_for_a_subject_applied_design_thinking_which_includes_and_make_lesson_and_subtopic_na.txt",
+      "metadata": {
+        "actual_chars": 3415
+      },
+      "export_status": "completed",
+      "docx_path": "output\\delivery\\8ebea0de-c8ef-4c6c-b09a-0ac952cc7731\\05_Lesson_5__System_Thinking_&_Concept_Exploration\\05.10_Validation_Risk_Mitigation.docx"
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "questions": [
+    {
+      "question": "What is the first step you should take to install Django on your system? Explain the steps involved in installing Django.",
+      "answer": "The first step to install Django on your system is to ensure that Python is installed and is set up in your system's PATH. After confirming Python is installed, you can install Django by running the command `pip install django` in your terminal or command prompt. This command installs Django as a package that can be imported in your Python scripts. If you are using a virtual environment, you should activate it before installing Django.",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "Explain the basic structure of a Django project. What are the main components of a Django project and how do they interact with each other?",
+      "answer": "A Django project consists of several main components that interact to provide a complete web application. These components include the project itself, the project's settings, the project's URLs, the project's views, and the project's templates. The project is the main directory of your Django application. The project's settings file (usually named `settings.py`) contains all the configuration settings for your project, such as database settings, static files settings, and security settings. The project's URLs file (usually named `urls.py`) maps URLs to views, allowing users to navigate through your application. The project's views file (usually named `views.py`) contains the functions that handle requests and return responses. The project's templates file (usually named `templates`) contains HTML files that are rendered by Django to provide dynamic content to the user. These components work together to create a fully functional Django application.",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "How do you start a new Django project? Explain the steps involved in creating a new Django project and setting up a basic structure.",
+      "answer": "To start a new Django project, you can use the command `django-admin startproject project_name` in your terminal or command prompt, where `project_name` is the name you want to give to your project. This command creates a new directory with the name of your project and sets up the basic structure of a Django project. The structure includes a `project_name` directory, a `manage.py` file, and a `project_name` directory that contains the main components of a Django project. The `manage.py` file is a script that provides commands to manage your project, such as running the development server, running tests, and creating migrations. The `project_name` directory contains the main components of a Django project, such as the project's settings, the project's URLs, the project's views, and the project's templates.",
+      "difficulty": "intermediate"
+    }
+  ]
+}
