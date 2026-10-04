@@ -1,0 +1,36 @@
+{
+  "tasks": [
+    {
+      "lesson_id": "270707e2-8e31-4f26-bd4a-f1551ba14d4a",
+      "lesson_title": "Exploring the Psychology of Reading Minds",
+      "subtopic_id": "b3846404-75ad-426e-b2fe-f5e3f7dfe78e",
+      "subtopic_title": "Empathy and Perspective-Taking",
+      "completed": true,
+      "content_file": "01_01_Empathy_and_Perspective-Taking.txt"
+    },
+    {
+      "lesson_id": "270707e2-8e31-4f26-bd4a-f1551ba14d4a",
+      "lesson_title": "Exploring the Psychology of Reading Minds",
+      "subtopic_id": "87c769cd-008b-44dc-973e-9b58dfa3e622",
+      "subtopic_title": "Personal Experience and Cultural Differences",
+      "completed": true,
+      "content_file": "01_02_Personal_Experience_and_Cultural_Differences.txt"
+    },
+    {
+      "lesson_id": "5482781f-d736-4c73-913e-88e2663f007d",
+      "lesson_title": "Advanced Psychologies of Reading Minds",
+      "subtopic_id": "3e07212b-8d00-4393-82cb-0935891f8087",
+      "subtopic_title": "Neurological Insights into Mental States",
+      "completed": true,
+      "content_file": "02_01_Neurological_Insights_into_Mental_States.txt"
+    },
+    {
+      "lesson_id": "5482781f-d736-4c73-913e-88e2663f007d",
+      "lesson_title": "Advanced Psychologies of Reading Minds",
+      "subtopic_id": "fd45b8ee-6a80-45ec-a2a4-eb7074894fe9",
+      "subtopic_title": "Cultural Contexts and Mental Interpretation",
+      "completed": true,
+      "content_file": "02_02_Cultural_Contexts_and_Mental_Interpretation.txt"
+    }
+  ]
+}

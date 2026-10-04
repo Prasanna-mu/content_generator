@@ -1,0 +1,14 @@
+{
+  "prompt": "pyschology of reading others mind",
+  "session_id": "bd0a070e-2aa9-495a-acfc-2c9f5b0cdefa",
+  "stages": {
+    "subtopic_generation": "completed",
+    "lesson_generation": "completed",
+    "content_generation": "completed",
+    "output_writing": "completed",
+    "docx_export": "completed"
+  },
+  "lessons": [],
+  "subtopics": [],
+  "tasklist": []
+}

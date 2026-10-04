@@ -1,0 +1,36 @@
+{
+  "prompt": "pyschology of reading others mind",
+  "config": {
+    "prompt": "pyschology of reading others mind",
+    "num_lessons": 2,
+    "subtopics_per_lesson": 2,
+    "content_quality": "intermediate",
+    "content_length": "medium",
+    "quiz_question_count": 5,
+    "quiz_difficulty": "intermediate",
+    "question_bank_count": 10,
+    "web_search_needed": false,
+    "subtopic_quality": {
+      "max_title_length": 60,
+      "max_regeneration_attempts": 3,
+      "quality_threshold": 6
+    }
+  },
+  "total_lessons": 2,
+  "total_subtopics": 4,
+  "total_content_chars": 16621,
+  "total_quiz_questions": 10,
+  "total_question_bank_items": 20,
+  "lessons": [
+    {
+      "title": "Exploring the Psychology of Reading Minds",
+      "subtopic_count": 2,
+      "total_chars": 7649
+    },
+    {
+      "title": "Advanced Psychologies of Reading Minds",
+      "subtopic_count": 2,
+      "total_chars": 8972
+    }
+  ]
+}

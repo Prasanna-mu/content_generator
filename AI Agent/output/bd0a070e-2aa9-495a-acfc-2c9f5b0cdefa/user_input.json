@@ -1,0 +1,16 @@
+{
+  "prompt": "pyschology of reading others mind",
+  "num_lessons": 2,
+  "subtopics_per_lesson": 2,
+  "content_quality": "intermediate",
+  "content_length": "medium",
+  "quiz_question_count": 5,
+  "quiz_difficulty": "intermediate",
+  "question_bank_count": 10,
+  "web_search_needed": false,
+  "subtopic_quality": {
+    "max_title_length": 60,
+    "max_regeneration_attempts": 3,
+    "quality_threshold": 6
+  }
+}

@@ -31,7 +31,8 @@
         "error_message": null
       },
       "export_status": "completed",
-      "docx_path": "output\\delivery\\d480709c-0d5f-4322-96f5-b0968337f891\\01_Python_and_Django_Fundamentals\\01.01_Setting_Up_the_Django_Environment.docx"
+      "docx_path": "output\\delivery\\d480709c-0d5f-4322-96f5-b0968337f891\\01_Python_and_Django_Fundamentals\\01.01_Setting_Up_the_Django_Environment.docx",
+      "export_error": "Could not find lesson/subtopic numbers for Python and Django Fundamentals/Setting Up the Django Environment (IDs: cbc4d31b-ab7b-42a5-8ab7-8b3b8c820383/8d48dbe2-5b1a-468d-99be-5f29df598be4)"
     },
     {
       "lesson_id": "cbc4d31b-ab7b-42a5-8ab7-8b3b8c820383",
@@ -60,7 +61,8 @@
         "error_message": null
       },
       "export_status": "completed",
-      "docx_path": "output\\delivery\\d480709c-0d5f-4322-96f5-b0968337f891\\01_Python_and_Django_Fundamentals\\01.02_Writing_Your_First_Django_Project.docx"
+      "docx_path": "output\\delivery\\d480709c-0d5f-4322-96f5-b0968337f891\\01_Python_and_Django_Fundamentals\\01.02_Writing_Your_First_Django_Project.docx",
+      "export_error": "Could not find lesson/subtopic numbers for Python and Django Fundamentals/Writing Your First Django Project (IDs: cbc4d31b-ab7b-42a5-8ab7-8b3b8c820383/d1cb36e7-2370-4453-9321-d7ac1cc48652)"
     }
   ]
 }

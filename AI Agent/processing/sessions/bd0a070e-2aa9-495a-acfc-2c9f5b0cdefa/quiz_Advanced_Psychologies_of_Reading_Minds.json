@@ -1,0 +1,64 @@
+{
+  "questions": [
+    {
+      "question": "Which of the following best explains how neurology can help us understand others' mental states? A) Through facial expressions B) By interpreting dreams C) By analyzing brain activity patterns D) Through reading their thoughts directly",
+      "options": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "correct_answer": 2,
+      "explanation": "Neurology provides insights into brain activity patterns, which can help us understand others' mental states by observing changes in brain activity.",
+      "k_level": "K3"
+    },
+    {
+      "question": "How do cultural contexts influence our interpretation of mental states? A) They have no significant impact B) They only affect language interpretation C) They shape our understanding of emotions and behaviors D) They solely dictate physical reactions",
+      "options": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "correct_answer": 3,
+      "explanation": "Cultural contexts shape our understanding of mental states by influencing how we interpret emotions and behaviors based on cultural norms and values.",
+      "k_level": "K4"
+    },
+    {
+      "question": "In an advanced scenario, a person is observed in a public park. What context would be most important for understanding their mental state? A) The weather conditions B) The presence of other people C) The time of day D) The type of park they are in",
+      "options": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "correct_answer": 1,
+      "explanation": "The presence of other people in the scenario is crucial for understanding the mental state of the person observed, as it can affect their behavior and emotional state.",
+      "k_level": "K5"
+    },
+    {
+      "question": "Which of the following is a key factor in interpreting mental states in cross-cultural situations? A) Ignoring cultural differences B) Assuming all people think and feel similarly C) Understanding and respecting cultural differences D) Focusing solely on verbal communication",
+      "options": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "correct_answer": 3,
+      "explanation": "Understanding and respecting cultural differences is crucial in cross-cultural situations as it allows for a more accurate interpretation of mental states.",
+      "k_level": "K5"
+    },
+    {
+      "question": "How can context play a role in misinterpreting mental states? A) It can clarify the exact thoughts of others B) It can prevent any misunderstandings C) It can lead to a misinterpretation if not considered D) It can make interpretations more accurate",
+      "options": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "correct_answer": 3,
+      "explanation": "Context can lead to a misinterpretation if not considered, as it can influence how we perceive and understand the mental states of others.",
+      "k_level": "K6"
+    }
+  ]
+}

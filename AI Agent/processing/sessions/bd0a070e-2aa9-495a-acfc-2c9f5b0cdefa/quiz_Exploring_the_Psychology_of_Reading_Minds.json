@@ -1,0 +1,64 @@
+{
+  "questions": [
+    {
+      "question": "Which of the following best describes empathy in the context of understanding others' thoughts and feelings?",
+      "options": [
+        "A) Empathy is the ability to read minds and know exactly what someone is thinking.",
+        "B) Empathy involves feeling what others feel and understanding their perspectives.",
+        "C) Empathy is the ability to predict others' actions based on their past behavior.",
+        "D) Empathy is the skill to change others' opinions to match your own beliefs."
+      ],
+      "correct_answer": 1,
+      "explanation": "Empathy is about understanding and sharing the feelings of another. It's not about reading minds or changing others' opinions.",
+      "k_level": "K3"
+    },
+    {
+      "question": "How does personal experience influence our ability to read minds?",
+      "options": [
+        "A) Personal experience has no impact on our ability to read minds.",
+        "B) Personal experience shapes our understanding and biases our perceptions.",
+        "C) Personal experience only affects our reading of minds in certain cultural contexts.",
+        "D) Personal experience allows us to perfectly understand others' thoughts and feelings."
+      ],
+      "correct_answer": 1,
+      "explanation": "Personal experience can shape our biases and understanding, making it harder to read minds accurately.",
+      "k_level": "K4"
+    },
+    {
+      "question": "What role does intuition play in understanding others' thoughts and feelings?",
+      "options": [
+        "A) Intuition is unreliable and should be avoided when understanding others.",
+        "B) Intuition can provide valuable insights but is not always accurate.",
+        "C) Intuition is the only reliable method for understanding others' thoughts and feelings.",
+        "D) Intuition should be the primary method for understanding others' thoughts and feelings."
+      ],
+      "correct_answer": 1,
+      "explanation": "Intuition can be a helpful tool, but it's not always accurate and should be used in conjunction with other methods.",
+      "k_level": "K5"
+    },
+    {
+      "question": "How do cultural differences affect our ability to read minds?",
+      "options": [
+        "A) Cultural differences have no impact on our ability to read minds.",
+        "B) Cultural differences can lead to misunderstandings and misinterpretations.",
+        "C) Cultural differences make it easier to understand others' thoughts and feelings.",
+        "D) Cultural differences are only relevant in cross-cultural studies and not in everyday interactions."
+      ],
+      "correct_answer": 1,
+      "explanation": "Cultural differences can lead to misunderstandings because people from different cultures may interpret the same cues differently.",
+      "k_level": "K6"
+    },
+    {
+      "question": "What is the role of perspective-taking in understanding others' thoughts and feelings?",
+      "options": [
+        "A) Perspective-taking is only useful in academic settings and not in real-life interactions.",
+        "B) Perspective-taking helps us understand others' thoughts and feelings by considering their viewpoints.",
+        "C) Perspective-taking is not necessary as long as we have empathy.",
+        "D) Perspective-taking is only useful when we agree with others' viewpoints."
+      ],
+      "correct_answer": 1,
+      "explanation": "Perspective-taking involves seeing things from another person's point of view, which is crucial for understanding their thoughts and feelings.",
+      "k_level": "K3"
+    }
+  ]
+}

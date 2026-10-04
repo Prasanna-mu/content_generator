@@ -1,0 +1,20 @@
+{
+  "lesson_title": "Exploring the Psychology of Reading Minds",
+  "lesson_description": "In this lesson, students will delve into the fundamental psychological concepts related to understanding others' thoughts and feelings. They will investigate the nature of human empathy, intuition, and how personal experiences shape our perceptions of others. Through engaging activities, students will gain a deeper understanding of the complexities of human psychology and the challenges in reading minds, laying a solid foundation for further studies in this intriguing field.",
+  "subtopics": [
+    {
+      "title": "Empathy and Perspective-Taking",
+      "description": "Explore the concept of empathy and how it influences our ability to understand others' thoughts and feelings. Discuss activities that enhance perspective-taking skills and the importance of emotional intelligence in reading minds.",
+      "estimated_chars": 1500,
+      "actual_chars": 4166
+    },
+    {
+      "title": "Personal Experience and Cultural Differences",
+      "description": "Investigate how personal experiences shape our perceptions and how cultural backgrounds impact our understanding of others. Analyze case studies that highlight the complexities of interpreting diverse viewpoints and emotions.",
+      "estimated_chars": 1500,
+      "actual_chars": 3483
+    }
+  ],
+  "quiz_question_count": 5,
+  "question_bank_count": 10
+}

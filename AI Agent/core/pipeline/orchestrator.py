@@ -13,7 +13,7 @@ from core.planning.prompt_analyzer import PromptAnalyzer
 from core.planning.lesson_generator import LessonGenerator
 from core.planning.subtopic_generator import SubtopicGenerator
 from core.generation.content_generator import ContentGenerator
-from core.output.writer import OutputWriter
+from core.output.writer import OutputWriter, DOCXWriter
 from core.websearch.manager import WebSearchManager
 from core.session.manager import SessionManager
 from core.session.models import (
@@ -1281,11 +1281,7 @@ class PipelineOrchestrator:
         return {"output_path": str(output_path)}
 
     def _run_docx_export(self) -> Dict[str, Any]:
-        """Export completed subtopics to DOCX files in delivery/ folder."""
-        from docx import Document
-        from docx.shared import Inches, Pt
-        from docx.enum.text import WD_ALIGN_PARAGRAPH
-        
+        """Export completed subtopics to DOCX files in delivery/ folder using professional DOCXWriter."""
         # Load content-generation JSON
         content_gen_file = self.prompt_dir / "content_generation.json"
         if not content_gen_file.exists():
@@ -1322,6 +1318,9 @@ class PipelineOrchestrator:
         failed_count = 0
         
         print(f"    Exporting {len(completed_subtopics)} completed subtopics to DOCX...")
+        
+        # Initialize DOCX writer
+        docx_writer = DOCXWriter()
         
         for entry in content_gen_data["subtopics"]:
             lesson_id = entry.get("lesson_id") or entry["lesson_title"]
@@ -1371,32 +1370,19 @@ class PipelineOrchestrator:
                 # Parse content (skip header lines)
                 content = ''.join(content_lines[6:]) if len(content_lines) > 6 else ''.join(content_lines)
                 
-                # Create DOCX
-                doc = Document()
+                # Create professional DOCX using DOCXWriter
+                doc = docx_writer.create_document(
+                    lesson_number=lesson_number,
+                    lesson_title=lesson_title,
+                    subtopic_number=subtopic_number,
+                    subtopic_title=subtopic_title,
+                    co=entry.get("co", "N/A"),
+                    po=entry.get("po", "N/A"),
+                    k_level=entry.get("k_level", "N/A")
+                )
                 
-                # Title
-                title = doc.add_heading(f"Lesson {lesson_number}: {lesson_title}", level=1)
-                title.alignment = WD_ALIGN_PARAGRAPH.CENTER
-                
-                # Subtopic
-                subtopic_heading = doc.add_heading(f"Subtopic {subtopic_number}: {subtopic_title}", level=2)
-                
-                # Metadata table
-                table = doc.add_table(rows=5, cols=2, style='Table Grid')
-                table.cell(0, 0).text = "Lesson"
-                table.cell(0, 1).text = f"{lesson_number}: {lesson_title}"
-                table.cell(1, 0).text = "Subtopic"
-                table.cell(1, 1).text = f"{subtopic_number}: {subtopic_title}"
-                table.cell(2, 0).text = "Course Outcome (CO)"
-                table.cell(2, 1).text = entry.get("co", "N/A")
-                table.cell(3, 0).text = "Program Outcome (PO)"
-                table.cell(3, 1).text = entry.get("po", "N/A")
-                table.cell(4, 0).text = "Knowledge Level (K-Level)"
-                table.cell(4, 1).text = entry.get("k_level", "N/A")
-                
-                # Content
-                doc.add_heading("Content", level=2)
-                self._markdown_to_docx(doc, content)
+                # Add markdown content with professional formatting
+                docx_writer.add_markdown_content(doc, content, lesson_title, subtopic_title)
                 
                 # Build delivery path: delivery/{lesson_number}_{lesson_name}/{lesson_number}.{subtopic_number}_{subtopic_name}.docx
                 sanitized_lesson = self._sanitize_folder_name(lesson_title)
@@ -1435,7 +1421,7 @@ class PipelineOrchestrator:
                     lessons_copied.add(lesson_title)
                 
                 docx_file_path = lesson_delivery_dir / filename
-                doc.save(docx_file_path)
+                docx_writer.save(doc, docx_file_path)
                 
                 # Update entry with success
                 entry["export_status"] = "completed"
