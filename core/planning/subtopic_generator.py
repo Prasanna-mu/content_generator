@@ -102,9 +102,10 @@ class SubtopicGenerator:
             results["failed"] += lesson_results["failed"]
             results["failed_subtopics"].extend(lesson_results["failed_subtopics"])
         
-        # Remove failed subtopics from lessons
+        # Keep all subtopics including failed ones - do NOT skip any.
+        # Failed subtopics are retained with their last generated state so
+        # the pipeline can continue and attempt content generation for them.
         for lesson in lessons:
-            lesson.subtopics = [s for s in lesson.subtopics if s.validation_status != "failed"]
             lesson.estimated_total_chars = sum(s.estimated_chars for s in lesson.subtopics)
         
         return results

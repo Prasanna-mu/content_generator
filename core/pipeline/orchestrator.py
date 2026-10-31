@@ -805,18 +805,31 @@ class PipelineOrchestrator:
 
     def _run_subtopic_validation(self) -> Dict[str, Any]:
         # Final validation: check count and that no subtopics have failed status
-        if not self.subtopic_generator.validate_subtopics(self.lessons, self.user_input):
-            # Check if there are failed subtopics we should report
+        is_valid = self.subtopic_generator.validate_subtopics(self.lessons, self.user_input)
+        if not is_valid:
+            # Report failed subtopics (exceeded max regeneration attempts) but do NOT terminate.
+            # Continue the process with the remaining valid subtopics.
             failed_subtopics = []
             for lesson in self.lessons:
                 for subtopic in lesson.subtopics:
                     if subtopic.validation_status == "failed":
                         failed_subtopics.append(f"{lesson.title}/{subtopic.title}: {subtopic.validation_errors}")
             if failed_subtopics:
-                raise ValueError(f"Subtopic validation failed for: {'; '.join(failed_subtopics)}")
-            raise ValueError("Subtopic validation failed")
-        
-        print("    Subtopics validated successfully")
+                print(f"  WARNING: {len(failed_subtopics)} subtopic(s) failed validation after max regeneration attempts, retaining them:")
+                for fs in failed_subtopics:
+                    print(f"    - {fs}")
+            else:
+                print("  WARNING: Subtopic validation count mismatch, proceeding with available subtopics.")
+
+            # Keep all subtopics including failed ones - do NOT skip any.
+            # Recalculate estimated totals with all subtopics retained.
+            for lesson in self.lessons:
+                lesson.estimated_total_chars = sum(s.estimated_chars for s in lesson.subtopics)
+
+            print(f"    Continuing pipeline with {sum(len(l.subtopics) for l in self.lessons)} subtopics (including failed ones)...")
+        else:
+            print("    Subtopics validated successfully")
+
         # Update subtopics.json in prompt directory
         self._update_subtopics_json()
         # Create content-generation JSON
