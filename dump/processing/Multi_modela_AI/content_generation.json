@@ -1,0 +1,39 @@
+{
+  "session_id": "0f2a0dd7-c58b-49fc-9b2e-0fd59c82dcbc",
+  "prompt": "Multi modela AI",
+  "generated_on": "2026-10-31T06:30:13.394203",
+  "subtopics": [
+    {
+      "lesson_title": "Exploring Multi-Model Artificial Intelligence",
+      "subtopic_title": "Foundational Principles of Multi-Model AI",
+      "subtopic_description": "In this subtopic, we will explore the fundamental principles that underpin Multi-Model AI. We will discuss how different models can work together to solve complex problems and the importance of these models in the development of AI. Estimated character count: 450",
+      "subtopic_estimated_chars": 450,
+      "co": "Define Multi-model AI",
+      "po": "Artificial Intelligence",
+      "k_level": "intermediate",
+      "status": "completed",
+      "output_file": "output\\0f2a0dd7-c58b-49fc-9b2e-0fd59c82dcbc\\Exploring_Multi-Model_Artificial_Intelligence\\01_01_Multi_modela_AI.txt",
+      "metadata": {
+        "actual_chars": 2918
+      },
+      "export_status": "completed",
+      "docx_path": "output\\delivery\\0f2a0dd7-c58b-49fc-9b2e-0fd59c82dcbc\\01_Exploring_Multi-Model_Artificial_Intelligence\\01.01_Foundational_Principles_of_Multi-Model_AI.docx"
+    },
+    {
+      "lesson_title": "Exploring Multi-Model Artificial Intelligence",
+      "subtopic_title": "Types of Multi-Model AI Models and Their Applications",
+      "subtopic_description": "We will delve into the various types of models used in Multi-Model AI, including but not limited to neural networks, decision trees, and reinforcement learning. We will also examine how these models collaborate and how they can be applied to solve real-world problems. Estimated character count: 550",
+      "subtopic_estimated_chars": 550,
+      "co": "Define Multi-model AI",
+      "po": "Artificial Intelligence",
+      "k_level": "intermediate",
+      "status": "completed",
+      "output_file": "output\\0f2a0dd7-c58b-49fc-9b2e-0fd59c82dcbc\\Exploring_Multi-Model_Artificial_Intelligence\\01_02_Multi_modela_AI.txt",
+      "metadata": {
+        "actual_chars": 3431
+      },
+      "export_status": "completed",
+      "docx_path": "output\\delivery\\0f2a0dd7-c58b-49fc-9b2e-0fd59c82dcbc\\01_Exploring_Multi-Model_Artificial_Intelligence\\01.02_Types_of_Multi-Model_AI_Models_and_Their_Applications.docx"
+    }
+  ]
+}

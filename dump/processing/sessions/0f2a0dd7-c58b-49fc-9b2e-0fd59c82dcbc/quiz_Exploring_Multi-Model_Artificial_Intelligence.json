@@ -1,0 +1,64 @@
+{
+  "questions": [
+    {
+      "question": "What is a key foundational principle of Multi-Model AI that allows it to handle complex problems more effectively than traditional AI?",
+      "options": [
+        "A. Single Model Dominance",
+        "B. Hierarchical Processing",
+        "C. Data Integration",
+        "D. Parallel Processing"
+      ],
+      "correct_answer": 1,
+      "explanation": "Hierarchical Processing enables Multi-Model AI to break down complex problems into smaller, more manageable parts and solve them sequentially, making it more effective than traditional AI which often relies on a single model to handle all aspects of a problem.",
+      "k_level": "K3"
+    },
+    {
+      "question": "Which type of Multi-Model AI model is best suited for understanding and generating natural language?",
+      "options": [
+        "A. Convolutional Neural Networks (CNNs)",
+        "B. Recurrent Neural Networks (RNNs)",
+        "C. Transformers",
+        "D. Convolutional Recurrent Neural Networks (CRNNs)"
+      ],
+      "correct_answer": 2,
+      "explanation": "Transformers are particularly effective for natural language processing tasks due to their ability to capture long-range dependencies in text sequences, making them a key model in Multi-Model AI for language understanding and generation.",
+      "k_level": "K4"
+    },
+    {
+      "question": "In Multi-Model AI, what is the primary advantage of using multiple models over a single model for image recognition tasks?",
+      "options": [
+        "A. Reduced computational cost",
+        "B. Increased accuracy",
+        "C. Faster processing speed",
+        "D. Enhanced interpretability"
+      ],
+      "correct_answer": 1,
+      "explanation": "Using multiple models in Multi-Model AI for image recognition can lead to higher accuracy by leveraging different models' strengths, such as convolutional models for feature extraction and fully connected models for classification.",
+      "k_level": "K5"
+    },
+    {
+      "question": "Which model in Multi-Model AI is specifically designed to handle sequential data like time series and speech?",
+      "options": [
+        "A. Convolutional Neural Networks (CNNs)",
+        "B. Recurrent Neural Networks (RNNs)",
+        "C. Transformers",
+        "D. Convolutional Recurrent Neural Networks (CRNNs)"
+      ],
+      "correct_answer": 1,
+      "explanation": "Recurrent Neural Networks (RNNs) are designed to process sequential data by maintaining a form of memory through their internal state, making them suitable for tasks like time series analysis and speech recognition.",
+      "k_level": "K6"
+    },
+    {
+      "question": "How does Multi-Model AI differ from traditional AI in terms of problem-solving?",
+      "options": [
+        "A. Multi-Model AI uses only one model for all tasks",
+        "B. Multi-Model AI requires more computational resources",
+        "C. Multi-Model AI can handle more complex and diverse problems",
+        "D. Multi-Model AI is less accurate than traditional AI"
+      ],
+      "correct_answer": 2,
+      "explanation": "Multi-Model AI addresses complex and diverse problems by combining multiple models, each specialized in different aspects, which allows it to tackle a wider range of tasks more effectively than traditional AI which relies on a single model for all operations.",
+      "k_level": "K2"
+    }
+  ]
+}

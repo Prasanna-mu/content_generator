@@ -1,8 +1,9 @@
 from abc import ABC, abstractmethod
 from typing import List, Dict, Any, Optional, Callable
-from core.models.schemas import UserInput, Lesson, Subtopic, GeneratedContent, QuizQuestion, QuestionBankItem
+from core.models.schemas import UserInput, Lesson, Subtopic, GeneratedContent, QuizQuestion, QuestionBankItem, SubtopicQualityConfig
 from pathlib import Path
 import json
+import re
 
 
 class BaseLLMProvider(ABC):
@@ -42,6 +43,7 @@ class BaseLLMProvider(ABC):
         validator: Callable[[Dict[str, Any]], bool],
         max_retries: int = 3,
         save_as: Optional[str] = None,
+        validator_details: Optional[Callable[[Dict[str, Any]], str]] = None,
         **kwargs
     ) -> Dict[str, Any]:
         for attempt in range(max_retries):
@@ -52,10 +54,19 @@ class BaseLLMProvider(ABC):
                         self._save_intermediate_json(save_as, result)
                     return result
                 else:
-                    print(f"  Validation failed (attempt {attempt + 1}/{max_retries}), retrying...")
+                    # Get detailed validation errors if validator_details provided
+                    if validator_details:
+                        errors = validator_details(result)
+                        if errors:
+                            print(f"  Validation failed (attempt {attempt + 1}/{max_retries}): {errors}")
+                        else:
+                            print(f"  Validation failed (attempt {attempt + 1}/{max_retries}), retrying...")
+                    else:
+                        print(f"  Validation failed (attempt {attempt + 1}/{max_retries}), retrying...")
             except Exception as e:
                 print(f"  Generation error (attempt {attempt + 1}/{max_retries}): {e}")
         raise ValueError(f"Failed to generate valid JSON after {max_retries} attempts")
+        return ""
 
     def validate_lessons_json(self, data: Dict[str, Any]) -> bool:
         if not isinstance(data, dict):
@@ -70,7 +81,25 @@ class BaseLLMProvider(ABC):
                 return False
         return True
 
-    def validate_subtopics_json(self, data: Dict[str, Any], expected_count: int = 0) -> bool:
+    def validate_lessons_json_with_details(self, data: Dict[str, Any]) -> str:
+        """Return detailed error message if validation fails, empty string if valid."""
+        if not isinstance(data, dict):
+            return "Root is not a JSON object"
+        lessons = data.get("lessons", [])
+        if not isinstance(lessons, list):
+            return "Missing or invalid 'lessons' array"
+        if len(lessons) == 0:
+            return "Lessons array is empty"
+        for i, lesson in enumerate(lessons):
+            if not isinstance(lesson, dict):
+                return f"Lesson {i} is not an object"
+            if not lesson.get("title"):
+                return f"Lesson {i} missing 'title'"
+            if not lesson.get("description"):
+                return f"Lesson {i} missing 'description'"
+        return ""
+
+    def validate_subtopics_json(self, data: Dict[str, Any], expected_count: int = 0, quality_config: Optional[SubtopicQualityConfig] = None) -> bool:
         if not isinstance(data, dict):
             return False
         subtopics = data.get("subtopics", [])
@@ -78,16 +107,50 @@ class BaseLLMProvider(ABC):
             return False
         if expected_count > 0 and len(subtopics) != expected_count:
             return False
+        if quality_config is None:
+            quality_config = SubtopicQualityConfig()
         for subtopic in subtopics:
             if not isinstance(subtopic, dict):
                 return False
             if not subtopic.get("title") or not subtopic.get("description"):
+                return False
+            title = subtopic["title"]
+            if len(title) > quality_config.max_title_length:
                 return False
             if "estimated_chars" not in subtopic or not isinstance(subtopic["estimated_chars"], int):
                 return False
             if subtopic["estimated_chars"] <= 0:
                 return False
         return True
+
+    def validate_subtopics_json_with_details(self, data: Dict[str, Any], expected_count: int = 0, quality_config: Optional[SubtopicQualityConfig] = None) -> str:
+        """Return detailed error message if validation fails, empty string if valid."""
+        if not isinstance(data, dict):
+            return "Root is not a JSON object"
+        subtopics = data.get("subtopics", [])
+        if not isinstance(subtopics, list):
+            return "Missing or invalid 'subtopics' array"
+        if expected_count > 0 and len(subtopics) != expected_count:
+            return f"Expected {expected_count} subtopics, got {len(subtopics)}"
+        if quality_config is None:
+            quality_config = SubtopicQualityConfig()
+        for i, subtopic in enumerate(subtopics):
+            if not isinstance(subtopic, dict):
+                return f"Subtopic {i} is not an object"
+            if not subtopic.get("title"):
+                return f"Subtopic {i} missing 'title'"
+            if not subtopic.get("description"):
+                return f"Subtopic {i} missing 'description'"
+            title = subtopic["title"]
+            if len(title) > quality_config.max_title_length:
+                return f"Subtopic {i} title too long ({len(title)} > {quality_config.max_title_length})"
+            if "estimated_chars" not in subtopic:
+                return f"Subtopic {i} missing 'estimated_chars'"
+            if not isinstance(subtopic["estimated_chars"], int):
+                return f"Subtopic {i} 'estimated_chars' must be integer"
+            if subtopic["estimated_chars"] <= 0:
+                return f"Subtopic {i} 'estimated_chars' must be positive"
+        return ""
 
     def validate_quiz_json(self, data: Dict[str, Any], expected_count: int = 0) -> bool:
         if not isinstance(data, dict):
@@ -115,6 +178,45 @@ class BaseLLMProvider(ABC):
                 return False
         return True
 
+    def validate_quiz_json_with_details(self, data: Dict[str, Any], expected_count: int = 0) -> str:
+        """Return detailed error message if validation fails, empty string if valid."""
+        if not isinstance(data, dict):
+            return "Root is not a JSON object"
+        questions = data.get("questions", [])
+        if not isinstance(questions, list):
+            return "Missing or invalid 'questions' array"
+        if expected_count > 0 and len(questions) != expected_count:
+            return f"Expected {expected_count} questions, got {len(questions)}"
+        for i, q in enumerate(questions):
+            if not isinstance(q, dict):
+                return f"Question {i} is not an object"
+            if not q.get("question"):
+                return f"Question {i} missing 'question'"
+            options = q.get("options")
+            if not isinstance(options, list):
+                return f"Question {i} 'options' must be array"
+            if len(options) != 4:
+                return f"Question {i} must have exactly 4 options, got {len(options)}"
+            for j, opt in enumerate(options):
+                if not isinstance(opt, str) or not opt.strip():
+                    return f"Question {i} option {j} must be non-empty string"
+            if "correct_answer" not in q:
+                return f"Question {i} missing 'correct_answer'"
+            if not isinstance(q["correct_answer"], int):
+                return f"Question {i} 'correct_answer' must be integer"
+            ca = q["correct_answer"]
+            if ca < 0 or ca > 3:
+                return f"Question {i} 'correct_answer' must be 0-3, got {ca}"
+            k_level = q.get("k_level")
+            if not k_level or not isinstance(k_level, str):
+                return f"Question {i} missing or invalid 'k_level'"
+            import re
+            if not re.match(r'^K[1-6]$', k_level):
+                return f"Question {i} 'k_level' must be K1-K6, got '{k_level}'"
+            if "explanation" not in q:
+                return f"Question {i} missing 'explanation'"
+        return ""
+
     def validate_question_bank_json(self, data: Dict[str, Any], expected_count: int = 0) -> bool:
         if not isinstance(data, dict):
             return False
@@ -137,6 +239,35 @@ class BaseLLMProvider(ABC):
                 return False
         return True
 
+    def validate_question_bank_json_with_details(self, data: Dict[str, Any], expected_count: int = 0) -> str:
+        """Return detailed error message if validation fails, empty string if valid."""
+        if not isinstance(data, dict):
+            return "Root is not a JSON object"
+        questions = data.get("questions", [])
+        if not isinstance(questions, list):
+            return "Missing or invalid 'questions' array"
+        if expected_count > 0 and len(questions) != expected_count:
+            return f"Expected {expected_count} questions, got {len(questions)}"
+        for i, q in enumerate(questions):
+            if not isinstance(q, dict):
+                return f"Question {i} is not an object"
+            if not q.get("question"):
+                return f"Question {i} missing 'question'"
+            if not q.get("answer"):
+                return f"Question {i} missing 'answer'"
+            k_level = q.get("k_level")
+            if not k_level or not isinstance(k_level, str):
+                return f"Question {i} missing or invalid 'k_level'"
+            import re
+            if not re.match(r'^K[1-6]$', k_level):
+                return f"Question {i} 'k_level' must be K1-K6, got '{k_level}'"
+            if "difficulty" not in q:
+                return f"Question {i} missing 'difficulty'"
+            diff = q["difficulty"]
+            if diff not in ("beginner", "intermediate", "technical"):
+                return f"Question {i} 'difficulty' must be beginner/intermediate/technical, got '{diff}'"
+        return ""
+
     def generate_lessons(self, user_input: UserInput) -> List[Dict[str, Any]]:
         prompt = self._build_lesson_prompt(user_input)
         system_prompt = self._get_lesson_system_prompt()
@@ -144,7 +275,8 @@ class BaseLLMProvider(ABC):
             prompt, system_prompt,
             lambda d: self.validate_lessons_json(d),
             max_retries=3,
-            save_as="lessons.json"
+            save_as="lessons.json",
+            validator_details=lambda d: self.validate_lessons_json_with_details(d)
         )
         return result.get("lessons", [])
 
@@ -152,11 +284,13 @@ class BaseLLMProvider(ABC):
         prompt = self._build_subtopic_prompt(lesson, user_input)
         system_prompt = self._get_subtopic_system_prompt()
         expected = user_input.subtopics_per_lesson
+        quality_config = user_input.subtopic_quality
         result = self.generate_json_with_validation(
             prompt, system_prompt,
-            lambda d: self.validate_subtopics_json(d, expected),
+            lambda d: self.validate_subtopics_json(d, expected, quality_config),
             max_retries=3,
-            save_as=f"subtopics_{lesson.title.replace(' ', '_')}.json"
+            save_as=f"subtopics_{lesson.title.replace(' ', '_')}.json",
+            validator_details=lambda d: self.validate_subtopics_json_with_details(d, expected, quality_config)
         )
         return [Subtopic(**subtopic) for subtopic in result.get("subtopics", [])]
 
@@ -179,7 +313,8 @@ class BaseLLMProvider(ABC):
             prompt, system_prompt,
             lambda d: self.validate_quiz_json(d, expected),
             max_retries=3,
-            save_as=f"quiz_{lesson.title.replace(' ', '_')}.json"
+            save_as=f"quiz_{lesson.title.replace(' ', '_')}.json",
+            validator_details=lambda d: self.validate_quiz_json_with_details(d, expected)
         )
         return [QuizQuestion(**q) for q in result.get("questions", [])]
 
@@ -234,6 +369,11 @@ Return JSON format:
 """
 
     def _build_subtopic_prompt(self, lesson: Lesson, user_input: UserInput) -> str:
+        config = user_input.subtopic_quality
+        expected_avg = self._calculate_expected_avg_chars_for_prompt(user_input)
+        
+        weak_examples = "Introduction, Overview, Basics, Fundamentals, Summary, Conclusion, Getting Started, What Is, Chapter 1, Section 1, Module 1, Topic 1, Unit 1, Lesson 1"
+        
         return f"""
 Generate EXACTLY {user_input.subtopics_per_lesson} subtopics for lesson: "{lesson.title}"
 Lesson description: {lesson.description}
@@ -242,13 +382,31 @@ Main topic: {user_input.prompt}
 STRICT REQUIREMENTS:
 - You MUST generate exactly {user_input.subtopics_per_lesson} subtopics - no more, no less
 - Each subtopic must have a title, description, and estimated character count
-- Subtopics should cover the lesson comprehensively
-- Character estimates based on content length: {user_input.content_length.value}
+- Subtopics should cover the lesson comprehensively with NO overlap
+- Character estimates based on content length: {user_input.content_length.value} (target ~{expected_avg} chars each)
+
+TITLE QUALITY RULES:
+- Title must be SHORT and MEANINGFUL (max {config.max_title_length} characters)
+- Title must be SPECIFIC, not generic
+- FORBIDDEN generic titles: {weak_examples}
+- Each title must clearly indicate the specific topic covered
+- Good examples: "Variables and Data Types", "Control Flow Statements", "Function Parameters and Return Values"
+- Bad examples: "Introduction", "Basics", "Overview", "Getting Started"
+
+DESCRIPTION QUALITY RULES:
+- Description must be specific and detailed, not vague
+- Must explain WHAT will be covered and WHY it matters
+- Each description must be distinct from others
+- Target 50-500 characters
+
+UNIQUENESS:
+- No two subtopics may have similar titles or descriptions
+- Each subtopic must cover a distinct, non-overlapping aspect of the lesson
 
 Return JSON format:
 {{
     "subtopics": [
-        {{"title": "Subtopic Title", "description": "Description", "estimated_chars": 1000}},
+        {{"title": "Specific Subtopic Title", "description": "Detailed specific description of what this covers and why...", "estimated_chars": {expected_avg}}},
         ...
     ]
 }}
@@ -277,17 +435,27 @@ Reference Material:
 """
         
         return f"""
-{reference_section}Write content for subtopic: "{subtopic.title}"
+{reference_section}Write HIGH-QUALITY educational content for subtopic: "{subtopic.title}"
 Lesson: "{lesson_title}"
 Main topic: {user_input.prompt}
 Subtopic description: {subtopic.description}
 
-Requirements:
+REQUIREMENTS:
 - Content length: {length_guide.get(user_input.content_length.value, "moderate")}
 - Quality level: {quality_guide.get(user_input.content_quality.value, "balanced")}
-- Target ~{subtopic.estimated_chars} characters
-- Well-structured with headers, examples, and clear explanations
+- Target ~{subtopic.estimated_chars} characters (aim for {int(subtopic.estimated_chars * 0.7)}-{int(subtopic.estimated_chars * 1.3)} chars)
+- Well-structured with clear headers, examples, and explanations
+- Include practical examples, code snippets, or diagrams where appropriate
+- Use clear, professional educational tone
 - No markdown formatting in output, plain text only
+- Cover the topic comprehensively based on the subtopic description
+
+STRUCTURE GUIDELINES:
+1. Start with a brief introduction to the subtopic
+2. Cover key concepts with clear explanations
+3. Include practical examples or code samples
+4. Add summaries or key takeaways
+5. Use numbered lists or bullet points for clarity
 """
 
     def _build_quiz_prompt(self, lesson: Lesson, user_input: UserInput) -> str:
@@ -343,13 +511,37 @@ Return JSON format:
         return "You are an expert curriculum designer. Create structured, progressive lesson plans."
 
     def _get_subtopic_system_prompt(self) -> str:
-        return "You are an expert content planner. Break down lessons into detailed subtopics with accurate character estimates."
+        return """You are an expert content planner. Break down lessons into detailed subtopics with accurate character estimates.
+Generate SPECIFIC, MEANINGFUL subtopic titles - NO generic titles like Introduction, Overview, Basics, etc.
+Each subtopic must cover a distinct, non-overlapping aspect of the lesson."""
 
     def _get_content_system_prompt(self, user_input: UserInput) -> str:
-        return f"You are an expert educational content writer. Write {user_input.content_quality.value} level content with {user_input.content_length.value} length."
+        return f"""You are an expert educational content writer. Write {user_input.content_quality.value} level content with {user_input.content_length.value} length.
+Follow the structure guidelines precisely. Include practical examples, code snippets, and clear explanations.
+Target the specified character count. No markdown formatting - plain text only."""
 
     def _get_quiz_system_prompt(self, user_input: UserInput) -> str:
         return f"You are an expert assessment designer. Create {user_input.quiz_difficulty.value} level quiz questions."
 
     def _get_question_bank_system_prompt(self, user_input: UserInput) -> str:
-        return "You are an expert question bank creator. Generate comprehensive practice questions with model answers."
+        return f"""You are an expert assessment designer. Create comprehensive question bank items for {user_input.content_quality.value} level.
+Include a mix of question types (short answer, essay, problem-solving) with model answers.
+Each item must have a difficulty level (beginner/intermediate/technical) and knowledge level (K1-K6).
+Cover all subtopics comprehensively with clear, unambiguous questions and detailed answers."""
+
+    def _calculate_expected_avg_chars_for_prompt(self, user_input: UserInput) -> int:
+        """Calculate expected average characters per subtopic for prompt guidance."""
+        length_base_chars = {
+            "simple": 800,
+            "medium": 1500,
+            "long": 2500,
+            "extreme": 4000
+        }
+        base = length_base_chars.get(user_input.content_length.value, 1500)
+        quality_multiplier = {
+            "beginner": 0.7,
+            "intermediate": 1.0,
+            "technical": 1.3
+        }
+        mult = quality_multiplier.get(user_input.content_quality.value, 1.0)
+        return int(base * mult)

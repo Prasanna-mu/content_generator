@@ -5,7 +5,7 @@ from core.models.schemas import UserInput, WebSearchResult, WebSearchReport
 from core.llm.base import BaseLLMProvider
 from core.websearch.query_generator import SearchQueryGenerator
 from core.websearch.searcher import WebSearcher
-from core.websearch.reputation_checker import ReputationChecker
+from core.websearch.reputation_checker import SourceQualityChecker, FactChecker
 from core.websearch.crawler import WebCrawler
 from core.websearch.extractor import ContentExtractor
 from core.websearch.normalizer import ContentNormalizer
@@ -26,7 +26,8 @@ class WebSearchManager:
         
         self.query_generator = SearchQueryGenerator(llm, max_queries)
         self.searcher = WebSearcher(worker_count, results_per_query)
-        self.reputation_checker = ReputationChecker()
+        self.source_quality_checker = SourceQualityChecker()
+        self.fact_checker = FactChecker(llm)
         self.crawler = WebCrawler(worker_count)
         self.extractor = ContentExtractor()
         self.normalizer = ContentNormalizer(max_content_chars)
@@ -42,7 +43,7 @@ class WebSearchManager:
                 search_queries=[],
                 results=[],
                 total_results=0,
-                reputable_results=0,
+                valid_sources=0,
                 search_timestamp=datetime.utcnow().isoformat() + "Z"
             )
         
@@ -61,7 +62,8 @@ class WebSearchManager:
                 search_queries=queries,
                 results=[],
                 total_results=0,
-                reputable_results=0,
+                valid_sources=0,
+                quality_sources=0,
                 search_timestamp=datetime.utcnow().isoformat() + "Z"
             )
         
@@ -75,12 +77,12 @@ class WebSearchManager:
             for r in raw_results
         ]
         
-        print(f"[Web Search] Checking site reputation...")
-        results = self.reputation_checker.check_batch(results)
-        reputable_count = sum(1 for r in results if r.is_reputable)
-        print(f"[Web Search] {reputable_count}/{len(results)} results are reputable")
+        print(f"[Web Search] Validating source URLs (security + quality)...")
+        results = self.source_quality_checker.check_batch(results)
+        valid_count = sum(1 for r in results if r.is_valid_for_crawling)
+        print(f"[Web Search] {valid_count}/{len(results)} sources passed security/quality validation")
         
-        print(f"[Web Search] Crawling reputable sites...")
+        print(f"[Web Search] Crawling valid sources...")
         results = self.crawler.crawl_batch(results)
         
         print(f"[Web Search] Extracting content...")
@@ -89,16 +91,32 @@ class WebSearchManager:
         print(f"[Web Search] Normalizing content...")
         results = self.normalizer.normalize_batch(results)
         
-        print(f"[Web Search] Analyzing content...")
+        print(f"[Web Search] Analyzing content for relevance and quality...")
         results = self.analyzer.analyze_batch(results, user_input)
         
+        # Fact-checking step for high-quality sources
+        print(f"[Web Search] Fact-checking extracted content...")
+        fact_check_count = 0
+        for result in results:
+            if result.normalized_content and len(result.normalized_content) > 500:
+                result = self.fact_checker.verify_facts(result, user_input.prompt)
+                fact_check_count += 1
+        
+        if fact_check_count > 0:
+            print(f"[Web Search] Fact-checking completed for {fact_check_count} sources")
+        
         print(f"[Web Search] Web search complete!")
+        
+        # Count sources with good quality scores
+        quality_sources = sum(1 for r in results if getattr(r, 'fact_check_score', 0) >= 6)
+        valid_sources = sum(1 for r in results if getattr(r, 'is_valid_for_crawling', False))
         
         return WebSearchReport(
             user_prompt=user_input.prompt,
             search_queries=queries,
             results=results,
             total_results=len(results),
-            reputable_results=reputable_count,
+            valid_sources=valid_sources,
+            quality_sources=quality_sources,
             search_timestamp=datetime.utcnow().isoformat() + "Z"
         )

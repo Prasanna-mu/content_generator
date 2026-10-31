@@ -1,0 +1,14 @@
+{
+  "prompt": "Multi modela AI",
+  "session_id": "0f2a0dd7-c58b-49fc-9b2e-0fd59c82dcbc",
+  "stages": {
+    "subtopic_generation": "completed",
+    "lesson_generation": "completed",
+    "content_generation": "completed",
+    "output_writing": "completed",
+    "docx_export": "completed"
+  },
+  "lessons": [],
+  "subtopics": [],
+  "tasklist": []
+}

@@ -35,11 +35,21 @@ class WebSearcher:
         return all_results
 
     def _check_internet(self) -> bool:
-        try:
-            requests.get("http://www.google.com", timeout=3)
-            return True
-        except requests.RequestException:
-            return False
+        """Check internet connectivity using multiple fallback endpoints."""
+        endpoints = [
+            "http://www.google.com",
+            "http://httpbin.org/get",
+            "https://api.ipify.org",
+            "http://connectivitycheck.gstatic.com/generate_204",
+        ]
+        for endpoint in endpoints:
+            try:
+                response = requests.get(endpoint, timeout=5)
+                if response.status_code in (200, 204):
+                    return True
+            except requests.RequestException:
+                continue
+        return False
 
     def _search_single_query(self, query: str) -> List[Dict[str, Any]]:
         if self.search_engine == "serper" and self.api_key:
@@ -80,10 +90,19 @@ class WebSearcher:
     def _search_duckduckgo(self, query: str) -> List[Dict[str, Any]]:
         url = "https://html.duckduckgo.com/html/"
         params = {"q": query}
-        headers = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"}
+        headers = {
+            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+            "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8",
+            "Accept-Language": "en-US,en;q=0.5",
+        }
         
         try:
-            response = requests.post(url, data=params, headers=headers, timeout=self.timeout)
+            response = requests.get(
+                url,
+                params=params,
+                headers=headers,
+                timeout=self.timeout
+            )
             response.raise_for_status()
             return self._parse_duckduckgo_results(response.text, query)
         except Exception as e:
@@ -116,17 +135,110 @@ class WebSearcher:
         from bs4 import BeautifulSoup
         results = []
         soup = BeautifulSoup(html, "html.parser")
-        for result in soup.select(".result__snippet, .snippet")[:self.results_per_query]:
-            link_elem = result.find_previous("a", class_="result__url") or result.find_previous("a")
-            url = link_elem.get("href", "") if link_elem else ""
-            title_elem = result.find_previous("a", class_="result__title") or result.find_previous("h2")
-            title = title_elem.get_text(strip=True) if title_elem else ""
-            snippet = result.get_text(strip=True)
-            if url and title:
-                results.append({
-                    "query": query,
-                    "url": url,
-                    "title": title,
-                    "snippet": snippet,
-                })
+        
+        # Try multiple selectors for DuckDuckGo's changing HTML structure
+        # Current structure uses .result with data-testid="result"
+        selectors = [
+            "article[data-testid='result']",  # New DDG layout
+            ".result[data-testid='result']",  # Alternative with class
+            ".result",                         # Classic layout
+            "[data-testid='result']",          # Test ID based
+            ".web-result",                     # Alternative class
+            ".result__body",                   # Result body
+            "div.results > div",               # Generic result container
+        ]
+        
+        result_elements = []
+        for selector in selectors:
+            result_elements = soup.select(selector)
+            if result_elements:
+                break
+        
+        # Fallback: try to find any link-containing elements with snippets
+        if not result_elements:
+            # Find all links that have surrounding text (likely results)
+            for link in soup.find_all("a", href=True):
+                href = link.get("href", "")
+                if href.startswith("http") and "duckduckgo.com" not in href:
+                    # Get parent element that might contain the result
+                    parent = link.parent
+                    if parent:
+                        result_elements.append(parent)
+        
+        for elem in result_elements[:self.results_per_query]:
+            try:
+                # Try to find URL - look for the main result link
+                url = ""
+                # First try: link with result__url class
+                link_elem = elem.find("a", class_="result__url")
+                if not link_elem:
+                    # Second try: any link with http URL that's not duckduckgo
+                    for a in elem.find_all("a", href=True):
+                        href = a.get("href", "")
+                        if href.startswith("http") and "duckduckgo.com" not in href:
+                            link_elem = a
+                            break
+                if link_elem:
+                    url = link_elem.get("href", "")
+                
+                # Try to find title
+                title = ""
+                # First try: result__title class
+                title_elem = elem.find("a", class_="result__title")
+                if not title_elem:
+                    # Second try: h2, h3, or strong
+                    title_elem = elem.find("h2") or elem.find("h3") or elem.find("strong")
+                if not title_elem:
+                    # Third try: the link element itself if it has text
+                    if link_elem and link_elem.get_text(strip=True):
+                        title = link_elem.get_text(strip=True)
+                if title_elem and not title:
+                    title = title_elem.get_text(strip=True)
+                
+                # Try to find snippet
+                snippet = ""
+                snippet_elem = elem.find(class_="result__snippet") or elem.find(class_="snippet") or elem.find("p")
+                if snippet_elem:
+                    snippet = snippet_elem.get_text(strip=True)
+                else:
+                    # Try to find any substantial text
+                    for p in elem.find_all("p"):
+                        text = p.get_text(strip=True)
+                        if len(text) > 30:
+                            snippet = text
+                            break
+                
+                # Clean up URL - DuckDuckGo sometimes wraps URLs
+                if url and url.startswith("//duckduckgo.com/l/?uddg="):
+                    import urllib.parse
+                    url = urllib.parse.unquote(url.split("uddg=")[1].split("&")[0])
+                
+                if url and title:
+                    results.append({
+                        "query": query,
+                        "url": url,
+                        "title": title,
+                        "snippet": snippet,
+                    })
+            except Exception as e:
+                # Skip malformed results but continue parsing
+                continue
+        
+        # If still no results, try a more aggressive parsing
+        if not results:
+            # Find all links in the page
+            for link in soup.find_all("a", href=True):
+                href = link.get("href", "")
+                if href.startswith("http") and "duckduckgo.com" not in href:
+                    title = link.get_text(strip=True)
+                    if title and len(title) > 5:
+                        results.append({
+                            "query": query,
+                            "url": href,
+                            "title": title,
+                            "snippet": "",
+                        })
+                        if len(results) >= self.results_per_query:
+                            break
+        
         return results

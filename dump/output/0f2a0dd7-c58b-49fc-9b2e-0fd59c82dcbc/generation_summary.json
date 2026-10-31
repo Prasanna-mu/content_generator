@@ -1,0 +1,26 @@
+{
+  "prompt": "Multi modela AI",
+  "config": {
+    "prompt": "Multi modela AI",
+    "num_lessons": 1,
+    "subtopics_per_lesson": 2,
+    "content_quality": "intermediate",
+    "content_length": "medium",
+    "quiz_question_count": 5,
+    "quiz_difficulty": "intermediate",
+    "question_bank_count": 10,
+    "web_search_needed": false
+  },
+  "total_lessons": 1,
+  "total_subtopics": 2,
+  "total_content_chars": 6349,
+  "total_quiz_questions": 5,
+  "total_question_bank_items": 10,
+  "lessons": [
+    {
+      "title": "Exploring Multi-Model Artificial Intelligence",
+      "subtopic_count": 2,
+      "total_chars": 6349
+    }
+  ]
+}
